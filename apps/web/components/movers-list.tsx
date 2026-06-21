@@ -47,10 +47,9 @@ export function MoversList({ movers }: MoversListProps) {
                     {humanizeFactorId(mover.factorId)}
                   </a>
                   <span
-                    className="shrink-0 font-mono text-xs tabular"
+                    className="shrink-0 text-xs font-medium tabular"
                     style={{ color: sooner ? "rgb(var(--accent-rgb))" : "rgb(var(--later))" }}
                   >
-                    {sooner ? "−" : "+"}
                     {formatMonths(mover.contributionMonths)} {sooner ? "sooner" : "later"}
                   </span>
                 </div>

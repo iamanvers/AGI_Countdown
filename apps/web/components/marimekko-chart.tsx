@@ -1,102 +1,72 @@
 import type { JobsSector } from "@/lib/static-data";
 
-const W = 1000;
-const H = 300;
-const PAD = { top: 22, right: 6, bottom: 22, left: 6 };
-const chartW = W - PAD.left - PAD.right;
-const chartH = H - PAD.top - PAD.bottom;
-
 function shade(exposure: number) {
-  const a = 0.3 + Math.min(1, exposure / 100) * 0.6;
+  const a = 0.32 + Math.min(1, exposure / 100) * 0.55;
   return `rgb(var(--accent-rgb) / ${a.toFixed(2)})`;
 }
 
 /**
- * Marimekko: each sector is a column whose WIDTH is its share of the workforce
- * and whose filled HEIGHT is its AI automation exposure. Labels live in the
- * legend below so nothing clips.
+ * Marimekko, in plain HTML/CSS (no SVG scaling, so text never squishes):
+ * each sector column's WIDTH is its share of the workforce and its filled
+ * HEIGHT is its AI automation exposure.
  */
 export function MarimekkoChart({ sectors }: { sectors: JobsSector[] }) {
   const ordered = [...sectors].sort((a, b) => b.workforceSharePct - a.workforceSharePct);
-  const totalShare = ordered.reduce((sum, s) => sum + s.workforceSharePct, 0) || 100;
-
-  let cursor = PAD.left;
-  const columns = ordered.map((sector) => {
-    const width = (sector.workforceSharePct / totalShare) * chartW;
-    const fillH = (sector.automationExposurePct / 100) * chartH;
-    const col = { sector, x: cursor, width, y: PAD.top + (chartH - fillH), fillH };
-    cursor += width;
-    return col;
-  });
+  const total = ordered.reduce((sum, s) => sum + s.workforceSharePct, 0) || 100;
 
   return (
-    <figure className="grid gap-4 rounded-lg border border-[rgb(var(--line)/0.66)] bg-[rgb(var(--panel)/0.5)] p-5">
-      <svg
-        className="w-full"
-        role="img"
-        aria-label="Workforce share by sector versus AI automation exposure"
-        viewBox={`0 0 ${W} ${H}`}
-        preserveAspectRatio="none"
-        style={{ height: "260px" }}
-      >
-        {[25, 50, 75, 100].map((tick) => {
-          const y = PAD.top + (chartH - (tick / 100) * chartH);
-          return (
-            <g key={tick}>
-              <line stroke="rgb(255 255 255 / 0.06)" x1={PAD.left} x2={W - PAD.right} y1={y} y2={y} />
-              <text fill="rgb(var(--muted))" fontSize="10" x={PAD.left + 2} y={y - 3}>
-                {tick}%
-              </text>
-            </g>
-          );
-        })}
-
-        {columns.map((col) => (
-          <g key={col.sector.sector}>
-            <rect
-              x={col.x + 1}
-              y={PAD.top}
-              width={Math.max(0, col.width - 2)}
-              height={chartH}
-              fill="rgb(255 255 255 / 0.03)"
-            />
-            <rect
-              x={col.x + 1}
-              y={col.y}
-              width={Math.max(0, col.width - 2)}
-              height={col.fillH}
-              fill={shade(col.sector.automationExposurePct)}
-            >
-              <title>
-                {col.sector.sector}: {col.sector.automationExposurePct}% exposure ·{" "}
-                {col.sector.workforceSharePct}% of workforce
-              </title>
-            </rect>
-            {col.width > 42 ? (
-              <text
-                fill="rgb(var(--foreground))"
-                fontSize="12"
-                fontWeight="600"
-                textAnchor="middle"
-                x={col.x + col.width / 2}
-                y={Math.max(PAD.top + 12, col.y - 5)}
-              >
-                {col.sector.automationExposurePct}%
-              </text>
-            ) : null}
-          </g>
+    <figure className="grid gap-5 rounded-xl border border-[rgb(var(--line))] bg-[rgb(var(--panel)/0.55)] p-5 sm:p-6">
+      <div className="relative h-[260px] w-full pl-9">
+        {/* gridlines */}
+        {[0, 25, 50, 75, 100].map((tick) => (
+          <div
+            className="absolute left-9 right-0 flex items-center"
+            key={tick}
+            style={{ bottom: `${tick}%` }}
+          >
+            <span className="absolute -left-9 w-8 text-right text-[0.62rem] tabular text-[rgb(var(--muted))]">
+              {tick}
+            </span>
+            <span className="h-px w-full bg-[rgb(var(--line)/0.7)]" />
+          </div>
         ))}
-      </svg>
+
+        {/* columns */}
+        <div className="absolute inset-y-0 left-9 right-0 flex items-end gap-[2px]">
+          {ordered.map((sector) => {
+            const widthPct = (sector.workforceSharePct / total) * 100;
+            return (
+              <div
+                className="group relative h-full"
+                key={sector.sector}
+                style={{ width: `${widthPct}%` }}
+                title={`${sector.sector}: ${sector.automationExposurePct}% exposure · ${sector.workforceSharePct}% of workforce`}
+              >
+                <div className="absolute inset-x-0 bottom-0 rounded-[3px] bg-[rgb(255_255_255/0.025)]" style={{ top: 0 }} />
+                <div
+                  className="absolute inset-x-0 bottom-0 rounded-t-[3px] transition-[height]"
+                  style={{ height: `${sector.automationExposurePct}%`, background: shade(sector.automationExposurePct) }}
+                >
+                  {widthPct > 6 ? (
+                    <span className="absolute -top-5 left-1/2 -translate-x-1/2 text-[0.66rem] font-semibold tabular text-[rgb(var(--foreground))]">
+                      {sector.automationExposurePct}%
+                    </span>
+                  ) : null}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
 
       <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs">
         {ordered.map((sector) => (
           <span className="inline-flex items-center gap-2 text-[rgb(var(--muted))]" key={sector.sector}>
-            <span
-              className="h-2.5 w-2.5 rounded-[3px]"
-              style={{ background: shade(sector.automationExposurePct) }}
-            />
+            <span className="h-2.5 w-2.5 rounded-[3px]" style={{ background: shade(sector.automationExposurePct) }} />
             <span className="text-[rgb(var(--foreground))]">{sector.sector}</span>
-            {sector.workforceSharePct}% · {sector.automationExposurePct}% exp
+            <span className="tabular">
+              {sector.workforceSharePct}% · {sector.automationExposurePct}% exp
+            </span>
           </span>
         ))}
       </div>

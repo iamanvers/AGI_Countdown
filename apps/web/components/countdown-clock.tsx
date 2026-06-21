@@ -90,15 +90,15 @@ function TimeBlock({
   return (
     <div
       className={[
-        "overflow-hidden rounded-lg border border-[rgb(var(--line)/0.68)] bg-[rgb(var(--panel)/0.66)] p-4 shadow-glow backdrop-blur",
+        "overflow-hidden rounded-xl border border-[rgb(var(--line)/0.55)] bg-[rgb(var(--panel)/0.4)] px-3 py-5 backdrop-blur-sm",
         wideOnMobile ? "col-span-2 sm:col-span-1" : ""
       ].join(" ")}
     >
-      <div className="relative h-24 sm:h-32 xl:h-36">
+      <div className="relative h-20 sm:h-28 xl:h-32">
         <AnimatePresence initial={false} mode="popLayout">
           <motion.span
             animate={{ opacity: 1, y: 0 }}
-            className="absolute inset-0 flex items-center justify-center font-mono text-6xl font-semibold leading-none tabular sm:text-7xl md:text-8xl xl:text-[8rem]"
+            className="absolute inset-0 flex items-center justify-center font-mono text-5xl font-semibold leading-none tracking-tight tabular sm:text-7xl xl:text-8xl"
             exit={reduceMotion ? { opacity: 0 } : { opacity: 0, y: "-34%" }}
             initial={reduceMotion ? { opacity: 0 } : { opacity: 0, y: "34%" }}
             key={value}
@@ -108,7 +108,7 @@ function TimeBlock({
           </motion.span>
         </AnimatePresence>
       </div>
-      <p className="mt-2 text-center text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(var(--muted))]">
+      <p className="mt-1 text-center text-[0.62rem] font-medium uppercase tracking-[0.2em] text-[rgb(var(--muted))]">
         {label}
       </p>
     </div>

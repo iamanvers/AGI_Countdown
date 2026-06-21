@@ -10,18 +10,14 @@ const config: Config = {
     extend: {
       fontFamily: {
         mono: [
+          "var(--font-mono)",
           "ui-monospace",
           "SFMono-Regular",
           "Menlo",
-          "Monaco",
-          "Consolas",
-          "Liberation Mono",
-          "Courier New",
           "monospace"
         ],
         sans: [
-          "Inter",
-          "Geist",
+          "var(--font-sans)",
           "ui-sans-serif",
           "system-ui",
           "Segoe UI",

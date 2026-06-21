@@ -120,8 +120,8 @@ export default async function MethodologyPage() {
                       <span
                         className={`rounded-full px-2.5 py-1 text-xs font-semibold ${
                           meta?.role === "decelerator"
-                            ? "bg-red-500/15 text-red-300"
-                            : "bg-emerald-500/15 text-emerald-300"
+                            ? "bg-[rgb(var(--later)/0.16)] text-[rgb(var(--later))]"
+                            : "bg-[rgb(var(--positive)/0.16)] text-[rgb(var(--positive))]"
                         }`}
                       >
                         {meta?.role ?? "signal"}

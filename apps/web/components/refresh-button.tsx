@@ -7,10 +7,10 @@ type Phase = "idle" | "loading" | "queued" | "cooldown" | "not-configured" | "er
 const tone: Record<Phase, string> = {
   idle: "text-[rgb(var(--muted))]",
   loading: "text-[rgb(var(--muted))]",
-  queued: "text-emerald-300",
-  cooldown: "text-amber-200",
+  queued: "text-[rgb(var(--positive))]",
+  cooldown: "text-[rgb(var(--warn))]",
   "not-configured": "text-[rgb(var(--muted))]",
-  error: "text-red-300"
+  error: "text-[rgb(var(--later))]"
 };
 
 export function RefreshButton() {
