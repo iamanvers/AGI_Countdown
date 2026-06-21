@@ -166,6 +166,16 @@ async function fetchGdelt(now: Date, limit: number): Promise<NewsItem[]> {
   });
 }
 
+// Keep only genuinely AI-relevant stories. Broad queries pull some noise
+// (generic "AI" mentions, unrelated tools); require an org tag or a clear
+// AI/ML term in the title.
+const AI_RELEVANCE_RE =
+  /\b(a\.?i\.?|artificial intelligence|agi|asi|llm|llms|gpt|chatgpt|claude|gemini|llama|grok|deepseek|qwen|mistral|openai|anthropic|deepmind|nvidia|machine learning|deep learning|neural|transformer|inference|model|models|agent|agentic|chatbot|reasoning|fine-tun|diffusion|robot|autonom|superintelligence|frontier model)\b/i;
+
+function isRelevant(item: NewsItem): boolean {
+  return item.orgs.length > 0 || AI_RELEVANCE_RE.test(item.title);
+}
+
 export async function fetchLiveNews(now: Date, limit = 30): Promise<NewsItem[]> {
   const sources: Array<() => Promise<NewsItem[]>> = [
     () => fetchHackerNews(limit),
@@ -175,14 +185,14 @@ export async function fetchLiveNews(now: Date, limit = 30): Promise<NewsItem[]> 
   const collected: NewsItem[] = [];
   for (const source of sources) {
     try {
-      const items = await source();
-      collected.push(...items);
-      if (collected.length >= limit) break;
+      collected.push(...(await source()));
+      if (collected.filter(isRelevant).length >= limit) break;
     } catch {
       /* try the next source */
     }
   }
 
-  collected.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
-  return dedupeAndTake(collected, limit);
+  const relevant = collected.filter(isRelevant);
+  relevant.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+  return dedupeAndTake(relevant, limit);
 }

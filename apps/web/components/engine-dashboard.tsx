@@ -19,7 +19,7 @@ import {
   definitions,
   fetchEngineState
 } from "@/lib/engine-state";
-import { formatDate, formatDateTime, formatMonths } from "@/lib/format";
+import { cadenceFromRunId, formatDate, formatDateTime, formatMonths, formatRelativeTime } from "@/lib/format";
 
 type LoadState = "loading" | "ready" | "refreshing" | "error";
 
@@ -103,7 +103,7 @@ export function EngineDashboard() {
               <SnapshotFooter loadState={loadState} state={state} />
 
               <section className="mt-8 grid gap-4 lg:grid-cols-3">
-                <ProgressMeter value={state.progress} />
+                <ProgressMeter value={state.progress} definitionLabel={definitionLabel} />
                 <ConfidenceBand state={state} />
                 <EstimateSummary state={state} />
               </section>
@@ -131,28 +131,53 @@ export function EngineDashboard() {
 }
 
 function EstimateSummary({ state }: { state: EngineState }) {
-  const direction = state.deltaMonths < 0 ? "sooner" : state.deltaMonths > 0 ? "later" : "unchanged";
+  const sooner = state.deltaMonths < 0;
+  const direction = state.deltaMonths === 0 ? "no change" : sooner ? "sooner" : "later";
   return (
     <section className="grid content-start gap-3 rounded-lg border border-[rgb(var(--line)/0.7)] bg-[rgb(var(--panel)/0.66)] p-5 backdrop-blur">
-      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[rgb(var(--muted))]">
-        How the date was built
-      </p>
-      <Row label="Forecast anchor" value={formatDate(state.anchor)} />
+      <div>
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[rgb(var(--muted))]">
+          How the date is built
+        </p>
+        <p className="mt-1 text-xs leading-5 text-[rgb(var(--muted))]">
+          Start from the forecast consensus, then move it by live signals.
+        </p>
+      </div>
+      <Row label="1 · Forecast anchor" value={formatDate(state.anchor)} />
       <Row
-        label="Live factor shift"
+        label="2 · Live signal shift"
         value={`${formatMonths(state.deltaMonths)} ${direction}`}
+        tone={sooner ? "accent" : "later"}
       />
-      <Row label="Estimated arrival" value={formatDate(state.tAgi)} emphasize />
+      <Row label="3 · Estimated arrival" value={formatDate(state.tAgi)} emphasize />
     </section>
   );
 }
 
-function Row({ label, value, emphasize }: { label: string; value: string; emphasize?: boolean }) {
+function Row({
+  label,
+  value,
+  emphasize,
+  tone
+}: {
+  label: string;
+  value: string;
+  emphasize?: boolean;
+  tone?: "accent" | "later";
+}) {
+  const color = emphasize
+    ? "rgb(var(--accent-rgb))"
+    : tone === "later"
+      ? "rgb(var(--later))"
+      : tone === "accent"
+        ? "rgb(var(--accent-rgb))"
+        : undefined;
   return (
     <div className="flex items-baseline justify-between gap-4 border-t border-[rgb(var(--line)/0.4)] pt-3 first-of-type:border-t-0 first-of-type:pt-0">
       <span className="text-sm text-[rgb(var(--muted))]">{label}</span>
       <span
-        className={`tabular text-right ${emphasize ? "text-lg font-semibold text-[rgb(var(--accent-rgb))]" : "font-medium"}`}
+        className={`tabular text-right ${emphasize ? "text-lg font-semibold" : "font-medium"}`}
+        style={color ? { color } : undefined}
       >
         {value}
       </span>
@@ -164,12 +189,16 @@ function SnapshotFooter({ loadState, state }: { loadState: LoadState; state: Eng
   return (
     <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[rgb(var(--line)/0.5)] py-4 text-sm text-[rgb(var(--muted))]">
       <div className="flex flex-wrap items-center gap-3">
-        <span>
-          Snapshot <span className="font-mono text-xs text-[rgb(var(--foreground))]">{state.runId}</span>
+        <span title={formatDateTime(state.ts)}>
+          Updated{" "}
+          <span className="font-medium text-[rgb(var(--foreground))]">
+            {formatRelativeTime(state.ts)}
+          </span>
+          <span className="text-[rgb(var(--muted))]"> · {cadenceFromRunId(state.runId)} refresh</span>
         </span>
         {state.stale ? (
-          <span className="rounded-full border border-amber-400/35 bg-amber-400/12 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-amber-200">
-            Stale
+          <span className="rounded-full border border-[rgb(var(--warn)/0.4)] bg-[rgb(var(--warn)/0.12)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-[rgb(var(--warn))]">
+            Catching up
           </span>
         ) : null}
         {loadState === "refreshing" ? (
@@ -178,10 +207,7 @@ function SnapshotFooter({ loadState, state }: { loadState: LoadState; state: Eng
           </span>
         ) : null}
       </div>
-      <div className="flex flex-wrap items-center gap-4">
-        <RefreshButton />
-        <span className="tabular">Computed {formatDateTime(state.ts)}</span>
-      </div>
+      <RefreshButton />
     </div>
   );
 }

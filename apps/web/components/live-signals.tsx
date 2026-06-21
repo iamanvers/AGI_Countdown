@@ -93,8 +93,10 @@ export function LiveSignals() {
             </a>
           ))}
           <p className="mt-1 text-xs leading-5 text-[rgb(var(--muted))]">
-            Current normalized readings (0–100) feeding the clock. Green accelerates the date; red
-            slows it. Tap any signal for its source.
+            Current readings (0–100) feeding the clock — higher is stronger.{" "}
+            <span style={{ color: "rgb(var(--accent-rgb))" }}>Accent</span> bars pull the date sooner;{" "}
+            <span style={{ color: "rgb(var(--later))" }}>amber</span> bars push it later. Tap any
+            signal for its source.
           </p>
         </div>
       )}

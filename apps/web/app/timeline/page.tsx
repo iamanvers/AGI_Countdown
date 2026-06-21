@@ -48,7 +48,7 @@ export default async function TimelinePage() {
             The live feed populates on the next scheduled refresh.
           </p>
         ) : (
-          <div className="grid gap-2 md:grid-cols-2">
+          <div className="grid max-h-[30rem] gap-2 overflow-y-auto rounded-lg border border-[rgb(var(--line)/0.4)] bg-[rgb(var(--background)/0.2)] p-2 md:grid-cols-2">
             {latest.map((item) => (
               <a
                 className="focus-ring group grid gap-2 rounded-lg border border-[rgb(var(--line)/0.6)] bg-[rgb(var(--panel)/0.5)] p-4 transition-colors hover:border-[rgb(var(--accent-rgb)/0.5)]"

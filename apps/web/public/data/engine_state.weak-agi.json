@@ -1,15 +1,15 @@
 {
-  "runId": "refresh-all-20260621T185842789Z-weak-agi",
-  "ts": "2026-06-21T18:58:42.789Z",
+  "runId": "refresh-all-20260621T190512858Z-weak-agi",
+  "ts": "2026-06-21T19:05:12.858Z",
   "definition": "weak-agi",
-  "tAgi": "2027-05-21T01:20:33.856Z",
+  "tAgi": "2027-05-18T05:49:44.841Z",
   "progress": 67.8433,
   "band": {
-    "earlyP10": "2025-05-05T18:22:51.144Z",
-    "lateP90": "2038-12-05T18:22:51.144Z"
+    "earlyP10": "2025-05-02T22:52:02.129Z",
+    "lateP90": "2038-12-02T22:52:02.129Z"
   },
   "anchor": "2028-06-15T06:57:42.712Z",
-  "deltaMonths": -12.853952,
+  "deltaMonths": -12.946375,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -60,8 +60,14 @@
       "citation": "https://artificialintelligenceact.eu/"
     },
     {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": -0.325951,
+      "rationale": "Public backlash pressure read 0.40 (a decelerator signal).",
+      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
+    },
+    {
       "factorId": "research-velocity",
-      "contributionMonths": -0.318035,
+      "contributionMonths": -0.317851,
       "rationale": "Research velocity read 0.56 (a accelerator signal).",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
@@ -70,12 +76,6 @@
       "contributionMonths": -0.250133,
       "rationale": "Energy headroom read 0.45 (a decelerator signal).",
       "citation": "https://www.iea.org/reports/electricity-2025"
-    },
-    {
-      "factorId": "public-backlash-pressure",
-      "contributionMonths": -0.233344,
-      "rationale": "Public backlash pressure read 0.43 (a decelerator signal).",
-      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
       "factorId": "safety-eval-pressure",
