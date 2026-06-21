@@ -1,23 +1,174 @@
 [
   {
+    "sourceId": "metaculus-agi-questions",
+    "name": "Metaculus AGI questions",
+    "url": "https://www.metaculus.com/api2/questions/",
+    "lastFetchedAt": "2026-06-21T18:07:37.010Z",
+    "status": "ok",
+    "errorRate": 0,
+    "domain": "forecasts",
+    "cadence": "daily"
+  },
+  {
     "sourceId": "manifold-ai-markets",
     "name": "Manifold AI markets",
     "url": "https://api.manifold.markets/v0/markets",
-    "lastFetchedAt": "2026-06-21T16:46:21.454Z",
+    "lastFetchedAt": "2026-06-21T18:07:37.010Z",
     "status": "ok",
     "errorRate": 0,
     "domain": "forecasts",
     "cadence": "hourly"
   },
   {
+    "sourceId": "epoch-ai-notable-models",
+    "name": "Epoch AI notable models",
+    "url": "https://epoch.ai/data/notable-ai-models",
+    "lastFetchedAt": "2026-06-21T18:07:37.010Z",
+    "status": "ok",
+    "errorRate": 0,
+    "domain": "compute",
+    "cadence": "weekly"
+  },
+  {
+    "sourceId": "papers-with-code-leaderboards",
+    "name": "Papers With Code leaderboards",
+    "url": "https://paperswithcode.com/sota",
+    "lastFetchedAt": "2026-06-21T18:07:37.010Z",
+    "status": "ok",
+    "errorRate": 0,
+    "domain": "benchmarks",
+    "cadence": "daily",
+    "notes": "Prefer official datasets or documented endpoints when available."
+  },
+  {
+    "sourceId": "lmarena-leaderboard",
+    "name": "LMArena leaderboard",
+    "url": "https://lmarena.ai/",
+    "lastFetchedAt": "2026-06-21T18:07:37.010Z",
+    "status": "ok",
+    "errorRate": 0,
+    "domain": "benchmarks",
+    "cadence": "daily"
+  },
+  {
+    "sourceId": "arxiv-ai-paper-volume",
+    "name": "arXiv AI paper volume",
+    "url": "https://export.arxiv.org/api/query",
+    "lastFetchedAt": "2026-06-21T18:07:37.010Z",
+    "status": "ok",
+    "errorRate": 0,
+    "domain": "research",
+    "cadence": "daily"
+  },
+  {
+    "sourceId": "openrouter-usage",
+    "name": "OpenRouter model usage",
+    "url": "https://openrouter.ai/",
+    "lastFetchedAt": "2026-06-21T18:07:37.010Z",
+    "status": "ok",
+    "errorRate": 0,
+    "domain": "adoption",
+    "cadence": "daily"
+  },
+  {
+    "sourceId": "hugging-face-hub",
+    "name": "Hugging Face Hub",
+    "url": "https://huggingface.co/api/models",
+    "lastFetchedAt": "2026-06-21T18:07:37.010Z",
+    "status": "ok",
+    "errorRate": 0,
+    "domain": "adoption",
+    "cadence": "daily"
+  },
+  {
+    "sourceId": "hyperscaler-ir",
+    "name": "Hyperscaler investor relations",
+    "url": "curated://hyperscaler-ir",
+    "lastFetchedAt": "2026-06-21T18:07:37.010Z",
+    "status": "ok",
+    "errorRate": 0,
+    "domain": "economics",
+    "cadence": "monthly"
+  },
+  {
+    "sourceId": "nvidia-earnings",
+    "name": "NVIDIA earnings",
+    "url": "curated://nvidia-earnings",
+    "lastFetchedAt": "2026-06-21T18:07:37.010Z",
+    "status": "ok",
+    "errorRate": 0,
+    "domain": "economics",
+    "cadence": "monthly"
+  },
+  {
+    "sourceId": "eia-electricity",
+    "name": "EIA electricity data",
+    "url": "https://api.eia.gov/v2/",
+    "lastFetchedAt": "2026-06-21T18:07:37.010Z",
+    "status": "ok",
+    "errorRate": 0,
+    "domain": "energy",
+    "cadence": "weekly"
+  },
+  {
+    "sourceId": "ember-electricity",
+    "name": "Ember electricity data",
+    "url": "https://ember-climate.org/data/",
+    "lastFetchedAt": "2026-06-21T18:07:37.010Z",
+    "status": "ok",
+    "errorRate": 0,
+    "domain": "energy",
+    "cadence": "weekly"
+  },
+  {
+    "sourceId": "oecd-ai-policy",
+    "name": "OECD.AI Policy Observatory",
+    "url": "https://oecd.ai/en/data",
+    "lastFetchedAt": "2026-06-21T18:07:37.010Z",
+    "status": "ok",
+    "errorRate": 0,
+    "domain": "policy",
+    "cadence": "weekly"
+  },
+  {
+    "sourceId": "nist-ai-risk",
+    "name": "NIST AI risk management guidance",
+    "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+    "lastFetchedAt": "2026-06-21T18:07:37.010Z",
+    "status": "ok",
+    "errorRate": 0,
+    "domain": "policy",
+    "cadence": "monthly"
+  },
+  {
     "sourceId": "gdelt-ai-tone",
     "name": "GDELT AI news tone",
     "url": "https://api.gdeltproject.org/api/v2/doc/doc",
-    "lastFetchedAt": "2026-06-21T16:46:21.454Z",
+    "lastFetchedAt": "2026-06-21T18:07:37.010Z",
     "status": "ok",
     "errorRate": 0,
     "domain": "sentiment",
     "cadence": "hourly",
     "notes": "GDELT live fetch failed: GDELT responded 429 Live fetch empty; used curated fallback."
+  },
+  {
+    "sourceId": "onet-occupation-data",
+    "name": "O*NET occupation data",
+    "url": "https://www.onetcenter.org/database.html",
+    "lastFetchedAt": "2026-06-21T18:07:37.010Z",
+    "status": "ok",
+    "errorRate": 0,
+    "domain": "jobs",
+    "cadence": "monthly"
+  },
+  {
+    "sourceId": "anthropic-economic-index",
+    "name": "Anthropic Economic Index",
+    "url": "https://www.anthropic.com/economic-index",
+    "lastFetchedAt": "2026-06-21T18:07:37.010Z",
+    "status": "ok",
+    "errorRate": 0,
+    "domain": "jobs",
+    "cadence": "monthly"
   }
 ]

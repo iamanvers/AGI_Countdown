@@ -87,6 +87,20 @@ export async function readFactors() {
   return readJson<FactorSnapshot[]>("factors.json");
 }
 
+export type EstimatePoint = {
+  ts: string;
+  definition: "weak-agi" | "transformative-ai" | "strong-agi";
+  tAgi: string;
+  progress: number;
+  runId?: string;
+  deltaMonths?: number;
+  band?: { earlyP10: string; lateP90: string };
+};
+
+export async function readEstimateHistory() {
+  return readJson<EstimatePoint[]>("estimate_history.json");
+}
+
 export async function readJobs() {
   return readJson<JobsImpact>("jobs.json");
 }

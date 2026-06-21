@@ -1,5 +1,6 @@
+import { EstimateHistoryChart } from "@/components/estimate-history-chart";
 import { PageFrame } from "@/components/page-frame";
-import { type FactorSnapshot, readFactors, readStatus } from "@/lib/static-data";
+import { type FactorSnapshot, readEstimateHistory, readFactors, readStatus } from "@/lib/static-data";
 
 export const metadata = {
   title: "Methodology — AGI Countdown",
@@ -52,7 +53,11 @@ function aggregate(factors: FactorSnapshot[]): AggregatedFactor[] {
 }
 
 export default async function MethodologyPage() {
-  const [factors, status] = await Promise.all([readFactors(), readStatus()]);
+  const [factors, status, history] = await Promise.all([
+    readFactors(),
+    readStatus(),
+    readEstimateHistory()
+  ]);
   const aggregated = aggregate(factors);
 
   return (
@@ -74,6 +79,14 @@ export default async function MethodologyPage() {
           factor below is normalized, signed (accelerator / decelerator), weighted, smoothed, and
           summed — then <em>clamped</em> so the live model can shape the date but never fabricate it.
         </p>
+      </section>
+
+      <section className="grid gap-3">
+        <h2 className="text-2xl font-semibold">How the estimate has moved</h2>
+        <p className="text-sm leading-7 text-[rgb(var(--muted))]">
+          The projected arrival year for each definition, across successive pipeline runs.
+        </p>
+        <EstimateHistoryChart history={history} />
       </section>
 
       <section className="grid gap-3">

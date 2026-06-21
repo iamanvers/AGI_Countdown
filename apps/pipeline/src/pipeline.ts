@@ -57,7 +57,18 @@ export async function runRefresh(options: RefreshOptions): Promise<RefreshResult
   );
   const sourceStatuses = sourceResults.map((result) => result.status);
   const rawSamples = sourceResults.flatMap((result) => result.samples).sort(compareSamples);
-  const samples = validateSamples(rawSamples);
+  const freshSamples = validateSamples(rawSamples);
+  const freshQuarantined = freshSamples.filter((sample) => sample.quarantined).length;
+
+  // Carry forward the last-known value of every factor that wasn't refreshed
+  // this run, so a partial-cadence run (e.g. hourly) never wipes the date or
+  // the progress meter. Slower factors keep their most recent observation.
+  const carriedFactors = await readJsonFile<PublicFactorSnapshot[]>(
+    options.outDir,
+    "factors.json",
+    [],
+  );
+  const samples = mergeWithCarriedFactors(freshSamples, carriedFactors);
 
   const aggregates = aggregateByFactor(samples);
   const marketOptimism = aggregates.get(FORECAST_FACTOR_ID)?.normalized;
@@ -67,14 +78,21 @@ export async function runRefresh(options: RefreshOptions): Promise<RefreshResult
     ),
   );
 
+  const carriedSources = await readJsonFile<PublicSourceStatus[]>(
+    options.outDir,
+    "sources.json",
+    [],
+  );
+
   const outputFiles = await writeStaticDataArtifacts(options.outDir, {
     generatedAt,
     runId,
     requestedCadence: options.cadence,
-    selectedSources,
     sourceStatuses,
+    carriedSources,
     samples,
     engineStates,
+    freshQuarantined,
   });
 
   const manifest: RefreshManifest = {
@@ -348,10 +366,11 @@ async function writeStaticDataArtifacts(
     generatedAt: string;
     runId: string;
     requestedCadence: RefreshScope;
-    selectedSources: readonly SourceDef[];
     sourceStatuses: SourceRunStatus[];
+    carriedSources: readonly PublicSourceStatus[];
     samples: FactorSample[];
     engineStates: EngineState[];
+    freshQuarantined: number;
   },
 ): Promise<string[]> {
   const previousHistory = await readJsonFile<EstimatePoint[]>(outDir, "estimate_history.json", []);
@@ -369,8 +388,11 @@ async function writeStaticDataArtifacts(
   ].slice(-HISTORY_LIMIT);
 
   const publicFactors = createPublicFactorSnapshots(artifacts.samples);
-  const publicSources = createPublicSourceStatuses(artifacts.selectedSources, artifacts.sourceStatuses);
-  const runStatus = createPublicRunStatus(artifacts, publicSources, publicFactors);
+  const publicSources = createPublicSourceStatuses(
+    artifacts.sourceStatuses,
+    artifacts.carriedSources,
+  );
+  const runStatus = createPublicRunStatus(artifacts);
   const timeline = curatedTimeline.map((event) => ({
     ...event,
     id: slugify(event.title),
@@ -411,42 +433,61 @@ function createPublicFactorSnapshots(samples: readonly FactorSample[]): PublicFa
   });
 }
 
+/**
+ * Build the public health record for every source in the registry. Sources that
+ * ran this tick get fresh status; the rest carry their last-known status so the
+ * Sources page stays complete after a partial-cadence run.
+ */
 function createPublicSourceStatuses(
-  selectedSources: readonly SourceDef[],
   sourceStatuses: readonly SourceRunStatus[],
+  carriedSources: readonly PublicSourceStatus[],
 ): PublicSourceStatus[] {
-  const byId = new Map(sourceStatuses.map((status) => [status.sourceId, status]));
-  return selectedSources.map((source) => {
-    const status = byId.get(source.id);
-    const publicStatus =
-      status?.status === "ok" ? "ok" : status?.status === "failed" ? "failed" : "stale";
+  const ranById = new Map(sourceStatuses.map((status) => [status.sourceId, status]));
+  const carriedById = new Map(carriedSources.map((source) => [source.sourceId, source]));
+
+  return (sourceRegistry as readonly SourceDef[]).map((source) => {
+    const status = ranById.get(source.id);
+    if (status !== undefined) {
+      const publicStatus =
+        status.status === "ok" ? "ok" : status.status === "failed" ? "failed" : "stale";
+      return {
+        sourceId: source.id,
+        name: source.name,
+        url: source.url,
+        lastFetchedAt: status.fetchedAt,
+        status: publicStatus,
+        errorRate: status.status === "failed" ? 1 : 0,
+        domain: source.domain,
+        cadence: source.cadence,
+        notes: status.warnings.join(" ") || source.tosNotes,
+      };
+    }
+
+    const carried = carriedById.get(source.id);
     return {
       sourceId: source.id,
       name: source.name,
       url: source.url,
-      lastFetchedAt: status?.fetchedAt ?? new Date(0).toISOString(),
-      status: publicStatus,
-      errorRate: status?.status === "failed" ? 1 : 0,
+      lastFetchedAt: carried?.lastFetchedAt ?? new Date(0).toISOString(),
+      status: carried?.status ?? "stale",
+      errorRate: carried?.errorRate ?? 0,
       domain: source.domain,
       cadence: source.cadence,
-      notes: status?.warnings.join(" ") || source.tosNotes,
+      notes: carried?.notes ?? source.tosNotes,
     };
   });
 }
 
-function createPublicRunStatus(
-  artifacts: {
-    runId: string;
-    generatedAt: string;
-    requestedCadence: RefreshScope;
-    selectedSources: readonly SourceDef[];
-    engineStates: EngineState[];
-  },
-  publicSources: readonly PublicSourceStatus[],
-  publicFactors: readonly PublicFactorSnapshot[],
-): PublicRunStatus {
-  const sourcesFailed = publicSources.filter((source) => source.status === "failed").length;
-  const quarantinedSamples = publicFactors.filter((factor) => factor.quarantined).length;
+function createPublicRunStatus(artifacts: {
+  runId: string;
+  generatedAt: string;
+  requestedCadence: RefreshScope;
+  sourceStatuses: readonly SourceRunStatus[];
+  freshQuarantined: number;
+  engineStates: EngineState[];
+}): PublicRunStatus {
+  const sourcesOk = artifacts.sourceStatuses.filter((source) => source.status === "ok").length;
+  const sourcesFailed = artifacts.sourceStatuses.filter((source) => source.status === "failed").length;
   return {
     runId: artifacts.runId,
     startedAt: artifacts.generatedAt,
@@ -455,14 +496,50 @@ function createPublicRunStatus(
       artifacts.requestedCadence === "monthly" || artifacts.requestedCadence === "all"
         ? "weekly"
         : artifacts.requestedCadence,
-    domainsRun: Array.from(new Set(artifacts.selectedSources.map((source) => source.domain))).sort(),
-    sourcesOk: publicSources.filter((source) => source.status === "ok").length,
+    domainsRun: Array.from(
+      new Set(
+        artifacts.sourceStatuses
+          .map((status) => sourceRegistry.find((source) => source.id === status.sourceId)?.domain)
+          .filter((domain): domain is NonNullable<typeof domain> => domain !== undefined),
+      ),
+    ).sort(),
+    sourcesOk,
     sourcesFailed,
-    quarantinedSamples,
+    quarantinedSamples: artifacts.freshQuarantined,
     deltaMonths: averageDefined(artifacts.engineStates.map((state) => state.deltaMonths)),
     bandWidthDays: averageDefined(artifacts.engineStates.map((state) => bandWidthDays(state))),
-    status: sourcesFailed > 0 || quarantinedSamples > 0 ? "degraded" : "ok",
+    status: sourcesFailed > 0 || artifacts.freshQuarantined > 0 ? "degraded" : "ok",
   };
+}
+
+/**
+ * Merge this run's fresh samples with the last-published factor snapshots,
+ * keeping the freshest value per (factor, source). Carried-over samples retain
+ * their original observation time so the UI can show how stale each value is.
+ */
+function mergeWithCarriedFactors(
+  fresh: FactorSample[],
+  carried: readonly PublicFactorSnapshot[],
+): FactorSample[] {
+  const freshKeys = new Set(fresh.map((sample) => `${sample.factorId}:${sample.sourceId}`));
+  const carriedSamples = carried
+    .filter((snapshot) => !freshKeys.has(`${snapshot.factorId}:${snapshot.sourceId}`))
+    .map(
+      (snapshot): FactorSample => ({
+        factorId: snapshot.factorId,
+        sourceId: snapshot.sourceId,
+        observedAt: snapshot.ts,
+        collectedAt: snapshot.ts,
+        raw: snapshot.raw,
+        unit: snapshot.unit ?? "",
+        normalized: snapshot.normalized,
+        confidence: snapshot.confidence,
+        citation: snapshot.citation,
+        quarantined: snapshot.quarantined,
+        notes: snapshot.notes,
+      }),
+    );
+  return [...fresh, ...carriedSamples].sort(compareSamples);
 }
 
 function readSampleNormalized(sample: FactorSample): number {
