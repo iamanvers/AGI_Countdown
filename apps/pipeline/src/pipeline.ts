@@ -30,6 +30,8 @@ import type { RefreshManifest, RefreshScope, SourceRunStatus } from "./types.js"
 const allCadences: readonly RefreshCadence[] = ["hourly", "daily", "weekly", "monthly"];
 const HISTORY_LIMIT = 4000;
 const FORECAST_FACTOR_ID = "forecast-consensus-anchor";
+// EWMA weight on the newest reading; lower = smoother / more robust to jitter.
+const SMOOTHING_ALPHA = 0.5;
 
 export type RefreshOptions = {
   cadence: RefreshScope;
@@ -70,7 +72,12 @@ export async function runRefresh(options: RefreshOptions): Promise<RefreshResult
   );
   const samples = mergeWithCarriedFactors(freshSamples, carriedFactors);
 
-  const aggregates = aggregateByFactor(samples);
+  // EWMA-smooth each factor against its previously published value so the date
+  // moves smoothly instead of jumping with every noisy live reading.
+  const aggregates = smoothAggregates(
+    aggregateByFactor(samples),
+    aggregateByFactor(carriedFactors.map(snapshotToSample)),
+  );
   const marketOptimism = aggregates.get(FORECAST_FACTOR_ID)?.normalized;
   const engineStates = agiDefinitions.map((definition) =>
     computeEngineState(
@@ -524,22 +531,45 @@ function mergeWithCarriedFactors(
   const freshKeys = new Set(fresh.map((sample) => `${sample.factorId}:${sample.sourceId}`));
   const carriedSamples = carried
     .filter((snapshot) => !freshKeys.has(`${snapshot.factorId}:${snapshot.sourceId}`))
-    .map(
-      (snapshot): FactorSample => ({
-        factorId: snapshot.factorId,
-        sourceId: snapshot.sourceId,
-        observedAt: snapshot.ts,
-        collectedAt: snapshot.ts,
-        raw: snapshot.raw,
-        unit: snapshot.unit ?? "",
-        normalized: snapshot.normalized,
-        confidence: snapshot.confidence,
-        citation: snapshot.citation,
-        quarantined: snapshot.quarantined,
-        notes: snapshot.notes,
-      }),
-    );
+    .map(snapshotToSample);
   return [...fresh, ...carriedSamples].sort(compareSamples);
+}
+
+function snapshotToSample(snapshot: PublicFactorSnapshot): FactorSample {
+  return {
+    factorId: snapshot.factorId,
+    sourceId: snapshot.sourceId,
+    observedAt: snapshot.ts,
+    collectedAt: snapshot.ts,
+    raw: snapshot.raw,
+    unit: snapshot.unit ?? "",
+    normalized: snapshot.normalized,
+    confidence: snapshot.confidence,
+    citation: snapshot.citation,
+    quarantined: snapshot.quarantined,
+    notes: snapshot.notes,
+  };
+}
+
+/**
+ * EWMA-smooth each current factor aggregate toward its previously published
+ * value. Robustness measure: a single noisy live reading can only move a factor
+ * part-way, so the projected date glides instead of jumping.
+ */
+function smoothAggregates(
+  current: Map<string, FactorAggregate>,
+  previous: Map<string, FactorAggregate>,
+): Map<string, FactorAggregate> {
+  const smoothed = new Map<string, FactorAggregate>();
+  for (const [factorId, aggregate] of current) {
+    const prior = previous.get(factorId);
+    const normalized =
+      prior === undefined
+        ? aggregate.normalized
+        : SMOOTHING_ALPHA * aggregate.normalized + (1 - SMOOTHING_ALPHA) * prior.normalized;
+    smoothed.set(factorId, { ...aggregate, normalized });
+  }
+  return smoothed;
 }
 
 function readSampleNormalized(sample: FactorSample): number {

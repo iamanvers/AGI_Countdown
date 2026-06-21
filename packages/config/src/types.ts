@@ -38,7 +38,10 @@ export type FactorDomain =
   | "energy"
   | "policy"
   | "sentiment"
-  | "jobs";
+  | "jobs"
+  | "hardware"
+  | "autonomy"
+  | "safety";
 
 export type NormalizationKind = "zscore" | "momentum-01" | "log-zscore";
 

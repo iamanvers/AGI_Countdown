@@ -326,6 +326,169 @@ export const curatedFactorSeedsBySource: Record<string, CuratedFactorSeed[]> = {
       notes: "Fallback estimate; replaced by live GDELT tone when available.",
     },
   ],
+  "stanford-ai-index": [
+    {
+      factorId: "frontier-benchmark-saturation",
+      raw: 0.76,
+      unit: "saturation-0-1",
+      normalized: 0.76,
+      confidence: 0.82,
+      citation: "https://aiindex.stanford.edu/report/",
+      notes: "AI Index: rapid benchmark gains, many human baselines surpassed.",
+    },
+    {
+      factorId: "algorithmic-efficiency",
+      raw: 0.7,
+      unit: "efficiency-momentum-0-1",
+      normalized: 0.7,
+      confidence: 0.74,
+      citation: "https://aiindex.stanford.edu/report/",
+      notes: "Inference cost for GPT-3.5-level capability fell sharply (AI Index).",
+    },
+  ],
+  "arc-prize": [
+    {
+      factorId: "frontier-benchmark-saturation",
+      raw: 0.55,
+      unit: "arc-agi-momentum-0-1",
+      normalized: 0.55,
+      confidence: 0.78,
+      citation: "https://arcprize.org/leaderboard",
+      notes: "ARC-AGI remains hard but reasoning models made large jumps.",
+    },
+  ],
+  "helm-crfm": [
+    {
+      factorId: "frontier-benchmark-saturation",
+      raw: 0.72,
+      unit: "helm-momentum-0-1",
+      normalized: 0.72,
+      confidence: 0.76,
+      citation: "https://crfm.stanford.edu/helm/",
+      notes: "HELM holistic leaderboards continue to climb at the frontier.",
+    },
+  ],
+  "metr-autonomy": [
+    {
+      factorId: "autonomy-horizon",
+      raw: 0.6,
+      unit: "task-horizon-momentum-0-1",
+      normalized: 0.6,
+      confidence: 0.78,
+      citation: "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/",
+      notes: "METR: the task length models can do autonomously is roughly doubling every ~7 months.",
+    },
+  ],
+  "polymarket-ai": [
+    {
+      factorId: "forecast-consensus-anchor",
+      raw: 0.58,
+      unit: "market-optimism-0-1",
+      normalized: 0.58,
+      confidence: 0.66,
+      citation: "https://polymarket.com/markets/ai",
+      notes: "Curated read of AI-timeline prediction markets.",
+    },
+  ],
+  "semantic-scholar": [
+    {
+      factorId: "research-velocity",
+      raw: 0.64,
+      unit: "citation-momentum-0-1",
+      normalized: 0.64,
+      confidence: 0.7,
+      citation: "https://www.semanticscholar.org/",
+      notes: "AI citation graph growth remains steep.",
+    },
+  ],
+  "github-frontier": [
+    {
+      factorId: "research-velocity",
+      raw: 0.66,
+      unit: "repo-activity-momentum-0-1",
+      normalized: 0.66,
+      confidence: 0.66,
+      citation: "https://github.com/topics/llm",
+      notes: "Frontier-AI open-source activity and stars trending up.",
+    },
+  ],
+  "iea-energy": [
+    {
+      factorId: "energy-headroom",
+      raw: 0.47,
+      unit: "constraint-0-1",
+      normalized: 0.47,
+      confidence: 0.74,
+      citation: "https://www.iea.org/reports/electricity-2025",
+      notes: "IEA projects datacenter electricity demand roughly doubling by 2030.",
+    },
+  ],
+  "tsmc-capacity": [
+    {
+      factorId: "hardware-supply",
+      raw: 0.7,
+      unit: "capacity-momentum-0-1",
+      normalized: 0.7,
+      confidence: 0.78,
+      citation: "https://investor.tsmc.com/english",
+      notes: "TSMC expanding advanced-node and CoWoS packaging capacity for AI accelerators.",
+    },
+  ],
+  "bis-export-controls": [
+    {
+      factorId: "export-control-friction",
+      raw: 0.5,
+      unit: "friction-0-1",
+      normalized: 0.5,
+      confidence: 0.7,
+      citation: "https://www.bis.gov/",
+      notes: "Tightening US chip export controls add friction to global scaling.",
+    },
+  ],
+  "eu-ai-act": [
+    {
+      factorId: "policy-friction",
+      raw: 0.42,
+      unit: "friction-0-1",
+      normalized: 0.42,
+      confidence: 0.72,
+      citation: "https://artificialintelligenceact.eu/",
+      notes: "EU AI Act obligations phasing in through 2025-2027.",
+    },
+  ],
+  "fred-macro": [
+    {
+      factorId: "datacenter-capex",
+      raw: 0.6,
+      unit: "capital-conditions-0-1",
+      normalized: 0.6,
+      confidence: 0.64,
+      citation: "https://fred.stlouisfed.org/",
+      notes: "Financing conditions supportive of continued AI capex.",
+    },
+  ],
+  "pew-ai-sentiment": [
+    {
+      factorId: "public-backlash-pressure",
+      raw: 0.4,
+      unit: "concern-0-1",
+      normalized: 0.4,
+      confidence: 0.7,
+      citation: "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/",
+      notes: "Public is more concerned than excited about AI in recent polling.",
+    },
+  ],
+  "uk-aisi-evals": [
+    {
+      factorId: "safety-eval-pressure",
+      raw: 0.45,
+      unit: "gating-0-1",
+      normalized: 0.45,
+      confidence: 0.68,
+      citation: "https://www.aisi.gov.uk/",
+      notes: "Pre-deployment safety evaluations add modest release friction.",
+    },
+  ],
 };
 
 export type CuratedTimelineEvent = {
@@ -357,6 +520,16 @@ export const curatedTimeline: CuratedTimelineEvent[] = [
     citation: "https://arxiv.org/abs/2005.14165",
   },
   {
+    date: "2020-11-30",
+    title: "AlphaFold 2 solves protein structure prediction",
+    summary:
+      "DeepMind's system reaches near-experimental accuracy at CASP14 — a landmark for AI in science.",
+    significance: "major",
+    category: "research",
+    citation:
+      "https://deepmind.google/discover/blog/alphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology/",
+  },
+  {
     date: "2022-11-30",
     title: "ChatGPT launches",
     summary:
@@ -366,40 +539,122 @@ export const curatedTimeline: CuratedTimelineEvent[] = [
     citation: "https://openai.com/blog/chatgpt",
   },
   {
+    date: "2023-02-24",
+    title: "Meta releases LLaMA, igniting open-weight models",
+    summary:
+      "Capable open-weight models spread rapidly, seeding a fast-moving open ecosystem.",
+    significance: "major",
+    category: "model-release",
+    citation: "https://arxiv.org/abs/2302.13971",
+  },
+  {
     date: "2023-03-14",
     title: "GPT-4 released",
     summary:
       "A large multimodal model posts human-level results on many professional and academic benchmarks.",
-    significance: "major",
+    significance: "landmark",
     category: "model-release",
     citation: "https://openai.com/research/gpt-4",
   },
   {
-    date: "2024-05-13",
-    title: "Frontier models go natively multimodal and real-time",
+    date: "2023-11-02",
+    title: "First global AI Safety Summit (Bletchley)",
     summary:
-      "Real-time voice, vision, and text in a single model push assistants toward agentic, multimodal interaction.",
+      "28 nations sign the Bletchley Declaration on frontier-AI risk — governance enters the picture.",
+    significance: "major",
+    category: "policy",
+    citation: "https://en.wikipedia.org/wiki/AI_Safety_Summit",
+  },
+  {
+    date: "2023-12-06",
+    title: "Google launches Gemini",
+    summary:
+      "A natively multimodal frontier family intensifies competition at the top.",
     significance: "major",
     category: "model-release",
-    citation: "https://en.wikipedia.org/wiki/GPT-4o",
+    citation: "https://blog.google/technology/ai/google-gemini-ai/",
+  },
+  {
+    date: "2024-02-15",
+    title: "Gemini 1.5 brings million-token context",
+    summary:
+      "Long-context models make whole-codebase and long-document reasoning practical.",
+    significance: "major",
+    category: "model-release",
+    citation:
+      "https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/",
+  },
+  {
+    date: "2024-03-04",
+    title: "Anthropic releases the Claude 3 family",
+    summary:
+      "Claude 3 Opus matches or exceeds peers across reasoning, coding, and vision benchmarks.",
+    significance: "major",
+    category: "model-release",
+    citation: "https://www.anthropic.com/news/claude-3-family",
+  },
+  {
+    date: "2024-04-18",
+    title: "Meta releases Llama 3",
+    summary:
+      "Stronger open-weight models narrow the gap to closed frontier systems.",
+    significance: "major",
+    category: "model-release",
+    citation: "https://ai.meta.com/blog/meta-llama-3/",
+  },
+  {
+    date: "2024-05-13",
+    title: "GPT-4o makes frontier models real-time multimodal",
+    summary:
+      "Native voice, vision, and text in one model push assistants toward agentic, real-time interaction.",
+    significance: "major",
+    category: "model-release",
+    citation: "https://openai.com/index/hello-gpt-4o/",
+  },
+  {
+    date: "2024-08-01",
+    title: "EU AI Act enters into force",
+    summary:
+      "The first comprehensive AI law begins phasing in obligations for frontier systems through 2027.",
+    significance: "major",
+    category: "policy",
+    citation: "https://artificialintelligenceact.eu/",
   },
   {
     date: "2024-09-12",
-    title: "Inference-time reasoning models emerge",
+    title: "OpenAI o1 — inference-time reasoning",
     summary:
-      "Models that 'think' with extended test-time compute sharply improve math, coding, and science benchmarks.",
-    significance: "major",
+      "Models that 'think' with extended test-time compute sharply improve math, coding, and science.",
+    significance: "landmark",
     category: "research",
     citation: "https://openai.com/index/learning-to-reason-with-llms/",
   },
   {
-    date: "2025-01-20",
-    title: "Efficient open-weight reasoning models close the gap",
+    date: "2024-12-20",
+    title: "o3 posts a breakthrough on ARC-AGI",
     summary:
-      "Strong open-weight reasoning models trained at lower cost intensify competition and broaden access.",
-    significance: "major",
+      "A reasoning model leaps on the ARC-AGI abstraction benchmark, reopening debate on how close AGI is.",
+    significance: "landmark",
+    category: "benchmark",
+    citation: "https://arcprize.org/blog/oai-o3-pub-breakthrough",
+  },
+  {
+    date: "2025-01-20",
+    title: "DeepSeek-R1: efficient open-weight reasoning",
+    summary:
+      "A strong reasoning model trained at far lower cost intensifies competition and broadens access.",
+    significance: "landmark",
     category: "model-release",
     citation: "https://arxiv.org/abs/2501.12948",
+  },
+  {
+    date: "2025-01-21",
+    title: "The Stargate Project announces massive AI buildout",
+    summary:
+      "A multi-hundred-billion-dollar US compute-infrastructure effort signals the scale of the buildout.",
+    significance: "major",
+    category: "infrastructure",
+    citation: "https://openai.com/index/announcing-the-stargate-project/",
   },
 ];
 
