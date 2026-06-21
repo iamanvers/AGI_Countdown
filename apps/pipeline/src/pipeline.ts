@@ -21,6 +21,7 @@ import {
   curatedForecastAnchors,
   curatedJobs,
   curatedTimeline,
+  fetchHistoricalMilestones,
   fetchLiveNews,
   findConnector,
   liveConnectors,
@@ -103,6 +104,10 @@ export async function runRefresh(options: RefreshOptions): Promise<RefreshResult
 
   // Live, genuinely-current AI news (with frontier-lab tagging). Falls back to
   // the previously published feed if the source is unavailable.
+  // Fetch the per-month historical milestones FIRST (sequential, gentle) so the
+  // recent months aren't dropped by HN throttling the live-news burst below.
+  const historicalMilestones = await fetchHistoricalMilestones(options.now, 11, 2);
+
   const liveNews = await fetchLiveNews(options.now);
   const news =
     liveNews.length > 0
@@ -119,6 +124,7 @@ export async function runRefresh(options: RefreshOptions): Promise<RefreshResult
     engineStates,
     freshQuarantined,
     news,
+    historicalMilestones,
   });
 
   const manifest: RefreshManifest = {
@@ -397,6 +403,7 @@ async function writeStaticDataArtifacts(
     engineStates: EngineState[];
     freshQuarantined: number;
     news: NewsItem[];
+    historicalMilestones: NewsItem[];
   },
 ): Promise<string[]> {
   const previousHistory = await readJsonFile<EstimatePoint[]>(outDir, "estimate_history.json", []);
@@ -424,8 +431,10 @@ async function writeStaticDataArtifacts(
     id: slugify(event.title),
     curatedBy: "curated" as const,
   }));
-  const derivedEvents = deriveMilestones(artifacts.news);
-  const timeline = dedupeTimeline([...derivedEvents, ...curatedEvents]);
+  const recentDerived = deriveMilestones(artifacts.news);
+  // Historical items are already the AI-relevant top stories of each month.
+  const historicalDerived = artifacts.historicalMilestones.map(newsItemToEvent);
+  const timeline = dedupeTimeline([...recentDerived, ...historicalDerived, ...curatedEvents]);
   const jobs = { ts: artifacts.generatedAt, ...curatedJobs };
 
   return Promise.all([
@@ -675,16 +684,21 @@ function deriveMilestones(news: NewsItem[]): DerivedEvent[] {
         item.orgs.length > 0 && (RELEASE_RE.test(item.title) || MODEL_RE.test(item.title)),
     )
     .slice(0, 6)
-    .map((item) => ({
-      date: item.publishedAt.slice(0, 10),
-      title: item.title,
-      summary: `${item.orgs.join(", ")} — surfaced from ${item.source}.`,
-      significance: "major" as const,
-      category: "model-release",
-      citation: item.url,
-      curatedBy: "feed" as const,
-      id: slugify(item.title),
-    }));
+    .map(newsItemToEvent);
+}
+
+function newsItemToEvent(item: NewsItem): DerivedEvent {
+  const tag = item.orgs.length > 0 ? item.orgs.join(", ") : "AI";
+  return {
+    date: item.publishedAt.slice(0, 10),
+    title: item.title,
+    summary: `${tag} — surfaced from ${item.source}.`,
+    significance: "major" as const,
+    category: "model-release",
+    citation: item.url,
+    curatedBy: "feed" as const,
+    id: slugify(item.title),
+  };
 }
 
 function dedupeTimeline(events: DerivedEvent[]): DerivedEvent[] {

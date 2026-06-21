@@ -176,6 +176,89 @@ function isRelevant(item: NewsItem): boolean {
   return item.orgs.length > 0 || AI_RELEVANCE_RE.test(item.title);
 }
 
+/**
+ * Fill the timeline's recent past: for each of the last `monthsBack` months,
+ * fetch the highest-signal AI stories from Hacker News (real, dated, cited).
+ * This closes the gap between curated landmark milestones and the live feed.
+ */
+export async function fetchHistoricalMilestones(
+  now: Date,
+  monthsBack = 11,
+  perMonth = 2
+): Promise<NewsItem[]> {
+  const windows: Array<{ start: number; end: number }> = [];
+  let cursor = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), 1));
+  for (let i = 0; i < monthsBack; i += 1) {
+    const end = Math.floor(cursor.getTime() / 1000);
+    const prev = new Date(Date.UTC(cursor.getUTCFullYear(), cursor.getUTCMonth() - 1, 1));
+    windows.push({ start: Math.floor(prev.getTime() / 1000), end });
+    cursor = prev;
+  }
+
+  const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
+  async function topForMonth(start: number, end: number): Promise<NewsItem[]> {
+    const url =
+      `https://hn.algolia.com/api/v1/search?query=AI&tags=story` +
+      `&numericFilters=created_at_i%3E${start},created_at_i%3C${end}&hitsPerPage=25`;
+    const payload = (await fetchJson(url)) as {
+      hits?: Array<{
+        title?: string;
+        url?: string | null;
+        created_at?: string;
+        objectID?: string;
+        points?: number;
+      }>;
+    };
+    const scored = (payload.hits ?? []).flatMap((hit) => {
+      const title = hit.title?.trim();
+      if (!title) return [];
+      const orgs = detectOrgs(title);
+      if (!(orgs.length > 0 || AI_RELEVANCE_RE.test(title))) return [];
+      const link =
+        hit.url && hit.url.startsWith("http")
+          ? hit.url
+          : `https://news.ycombinator.com/item?id=${hit.objectID}`;
+      let source = "news.ycombinator.com";
+      try {
+        source = new URL(link).hostname.replace(/^www\./, "");
+      } catch {
+        /* keep default */
+      }
+      const item: NewsItem = {
+        title,
+        url: link,
+        source,
+        publishedAt: hit.created_at ?? new Date(end * 1000).toISOString(),
+        orgs
+      };
+      const score = (hit.points ?? 0) + (orgs.length > 0 ? 400 : 0);
+      return [{ item, score }];
+    });
+    scored.sort((a, b) => b.score - a.score);
+    return scored.slice(0, perMonth).map((s) => s.item);
+  }
+
+  // Sequential with spacing + one retry — HN throttles request bursts, which
+  // otherwise drops the most recent months.
+  const collected: NewsItem[] = [];
+  for (const { start, end } of windows) {
+    let items: NewsItem[] = [];
+    for (let attempt = 0; attempt < 2 && items.length === 0; attempt += 1) {
+      if (attempt > 0) await sleep(700);
+      try {
+        items = await topForMonth(start, end);
+      } catch {
+        items = [];
+      }
+    }
+    collected.push(...items);
+    await sleep(300);
+  }
+
+  return dedupeAndTake(collected, monthsBack * perMonth);
+}
+
 export async function fetchLiveNews(now: Date, limit = 30): Promise<NewsItem[]> {
   const sources: Array<() => Promise<NewsItem[]>> = [
     () => fetchHackerNews(limit),
