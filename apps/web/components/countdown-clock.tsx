@@ -139,7 +139,7 @@ function getCountdownParts(targetMs: number): CountdownParts {
   return {
     totalSeconds,
     years: pad(years, 2),
-    days: pad(days, 3),
+    days: days.toString(),
     hours: pad(hours, 2),
     minutes: pad(minutes, 2),
     seconds: pad(seconds, 2)
