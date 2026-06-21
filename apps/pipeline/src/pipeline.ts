@@ -419,11 +419,13 @@ async function writeStaticDataArtifacts(
     artifacts.carriedSources,
   );
   const runStatus = createPublicRunStatus(artifacts);
-  const timeline = curatedTimeline.map((event) => ({
+  const curatedEvents = curatedTimeline.map((event) => ({
     ...event,
     id: slugify(event.title),
     curatedBy: "curated" as const,
   }));
+  const derivedEvents = deriveMilestones(artifacts.news);
+  const timeline = dedupeTimeline([...derivedEvents, ...curatedEvents]);
   const jobs = { ts: artifacts.generatedAt, ...curatedJobs };
 
   return Promise.all([
@@ -645,6 +647,55 @@ function isHttpUrl(value: string): boolean {
 
 function clamp(value: number, min: number, max: number): number {
   return Math.min(max, Math.max(min, value));
+}
+
+type DerivedEvent = {
+  date: string;
+  title: string;
+  summary: string;
+  significance: "minor" | "major" | "landmark";
+  category: string;
+  citation: string;
+  curatedBy: "curated" | "feed";
+  id: string;
+};
+
+const RELEASE_RE = /\b(launch|launches|launched|releas|unveil|announce|introduc|debut|ships?|rolls? out)\b/i;
+const MODEL_RE = /\b(gpt-?\d|gpt|claude|gemini|llama|grok|deepseek|qwen|mistral|fable|model|agi|frontier|reasoning|o\d|sora|superintelligence)\b/i;
+
+/**
+ * Auto-derive recent major-milestone candidates from the live news feed:
+ * org-tagged stories using release/launch language about a model or AGI. Keeps
+ * the "Major milestones" section current (incl. the present year) deterministically.
+ */
+function deriveMilestones(news: NewsItem[]): DerivedEvent[] {
+  return news
+    .filter(
+      (item) =>
+        item.orgs.length > 0 && (RELEASE_RE.test(item.title) || MODEL_RE.test(item.title)),
+    )
+    .slice(0, 6)
+    .map((item) => ({
+      date: item.publishedAt.slice(0, 10),
+      title: item.title,
+      summary: `${item.orgs.join(", ")} — surfaced from ${item.source}.`,
+      significance: "major" as const,
+      category: "model-release",
+      citation: item.url,
+      curatedBy: "feed" as const,
+      id: slugify(item.title),
+    }));
+}
+
+function dedupeTimeline(events: DerivedEvent[]): DerivedEvent[] {
+  const seen = new Set<string>();
+  const out: DerivedEvent[] = [];
+  for (const event of events) {
+    if (seen.has(event.id)) continue;
+    seen.add(event.id);
+    out.push(event);
+  }
+  return out;
 }
 
 function slugify(value: string): string {

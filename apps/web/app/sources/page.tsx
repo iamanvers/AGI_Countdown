@@ -7,9 +7,9 @@ export const metadata = {
 };
 
 const statusClass: Record<string, string> = {
-  ok: "bg-emerald-500/15 text-emerald-300",
-  stale: "bg-amber-400/15 text-amber-200",
-  failed: "bg-red-500/15 text-red-300",
+  ok: "bg-[rgb(var(--positive)/0.16)] text-[rgb(var(--positive))]",
+  stale: "bg-[rgb(var(--warn)/0.16)] text-[rgb(var(--warn))]",
+  failed: "bg-[rgb(var(--later)/0.18)] text-[rgb(var(--later))]",
   reference: "bg-[rgb(var(--panel-strong)/0.8)] text-[rgb(var(--muted))]"
 };
 

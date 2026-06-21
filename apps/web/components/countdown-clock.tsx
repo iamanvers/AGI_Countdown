@@ -32,27 +32,18 @@ export function CountdownClock({ targetIso }: CountdownClockProps) {
   useEffect(() => {
     setParts(getCountdownParts(targetMs));
 
-    if (shouldReduceMotion) {
-      const interval = window.setInterval(() => {
-        setParts(getCountdownParts(targetMs));
-      }, secondMs);
-
-      return () => window.clearInterval(interval);
-    }
-
-    let frameId = 0;
-
-    const tick = () => {
+    // A seconds-resolution clock only needs a light timer — far cheaper than a
+    // 60fps animation-frame loop. State only changes when the second rolls over,
+    // so React bails out of re-rendering between ticks.
+    const period = shouldReduceMotion ? secondMs : 250;
+    const interval = window.setInterval(() => {
       setParts((current) => {
         const next = getCountdownParts(targetMs);
         return next.totalSeconds === current.totalSeconds ? current : next;
       });
-      frameId = window.requestAnimationFrame(tick);
-    };
+    }, period);
 
-    frameId = window.requestAnimationFrame(tick);
-
-    return () => window.cancelAnimationFrame(frameId);
+    return () => window.clearInterval(interval);
   }, [shouldReduceMotion, targetMs]);
 
   return (

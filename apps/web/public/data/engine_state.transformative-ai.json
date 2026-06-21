@@ -1,15 +1,15 @@
 {
-  "runId": "refresh-all-20260621T185035805Z-transformative-ai",
-  "ts": "2026-06-21T18:50:35.805Z",
+  "runId": "refresh-all-20260621T185842789Z-transformative-ai",
+  "ts": "2026-06-21T18:58:42.789Z",
   "definition": "transformative-ai",
-  "tAgi": "2030-12-12T19:31:49.868Z",
+  "tAgi": "2030-12-20T22:14:36.554Z",
   "progress": 65.3264,
   "band": {
-    "earlyP10": "2026-12-27T02:29:32.580Z",
-    "lateP90": "2053-12-12T19:31:49.868Z"
+    "earlyP10": "2027-01-04T05:12:19.266Z",
+    "lateP90": "2053-12-20T22:14:36.554Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -12.622394,
+  "deltaMonths": -12.355841,
   "movers": [
     {
       "factorId": "datacenter-capex",
@@ -60,16 +60,16 @@
       "citation": "https://artificialintelligenceact.eu/"
     },
     {
-      "factorId": "public-backlash-pressure",
-      "contributionMonths": -0.5874,
-      "rationale": "Public backlash pressure read 0.36 (a decelerator signal).",
-      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
-    },
-    {
       "factorId": "energy-headroom",
       "contributionMonths": -0.4288,
       "rationale": "Energy headroom read 0.45 (a decelerator signal).",
       "citation": "https://www.iea.org/reports/electricity-2025"
+    },
+    {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": -0.320847,
+      "rationale": "Public backlash pressure read 0.43 (a decelerator signal).",
+      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
       "factorId": "research-velocity",

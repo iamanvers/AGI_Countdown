@@ -91,11 +91,18 @@ export default async function TimelinePage() {
                   <time className="font-mono text-sm text-[rgb(var(--muted))] tabular">
                     {formatDateOnly(event.date)}
                   </time>
-                  <span
-                    className={`rounded-full px-3 py-1 text-[0.66rem] font-semibold uppercase tracking-[0.14em] ${significanceClass[event.significance] ?? significanceClass.minor}`}
-                  >
-                    {event.significance} · {event.category}
-                  </span>
+                  <div className="flex items-center gap-2">
+                    {event.curatedBy === "feed" ? (
+                      <span className="rounded-full bg-[rgb(var(--panel-strong)/0.8)] px-2 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.12em] text-[rgb(var(--muted))]">
+                        auto
+                      </span>
+                    ) : null}
+                    <span
+                      className={`rounded-full px-3 py-1 text-[0.66rem] font-semibold uppercase tracking-[0.14em] ${significanceClass[event.significance] ?? significanceClass.minor}`}
+                    >
+                      {event.significance} · {event.category}
+                    </span>
+                  </div>
                 </div>
                 <h3 className="mt-3 text-xl font-semibold leading-tight">{event.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-[rgb(var(--muted))]">{event.summary}</p>

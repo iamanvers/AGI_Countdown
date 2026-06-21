@@ -86,7 +86,7 @@ export function LiveSignals() {
                   className="h-full rounded-full"
                   style={{
                     width: `${Math.min(100, Math.max(2, signal.value * 100))}%`,
-                    background: signal.tone === "decel" ? "rgb(239 68 68)" : "rgb(var(--accent-rgb))"
+                    background: signal.tone === "decel" ? "rgb(var(--later))" : "rgb(var(--accent-rgb))"
                   }}
                 />
               </div>

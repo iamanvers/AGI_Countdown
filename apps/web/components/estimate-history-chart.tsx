@@ -1,9 +1,9 @@
 import type { EstimatePoint } from "@/lib/static-data";
 
 const SERIES: Array<{ id: EstimatePoint["definition"]; label: string; color: string }> = [
-  { id: "weak-agi", label: "Weak AGI", color: "rgb(34 197 94)" },
-  { id: "transformative-ai", label: "Transformative", color: "rgb(244 159 10)" },
-  { id: "strong-agi", label: "Strong AGI", color: "rgb(239 68 68)" }
+  { id: "weak-agi", label: "Weak AGI", color: "rgb(56 189 248)" },
+  { id: "transformative-ai", label: "Transformative", color: "rgb(94 106 210)" },
+  { id: "strong-agi", label: "Strong AGI", color: "rgb(139 92 246)" }
 ];
 
 const W = 720;
