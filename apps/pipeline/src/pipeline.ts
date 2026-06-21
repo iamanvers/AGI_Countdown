@@ -21,9 +21,11 @@ import {
   curatedForecastAnchors,
   curatedJobs,
   curatedTimeline,
+  fetchLiveNews,
   findConnector,
   liveConnectors,
   type FactorSample,
+  type NewsItem,
 } from "@agi-countdown/sources";
 import { basename } from "node:path";
 import { readJsonFile, writeJsonFile } from "./file-store.js";
@@ -99,6 +101,14 @@ export async function runRefresh(options: RefreshOptions): Promise<RefreshResult
     [],
   );
 
+  // Live, genuinely-current AI news (with frontier-lab tagging). Falls back to
+  // the previously published feed if the source is unavailable.
+  const liveNews = await fetchLiveNews(options.now);
+  const news =
+    liveNews.length > 0
+      ? liveNews
+      : await readJsonFile<NewsItem[]>(options.outDir, "news.json", []);
+
   const outputFiles = await writeStaticDataArtifacts(options.outDir, {
     generatedAt,
     runId,
@@ -108,6 +118,7 @@ export async function runRefresh(options: RefreshOptions): Promise<RefreshResult
     samples,
     engineStates,
     freshQuarantined,
+    news,
   });
 
   const manifest: RefreshManifest = {
@@ -381,6 +392,7 @@ async function writeStaticDataArtifacts(
     samples: FactorSample[];
     engineStates: EngineState[];
     freshQuarantined: number;
+    news: NewsItem[];
   },
 ): Promise<string[]> {
   const previousHistory = await readJsonFile<EstimatePoint[]>(outDir, "estimate_history.json", []);
@@ -420,6 +432,7 @@ async function writeStaticDataArtifacts(
     writeJsonFile(outDir, "status.json", runStatus),
     writeJsonFile(outDir, "timeline.json", timeline),
     writeJsonFile(outDir, "jobs.json", jobs),
+    writeJsonFile(outDir, "news.json", artifacts.news),
   ]);
 }
 

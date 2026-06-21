@@ -656,6 +656,70 @@ export const curatedTimeline: CuratedTimelineEvent[] = [
     category: "infrastructure",
     citation: "https://openai.com/index/announcing-the-stargate-project/",
   },
+  {
+    date: "2025-02-24",
+    title: "Anthropic releases Claude 3.7 Sonnet (hybrid reasoning)",
+    summary:
+      "A model that can answer instantly or think step-by-step blends fast and deliberate reasoning.",
+    significance: "major",
+    category: "model-release",
+    citation: "https://www.anthropic.com/news/claude-3-7-sonnet",
+  },
+  {
+    date: "2025-02-27",
+    title: "OpenAI releases GPT-4.5",
+    summary:
+      "The largest GPT-series model to date pushes breadth of knowledge and reduced hallucination.",
+    significance: "major",
+    category: "model-release",
+    citation: "https://openai.com/index/introducing-gpt-4-5/",
+  },
+  {
+    date: "2025-03-25",
+    title: "Google launches Gemini 2.5 Pro",
+    summary:
+      "A 'thinking' frontier model tops reasoning and coding leaderboards with long context.",
+    significance: "major",
+    category: "model-release",
+    citation:
+      "https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/",
+  },
+  {
+    date: "2025-04-05",
+    title: "Meta releases Llama 4 (mixture-of-experts, multimodal)",
+    summary:
+      "Open-weight MoE models with very long context keep the open ecosystem near the frontier.",
+    significance: "major",
+    category: "model-release",
+    citation: "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+  },
+  {
+    date: "2025-04-16",
+    title: "OpenAI o3 and o4-mini bring tool-using reasoning",
+    summary:
+      "Reasoning models that fluently use tools (browsing, code, vision) advance agentic capability.",
+    significance: "major",
+    category: "model-release",
+    citation: "https://openai.com/index/introducing-o3-and-o4-mini/",
+  },
+  {
+    date: "2025-05-22",
+    title: "Anthropic releases Claude 4 (Opus 4 & Sonnet 4)",
+    summary:
+      "Frontier coding and long-horizon agentic performance step up with the Claude 4 family.",
+    significance: "landmark",
+    category: "model-release",
+    citation: "https://www.anthropic.com/news/claude-4",
+  },
+  {
+    date: "2025-08-07",
+    title: "OpenAI releases GPT-5",
+    summary:
+      "A unified flagship system routes between fast and deep reasoning across the product surface.",
+    significance: "landmark",
+    category: "model-release",
+    citation: "https://openai.com/index/introducing-gpt-5/",
+  },
 ];
 
 export type CuratedJobsImpact = {

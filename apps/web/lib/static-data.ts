@@ -102,6 +102,18 @@ export async function readEstimateHistory() {
   return readJson<EstimatePoint[]>("estimate_history.json");
 }
 
+export type NewsItem = {
+  title: string;
+  url: string;
+  source: string;
+  publishedAt: string;
+  orgs: string[];
+};
+
+export async function readNews() {
+  return readJson<NewsItem[]>("news.json").catch(() => [] as NewsItem[]);
+}
+
 export async function readJobs() {
   return readJson<JobsImpact>("jobs.json");
 }

@@ -189,6 +189,18 @@ export const runStatusSchema = z
   })
   .strict();
 
+export const newsItemSchema = z
+  .object({
+    title: nonEmptyStringSchema,
+    url: urlSchema,
+    source: nonEmptyStringSchema,
+    publishedAt: isoDateTimeSchema,
+    orgs: z.array(nonEmptyStringSchema)
+  })
+  .strict();
+
+export const newsSchema = z.array(newsItemSchema);
+
 export const staticDataSchemas = {
   "engine_state.weak-agi.json": engineStateSchema,
   "engine_state.transformative-ai.json": engineStateSchema,
@@ -198,7 +210,8 @@ export const staticDataSchemas = {
   "timeline.json": timelineSchema,
   "jobs.json": jobsImpactSchema,
   "sources.json": sourceStatusesSchema,
-  "status.json": runStatusSchema
+  "status.json": runStatusSchema,
+  "news.json": newsSchema
 } as const;
 
 export type StaticDataFile = keyof typeof staticDataSchemas;
