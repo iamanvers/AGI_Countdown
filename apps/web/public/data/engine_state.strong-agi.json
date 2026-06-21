@@ -1,22 +1,16 @@
 {
-  "runId": "refresh-all-20260621T181744881Z-strong-agi",
-  "ts": "2026-06-21T18:17:44.881Z",
+  "runId": "refresh-hourly-20260621T182012435Z-strong-agi",
+  "ts": "2026-06-21T18:20:12.435Z",
   "definition": "strong-agi",
-  "tAgi": "2038-12-20T03:54:11.521Z",
-  "progress": 68.6052,
+  "tAgi": "2038-12-23T20:03:18.749Z",
+  "progress": 68.0956,
   "band": {
-    "earlyP10": "2028-12-20T03:54:11.521Z",
-    "lateP90": "2058-12-20T03:54:11.521Z"
+    "earlyP10": "2028-12-23T20:03:18.749Z",
+    "lateP90": "2058-12-23T20:03:18.749Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -12.380948,
+  "deltaMonths": -12.260272,
   "movers": [
-    {
-      "factorId": "frontier-benchmark-saturation",
-      "contributionMonths": -2.289276,
-      "rationale": "Frontier benchmark saturation read 0.71 (a accelerator signal).",
-      "citation": "https://aiindex.stanford.edu/report/"
-    },
     {
       "factorId": "training-compute-growth",
       "contributionMonths": -2.244,
@@ -24,9 +18,15 @@
       "citation": "https://epoch.ai/data/notable-ai-models"
     },
     {
+      "factorId": "frontier-benchmark-saturation",
+      "contributionMonths": -2.14872,
+      "rationale": "Frontier benchmark saturation read 0.69 (a accelerator signal).",
+      "citation": "https://aiindex.stanford.edu/report/"
+    },
+    {
       "factorId": "datacenter-capex",
-      "contributionMonths": -1.609118,
-      "rationale": "Datacenter capex read 0.76 (a accelerator signal).",
+      "contributionMonths": -1.446933,
+      "rationale": "Datacenter capex read 0.74 (a accelerator signal).",
       "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
     },
     {
@@ -55,33 +55,33 @@
     },
     {
       "factorId": "policy-friction",
-      "contributionMonths": -0.725055,
-      "rationale": "Policy friction read 0.37 (a decelerator signal).",
+      "contributionMonths": -0.667733,
+      "rationale": "Policy friction read 0.38 (a decelerator signal).",
       "citation": "https://artificialintelligenceact.eu/"
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": -0.618,
-      "rationale": "Public backlash pressure read 0.34 (a decelerator signal).",
+      "contributionMonths": -0.534,
+      "rationale": "Public backlash pressure read 0.36 (a decelerator signal).",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
       "factorId": "energy-headroom",
-      "contributionMonths": -0.39416,
+      "contributionMonths": -0.357333,
       "rationale": "Energy headroom read 0.45 (a decelerator signal).",
       "citation": "https://www.iea.org/reports/electricity-2025"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.245553,
+      "rationale": "Research velocity read 0.56 (a accelerator signal).",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "safety-eval-pressure",
       "contributionMonths": -0.136,
       "rationale": "Safety-eval pressure read 0.45 (a decelerator signal).",
       "citation": "https://www.aisi.gov.uk/"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": 0.114661,
-      "rationale": "Research velocity read 0.47 (a accelerator signal).",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "labor-automation-exposure",
