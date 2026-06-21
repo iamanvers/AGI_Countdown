@@ -22,12 +22,22 @@
 ╰──────────────────────────────────────────────────────────────────╯
 ```
 
-A **Worldometer for AGI** — one large clock counting down to the current estimated arrival of
-Artificial General Intelligence. The number is not a guess: a transparent, deterministic engine
-blends public forecasts into a baseline date, then nudges it with bounded live signals. Everything
-is cited, the uncertainty is always shown, and the whole thing runs for **$0**.
+## Why this exists
 
----
+"When will AGI arrive?" is one of the most consequential questions of our era — and the answer is
+usually a shrug, a hot take, or a sales pitch. AGI Countdown replaces that fog with **one honest,
+transparent number that updates as the world actually changes.**
+
+Most predictions are a single confident date from a single confident person — no reasoning, no
+uncertainty, never updated. This is the opposite: a clock you can interrogate. It starts from what
+forecasters, prediction markets, expert surveys, and compute-based models collectively expect, then
+moves the date sooner or later as real signals change (benchmark results, training compute, capital,
+energy limits, policy, sentiment). When the signals move, the clock moves; when the data is thin, the
+uncertainty band widens. You can disagree with it *specifically* — open the
+[methodology](docs/02-CLOCK-ENGINE.md) and every input, weight, and source is there.
+
+It's deliberately **not hype and not doom**, it runs for **$0**, and **no AI model is required** to
+produce the number.
 
 ## How the clock works
 
@@ -35,14 +45,14 @@ is cited, the uncertainty is always shown, and the whole thing runs for **$0**.
 T_AGI  =  Anchor  +  Δ_factors
 ```
 
-- **Anchor** — a weighted blend of published forecasts (Metaculus community, prediction markets,
-  expert surveys, compute-based models) → the slow-moving consensus date.
-- **Δ_factors** — a live, bounded shift from signals like frontier-benchmark saturation, training
-  compute, research velocity (arXiv), adoption, datacenter capex, energy headroom, policy friction,
-  and public sentiment (GDELT). Each is normalized, signed, weighted, smoothed, and **clamped**.
+- **Anchor** — a weighted blend of published forecasts (Metaculus, prediction markets, expert
+  surveys, compute-based models): the slow-moving consensus date.
+- **Δ_factors** — a live, *bounded* shift from ~15 signals (benchmark saturation, training compute,
+  autonomy, capital, energy, policy, sentiment, …), weighted differently per AGI definition and
+  EWMA-smoothed so the date glides instead of jumping.
 
-> **The rule:** validated data goes in; a pure function computes the date. No model ever invents the
-> number — see [`docs/adr/0005-determinism-boundary.md`](docs/adr/0005-determinism-boundary.md).
+> **The one rule:** validated data goes in; a pure function computes the date. No model ever invents
+> the number — see [`docs/adr/0005-determinism-boundary.md`](docs/adr/0005-determinism-boundary.md).
 
 Three switchable definitions (**Weak AGI**, **Transformative AI**, **Strong AGI**) each get their own
 anchor and clock.
