@@ -1,7 +1,29 @@
-import type { SourceDef } from "./types.js";
+import type { SourceDef, SourceTier } from "./types.js";
 import { indexById } from "./registry-utils.js";
 
-export const sourceRegistry = [
+/** Compact constructor for a reference-catalog source (listed, not fetched). */
+function ref(
+  id: string,
+  name: string,
+  domain: SourceDef["domain"],
+  url: string,
+  tier: SourceTier,
+): SourceDef {
+  return {
+    id,
+    name,
+    domain,
+    accessMethod: "scrape",
+    ingestion: "curated",
+    authNeeded: false,
+    cadence: "monthly",
+    parser: "reference",
+    url,
+    tier,
+  };
+}
+
+export const sourceRegistry: readonly SourceDef[] = [
   {
     id: "metaculus-agi-questions",
     name: "Metaculus AGI questions",
@@ -350,9 +372,154 @@ export const sourceRegistry = [
     parser: "aisi",
     url: "https://www.aisi.gov.uk/",
   },
-] as const satisfies readonly SourceDef[];
+
+  // ---------------------------------------------------------------------------
+  // Reference catalog — sources we attribute and monitor for credibility but
+  // that do not each emit a numeric factor sample. Tagged primary / secondary /
+  // tertiary. parser:"reference" so the pipeline lists (not fetches) them.
+  // ---------------------------------------------------------------------------
+
+  // --- Frontier labs (primary, first-party) ---
+  ref("openai-news", "OpenAI", "labs", "https://openai.com/news/", "primary"),
+  ref("anthropic-news-blog", "Anthropic", "labs", "https://www.anthropic.com/news", "primary"),
+  ref("google-deepmind-blog", "Google DeepMind", "labs", "https://deepmind.google/discover/blog/", "primary"),
+  ref("meta-ai-blog", "Meta AI (FAIR)", "labs", "https://ai.meta.com/blog/", "primary"),
+  ref("xai-news", "xAI", "labs", "https://x.ai/news", "primary"),
+  ref("mistral-news", "Mistral AI", "labs", "https://mistral.ai/news/", "primary"),
+  ref("deepseek-news", "DeepSeek", "labs", "https://api-docs.deepseek.com/news", "primary"),
+  ref("qwen-blog", "Qwen (Alibaba)", "labs", "https://qwenlm.github.io/blog/", "primary"),
+  ref("microsoft-ai-blog", "Microsoft AI", "labs", "https://blogs.microsoft.com/ai/", "primary"),
+  ref("cohere-blog", "Cohere", "labs", "https://cohere.com/blog", "primary"),
+  ref("ai21-blog", "AI21 Labs", "labs", "https://www.ai21.com/blog", "primary"),
+  ref("stability-news", "Stability AI", "labs", "https://stability.ai/news", "primary"),
+
+  // --- Hardware & infrastructure (primary) ---
+  ref("nvidia-newsroom", "NVIDIA Newsroom", "hardware", "https://nvidianews.nvidia.com/", "primary"),
+  ref("amd-ai", "AMD AI", "hardware", "https://www.amd.com/en/solutions/ai.html", "primary"),
+  ref("tsmc-newsroom", "TSMC Newsroom", "hardware", "https://pr.tsmc.com/english/news", "primary"),
+  ref("broadcom-ir", "Broadcom IR", "hardware", "https://investors.broadcom.com/", "secondary"),
+  ref("micron-ir", "Micron (HBM) IR", "hardware", "https://investors.micron.com/", "secondary"),
+  ref("oracle-ai", "Oracle Cloud AI", "labs", "https://www.oracle.com/artificial-intelligence/", "primary"),
+  ref("aws-ai-blog", "AWS AI", "labs", "https://aws.amazon.com/blogs/machine-learning/", "primary"),
+  ref("google-cloud-ai", "Google Cloud AI", "labs", "https://cloud.google.com/blog/products/ai-machine-learning", "primary"),
+  ref("coreweave-blog", "CoreWeave", "hardware", "https://www.coreweave.com/blog", "tertiary"),
+
+  // --- Open-source / community (primary & secondary) ---
+  ref("hugging-face-blog", "Hugging Face Blog", "research", "https://huggingface.co/blog", "primary"),
+  ref("eleutherai", "EleutherAI", "research", "https://www.eleuther.ai/", "secondary"),
+  ref("allenai", "Allen Institute for AI (AI2)", "research", "https://allenai.org/", "primary"),
+  ref("llama-meta", "Llama (Meta open models)", "labs", "https://www.llama.com/", "primary"),
+  ref("ollama-models", "Ollama model library", "adoption", "https://ollama.com/library", "tertiary"),
+  ref("lmsys-org", "LMSYS Org", "benchmarks", "https://lmsys.org/", "secondary"),
+
+  // --- Compute / scaling research (primary & secondary) ---
+  ref("epoch-data", "Epoch AI — Data", "compute", "https://epoch.ai/data", "primary"),
+  ref("epoch-benchmarking-hub", "Epoch AI — Benchmarking Hub", "benchmarks", "https://epoch.ai/benchmarks", "primary"),
+  ref("our-world-in-data-ai", "Our World in Data — AI", "research", "https://ourworldindata.org/artificial-intelligence", "primary"),
+  ref("state-of-ai-report", "State of AI Report", "research", "https://www.stateof.ai/", "secondary"),
+
+  // --- Benchmarks (primary) ---
+  ref("swe-bench", "SWE-bench", "benchmarks", "https://www.swebench.com/", "primary"),
+  ref("gpqa-benchmark", "GPQA", "benchmarks", "https://github.com/idavidrein/gpqa", "primary"),
+  ref("mmlu-benchmark", "MMLU", "benchmarks", "https://github.com/hendrycks/test", "primary"),
+  ref("frontiermath", "FrontierMath (Epoch)", "benchmarks", "https://epoch.ai/frontiermath", "primary"),
+  ref("humanitys-last-exam", "Humanity's Last Exam", "benchmarks", "https://lastexam.ai/", "primary"),
+  ref("livecodebench", "LiveCodeBench", "benchmarks", "https://livecodebench.github.io/", "secondary"),
+  ref("gaia-benchmark", "GAIA agent benchmark", "benchmarks", "https://huggingface.co/gaia-benchmark", "secondary"),
+  ref("osworld-benchmark", "OSWorld", "benchmarks", "https://os-world.github.io/", "secondary"),
+
+  // --- Forecasts / markets (primary & secondary) ---
+  ref("metaculus-ai", "Metaculus — AI", "forecasts", "https://www.metaculus.com/questions/?categories=ai", "primary"),
+  ref("kalshi-ai", "Kalshi", "forecasts", "https://kalshi.com/", "tertiary"),
+  ref("samotsvety", "Samotsvety Forecasting", "forecasts", "https://samotsvety.org/", "secondary"),
+
+  // --- Policy / governance (primary & secondary) ---
+  ref("white-house-ai", "White House OSTP — AI", "policy", "https://www.whitehouse.gov/ostp/", "primary"),
+  ref("nist-airc", "NIST AI Resource Center", "policy", "https://airc.nist.gov/", "primary"),
+  ref("uk-gov-dsit", "UK DSIT", "policy", "https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology", "primary"),
+  ref("eu-commission-ai", "European Commission — AI", "policy", "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence", "primary"),
+  ref("cset-georgetown", "CSET Georgetown", "policy", "https://cset.georgetown.edu/", "secondary"),
+  ref("govai", "Centre for the Governance of AI", "policy", "https://www.governance.ai/", "secondary"),
+  ref("rand-ai", "RAND — AI", "policy", "https://www.rand.org/topics/artificial-intelligence.html", "secondary"),
+  ref("brookings-ai", "Brookings — AI", "policy", "https://www.brookings.edu/topic/artificial-intelligence/", "secondary"),
+  ref("ai-now", "AI Now Institute", "policy", "https://ainowinstitute.org/", "secondary"),
+  ref("oecd-ai-observatory", "OECD.AI Observatory", "policy", "https://oecd.ai/", "primary"),
+
+  // --- Safety / alignment (primary & secondary) ---
+  ref("metr-org", "METR", "safety", "https://metr.org/", "primary"),
+  ref("apollo-research", "Apollo Research", "safety", "https://www.apolloresearch.ai/", "secondary"),
+  ref("redwood-research", "Redwood Research", "safety", "https://www.redwoodresearch.org/", "secondary"),
+  ref("alignment-forum", "Alignment Forum", "safety", "https://www.alignmentforum.org/", "secondary"),
+  ref("lesswrong", "LessWrong", "safety", "https://www.lesswrong.com/", "tertiary"),
+  ref("80000-hours-ai", "80,000 Hours — AI", "safety", "https://80000hours.org/problem-profiles/artificial-intelligence/", "secondary"),
+  ref("ai-incident-db", "AI Incident Database", "safety", "https://incidentdatabase.ai/", "secondary"),
+  ref("us-caisi", "US Center for AI Standards (CAISI)", "safety", "https://www.nist.gov/caisi", "primary"),
+
+  // --- Research orgs / academia (secondary) ---
+  ref("stanford-hai", "Stanford HAI", "research", "https://hai.stanford.edu/", "secondary"),
+  ref("mit-csail", "MIT CSAIL", "research", "https://www.csail.mit.edu/", "secondary"),
+  ref("berkeley-bair", "Berkeley AI Research (BAIR)", "research", "https://bair.berkeley.edu/", "secondary"),
+  ref("mila-quebec", "Mila", "research", "https://mila.quebec/en/", "secondary"),
+  ref("ai-impacts-org", "AI Impacts", "forecasts", "https://aiimpacts.org/", "secondary"),
+
+  // --- Economy / finance / Wall Street (secondary & tertiary) ---
+  ref("goldman-research", "Goldman Sachs Research", "economics", "https://www.goldmansachs.com/insights", "secondary"),
+  ref("morgan-stanley-ai", "Morgan Stanley — AI", "economics", "https://www.morganstanley.com/ideas", "secondary"),
+  ref("jpmorgan-ai", "J.P. Morgan — AI", "economics", "https://www.jpmorgan.com/insights", "secondary"),
+  ref("imf-ai", "IMF — AI", "economics", "https://www.imf.org/en/Topics/Artificial-Intelligence", "primary"),
+  ref("world-bank-data", "World Bank Data", "economics", "https://data.worldbank.org/", "primary"),
+  ref("sec-edgar", "SEC EDGAR filings", "economics", "https://www.sec.gov/edgar", "primary"),
+  ref("crunchbase-ai", "Crunchbase — AI companies", "economics", "https://www.crunchbase.com/hub/artificial-intelligence-companies", "tertiary"),
+  ref("pitchbook-ai", "PitchBook", "economics", "https://pitchbook.com/", "tertiary"),
+  ref("a16z-ai", "a16z — AI", "adoption", "https://a16z.com/ai/", "secondary"),
+
+  // --- Energy (primary) ---
+  ref("iea-data-stats", "IEA Data & Statistics", "energy", "https://www.iea.org/data-and-statistics", "primary"),
+  ref("eia-open-data", "EIA Open Data", "energy", "https://www.eia.gov/opendata/", "primary"),
+  ref("ferc", "US FERC", "energy", "https://www.ferc.gov/", "secondary"),
+
+  // --- Jobs / labor (primary & secondary) ---
+  ref("bls-oes", "BLS OEWS", "jobs", "https://www.bls.gov/oes/", "primary"),
+  ref("onet-online", "O*NET OnLine", "jobs", "https://www.onetonline.org/", "primary"),
+  ref("oecd-employment", "OECD Employment", "jobs", "https://www.oecd.org/employment/", "primary"),
+  ref("ilostat", "ILOSTAT", "jobs", "https://ilostat.ilo.org/", "primary"),
+  ref("wef-future-of-jobs", "WEF Future of Jobs", "jobs", "https://www.weforum.org/publications/the-future-of-jobs-report-2025/", "secondary"),
+  ref("mckinsey-ai", "McKinsey — AI insights", "jobs", "https://www.mckinsey.com/capabilities/quantumblack/our-insights", "secondary"),
+  ref("pwc-ai-jobs", "PwC AI Jobs Barometer", "jobs", "https://www.pwc.com/gx/en/issues/artificial-intelligence/ai-jobs-barometer.html", "secondary"),
+  ref("linkedin-economic-graph", "LinkedIn Economic Graph", "jobs", "https://economicgraph.linkedin.com/", "secondary"),
+  ref("indeed-hiring-lab", "Indeed Hiring Lab", "jobs", "https://www.hiringlab.org/", "secondary"),
+
+  // --- Adoption / usage (secondary & tertiary) ---
+  ref("similarweb", "Similarweb", "adoption", "https://www.similarweb.com/", "tertiary"),
+  ref("sensor-tower", "Sensor Tower", "adoption", "https://sensortower.com/", "tertiary"),
+  ref("gartner-ai", "Gartner — AI", "adoption", "https://www.gartner.com/en/information-technology/insights/artificial-intelligence", "tertiary"),
+
+  // --- Sentiment / polling (secondary) ---
+  ref("yougov-tech", "YouGov — Technology", "sentiment", "https://today.yougov.com/topics/technology", "secondary"),
+  ref("aipi-polls", "AI Policy Institute polls", "sentiment", "https://theaipi.org/", "secondary"),
+  ref("gallup-ai", "Gallup — AI", "sentiment", "https://news.gallup.com/topic/artificial_intelligence.aspx", "secondary"),
+
+  // --- Media / trade press (tertiary) ---
+  ref("the-information", "The Information", "media", "https://www.theinformation.com/", "tertiary"),
+  ref("bloomberg-tech", "Bloomberg Technology", "media", "https://www.bloomberg.com/technology", "tertiary"),
+  ref("reuters-tech", "Reuters Technology", "media", "https://www.reuters.com/technology/", "tertiary"),
+  ref("ft-ai", "Financial Times — AI", "media", "https://www.ft.com/artificial-intelligence", "tertiary"),
+  ref("wsj-ai", "WSJ — AI", "media", "https://www.wsj.com/tech/ai", "tertiary"),
+  ref("techcrunch-ai", "TechCrunch — AI", "media", "https://techcrunch.com/category/artificial-intelligence/", "tertiary"),
+  ref("the-verge-ai", "The Verge — AI", "media", "https://www.theverge.com/ai-artificial-intelligence", "tertiary"),
+  ref("ars-technica-ai", "Ars Technica — AI", "media", "https://arstechnica.com/ai/", "tertiary"),
+  ref("wired-ai", "WIRED — AI", "media", "https://www.wired.com/tag/artificial-intelligence/", "tertiary"),
+  ref("mit-tech-review-ai", "MIT Technology Review — AI", "media", "https://www.technologyreview.com/topic/artificial-intelligence/", "tertiary"),
+  ref("semianalysis", "SemiAnalysis", "hardware", "https://www.semianalysis.com/", "secondary"),
+  ref("import-ai", "Import AI (J. Clark)", "media", "https://importai.substack.com/", "secondary"),
+  ref("the-batch", "The Batch (DeepLearning.AI)", "media", "https://www.deeplearning.ai/the-batch/", "secondary"),
+  ref("stratechery", "Stratechery", "media", "https://stratechery.com/", "tertiary"),
+  ref("hacker-news", "Hacker News", "media", "https://news.ycombinator.com/", "tertiary"),
+  ref("ai-news-smol", "AI News (smol.ai)", "media", "https://news.smol.ai/", "tertiary"),
+  ref("wikipedia-ai-timeline", "Wikipedia — Timeline of AI", "media", "https://en.wikipedia.org/wiki/Timeline_of_artificial_intelligence", "tertiary"),
+];
 
 export const sourcesById = indexById(sourceRegistry);
 
 export type SourceEntry = (typeof sourceRegistry)[number];
-export type SourceId = SourceEntry["id"];
+export type SourceId = string;

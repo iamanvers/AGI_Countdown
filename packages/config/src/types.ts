@@ -41,7 +41,11 @@ export type FactorDomain =
   | "jobs"
   | "hardware"
   | "autonomy"
-  | "safety";
+  | "safety"
+  | "labs"
+  | "media";
+
+export type SourceTier = "primary" | "secondary" | "tertiary";
 
 export type NormalizationKind = "zscore" | "momentum-01" | "log-zscore";
 
@@ -79,6 +83,7 @@ export type SourceDef = {
   tosNotes?: string;
   parser: string;
   url: string;
+  tier?: SourceTier;
 };
 
 export type RegistryIndex<T extends { id: string }> = Record<T["id"], T>;

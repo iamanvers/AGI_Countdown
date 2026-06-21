@@ -17,10 +17,12 @@ import {
 } from "@agi-countdown/engine";
 import {
   curatedConnector,
+  curatedFactorSeedsBySource,
   curatedForecastAnchors,
   curatedJobs,
   curatedTimeline,
   findConnector,
+  liveConnectors,
   type FactorSample,
 } from "@agi-countdown/sources";
 import { basename } from "node:path";
@@ -32,6 +34,12 @@ const HISTORY_LIMIT = 4000;
 const FORECAST_FACTOR_ID = "forecast-consensus-anchor";
 // EWMA weight on the newest reading; lower = smoother / more robust to jitter.
 const SMOOTHING_ALPHA = 0.5;
+const LIVE_PARSERS = new Set(liveConnectors.map((connector) => connector.parser));
+
+/** A source produces a numeric factor sample (live connector or curated seed). */
+function isSignalSource(source: SourceDef): boolean {
+  return LIVE_PARSERS.has(source.parser) || curatedFactorSeedsBySource[source.id] !== undefined;
+}
 
 export type RefreshOptions = {
   cadence: RefreshScope;
@@ -49,8 +57,8 @@ export type RefreshResult = {
 export async function runRefresh(options: RefreshOptions): Promise<RefreshResult> {
   const generatedAt = options.now.toISOString();
   const dueCadences = resolveDueCadences(options.cadence);
-  const selectedSources = sourceRegistry.filter((source) =>
-    dueCadences.includes(source.cadence),
+  const selectedSources = sourceRegistry.filter(
+    (source) => isSignalSource(source) && dueCadences.includes(source.cadence),
   );
   const runId = createRunId(options.cadence, generatedAt);
 
@@ -448,6 +456,22 @@ function createPublicSourceStatuses(
   const carriedById = new Map(carriedSources.map((source) => [source.sourceId, source]));
 
   return (sourceRegistry as readonly SourceDef[]).map((source) => {
+    // Reference-catalog sources are attributed but not fetched.
+    if (!isSignalSource(source)) {
+      return {
+        sourceId: source.id,
+        name: source.name,
+        url: source.url,
+        lastFetchedAt: new Date(0).toISOString(),
+        status: "reference" as const,
+        errorRate: 0,
+        domain: source.domain,
+        cadence: source.cadence,
+        notes: source.tosNotes,
+        tier: source.tier ?? "tertiary",
+      };
+    }
+
     const status = ranById.get(source.id);
     if (status !== undefined) {
       const publicStatus =
@@ -462,6 +486,7 @@ function createPublicSourceStatuses(
         domain: source.domain,
         cadence: source.cadence,
         notes: status.warnings.join(" ") || source.tosNotes,
+        tier: source.tier ?? "primary",
       };
     }
 
@@ -471,11 +496,12 @@ function createPublicSourceStatuses(
       name: source.name,
       url: source.url,
       lastFetchedAt: carried?.lastFetchedAt ?? new Date(0).toISOString(),
-      status: carried?.status ?? "stale",
+      status: carried?.status === "reference" ? "stale" : carried?.status ?? "stale",
       errorRate: carried?.errorRate ?? 0,
       domain: source.domain,
       cadence: source.cadence,
       notes: carried?.notes ?? source.tosNotes,
+      tier: source.tier ?? "primary",
     };
   });
 }
@@ -654,11 +680,12 @@ type PublicSourceStatus = {
   name: string;
   url: string;
   lastFetchedAt: string;
-  status: "ok" | "stale" | "failed";
+  status: "ok" | "stale" | "failed" | "reference";
   errorRate: number;
   domain?: string;
   cadence?: RefreshCadence;
   notes?: string;
+  tier?: "primary" | "secondary" | "tertiary";
 };
 
 type PublicRunStatus = {

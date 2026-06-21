@@ -6,11 +6,12 @@ export type SourceStatus = {
   name: string;
   url: string;
   lastFetchedAt: string;
-  status: "ok" | "stale" | "failed";
+  status: "ok" | "stale" | "failed" | "reference";
   errorRate: number;
   domain?: string;
   cadence?: string;
   notes?: string;
+  tier?: "primary" | "secondary" | "tertiary";
 };
 
 export type TimelineEvent = {

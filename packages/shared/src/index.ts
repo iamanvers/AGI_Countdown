@@ -50,8 +50,11 @@ export type TimelineCategory = (typeof TIMELINE_CATEGORIES)[number];
 export const CURATION_MODES = ["curated", "feed"] as const;
 export type CurationMode = (typeof CURATION_MODES)[number];
 
-export const SOURCE_STATUSES = ["ok", "stale", "failed"] as const;
+export const SOURCE_STATUSES = ["ok", "stale", "failed", "reference"] as const;
 export type SourceHealthStatus = (typeof SOURCE_STATUSES)[number];
+
+export const SOURCE_TIERS = ["primary", "secondary", "tertiary"] as const;
+export type SourceTier = (typeof SOURCE_TIERS)[number];
 
 export const DATA_CADENCES = ["hourly", "daily", "weekly", "monthly"] as const;
 export type DataCadence = (typeof DATA_CADENCES)[number];
@@ -166,6 +169,7 @@ export type SourceStatus = {
   domain?: string;
   cadence?: DataCadence;
   notes?: string;
+  tier?: SourceTier;
 };
 
 export type RunStatus = {

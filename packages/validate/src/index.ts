@@ -5,7 +5,8 @@ export const CURATION_MODES = ["curated", "feed"] as const;
 export const DATA_CADENCES = ["hourly", "daily", "weekly", "monthly"] as const;
 export const RUN_CADENCES = ["hourly", "daily", "weekly"] as const;
 export const RUN_STATUSES = ["ok", "degraded", "failed"] as const;
-export const SOURCE_STATUSES = ["ok", "stale", "failed"] as const;
+export const SOURCE_STATUSES = ["ok", "stale", "failed", "reference"] as const;
+export const SOURCE_TIERS = ["primary", "secondary", "tertiary"] as const;
 export const TIMELINE_SIGNIFICANCES = ["minor", "major", "landmark"] as const;
 
 export type AgiDefinition = (typeof AGI_DEFINITIONS)[number];
@@ -163,7 +164,8 @@ export const sourceStatusSchema = z
     errorRate: ratioSchema,
     domain: nonEmptyStringSchema.optional(),
     cadence: dataCadenceSchema.optional(),
-    notes: nonEmptyStringSchema.optional()
+    notes: nonEmptyStringSchema.optional(),
+    tier: z.enum(SOURCE_TIERS).optional()
   })
   .strict();
 
