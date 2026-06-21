@@ -50,10 +50,7 @@ html {
 body {
   min-height: 100%;
   margin: 0;
-  background:
-    radial-gradient(1100px 680px at 82% -12%, rgb(var(--accent-rgb) / 0.1), transparent 62%),
-    rgb(var(--background));
-  background-attachment: fixed;
+  background: rgb(var(--background));
   color: rgb(var(--foreground));
   font-family: var(--font-sans), ui-sans-serif, system-ui, "Segoe UI", sans-serif;
   font-feature-settings: "cv02", "cv03", "cv04", "ss01";
@@ -61,6 +58,53 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animated aurora — slow drifting color fields, kept subtle so it never shouts. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -25%;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(38% 38% at 18% 28%, rgb(99 102 241 / 0.22), transparent 70%),
+    radial-gradient(34% 34% at 82% 16%, rgb(139 92 246 / 0.18), transparent 70%),
+    radial-gradient(40% 40% at 70% 82%, rgb(56 189 248 / 0.14), transparent 72%);
+  filter: blur(48px) saturate(115%);
+  animation: aurora 26s ease-in-out infinite alternate;
+}
+
+/* Fine grain for texture (data-uri noise). */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@keyframes aurora {
+  0% {
+    transform: translate3d(-3%, -2%, 0) rotate(0deg) scale(1.05);
+  }
+  100% {
+    transform: translate3d(3%, 2%, 0) rotate(8deg) scale(1.18);
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(
+    100deg,
+    rgb(var(--foreground)) 0%,
+    rgb(var(--accent-rgb)) 55%,
+    rgb(139 92 246) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 h1,

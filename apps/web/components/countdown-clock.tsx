@@ -50,10 +50,13 @@ export function CountdownClock({ targetIso }: CountdownClockProps) {
     <section aria-labelledby="countdown-heading" className="py-6 md:py-10">
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[rgb(var(--accent-rgb))]">
-            Estimated Arrival
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[rgb(var(--accent-rgb))]">
+            Estimated arrival
           </p>
-          <h1 id="countdown-heading" className="mt-3 max-w-4xl text-4xl font-semibold leading-none sm:text-6xl">
+          <h1
+            id="countdown-heading"
+            className="gradient-text mt-3 max-w-4xl text-5xl font-bold leading-[0.95] tracking-tight sm:text-7xl xl:text-8xl"
+          >
             AGI Countdown
           </h1>
         </div>
