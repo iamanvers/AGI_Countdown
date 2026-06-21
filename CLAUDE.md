@@ -119,6 +119,13 @@ before the engine applies sign/weight. `forecast-consensus-anchor` is special �
 - Windows + Git Bash environment; prefer `corepack pnpm ...`.
 - **Don't** commit build artifacts (`.next/`, `dist/`, `node_modules/`) — see `.gitignore`.
 
+## Git workflow
+
+- **Commit directly to `master`.** No feature branches for routine work (owner preference).
+- The refresh **bot writes to `master`** too: all `.github/workflows/refresh-*.yml` checkout
+  `ref: master` and `git push origin HEAD:master`. The default branch is `master` (not `main`) —
+  the `/api/refresh` dispatch ref and `GITHUB_REF_NAME` default to `master`.
+
 ## Where to look first
 
 - Architecture & decisions: `docs/` (ADR-0006 = zero-cost/LLM-optional is the current default;

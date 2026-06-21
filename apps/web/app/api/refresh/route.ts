@@ -25,7 +25,7 @@ export async function POST() {
   const token = process.env.GITHUB_DISPATCH_TOKEN;
   const repo = process.env.GITHUB_REPOSITORY; // "owner/repo"
   const workflow = process.env.GITHUB_REFRESH_WORKFLOW ?? "refresh-manual.yml";
-  const ref = process.env.GITHUB_REF_NAME ?? "main";
+  const ref = process.env.GITHUB_REF_NAME ?? "master";
 
   if (!token || !repo || !repo.includes("/")) {
     return reply(
