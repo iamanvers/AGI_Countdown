@@ -1,91 +1,91 @@
 {
-  "runId": "refresh-all-20260621T184335169Z-weak-agi",
-  "ts": "2026-06-21T18:43:35.169Z",
+  "runId": "refresh-all-20260621T185035805Z-weak-agi",
+  "ts": "2026-06-21T18:50:35.805Z",
   "definition": "weak-agi",
-  "tAgi": "2027-06-08T03:18:35.989Z",
+  "tAgi": "2027-05-15T03:44:01.815Z",
   "progress": 67.8433,
   "band": {
-    "earlyP10": "2025-05-23T20:20:53.277Z",
-    "lateP90": "2038-12-23T20:20:53.277Z"
+    "earlyP10": "2025-04-29T20:46:19.103Z",
+    "lateP90": "2038-11-29T20:46:19.103Z"
   },
   "anchor": "2028-06-15T06:57:42.712Z",
-  "deltaMonths": -12.259871,
+  "deltaMonths": -13.047808,
   "movers": [
     {
-      "factorId": "training-compute-growth",
-      "contributionMonths": -2.244,
-      "rationale": "Training compute growth read 0.72 (a accelerator signal).",
-      "citation": "https://epoch.ai/data/notable-ai-models"
-    },
-    {
       "factorId": "frontier-benchmark-saturation",
-      "contributionMonths": -2.14872,
+      "contributionMonths": -3.22308,
       "rationale": "Frontier benchmark saturation read 0.69 (a accelerator signal).",
       "citation": "https://aiindex.stanford.edu/report/"
     },
     {
-      "factorId": "datacenter-capex",
-      "contributionMonths": -1.446933,
-      "rationale": "Datacenter capex read 0.74 (a accelerator signal).",
-      "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
-    },
-    {
-      "factorId": "hardware-supply",
-      "contributionMonths": -1.248,
-      "rationale": "Hardware supply read 0.70 (a accelerator signal).",
-      "citation": "https://investor.tsmc.com/english"
+      "factorId": "training-compute-growth",
+      "contributionMonths": -2.4684,
+      "rationale": "Training compute growth read 0.72 (a accelerator signal).",
+      "citation": "https://epoch.ai/data/notable-ai-models"
     },
     {
       "factorId": "algorithmic-efficiency",
-      "contributionMonths": -1.184,
+      "contributionMonths": -1.3024,
       "rationale": "Algorithmic efficiency read 0.70 (a accelerator signal).",
       "citation": "https://aiindex.stanford.edu/report/"
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -1.052,
+      "contributionMonths": -1.2624,
       "rationale": "Adoption and usage read 0.64 (a accelerator signal).",
       "citation": "https://openrouter.ai/rankings"
     },
     {
+      "factorId": "datacenter-capex",
+      "contributionMonths": -1.157547,
+      "rationale": "Datacenter capex read 0.74 (a accelerator signal).",
+      "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
+    },
+    {
       "factorId": "autonomy-horizon",
-      "contributionMonths": -0.936,
+      "contributionMonths": -1.0296,
       "rationale": "Autonomy horizon read 0.60 (a accelerator signal).",
       "citation": "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/"
     },
     {
+      "factorId": "hardware-supply",
+      "contributionMonths": -0.9984,
+      "rationale": "Hardware supply read 0.70 (a accelerator signal).",
+      "citation": "https://investor.tsmc.com/english"
+    },
+    {
       "factorId": "policy-friction",
-      "contributionMonths": -0.667733,
+      "contributionMonths": -0.467413,
       "rationale": "Policy friction read 0.38 (a decelerator signal).",
       "citation": "https://artificialintelligenceact.eu/"
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": -0.534,
+      "contributionMonths": -0.4272,
       "rationale": "Public backlash pressure read 0.36 (a decelerator signal).",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
-      "factorId": "energy-headroom",
-      "contributionMonths": -0.357333,
-      "rationale": "Energy headroom read 0.45 (a decelerator signal).",
-      "citation": "https://www.iea.org/reports/electricity-2025"
-    },
-    {
       "factorId": "research-velocity",
-      "contributionMonths": -0.245152,
+      "contributionMonths": -0.318035,
       "rationale": "Research velocity read 0.56 (a accelerator signal).",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
+      "factorId": "energy-headroom",
+      "contributionMonths": -0.250133,
+      "rationale": "Energy headroom read 0.45 (a decelerator signal).",
+      "citation": "https://www.iea.org/reports/electricity-2025"
+    },
+    {
       "factorId": "safety-eval-pressure",
-      "contributionMonths": -0.136,
+      "contributionMonths": -0.0952,
       "rationale": "Safety-eval pressure read 0.45 (a decelerator signal).",
       "citation": "https://www.aisi.gov.uk/"
     },
     {
       "factorId": "labor-automation-exposure",
-      "contributionMonths": -0.06,
+      "contributionMonths": -0.048,
       "rationale": "Labor automation exposure read 0.51 (a accelerator signal).",
       "citation": "https://www.anthropic.com/economic-index"
     }

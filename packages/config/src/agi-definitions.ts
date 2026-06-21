@@ -20,6 +20,21 @@ export const agiDefinitions = [
       experts: 0.15,
       computeModels: 0.15,
     },
+    // Near-term, capability-driven: benchmarks, research, adoption lead.
+    domainEmphasis: {
+      benchmarks: 1.5,
+      research: 1.3,
+      adoption: 1.2,
+      autonomy: 1.1,
+      compute: 1.1,
+      energy: 0.7,
+      policy: 0.7,
+      safety: 0.7,
+      hardware: 0.8,
+      economics: 0.8,
+      jobs: 0.8,
+      sentiment: 0.8,
+    },
   },
   {
     id: "transformative-ai",
@@ -40,6 +55,18 @@ export const agiDefinitions = [
       experts: 0.25,
       computeModels: 0.2,
     },
+    // Deployment- and economy-driven: adoption, economics, jobs, energy lead.
+    domainEmphasis: {
+      adoption: 1.5,
+      economics: 1.4,
+      jobs: 1.4,
+      energy: 1.2,
+      sentiment: 1.1,
+      benchmarks: 0.8,
+      autonomy: 0.9,
+      compute: 0.9,
+      research: 0.9,
+    },
   },
   {
     id: "strong-agi",
@@ -59,6 +86,17 @@ export const agiDefinitions = [
       markets: 0.15,
       experts: 0.3,
       computeModels: 0.3,
+    },
+    // Deep capability + hard constraints: compute, autonomy, hardware, safety lead.
+    domainEmphasis: {
+      compute: 1.5,
+      autonomy: 1.5,
+      hardware: 1.3,
+      research: 1.2,
+      safety: 1.3,
+      energy: 1.2,
+      adoption: 0.7,
+      jobs: 0.7,
     },
   },
 ] as const satisfies readonly AgiDefinition[];

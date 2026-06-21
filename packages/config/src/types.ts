@@ -24,6 +24,13 @@ export type AgiDefinition = {
   maxShiftMonths: number;
   progressWeights: ProgressWeights;
   forecastWeights: ForecastWeights;
+  /**
+   * Per-definition multipliers on each factor domain's weight, so the live
+   * factor shift reflects what matters for *this* definition (e.g. benchmarks
+   * for weak AGI, deployment/economy for transformative AI, compute/autonomy
+   * for strong AGI). Defaults to 1 where unspecified.
+   */
+  domainEmphasis?: Partial<Record<FactorDomain, number>>;
 };
 
 export type FactorCategory = "internal" | "external";

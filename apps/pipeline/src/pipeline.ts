@@ -309,12 +309,16 @@ function buildEngineInput(
       if (aggregate === undefined) {
         return [];
       }
+      const emphasisMap = definition.domainEmphasis as
+        | Partial<Record<string, number>>
+        | undefined;
+      const emphasis = emphasisMap?.[factor.domain] ?? 1;
       return [
         {
           factorId: factor.id,
           normalized: centerNormalized(factor, aggregate.normalized),
           sign: factor.sign,
-          weight: factor.weight,
+          weight: factor.weight * emphasis,
           confidence: aggregate.confidence,
           citation: aggregate.citation,
           rationale: createMoverRationale(factor, aggregate.normalized),

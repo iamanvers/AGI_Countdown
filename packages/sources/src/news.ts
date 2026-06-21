@@ -16,7 +16,7 @@ export type NewsItem = {
 /** Detected org -> the keywords that map to it (case-insensitive, word-ish). */
 const ORG_KEYWORDS: Record<string, string[]> = {
   OpenAI: ["openai", "chatgpt", "gpt-5", "gpt-4", "sora", "o3", "o4"],
-  Anthropic: ["anthropic", "claude"],
+  Anthropic: ["anthropic", "claude", "fable"],
   "Google DeepMind": ["google deepmind", "deepmind", "gemini", "google ai"],
   Meta: ["meta ai", "llama", "fair "],
   NVIDIA: ["nvidia", "blackwell", "cuda", "gpu"],
@@ -54,51 +54,135 @@ function parseSeenDate(value: string): string {
   return `${y}-${mo}-${d}T${h}:${mi}:${s}.000Z`;
 }
 
-export async function fetchLiveNews(now: Date, limit = 30): Promise<NewsItem[]> {
-  const query = encodeURIComponent(
-    '("artificial intelligence" OR "AGI" OR "large language model") sourcelang:english',
-  );
-  const url =
-    `https://api.gdeltproject.org/api/v2/doc/doc?query=${query}` +
-    `&mode=artlist&maxrecords=${limit * 2}&sort=datedesc&timespan=7d&format=json`;
-
+async function fetchJson(url: string, timeoutMs = 15_000): Promise<unknown> {
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 15_000);
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
   try {
     const response = await fetch(url, {
       signal: controller.signal,
       headers: { "user-agent": "agi-countdown-pipeline/1.0" }
     });
     if (!response.ok) {
-      throw new Error(`GDELT artlist responded ${response.status}`);
+      throw new Error(`HTTP ${response.status}`);
     }
-    const payload = (await response.json()) as {
-      articles?: Array<{ title?: string; url?: string; domain?: string; seendate?: string }>;
-    };
-    const articles = payload.articles ?? [];
-
-    const seen = new Set<string>();
-    const items: NewsItem[] = [];
-    for (const article of articles) {
-      const title = article.title?.trim();
-      const link = article.url?.trim();
-      if (!title || !link || !link.startsWith("http")) continue;
-      const key = title.toLowerCase();
-      if (seen.has(key)) continue;
-      seen.add(key);
-      items.push({
-        title,
-        url: link,
-        source: article.domain ?? new URL(link).hostname,
-        publishedAt: article.seendate ? parseSeenDate(article.seendate) : now.toISOString(),
-        orgs: detectOrgs(title)
-      });
-      if (items.length >= limit) break;
-    }
-    return items;
-  } catch {
-    return [];
+    return await response.json();
   } finally {
     clearTimeout(timer);
   }
+}
+
+function dedupeAndTake(items: NewsItem[], limit: number): NewsItem[] {
+  const seen = new Set<string>();
+  const out: NewsItem[] = [];
+  for (const item of items) {
+    const key = item.title.toLowerCase().slice(0, 80);
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(item);
+    if (out.length >= limit) break;
+  }
+  return out;
+}
+
+// Algolia does not treat "OR" as boolean, so we run several targeted queries
+// and merge. These cover the field broadly while staying AI-relevant.
+const HN_QUERIES = [
+  "artificial intelligence",
+  "OpenAI",
+  "Anthropic",
+  "large language model",
+  "AGI",
+  "Nvidia AI"
+];
+
+/** Primary live feed: Hacker News (Algolia) — reliable, free, genuinely current. */
+async function fetchHackerNews(limit: number): Promise<NewsItem[]> {
+  const perQuery = Math.max(8, Math.ceil(limit / 2));
+  const results = await Promise.all(
+    HN_QUERIES.map(async (query) => {
+      try {
+        const url =
+          `https://hn.algolia.com/api/v1/search_by_date?query=${encodeURIComponent(query)}` +
+          `&tags=story&numericFilters=points%3E4&hitsPerPage=${perQuery}`;
+        const payload = (await fetchJson(url)) as {
+          hits?: Array<{ title?: string; url?: string | null; created_at?: string; objectID?: string }>;
+        };
+        return payload.hits ?? [];
+      } catch {
+        return [];
+      }
+    })
+  );
+
+  return results.flat().flatMap((hit): NewsItem[] => {
+    const title = hit.title?.trim();
+    if (!title) return [];
+    const link =
+      hit.url && hit.url.startsWith("http")
+        ? hit.url
+        : `https://news.ycombinator.com/item?id=${hit.objectID}`;
+    let source = "news.ycombinator.com";
+    try {
+      source = new URL(link).hostname.replace(/^www\./, "");
+    } catch {
+      /* keep default */
+    }
+    return [
+      {
+        title,
+        url: link,
+        source,
+        publishedAt: hit.created_at ?? new Date().toISOString(),
+        orgs: detectOrgs(title)
+      }
+    ];
+  });
+}
+
+/** Fallback live feed: GDELT artlist. */
+async function fetchGdelt(now: Date, limit: number): Promise<NewsItem[]> {
+  const query = encodeURIComponent(
+    '("artificial intelligence" OR "AGI" OR "large language model") sourcelang:english'
+  );
+  const url =
+    `https://api.gdeltproject.org/api/v2/doc/doc?query=${query}` +
+    `&mode=artlist&maxrecords=${limit * 2}&sort=datedesc&timespan=7d&format=json`;
+  const payload = (await fetchJson(url)) as {
+    articles?: Array<{ title?: string; url?: string; domain?: string; seendate?: string }>;
+  };
+  return (payload.articles ?? []).flatMap((article): NewsItem[] => {
+    const title = article.title?.trim();
+    const link = article.url?.trim();
+    if (!title || !link || !link.startsWith("http")) return [];
+    return [
+      {
+        title,
+        url: link,
+        source: article.domain ?? "",
+        publishedAt: article.seendate ? parseSeenDate(article.seendate) : now.toISOString(),
+        orgs: detectOrgs(title)
+      }
+    ];
+  });
+}
+
+export async function fetchLiveNews(now: Date, limit = 30): Promise<NewsItem[]> {
+  const sources: Array<() => Promise<NewsItem[]>> = [
+    () => fetchHackerNews(limit),
+    () => fetchGdelt(now, limit)
+  ];
+
+  const collected: NewsItem[] = [];
+  for (const source of sources) {
+    try {
+      const items = await source();
+      collected.push(...items);
+      if (collected.length >= limit) break;
+    } catch {
+      /* try the next source */
+    }
+  }
+
+  collected.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+  return dedupeAndTake(collected, limit);
 }
