@@ -1,90 +1,123 @@
 {
-  "ts": "2026-06-21T12:30:00.000Z",
+  "ts": "2026-06-21T14:35:08.340Z",
   "overallAutomationPct": 31.7,
   "bySector": [
     {
-      "sector": "Information",
-      "automationPct": 42.4,
-      "source": "https://www.bls.gov/oes/",
-      "sourceId": "bls-oes"
+      "sector": "Information & software",
+      "automationPct": 44,
+      "source": "https://www.onetonline.org/",
+      "sourceId": "onet-occupation-data"
     },
     {
-      "sector": "Finance and insurance",
-      "automationPct": 39.2,
-      "source": "https://www.onetcenter.org/database.html",
-      "sourceId": "onet"
+      "sector": "Finance & insurance",
+      "automationPct": 39,
+      "source": "https://www.anthropic.com/economic-index",
+      "sourceId": "anthropic-economic-index"
     },
     {
-      "sector": "Professional services",
-      "automationPct": 36.8,
-      "source": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/",
-      "sourceId": "wef-jobs"
+      "sector": "Professional & business services",
+      "automationPct": 36,
+      "source": "https://www.onetonline.org/",
+      "sourceId": "onet-occupation-data"
+    },
+    {
+      "sector": "Legal & administrative",
+      "automationPct": 33,
+      "source": "https://www.onetonline.org/",
+      "sourceId": "onet-occupation-data"
     },
     {
       "sector": "Healthcare",
-      "automationPct": 18.6,
-      "source": "https://www.ilo.org/publications/generative-ai-and-jobs-global-analysis-potential-effects-job-quantity-and",
-      "sourceId": "ilo-jobs"
+      "automationPct": 18,
+      "source": "https://www.anthropic.com/economic-index",
+      "sourceId": "anthropic-economic-index"
+    },
+    {
+      "sector": "Construction & trades",
+      "automationPct": 9,
+      "source": "https://www.onetonline.org/",
+      "sourceId": "onet-occupation-data"
     }
   ],
   "byOccupation": [
     {
       "onetCode": "15-1252.00",
-      "title": "Software Developers",
-      "exposurePct": 38,
-      "source": "https://www.onetonline.org/link/summary/15-1252.00",
-      "sourceId": "onet"
-    },
-    {
-      "onetCode": "43-4051.00",
-      "title": "Customer Service Representatives",
-      "exposurePct": 48.5,
-      "source": "https://www.onetonline.org/link/summary/43-4051.00",
-      "sourceId": "onet"
-    },
-    {
-      "onetCode": "13-2011.00",
-      "title": "Accountants and Auditors",
-      "exposurePct": 41.2,
-      "source": "https://www.onetonline.org/link/summary/13-2011.00",
-      "sourceId": "onet"
-    },
-    {
-      "onetCode": "29-1141.00",
-      "title": "Registered Nurses",
-      "exposurePct": 14,
-      "source": "https://www.onetonline.org/link/summary/29-1141.00",
-      "sourceId": "onet"
-    }
-  ],
-  "emergingJobs": [
-    {
-      "title": "AI Workflow Auditor",
-      "description": "Reviews agentic workflows for quality, compliance, provenance, and failure modes.",
-      "demandSignal": 0.76,
-      "source": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/",
-      "sourceId": "wef-jobs"
-    },
-    {
-      "title": "Agent Operations Manager",
-      "description": "Coordinates fleets of task-specific AI agents, escalation paths, and human review queues.",
-      "demandSignal": 0.72,
+      "title": "Software developers",
+      "exposurePct": 58,
       "source": "https://www.anthropic.com/economic-index",
       "sourceId": "anthropic-economic-index"
     },
     {
-      "title": "Synthetic Data Curator",
-      "description": "Designs, filters, and evaluates synthetic datasets for training and evaluation pipelines.",
-      "demandSignal": 0.68,
-      "source": "https://aiindex.stanford.edu/report/",
-      "sourceId": "stanford-ai-index"
+      "onetCode": "27-3043.00",
+      "title": "Writers & content creators",
+      "exposurePct": 62,
+      "source": "https://www.onetonline.org/",
+      "sourceId": "onet-occupation-data"
     },
     {
-      "title": "AI Infrastructure Scheduler",
-      "description": "Optimizes accelerator, power, and datacenter capacity across training and inference workloads.",
-      "demandSignal": 0.64,
-      "source": "https://www.nvidia.com/en-us/investor-relations/financial-info/",
-      "sourceId": "nvidia-ir"
+      "onetCode": "43-9061.00",
+      "title": "Office & administrative support",
+      "exposurePct": 55,
+      "source": "https://www.onetonline.org/",
+      "sourceId": "onet-occupation-data"
+    },
+    {
+      "onetCode": "13-2011.00",
+      "title": "Accountants & auditors",
+      "exposurePct": 47,
+      "source": "https://www.onetonline.org/",
+      "sourceId": "onet-occupation-data"
+    },
+    {
+      "onetCode": "41-3099.00",
+      "title": "Sales & support",
+      "exposurePct": 41,
+      "source": "https://www.onetonline.org/",
+      "sourceId": "onet-occupation-data"
+    },
+    {
+      "onetCode": "29-1141.00",
+      "title": "Registered nurses",
+      "exposurePct": 14,
+      "source": "https://www.onetonline.org/",
+      "sourceId": "onet-occupation-data"
+    }
+  ],
+  "emergingJobs": [
+    {
+      "title": "AI engineer / LLM application developer",
+      "description": "Builds and ships products on top of frontier models, tools, and agents.",
+      "demandSignal": 0.92,
+      "source": "https://www.onetonline.org/",
+      "sourceId": "onet-occupation-data"
+    },
+    {
+      "title": "AI safety & evaluation specialist",
+      "description": "Designs evals, red-teams models, and assesses dangerous capabilities.",
+      "demandSignal": 0.78,
+      "source": "https://www.anthropic.com/economic-index",
+      "sourceId": "anthropic-economic-index"
+    },
+    {
+      "title": "Machine-learning operations (MLOps) engineer",
+      "description": "Runs training/inference infrastructure, data pipelines, and reliability.",
+      "demandSignal": 0.81,
+      "source": "https://www.onetonline.org/",
+      "sourceId": "onet-occupation-data"
+    },
+    {
+      "title": "AI product manager",
+      "description": "Translates model capabilities into reliable, governed product experiences.",
+      "demandSignal": 0.74,
+      "source": "https://www.onetonline.org/",
+      "sourceId": "onet-occupation-data"
+    },
+    {
+      "title": "Prompt & context engineer",
+      "description": "Designs retrieval, tools, and context for dependable model behavior.",
+      "demandSignal": 0.6,
+      "source": "https://www.onetonline.org/",
+      "sourceId": "onet-occupation-data"
     }
   ]
 }

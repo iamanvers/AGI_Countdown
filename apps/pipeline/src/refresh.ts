@@ -3,7 +3,6 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import { runRefresh } from "./pipeline.js";
 import type { RefreshScope } from "./types.js";
 
-const defaultNow = "2026-01-01T00:00:00.000Z";
 const defaultOutDir = fileURLToPath(new URL("../../web/public/data", import.meta.url));
 
 type CliOptions = {
@@ -16,13 +15,15 @@ export async function main(argv = process.argv.slice(2)): Promise<void> {
   const options = parseArgs(argv);
   const result = await runRefresh(options);
 
+  const ok = result.sourceStatuses.filter((status) => status.status === "ok").length;
   console.log(
     [
-      `AGI Countdown refresh scaffold complete`,
+      `AGI Countdown refresh complete`,
       `runId=${result.manifest.runId}`,
       `cadence=${result.manifest.requestedCadence}`,
       `samples=${result.samples.length}`,
-      `sources=${result.sourceStatuses.length}`,
+      `sources=${ok}/${result.sourceStatuses.length} ok`,
+      `tAgi=${result.engineStates.map((s) => `${s.definition}:${s.tAgi.slice(0, 10)}`).join(" ")}`,
       `outDir=${options.outDir}`,
     ].join("\n"),
   );
@@ -60,7 +61,8 @@ function parseArgs(argv: string[]): CliOptions {
   const cadence = parseCadence(
     values.get("cadence") ?? process.env.PIPELINE_CADENCE ?? "all",
   );
-  const now = parseNow(values.get("now") ?? process.env.PIPELINE_NOW ?? defaultNow);
+  const nowValue = values.get("now") ?? process.env.PIPELINE_NOW;
+  const now = nowValue === undefined ? new Date() : parseNow(nowValue);
   const outDir = resolve(
     values.get("out-dir") ?? process.env.PIPELINE_OUT_DIR ?? defaultOutDir,
   );

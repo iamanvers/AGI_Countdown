@@ -39,6 +39,40 @@ export type FactorSnapshot = {
   notes?: string;
 };
 
+export type JobsImpact = {
+  ts: string;
+  overallAutomationPct: number;
+  bySector: Array<{ sector: string; automationPct: number; source: string; sourceId?: string }>;
+  byOccupation: Array<{
+    onetCode: string;
+    title: string;
+    exposurePct: number;
+    source: string;
+    sourceId?: string;
+  }>;
+  emergingJobs: Array<{
+    title: string;
+    description: string;
+    demandSignal: number;
+    source: string;
+    sourceId?: string;
+  }>;
+};
+
+export type RunStatus = {
+  runId: string;
+  startedAt: string;
+  finishedAt: string;
+  cadence: string;
+  domainsRun: string[];
+  sourcesOk: number;
+  sourcesFailed: number;
+  quarantinedSamples: number;
+  deltaMonths: number;
+  bandWidthDays: number;
+  status: "ok" | "degraded" | "failed";
+};
+
 const dataDir = join(process.cwd(), "public", "data");
 
 export async function readSources() {
@@ -51,6 +85,14 @@ export async function readTimeline() {
 
 export async function readFactors() {
   return readJson<FactorSnapshot[]>("factors.json");
+}
+
+export async function readJobs() {
+  return readJson<JobsImpact>("jobs.json");
+}
+
+export async function readStatus() {
+  return readJson<RunStatus>("status.json");
 }
 
 async function readJson<T>(fileName: string): Promise<T> {

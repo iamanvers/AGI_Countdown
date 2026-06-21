@@ -9,11 +9,7 @@ export const factorRegistry = [
     domain: "forecasts",
     description:
       "Definition-matched crowd and market expectations that set the baseline anchor before live factors move it.",
-    sources: [
-      "metaculus-agi-questions",
-      "manifold-ai-markets",
-      "fixture-hourly-signals",
-    ],
+    sources: ["metaculus-agi-questions", "manifold-ai-markets"],
     normalization: "zscore",
     sign: 1,
     weight: 8,
@@ -30,11 +26,7 @@ export const factorRegistry = [
     domain: "benchmarks",
     description:
       "Composite saturation across frontier benchmark leaderboards, tracked separately from the date estimate.",
-    sources: [
-      "papers-with-code-leaderboards",
-      "lmarena-leaderboard",
-      "fixture-daily-signals",
-    ],
+    sources: ["papers-with-code-leaderboards", "lmarena-leaderboard"],
     normalization: "momentum-01",
     sign: 1,
     weight: 7,
@@ -51,7 +43,7 @@ export const factorRegistry = [
     domain: "compute",
     description:
       "Growth in frontier training compute and related scaling indicators.",
-    sources: ["epoch-ai-notable-models", "fixture-weekly-signals"],
+    sources: ["epoch-ai-notable-models"],
     normalization: "log-zscore",
     sign: 1,
     weight: 6,
@@ -68,7 +60,7 @@ export const factorRegistry = [
     domain: "research",
     description:
       "AI research output and citation momentum from structured paper feeds.",
-    sources: ["arxiv-ai-paper-volume", "fixture-daily-signals"],
+    sources: ["arxiv-ai-paper-volume"],
     normalization: "zscore",
     sign: 1,
     weight: 3,
@@ -84,7 +76,7 @@ export const factorRegistry = [
     domain: "adoption",
     description:
       "Public model usage, downloads, and deployment proxies from structured usage feeds.",
-    sources: ["openrouter-usage", "hugging-face-hub", "fixture-daily-signals"],
+    sources: ["openrouter-usage", "hugging-face-hub"],
     normalization: "momentum-01",
     sign: 1,
     weight: 5,
@@ -101,7 +93,7 @@ export const factorRegistry = [
     domain: "economics",
     description:
       "Investment and revenue signals that proxy buildout capacity for frontier systems.",
-    sources: ["hyperscaler-ir", "nvidia-earnings", "fixture-weekly-signals"],
+    sources: ["hyperscaler-ir", "nvidia-earnings"],
     normalization: "log-zscore",
     sign: 1,
     weight: 4,
@@ -118,7 +110,7 @@ export const factorRegistry = [
     domain: "energy",
     description:
       "Electricity and grid constraints that can slow datacenter buildout.",
-    sources: ["eia-electricity", "ember-electricity", "fixture-weekly-signals"],
+    sources: ["eia-electricity", "ember-electricity"],
     normalization: "zscore",
     sign: -1,
     weight: 5,
@@ -135,7 +127,7 @@ export const factorRegistry = [
     domain: "policy",
     description:
       "Regulatory and governance pressure that can slow deployment or constrain scaling.",
-    sources: ["oecd-ai-policy", "nist-ai-risk", "fixture-weekly-signals"],
+    sources: ["oecd-ai-policy", "nist-ai-risk"],
     normalization: "momentum-01",
     sign: -1,
     weight: 4,
@@ -152,7 +144,7 @@ export const factorRegistry = [
     domain: "sentiment",
     description:
       "News tone and public pressure that can create deployment drag.",
-    sources: ["gdelt-ai-tone", "fixture-hourly-signals"],
+    sources: ["gdelt-ai-tone"],
     normalization: "zscore",
     sign: -1,
     weight: 3,
@@ -169,11 +161,7 @@ export const factorRegistry = [
     domain: "jobs",
     description:
       "Occupation-level exposure and automation signals for broad economic deployment.",
-    sources: [
-      "onet-occupation-data",
-      "anthropic-economic-index",
-      "fixture-weekly-signals",
-    ],
+    sources: ["onet-occupation-data", "anthropic-economic-index"],
     normalization: "momentum-01",
     sign: 1,
     weight: 4,

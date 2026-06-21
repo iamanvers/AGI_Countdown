@@ -1,6 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import { ConfidenceBand } from "@/components/confidence-band";
@@ -8,6 +9,7 @@ import { CountdownClock } from "@/components/countdown-clock";
 import { DefinitionToggle } from "@/components/definition-toggle";
 import { MoversList } from "@/components/movers-list";
 import { ProgressMeter } from "@/components/progress-meter";
+import { RefreshButton } from "@/components/refresh-button";
 import {
   type DefinitionId,
   type EngineState,
@@ -16,7 +18,7 @@ import {
   definitions,
   fetchEngineState
 } from "@/lib/engine-state";
-import { formatCompactNumber, formatDateTime } from "@/lib/format";
+import { formatCompactNumber, formatDate, formatDateTime, formatMonths } from "@/lib/format";
 
 type LoadState = "loading" | "ready" | "refreshing" | "error";
 
@@ -41,17 +43,13 @@ export function EngineDashboard() {
 
     fetchEngineState(activeDefinition, controller.signal)
       .then((nextState) => {
-        setSnapshots((current) => ({
-          ...current,
-          [activeDefinition]: nextState
-        }));
+        setSnapshots((current) => ({ ...current, [activeDefinition]: nextState }));
         setLoadState("ready");
       })
       .catch((nextError: unknown) => {
         if (controller.signal.aborted) {
           return;
         }
-
         setError(nextError instanceof Error ? nextError.message : "Unable to load engine state.");
         setLoadState(hasSnapshot ? "ready" : "error");
       });
@@ -65,15 +63,20 @@ export function EngineDashboard() {
   );
 
   return (
-    <main className="min-h-svh overflow-hidden px-4 py-4 sm:px-6 lg:px-8" data-definition={activeDefinition}>
-      <div className="mx-auto flex min-h-[calc(100svh-2rem)] w-full max-w-[1500px] flex-col">
-        <header className="flex flex-col gap-5 py-4 md:flex-row md:items-center md:justify-between">
+    <main
+      className="px-4 pb-16 pt-6 sm:px-6 lg:px-8"
+      data-definition={activeDefinition}
+    >
+      <div className="mx-auto w-full max-w-[1500px]">
+        <header className="flex flex-col gap-4 border-b border-[rgb(var(--line)/0.5)] pb-5 md:flex-row md:items-center md:justify-between">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[rgb(var(--muted))]">
               Deterministic forecast clock
             </p>
             <p className="mt-2 text-sm text-[rgb(var(--muted))]">
-              Active lens: <span className="font-medium text-[rgb(var(--foreground))]">{definitionLabel}</span>
+              A live estimate of when{" "}
+              <span className="font-medium text-[rgb(var(--foreground))]">{definitionLabel}</span>{" "}
+              arrives — blended from public forecasts, nudged by live signals.
             </p>
           </div>
           <DefinitionToggle
@@ -87,23 +90,29 @@ export function EngineDashboard() {
           {state ? (
             <motion.div
               animate={{ opacity: 1, y: 0 }}
-              className="grid flex-1 gap-5 pb-6 lg:grid-cols-[minmax(0,1.6fr)_minmax(340px,0.78fr)]"
               exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 12 }}
               initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 18 }}
               key={state.definition}
               transition={shouldReduceMotion ? { duration: 0 } : { type: "spring", stiffness: 140, damping: 22 }}
             >
-              <div className="flex min-w-0 flex-col justify-center">
+              <section className="py-2">
                 <CountdownClock targetIso={state.tAgi} />
-                <SnapshotFooter loadState={loadState} state={state} />
-              </div>
+              </section>
 
-              <aside className="grid content-center gap-4">
+              <SnapshotFooter loadState={loadState} state={state} />
+
+              <section className="mt-8 grid gap-4 lg:grid-cols-3">
                 <ProgressMeter value={state.progress} />
                 <ConfidenceBand state={state} />
-                <RatesPanel state={state} />
+                <EstimateSummary state={state} />
+              </section>
+
+              <section className="mt-4 grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.5fr)]">
                 <MoversList movers={state.movers} />
-              </aside>
+                <RatesPanel state={state} />
+              </section>
+
+              <ExploreStrip />
             </motion.div>
           ) : (
             <LoadingPanel
@@ -120,11 +129,43 @@ export function EngineDashboard() {
   );
 }
 
+function EstimateSummary({ state }: { state: EngineState }) {
+  const direction = state.deltaMonths < 0 ? "sooner" : state.deltaMonths > 0 ? "later" : "unchanged";
+  return (
+    <section className="grid content-start gap-3 rounded-lg border border-[rgb(var(--line)/0.7)] bg-[rgb(var(--panel)/0.66)] p-5 backdrop-blur">
+      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[rgb(var(--muted))]">
+        How the date was built
+      </p>
+      <Row label="Forecast anchor" value={formatDate(state.anchor)} />
+      <Row
+        label="Live factor shift"
+        value={`${formatMonths(state.deltaMonths)} ${direction}`}
+      />
+      <Row label="Estimated arrival" value={formatDate(state.tAgi)} emphasize />
+    </section>
+  );
+}
+
+function Row({ label, value, emphasize }: { label: string; value: string; emphasize?: boolean }) {
+  return (
+    <div className="flex items-baseline justify-between gap-4 border-t border-[rgb(var(--line)/0.4)] pt-3 first-of-type:border-t-0 first-of-type:pt-0">
+      <span className="text-sm text-[rgb(var(--muted))]">{label}</span>
+      <span
+        className={`tabular text-right ${emphasize ? "text-lg font-semibold text-[rgb(var(--accent-rgb))]" : "font-medium"}`}
+      >
+        {value}
+      </span>
+    </div>
+  );
+}
+
 function SnapshotFooter({ loadState, state }: { loadState: LoadState; state: EngineState }) {
   return (
-    <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[rgb(var(--line)/0.66)] py-5 text-sm text-[rgb(var(--muted))]">
+    <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[rgb(var(--line)/0.5)] py-4 text-sm text-[rgb(var(--muted))]">
       <div className="flex flex-wrap items-center gap-3">
-        <span>Snapshot: <span className="font-medium text-[rgb(var(--foreground))]">{state.runId}</span></span>
+        <span>
+          Snapshot <span className="font-mono text-xs text-[rgb(var(--foreground))]">{state.runId}</span>
+        </span>
         {state.stale ? (
           <span className="rounded-full border border-amber-400/35 bg-amber-400/12 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-amber-200">
             Stale
@@ -136,40 +177,61 @@ function SnapshotFooter({ loadState, state }: { loadState: LoadState; state: Eng
           </span>
         ) : null}
       </div>
-      <span className="tabular">Computed {formatDateTime(state.ts)}</span>
+      <div className="flex flex-wrap items-center gap-4">
+        <RefreshButton />
+        <span className="tabular">Computed {formatDateTime(state.ts)}</span>
+      </div>
     </div>
   );
 }
 
 function RatesPanel({ state }: { state: EngineState }) {
   const rates = state.rates;
-
   if (!rates || (!rates.computePerSec && !rates.papersPerDay && !rates.investUsdPerSec)) {
     return null;
   }
 
   const entries = [
-    rates.computePerSec
-      ? { label: "Compute/sec", value: formatCompactNumber(rates.computePerSec) }
-      : null,
-    rates.papersPerDay
-      ? { label: "Papers/day", value: formatCompactNumber(rates.papersPerDay) }
-      : null,
-    rates.investUsdPerSec
-      ? { label: "Invest/sec", value: `$${formatCompactNumber(rates.investUsdPerSec)}` }
-      : null
+    rates.computePerSec ? { label: "Compute / sec (FLOP)", value: formatCompactNumber(rates.computePerSec) } : null,
+    rates.papersPerDay ? { label: "AI papers / day", value: formatCompactNumber(rates.papersPerDay) } : null,
+    rates.investUsdPerSec ? { label: "AI invest / sec", value: `$${formatCompactNumber(rates.investUsdPerSec)}` } : null
   ].filter(Boolean) as Array<{ label: string; value: string }>;
 
   return (
-    <section
-      className="grid gap-2 rounded-lg border border-[rgb(var(--line)/0.7)] bg-[rgb(var(--panel)/0.72)] p-3 backdrop-blur"
-      style={{ gridTemplateColumns: `repeat(${entries.length}, minmax(0, 1fr))` }}
-    >
-      {entries.map((entry) => (
-        <div className="rounded-md bg-[rgb(var(--background)/0.3)] p-3" key={entry.label}>
-          <p className="text-[0.66rem] uppercase tracking-[0.14em] text-[rgb(var(--muted))]">{entry.label}</p>
-          <p className="mt-2 font-mono text-lg font-semibold tabular">{entry.value}</p>
-        </div>
+    <section className="grid content-start gap-3 rounded-lg border border-[rgb(var(--line)/0.7)] bg-[rgb(var(--panel)/0.66)] p-5 backdrop-blur">
+      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[rgb(var(--muted))]">
+        Live rate estimates
+      </p>
+      <div className="grid gap-3">
+        {entries.map((entry) => (
+          <div className="flex items-baseline justify-between gap-3" key={entry.label}>
+            <span className="text-sm text-[rgb(var(--muted))]">{entry.label}</span>
+            <span className="font-mono text-lg font-semibold tabular">{entry.value}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function ExploreStrip() {
+  const cards = [
+    { href: "/methodology", title: "Methodology", copy: "The exact formula, factors, and weights." },
+    { href: "/jobs", title: "Jobs & automation", copy: "Exposure by sector and the roles emerging." },
+    { href: "/timeline", title: "Timeline", copy: "The milestones that got us here." }
+  ];
+  return (
+    <section className="mt-10 grid gap-3 sm:grid-cols-3">
+      {cards.map((card) => (
+        <Link
+          className="focus-ring group rounded-lg border border-[rgb(var(--line)/0.66)] bg-[rgb(var(--panel)/0.55)] p-5 transition-colors hover:border-[rgb(var(--accent-rgb)/0.6)]"
+          href={card.href}
+          key={card.href}
+        >
+          <p className="text-base font-semibold">{card.title}</p>
+          <p className="mt-2 text-sm leading-6 text-[rgb(var(--muted))]">{card.copy}</p>
+          <span className="mt-3 inline-block text-sm text-[rgb(var(--accent-rgb))]">Explore →</span>
+        </Link>
       ))}
     </section>
   );
@@ -187,11 +249,10 @@ function LoadingPanel({
   reduceMotion: boolean | null;
 }) {
   const expectedPath = dataPathForDefinition(definition);
-
   return (
     <motion.section
       animate={{ opacity: 1, y: 0 }}
-      className="grid flex-1 place-items-center py-20"
+      className="grid place-items-center py-24"
       exit={reduceMotion ? { opacity: 0 } : { opacity: 0, y: 10 }}
       initial={reduceMotion ? { opacity: 0 } : { opacity: 0, y: 18 }}
       transition={reduceMotion ? { duration: 0 } : { type: "spring", stiffness: 140, damping: 22 }}

@@ -1,89 +1,136 @@
-# AGI Countdown
-
-A live digital countdown clock for Artificial General Intelligence.
-
-The product is intentionally simple at the surface: one large, precise clock counting down to the
-current estimated AGI arrival date. Underneath it is a transparent, deterministic engine that
-combines forecast anchors, live factors, uncertainty, citations, and source health into static JSON
-snapshots that the site can serve for free.
-
-> Status: application scaffold in progress. The architecture of record lives in `docs/`, with
-> ADR-0006 as the current default: zero-cost, deterministic, and LLM-optional.
-
-## What This Is
-
-AGI Countdown is a "Worldometer for AGI": a beautiful digital clock that keeps ticking locally while
-the projected date is recomputed by a scheduled deterministic pipeline.
-
-The core rule is:
-
-**Validated data goes in; a pure deterministic function computes the date.**
-
-No LLM is used in the default build. No database, Redis, or always-on worker is required. The
-pipeline writes static JSON snapshots and the Next.js app reads them from the CDN.
-
-## Build Shape
-
-```txt
-apps/
-  web/                 Next.js App Router site and digital countdown UI
-  pipeline/            Deterministic refresh script run by GitHub Actions
-packages/
-  engine/              Pure TypeScript estimator math
-  sources/             Structured source connectors and fixture connectors
-  validate/            Zod schemas and validation helpers
-  config/              AGI definitions, factors, source registry
-  shared/              Shared TypeScript types and constants
-docs/                  Architecture, roadmap, testing, ADRs
+```
+   █████╗  ██████╗ ██╗    ██████╗ ██████╗ ██╗   ██╗███╗   ██╗████████╗██████╗  ██████╗ ██╗    ██╗███╗   ██╗
+  ██╔══██╗██╔════╝ ██║   ██╔════╝██╔═══██╗██║   ██║████╗  ██║╚══██╔══╝██╔══██╗██╔═══██╗██║    ██║████╗  ██║
+  ███████║██║  ███╗██║   ██║     ██║   ██║██║   ██║██╔██╗ ██║   ██║   ██║  ██║██║   ██║██║ █╗ ██║██╔██╗ ██║
+  ██╔══██║██║   ██║██║   ██║     ██║   ██║██║   ██║██║╚██╗██║   ██║   ██║  ██║██║   ██║██║███╗██║██║╚██╗██║
+  ██║  ██║╚██████╔╝██║   ╚██████╗╚██████╔╝╚██████╔╝██║ ╚████║   ██║   ██████╔╝╚██████╔╝╚███╔███╔╝██║ ╚████║
+  ╚═╝  ╚═╝ ╚═════╝ ╚═╝    ╚═════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚═════╝  ╚═════╝  ╚══╝╚══╝ ╚═╝  ╚═══╝
 ```
 
-## Development
+```
+╭──────────────────────────────────────────────────────────────────╮
+│ ✻ AGI Countdown                                                    │
+│                                                                    │
+│   A deterministic, zero-cost live clock to AGI.                    │
+│                                                                    │
+│   pnpm dev          → run the site locally                         │
+│   pnpm refresh      → recompute the snapshot from live data        │
+│   /methodology      → see exactly how the date is built            │
+│                                                                    │
+│   stack: Next.js · TypeScript · Tailwind · GitHub Actions          │
+│   cost:  $0  ·  no LLM required  ·  every number cited             │
+╰──────────────────────────────────────────────────────────────────╯
+```
+
+A **Worldometer for AGI** — one large clock counting down to the current estimated arrival of
+Artificial General Intelligence. The number is not a guess: a transparent, deterministic engine
+blends public forecasts into a baseline date, then nudges it with bounded live signals. Everything
+is cited, the uncertainty is always shown, and the whole thing runs for **$0**.
+
+---
+
+## How the clock works
+
+```
+T_AGI  =  Anchor  +  Δ_factors
+```
+
+- **Anchor** — a weighted blend of published forecasts (Metaculus community, prediction markets,
+  expert surveys, compute-based models) → the slow-moving consensus date.
+- **Δ_factors** — a live, bounded shift from signals like frontier-benchmark saturation, training
+  compute, research velocity (arXiv), adoption, datacenter capex, energy headroom, policy friction,
+  and public sentiment (GDELT). Each is normalized, signed, weighted, smoothed, and **clamped**.
+
+> **The rule:** validated data goes in; a pure function computes the date. No model ever invents the
+> number — see [`docs/adr/0005-determinism-boundary.md`](docs/adr/0005-determinism-boundary.md).
+
+Three switchable definitions (**Weak AGI**, **Transformative AI**, **Strong AGI**) each get their own
+anchor and clock.
+
+---
+
+## Quick start
 
 ```bash
-pnpm install
-pnpm dev
+corepack pnpm install          # install (pnpm workspace)
+corepack pnpm refresh          # compute fresh snapshots from live + curated data
+corepack pnpm dev              # run the site at http://localhost:3000
 ```
 
-Useful scripts:
+Other useful scripts:
 
-```bash
-pnpm build
-pnpm typecheck
-pnpm test
-pnpm refresh
-```
-
-The web app serves seeded data from `apps/web/public/data/` until the pipeline is connected to live
-sources.
-
-## Documentation
-
-| Doc | What it covers |
+| Command | What it does |
 |---|---|
-| [Overview & AGI Definitions](docs/00-OVERVIEW.md) | Vision, product surface, glossary, switchable AGI definitions |
-| [System Architecture](docs/01-ARCHITECTURE.md) | End-to-end data flow, determinism boundary, monorepo layout |
-| [Clock Engine](docs/02-CLOCK-ENGINE.md) | Estimator math, anchor blend, factor registry, live ticker |
-| [Refresh Pipeline](docs/03-AGENT-ARCHITECTURE.md) | Deterministic pipeline and optional LLM enhancement |
-| [Data Sources](docs/04-DATA-SOURCES.md) | Source registry, cadence, access, attribution |
-| [Data Model](docs/05-DATA-MODEL.md) | Static JSON contracts and schemas |
-| [Data Access](docs/06-API.md) | Static JSON paths and caching |
-| [Frontend Design](docs/07-FRONTEND-DESIGN.md) | Pages, components, design system, motion |
-| [Performance](docs/08-PERFORMANCE.md) | Rendering strategy, budgets, client animation |
-| [Deployment](docs/09-DEPLOYMENT.md) | GitHub Actions and Vercel zero-cost deployment |
-| [Observability](docs/10-OBSERVABILITY.md) | Source health and run telemetry |
-| [Security & Legal](docs/11-SECURITY-LEGAL.md) | Attribution, secrets, honest framing |
-| [Cost Model](docs/12-COST-MODEL.md) | Free-tier constraints and optional upgrades |
-| [Roadmap](docs/13-ROADMAP.md) | Phases and milestones |
-| [Testing](docs/14-TESTING.md) | Unit, pipeline, E2E, and performance verification |
-| [ADRs](docs/adr/README.md) | Architecture decision records |
+| `pnpm build` | Build every package + the Next.js site |
+| `pnpm typecheck` | Type-check the whole workspace |
+| `pnpm test` | Run unit tests (engine math is fully tested) |
+| `pnpm refresh -- --cadence hourly` | Run only the hourly tier |
+| `pnpm validate:data` | Validate the static JSON against the schemas |
 
-## Current Target
+---
 
-The first shippable milestone is a polished digital clock:
+## Triggering a refresh
 
-- Huge mono countdown numerals on `/`
-- Definition switcher for `weak-agi`, `transformative-ai`, and `strong-agi`
-- Confidence band and top movers visible under the clock
-- Static JSON data contract wired end-to-end
-- Pure engine v1 and deterministic pipeline scaffold
-- Reduced-motion and accessible rendering paths
+The data updates on a schedule, but you can force a fresh run two ways:
+
+1. **From the website** — the **Trigger refresh** button on the home page calls the
+   [`/api/refresh`](apps/web/app/api/refresh/route.ts) route, which dispatches the on-demand GitHub
+   Actions workflow. Configure it by setting `GITHUB_DISPATCH_TOKEN` and `GITHUB_REPOSITORY` (see
+   [`.env.example`](.env.example)); without them the button explains it's not configured and the
+   scheduled refreshes still run.
+2. **From GitHub** — run the **Refresh (on-demand)** workflow manually, or wait for the hourly /
+   daily / weekly schedules in [`.github/workflows`](.github/workflows).
+
+---
+
+## Architecture (zero-cost)
+
+```
+GitHub Actions (cron / on-demand)                 Vercel (free) / any static host
+┌─────────────────────────────────────┐           ┌──────────────────────────────┐
+│ apps/pipeline:                       │  commit   │ Next.js — reads /data/*.json │
+│  fetch (live + curated)  →  validate │  JSON →   │ clock animates locally,      │
+│  →  engine.compute()  →  write JSON  │ ───────→  │ revalidates on cadence       │
+└─────────────────────────────────────┘           └──────────────────────────────┘
+        live: Manifold · arXiv · GDELT                    no DB · no server · no LLM
+```
+
+No always-on worker, no database, no paid APIs. The request path just serves static JSON from the
+edge; the time-series history *is* the git history.
+
+### Project layout
+
+```
+apps/
+  web/        Next.js site (clock, timeline, jobs, methodology, sources, about)
+  pipeline/   deterministic refresh: fetch → validate → compute → write JSON
+packages/
+  engine/     pure TS estimator math (anchor blend, bounded Δ, band) — unit-tested
+  sources/    live connectors (Manifold/arXiv/GDELT) + cited curated dataset
+  config/     factor registry, AGI definitions, source registry
+  validate/   zod schemas for every static data file
+  shared/     shared types
+docs/         architecture of record + ADRs
+```
+
+---
+
+## Deployment
+
+- **Site:** deploy `apps/web` to **Vercel** (Hobby) or any static host. Set `NEXT_PUBLIC_SITE_URL`
+  to your canonical origin so metadata / Open Graph resolve correctly.
+- **Data:** the GitHub Actions workflows commit refreshed JSON to the repo; the push redeploys the
+  site. Add free API keys and the refresh-trigger token as repo / Vercel secrets if you want them.
+
+See [`.env.example`](.env.example) for every (optional) variable.
+
+---
+
+## Honest by design
+
+The projected date is an **estimate**, not a prediction of record. A confidence band is always
+shown, failed sources are flagged rather than faked, and switching the AGI definition visibly moves
+the date. The full method, factor table, and source health are public in the app and in
+[`docs/`](docs/).
+
+_Not financial, investment, or professional advice._

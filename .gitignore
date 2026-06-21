@@ -1,11 +1,34 @@
-node_modules
-.next
-dist
-coverage
-.turbo
-.corepack
-.logs
+# Dependencies
+node_modules/
+.pnpm-store/
+.corepack/
+
+# Build output / caches
+.next/
+out/
+dist/
+build/
+coverage/
+.turbo/
 *.tsbuildinfo
+
+# Logs
+.logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Local session state / deploy
+.remember/
+.vercel/
+
+# Environment (keep the example committed)
 .env
 .env.*
 !.env.example
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
