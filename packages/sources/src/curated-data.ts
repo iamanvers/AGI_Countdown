@@ -724,34 +724,162 @@ export const curatedTimeline: CuratedTimelineEvent[] = [
 
 export type CuratedJobsImpact = {
   overallAutomationPct: number;
-  bySector: Array<{ sector: string; automationPct: number; source: string; sourceId?: string }>;
-  byOccupation: Array<{ onetCode: string; title: string; exposurePct: number; source: string; sourceId?: string }>;
-  emergingJobs: Array<{ title: string; description: string; demandSignal: number; source: string; sourceId?: string }>;
+  sectors: Array<{
+    sector: string;
+    workforceSharePct: number;
+    automationExposurePct: number;
+    source: string;
+    sourceId?: string;
+    emergingRoles: Array<{ title: string; demandSignal: number }>;
+    decliningRoles: string[];
+  }>;
+  highlights: Array<{ title: string; description: string; demandSignal: number; source: string; sourceId?: string }>;
 };
 
+const ONET = "https://www.onetonline.org/";
+const BLS = "https://www.bls.gov/oes/";
+const AEI = "https://www.anthropic.com/economic-index";
+
+// Workforce shares approximate US employment distribution (BLS); automation
+// exposure is a curated read of task-level AI exposure (Anthropic Economic
+// Index, OpenAI "GPTs are GPTs", OECD). Shares are normalized to ~100%.
 export const curatedJobs: CuratedJobsImpact = {
   overallAutomationPct: 31.7,
-  bySector: [
-    { sector: "Information & software", automationPct: 44, source: "https://www.onetonline.org/", sourceId: "onet-occupation-data" },
-    { sector: "Finance & insurance", automationPct: 39, source: "https://www.anthropic.com/economic-index", sourceId: "anthropic-economic-index" },
-    { sector: "Professional & business services", automationPct: 36, source: "https://www.onetonline.org/", sourceId: "onet-occupation-data" },
-    { sector: "Legal & administrative", automationPct: 33, source: "https://www.onetonline.org/", sourceId: "onet-occupation-data" },
-    { sector: "Healthcare", automationPct: 18, source: "https://www.anthropic.com/economic-index", sourceId: "anthropic-economic-index" },
-    { sector: "Construction & trades", automationPct: 9, source: "https://www.onetonline.org/", sourceId: "onet-occupation-data" },
+  sectors: [
+    {
+      sector: "Information & software",
+      workforceSharePct: 3,
+      automationExposurePct: 52,
+      source: AEI,
+      sourceId: "anthropic-economic-index",
+      emergingRoles: [
+        { title: "AI engineer / LLM app developer", demandSignal: 0.93 },
+        { title: "MLOps & inference platform engineer", demandSignal: 0.82 },
+        { title: "AI product manager", demandSignal: 0.75 },
+      ],
+      decliningRoles: ["Routine QA testing", "Boilerplate coding", "Tier-1 IT support"],
+    },
+    {
+      sector: "Professional & business services",
+      workforceSharePct: 14,
+      automationExposurePct: 41,
+      source: ONET,
+      sourceId: "onet-occupation-data",
+      emergingRoles: [
+        { title: "AI governance & compliance officer", demandSignal: 0.78 },
+        { title: "Process-automation analyst", demandSignal: 0.7 },
+        { title: "AI-augmented consultant", demandSignal: 0.66 },
+      ],
+      decliningRoles: ["Data entry", "Basic bookkeeping", "Research assistants"],
+    },
+    {
+      sector: "Financial activities",
+      workforceSharePct: 6,
+      automationExposurePct: 40,
+      source: AEI,
+      sourceId: "anthropic-economic-index",
+      emergingRoles: [
+        { title: "AI model-risk & validation analyst", demandSignal: 0.74 },
+        { title: "Algorithmic-fraud investigator", demandSignal: 0.68 },
+        { title: "AI-augmented financial advisor", demandSignal: 0.62 },
+      ],
+      decliningRoles: ["Loan processing clerks", "Manual underwriting", "Routine accounting"],
+    },
+    {
+      sector: "Government & public sector",
+      workforceSharePct: 15,
+      automationExposurePct: 28,
+      source: BLS,
+      sourceId: "bls-oes",
+      emergingRoles: [
+        { title: "Public-sector AI policy analyst", demandSignal: 0.6 },
+        { title: "AI service-delivery designer", demandSignal: 0.55 },
+      ],
+      decliningRoles: ["Form processing", "Records clerks"],
+    },
+    {
+      sector: "Education",
+      workforceSharePct: 9,
+      automationExposurePct: 32,
+      source: ONET,
+      sourceId: "onet-occupation-data",
+      emergingRoles: [
+        { title: "AI tutoring & curriculum designer", demandSignal: 0.64 },
+        { title: "AI-literacy educator", demandSignal: 0.58 },
+      ],
+      decliningRoles: ["Manual grading", "Basic content creation"],
+    },
+    {
+      sector: "Healthcare & social assistance",
+      workforceSharePct: 14,
+      automationExposurePct: 20,
+      source: AEI,
+      sourceId: "anthropic-economic-index",
+      emergingRoles: [
+        { title: "Clinical AI integration specialist", demandSignal: 0.7 },
+        { title: "AI-assisted diagnostics technician", demandSignal: 0.6 },
+        { title: "Health-data governance lead", demandSignal: 0.57 },
+      ],
+      decliningRoles: ["Medical transcription", "Some radiology screening", "Scheduling clerks"],
+    },
+    {
+      sector: "Retail & wholesale trade",
+      workforceSharePct: 13,
+      automationExposurePct: 24,
+      source: ONET,
+      sourceId: "onet-occupation-data",
+      emergingRoles: [
+        { title: "AI merchandising analyst", demandSignal: 0.55 },
+        { title: "Conversational-commerce manager", demandSignal: 0.52 },
+      ],
+      decliningRoles: ["Cashiers", "Call-center agents", "Inventory clerks"],
+    },
+    {
+      sector: "Manufacturing",
+      workforceSharePct: 8,
+      automationExposurePct: 25,
+      source: BLS,
+      sourceId: "bls-oes",
+      emergingRoles: [
+        { title: "Robotics / industrial-AI technician", demandSignal: 0.63 },
+        { title: "AI operations / predictive-maintenance lead", demandSignal: 0.58 },
+      ],
+      decliningRoles: ["Repetitive assembly", "Manual inspection"],
+    },
+    {
+      sector: "Transportation & logistics",
+      workforceSharePct: 6,
+      automationExposurePct: 22,
+      source: BLS,
+      sourceId: "bls-oes",
+      emergingRoles: [
+        { title: "Autonomy operations supervisor", demandSignal: 0.56 },
+        { title: "AI logistics optimization analyst", demandSignal: 0.54 },
+      ],
+      decliningRoles: ["Routing clerks", "Some long-haul driving (longer term)"],
+    },
+    {
+      sector: "Leisure & hospitality",
+      workforceSharePct: 7,
+      automationExposurePct: 13,
+      source: ONET,
+      sourceId: "onet-occupation-data",
+      emergingRoles: [{ title: "AI guest-experience designer", demandSignal: 0.45 }],
+      decliningRoles: ["Reservation agents", "Basic concierge"],
+    },
+    {
+      sector: "Construction & trades",
+      workforceSharePct: 5,
+      automationExposurePct: 9,
+      source: ONET,
+      sourceId: "onet-occupation-data",
+      emergingRoles: [{ title: "AI estimating & planning specialist", demandSignal: 0.42 }],
+      decliningRoles: ["Manual estimating", "Drafting (partially)"],
+    },
   ],
-  byOccupation: [
-    { onetCode: "15-1252.00", title: "Software developers", exposurePct: 58, source: "https://www.anthropic.com/economic-index", sourceId: "anthropic-economic-index" },
-    { onetCode: "27-3043.00", title: "Writers & content creators", exposurePct: 62, source: "https://www.onetonline.org/", sourceId: "onet-occupation-data" },
-    { onetCode: "43-9061.00", title: "Office & administrative support", exposurePct: 55, source: "https://www.onetonline.org/", sourceId: "onet-occupation-data" },
-    { onetCode: "13-2011.00", title: "Accountants & auditors", exposurePct: 47, source: "https://www.onetonline.org/", sourceId: "onet-occupation-data" },
-    { onetCode: "41-3099.00", title: "Sales & support", exposurePct: 41, source: "https://www.onetonline.org/", sourceId: "onet-occupation-data" },
-    { onetCode: "29-1141.00", title: "Registered nurses", exposurePct: 14, source: "https://www.onetonline.org/", sourceId: "onet-occupation-data" },
-  ],
-  emergingJobs: [
-    { title: "AI engineer / LLM application developer", description: "Builds and ships products on top of frontier models, tools, and agents.", demandSignal: 0.92, source: "https://www.onetonline.org/", sourceId: "onet-occupation-data" },
-    { title: "AI safety & evaluation specialist", description: "Designs evals, red-teams models, and assesses dangerous capabilities.", demandSignal: 0.78, source: "https://www.anthropic.com/economic-index", sourceId: "anthropic-economic-index" },
-    { title: "Machine-learning operations (MLOps) engineer", description: "Runs training/inference infrastructure, data pipelines, and reliability.", demandSignal: 0.81, source: "https://www.onetonline.org/", sourceId: "onet-occupation-data" },
-    { title: "AI product manager", description: "Translates model capabilities into reliable, governed product experiences.", demandSignal: 0.74, source: "https://www.onetonline.org/", sourceId: "onet-occupation-data" },
-    { title: "Prompt & context engineer", description: "Designs retrieval, tools, and context for dependable model behavior.", demandSignal: 0.6, source: "https://www.onetonline.org/", sourceId: "onet-occupation-data" },
+  highlights: [
+    { title: "AI engineer / LLM application developer", description: "Builds and ships products on frontier models, tools, and agents — the fastest-growing AI role across every sector.", demandSignal: 0.93, source: ONET, sourceId: "onet-occupation-data" },
+    { title: "AI safety & evaluation specialist", description: "Designs evals, red-teams models, and assesses dangerous capabilities for labs and enterprises.", demandSignal: 0.78, source: AEI, sourceId: "anthropic-economic-index" },
+    { title: "AI governance & compliance officer", description: "Owns responsible-AI policy, audits, and regulatory compliance (EU AI Act and beyond).", demandSignal: 0.76, source: ONET, sourceId: "onet-occupation-data" },
   ],
 };

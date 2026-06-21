@@ -134,23 +134,21 @@ export type TimelineEvent = {
   id?: string;
 };
 
+export type JobsSector = {
+  sector: string;
+  workforceSharePct: number;
+  automationExposurePct: number;
+  source: string;
+  sourceId?: string;
+  emergingRoles: Array<{ title: string; demandSignal: number }>;
+  decliningRoles: string[];
+};
+
 export type JobsImpact = {
   ts: IsoDateTime;
   overallAutomationPct: number;
-  bySector: Array<{
-    sector: string;
-    automationPct: number;
-    source: string;
-    sourceId?: string;
-  }>;
-  byOccupation: Array<{
-    onetCode: string;
-    title: string;
-    exposurePct: number;
-    source: string;
-    sourceId?: string;
-  }>;
-  emergingJobs: Array<{
+  sectors: JobsSector[];
+  highlights: Array<{
     title: string;
     description: string;
     demandSignal: number;
