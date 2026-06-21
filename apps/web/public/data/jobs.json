@@ -1,0 +1,90 @@
+{
+  "ts": "2026-06-21T12:30:00.000Z",
+  "overallAutomationPct": 31.7,
+  "bySector": [
+    {
+      "sector": "Information",
+      "automationPct": 42.4,
+      "source": "https://www.bls.gov/oes/",
+      "sourceId": "bls-oes"
+    },
+    {
+      "sector": "Finance and insurance",
+      "automationPct": 39.2,
+      "source": "https://www.onetcenter.org/database.html",
+      "sourceId": "onet"
+    },
+    {
+      "sector": "Professional services",
+      "automationPct": 36.8,
+      "source": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/",
+      "sourceId": "wef-jobs"
+    },
+    {
+      "sector": "Healthcare",
+      "automationPct": 18.6,
+      "source": "https://www.ilo.org/publications/generative-ai-and-jobs-global-analysis-potential-effects-job-quantity-and",
+      "sourceId": "ilo-jobs"
+    }
+  ],
+  "byOccupation": [
+    {
+      "onetCode": "15-1252.00",
+      "title": "Software Developers",
+      "exposurePct": 38,
+      "source": "https://www.onetonline.org/link/summary/15-1252.00",
+      "sourceId": "onet"
+    },
+    {
+      "onetCode": "43-4051.00",
+      "title": "Customer Service Representatives",
+      "exposurePct": 48.5,
+      "source": "https://www.onetonline.org/link/summary/43-4051.00",
+      "sourceId": "onet"
+    },
+    {
+      "onetCode": "13-2011.00",
+      "title": "Accountants and Auditors",
+      "exposurePct": 41.2,
+      "source": "https://www.onetonline.org/link/summary/13-2011.00",
+      "sourceId": "onet"
+    },
+    {
+      "onetCode": "29-1141.00",
+      "title": "Registered Nurses",
+      "exposurePct": 14,
+      "source": "https://www.onetonline.org/link/summary/29-1141.00",
+      "sourceId": "onet"
+    }
+  ],
+  "emergingJobs": [
+    {
+      "title": "AI Workflow Auditor",
+      "description": "Reviews agentic workflows for quality, compliance, provenance, and failure modes.",
+      "demandSignal": 0.76,
+      "source": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/",
+      "sourceId": "wef-jobs"
+    },
+    {
+      "title": "Agent Operations Manager",
+      "description": "Coordinates fleets of task-specific AI agents, escalation paths, and human review queues.",
+      "demandSignal": 0.72,
+      "source": "https://www.anthropic.com/economic-index",
+      "sourceId": "anthropic-economic-index"
+    },
+    {
+      "title": "Synthetic Data Curator",
+      "description": "Designs, filters, and evaluates synthetic datasets for training and evaluation pipelines.",
+      "demandSignal": 0.68,
+      "source": "https://aiindex.stanford.edu/report/",
+      "sourceId": "stanford-ai-index"
+    },
+    {
+      "title": "AI Infrastructure Scheduler",
+      "description": "Optimizes accelerator, power, and datacenter capacity across training and inference workloads.",
+      "demandSignal": 0.64,
+      "source": "https://www.nvidia.com/en-us/investor-relations/financial-info/",
+      "sourceId": "nvidia-ir"
+    }
+  ]
+}

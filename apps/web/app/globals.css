@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --background: 9 10 9;
+  --foreground: 241 238 229;
+  --muted: 162 158 146;
+  --panel: 20 22 20;
+  --panel-strong: 30 32 29;
+  --line: 64 61 54;
+  --accent-rgb: 244 159 10;
+  --accent: rgb(var(--accent-rgb));
+  --accent-contrast: 14 13 10;
+  --sooner: 22 163 74;
+  --later: 239 68 68;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    --background: 246 244 238;
+    --foreground: 19 20 18;
+    --muted: 91 86 74;
+    --panel: 255 253 247;
+    --panel-strong: 238 235 226;
+    --line: 203 197 181;
+    --accent-contrast: 255 252 244;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: rgb(var(--background));
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background:
+    linear-gradient(135deg, rgb(var(--background)) 0%, rgb(var(--background)) 55%, rgb(var(--panel)) 100%),
+    rgb(var(--background));
+  color: rgb(var(--foreground));
+  font-family:
+    Inter,
+    Geist,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  text-rendering: geometricPrecision;
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+  opacity: 0.08;
+  background-image:
+    repeating-linear-gradient(0deg, transparent 0, transparent 2px, rgb(var(--foreground) / 0.4) 3px),
+    repeating-linear-gradient(90deg, transparent 0, transparent 3px, rgb(var(--foreground) / 0.3) 4px);
+  mix-blend-mode: soft-light;
+}
+
+::selection {
+  background: rgb(var(--accent-rgb) / 0.32);
+}
+
+[data-definition="weak-agi"] {
+  --accent-rgb: 34 197 94;
+}
+
+[data-definition="transformative-ai"] {
+  --accent-rgb: 244 159 10;
+}
+
+[data-definition="strong-agi"] {
+  --accent-rgb: 239 68 68;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.focus-ring {
+  outline: none;
+}
+
+.focus-ring:focus-visible {
+  box-shadow:
+    0 0 0 2px rgb(var(--background)),
+    0 0 0 4px rgb(var(--accent-rgb) / 0.9);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

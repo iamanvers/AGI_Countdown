@@ -1,0 +1,80 @@
+{
+  "runId": "refresh-all-20260101T000000000Z-weak-agi",
+  "ts": "2026-01-01T00:00:00.000Z",
+  "definition": "weak-agi",
+  "tAgi": "2027-08-05T15:58:20.194Z",
+  "progress": 67.4,
+  "band": {
+    "earlyP10": "2025-08-05T04:19:56.194Z",
+    "lateP90": "2029-08-05T03:36:44.194Z"
+  },
+  "anchor": "2029-01-01T00:00:00.000Z",
+  "deltaMonths": -16.8984,
+  "movers": [
+    {
+      "factorId": "forecast-consensus-anchor",
+      "contributionMonths": -4.5632,
+      "rationale": "Forecast consensus registered 0.62 as a accelerator signal.",
+      "citation": "https://example.com/agi-countdown/fixtures/hourly-signals#forecast-consensus-anchor"
+    },
+    {
+      "factorId": "frontier-benchmark-saturation",
+      "contributionMonths": -4.473,
+      "rationale": "Frontier benchmark saturation registered 0.71 as a accelerator signal.",
+      "citation": "https://example.com/agi-countdown/fixtures/daily-signals#frontier-benchmark-saturation"
+    },
+    {
+      "factorId": "training-compute-growth",
+      "contributionMonths": -3.6018,
+      "rationale": "Training compute growth registered 0.69 as a accelerator signal.",
+      "citation": "https://example.com/agi-countdown/fixtures/weekly-signals#training-compute-growth"
+    },
+    {
+      "factorId": "adoption-usage",
+      "contributionMonths": -2.816,
+      "rationale": "Adoption and usage registered 0.64 as a accelerator signal.",
+      "citation": "https://example.com/agi-countdown/fixtures/daily-signals#adoption-usage"
+    },
+    {
+      "factorId": "datacenter-capex",
+      "contributionMonths": -1.952,
+      "rationale": "Datacenter capex registered 0.61 as a accelerator signal.",
+      "citation": "https://example.com/agi-countdown/fixtures/weekly-signals#datacenter-capex"
+    },
+    {
+      "factorId": "energy-headroom",
+      "contributionMonths": 1.722,
+      "rationale": "Energy headroom registered 0.42 as a decelerator signal.",
+      "citation": "https://example.com/agi-countdown/fixtures/weekly-signals#energy-headroom"
+    },
+    {
+      "factorId": "labor-automation-exposure",
+      "contributionMonths": -1.5552,
+      "rationale": "Labor automation exposure registered 0.48 as a accelerator signal.",
+      "citation": "https://example.com/agi-countdown/fixtures/weekly-signals#labor-automation-exposure"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -1.4112,
+      "rationale": "Research velocity registered 0.56 as a accelerator signal.",
+      "citation": "https://example.com/agi-countdown/fixtures/daily-signals#research-velocity"
+    },
+    {
+      "factorId": "policy-friction",
+      "contributionMonths": 1.0296,
+      "rationale": "Policy friction registered 0.33 as a decelerator signal.",
+      "citation": "https://example.com/agi-countdown/fixtures/weekly-signals#policy-friction"
+    },
+    {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": 0.7224,
+      "rationale": "Public backlash pressure registered 0.28 as a decelerator signal.",
+      "citation": "https://example.com/agi-countdown/fixtures/hourly-signals#public-backlash-pressure"
+    }
+  ],
+  "rates": {
+    "computePerSec": 7800000000000000000,
+    "papersPerDay": 184,
+    "investUsdPerSec": 4280
+  }
+}

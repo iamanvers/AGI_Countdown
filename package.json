@@ -1,0 +1,22 @@
+{
+  "name": "agi-countdown",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A deterministic digital countdown clock to AGI.",
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev": "corepack pnpm --filter @agi-countdown/web dev",
+    "build": "corepack pnpm -r build",
+    "lint": "corepack pnpm -r lint",
+    "typecheck": "corepack pnpm -r typecheck",
+    "test": "corepack pnpm -r test",
+    "refresh": "corepack pnpm --filter @agi-countdown/pipeline refresh",
+    "validate:data": "node scripts/validate-data.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

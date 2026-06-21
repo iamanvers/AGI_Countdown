@@ -1,0 +1,39 @@
+name: Refresh hourly data
+
+on:
+  schedule:
+    - cron: "5 * * * *"
+  workflow_dispatch:
+
+jobs:
+  refresh-hourly:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Refresh hourly snapshots
+        run: pnpm --filter @agi-countdown/pipeline refresh -- --cadence hourly
+
+      - name: Commit snapshots
+        run: |
+          git config user.name "agi-countdown-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add apps/web/public/data
+          git commit -m "data: refresh hourly snapshots" || echo "no changes"
+          git push

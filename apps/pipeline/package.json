@@ -1,0 +1,26 @@
+{
+  "name": "@agi-countdown/pipeline",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "@agi-countdown/config": "workspace:*",
+    "@agi-countdown/engine": "workspace:*",
+    "@agi-countdown/sources": "workspace:*"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "refresh": "tsc -b && node dist/refresh.js",
+    "typecheck": "tsc -b",
+    "test": "vitest run --passWithNoTests"
+  }
+}
