@@ -323,11 +323,6 @@ function buildEngineInput(
       factorVolatilityMultiplier: 1,
       minimumBandMonths: Math.max(6, definition.maxShiftMonths / 6),
     },
-    rates: {
-      computePerSec: 8.4e18,
-      papersPerDay: 196,
-      investUsdPerSec: 4900,
-    },
   };
 }
 

@@ -7,6 +7,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { ConfidenceBand } from "@/components/confidence-band";
 import { CountdownClock } from "@/components/countdown-clock";
 import { DefinitionToggle } from "@/components/definition-toggle";
+import { LiveSignals } from "@/components/live-signals";
 import { MoversList } from "@/components/movers-list";
 import { ProgressMeter } from "@/components/progress-meter";
 import { RefreshButton } from "@/components/refresh-button";
@@ -18,7 +19,7 @@ import {
   definitions,
   fetchEngineState
 } from "@/lib/engine-state";
-import { formatCompactNumber, formatDate, formatDateTime, formatMonths } from "@/lib/format";
+import { formatDate, formatDateTime, formatMonths } from "@/lib/format";
 
 type LoadState = "loading" | "ready" | "refreshing" | "error";
 
@@ -109,7 +110,7 @@ export function EngineDashboard() {
 
               <section className="mt-4 grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.5fr)]">
                 <MoversList movers={state.movers} />
-                <RatesPanel state={state} />
+                <LiveSignals />
               </section>
 
               <ExploreStrip />
@@ -182,35 +183,6 @@ function SnapshotFooter({ loadState, state }: { loadState: LoadState; state: Eng
         <span className="tabular">Computed {formatDateTime(state.ts)}</span>
       </div>
     </div>
-  );
-}
-
-function RatesPanel({ state }: { state: EngineState }) {
-  const rates = state.rates;
-  if (!rates || (!rates.computePerSec && !rates.papersPerDay && !rates.investUsdPerSec)) {
-    return null;
-  }
-
-  const entries = [
-    rates.computePerSec ? { label: "Compute / sec (FLOP)", value: formatCompactNumber(rates.computePerSec) } : null,
-    rates.papersPerDay ? { label: "AI papers / day", value: formatCompactNumber(rates.papersPerDay) } : null,
-    rates.investUsdPerSec ? { label: "AI invest / sec", value: `$${formatCompactNumber(rates.investUsdPerSec)}` } : null
-  ].filter(Boolean) as Array<{ label: string; value: string }>;
-
-  return (
-    <section className="grid content-start gap-3 rounded-lg border border-[rgb(var(--line)/0.7)] bg-[rgb(var(--panel)/0.66)] p-5 backdrop-blur">
-      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[rgb(var(--muted))]">
-        Live rate estimates
-      </p>
-      <div className="grid gap-3">
-        {entries.map((entry) => (
-          <div className="flex items-baseline justify-between gap-3" key={entry.label}>
-            <span className="text-sm text-[rgb(var(--muted))]">{entry.label}</span>
-            <span className="font-mono text-lg font-semibold tabular">{entry.value}</span>
-          </div>
-        ))}
-      </div>
-    </section>
   );
 }
 

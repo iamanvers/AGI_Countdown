@@ -12,12 +12,12 @@ export function ProgressMeter({ value }: ProgressMeterProps) {
       <div className="flex items-end justify-between gap-4">
         <div>
           <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-[rgb(var(--muted))]">
-            Progress
+            Capability index
           </h2>
           <p className="mt-2 text-3xl font-semibold tabular">{progress.toFixed(1)}%</p>
         </div>
-        <div className="text-right text-xs uppercase tracking-[0.16em] text-[rgb(var(--muted))]">
-          Capability meter
+        <div className="max-w-[9rem] text-right text-[0.68rem] leading-4 uppercase tracking-[0.12em] text-[rgb(var(--muted))]">
+          composite of benchmarks · compute · deployment
         </div>
       </div>
       <div
