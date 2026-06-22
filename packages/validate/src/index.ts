@@ -29,7 +29,9 @@ export const runHealthStatusSchema = z.enum(RUN_STATUSES);
 export const confidenceBandSchema = z
   .object({
     earlyP10: isoDateTimeSchema,
-    lateP90: isoDateTimeSchema
+    lateP90: isoDateTimeSchema,
+    likelyEarly: isoDateTimeSchema.optional(),
+    likelyLate: isoDateTimeSchema.optional()
   })
   .strict();
 

@@ -69,6 +69,9 @@ export type EngineInput = {
 export type ConfidenceBand = {
   earlyP10: string;
   lateP90: string;
+  /** Tighter inner band (~P25–P75) — the "more likely than not" window. */
+  likelyEarly: string;
+  likelyLate: string;
 };
 
 export type Mover = {
@@ -344,9 +347,20 @@ function computeConfidenceBand(
     addMonths(targetMs, minimumBandMonths)
   );
 
+  // Inner "likely" band (~P25–P75): a tighter, more-likely-than-not window around
+  // the central estimate, sized as a fraction of each outer half-spread.
+  const innerFraction = 0.45;
+  const likelyEarlyMs = Math.min(
+    Math.max(targetMs - innerFraction * (targetMs - earlyMs), nowMs),
+    targetMs
+  );
+  const likelyLateMs = Math.max(targetMs + innerFraction * (lateMs - targetMs), targetMs);
+
   return {
     earlyP10: toIso(earlyMs),
-    lateP90: toIso(lateMs)
+    lateP90: toIso(lateMs),
+    likelyEarly: toIso(likelyEarlyMs),
+    likelyLate: toIso(likelyLateMs)
   };
 }
 

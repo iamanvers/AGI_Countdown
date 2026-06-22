@@ -9,6 +9,8 @@ export type EngineState = {
   band: {
     earlyP10: string;
     lateP90: string;
+    likelyEarly?: string;
+    likelyLate?: string;
   };
   anchor: string;
   deltaMonths: number;

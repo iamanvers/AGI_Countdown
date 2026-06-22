@@ -37,6 +37,10 @@ const HISTORY_LIMIT = 4000;
 const FORECAST_FACTOR_ID = "forecast-consensus-anchor";
 // EWMA weight on the newest reading; lower = smoother / more robust to jitter.
 const SMOOTHING_ALPHA = 0.5;
+// Global calibration for the directional factor model: scales every factor's
+// monthly contribution so a fully-active portfolio shifts the date a believable
+// amount (and the raw Δ stays inside each definition's clamp instead of flooring).
+const CONTRIBUTION_SCALE = 0.5;
 // Rolling-normalization window. Each run appends every factor's level here; the
 // engine reading is then a z-score / empirical percentile of the latest level
 // within this trailing window (so the date moves on *momentum*, not absolute
@@ -374,9 +378,9 @@ function buildEngineInput(
       return [
         {
           factorId: factor.id,
-          normalized: centerNormalized(factor, aggregate.normalized),
+          normalized: factorIntensity(factor, aggregate.normalized),
           sign: factor.sign,
-          weight: factor.weight * emphasis,
+          weight: factor.weight * emphasis * CONTRIBUTION_SCALE,
           confidence: aggregate.confidence,
           volatility: aggregate.volatility ?? 0,
           citation: aggregate.citation,
@@ -410,16 +414,18 @@ function buildEngineInput(
 }
 
 /**
- * Factors are normalized 0..1 levels. Center them around 0.5 so a "neutral"
- * reading contributes ~0 to the date, above-neutral accelerates, below-neutral
- * decelerates. Scaled to [-1, 1].
+ * Map a factor reading onto a 0..1 *intensity* using its bounds. This is a
+ * directional model: the engine applies the factor's sign, so an accelerator's
+ * intensity always pulls sooner and a decelerator's intensity always pushes
+ * LATER — never the reverse. A reading of 0 contributes nothing; 1 contributes
+ * the factor's full weight in its natural direction. (No centering — a weak
+ * decelerator is a weak headwind, not a tailwind.)
  */
-function centerNormalized(factor: FactorDef, normalized: number): number {
+function factorIntensity(factor: FactorDef, normalized: number): number {
   const max = factor.bounds?.max ?? 1;
   const min = factor.bounds?.min ?? 0;
   const span = max - min || 1;
-  const unit = (normalized - min) / span; // 0..1
-  return clamp((unit - 0.5) * 2, -1, 1);
+  return clamp((normalized - min) / span, 0, 1);
 }
 
 function buildAnchorSources(
@@ -874,19 +880,13 @@ function averageDefined(values: ReadonlyArray<number | undefined>): number {
 }
 
 function createMoverRationale(factor: FactorDef, normalized: number): string {
-  // Effect on the date: contribution = -sign * centered. Below the bounds
-  // midpoint a decelerator eases (sooner); an accelerator above it pulls sooner.
-  const centered = centerNormalized(factor, normalized); // -1..1
-  const effect = -factor.sign * centered;
-  const level = normalized >= 0.66 ? "running high" : normalized >= 0.45 ? "moderate" : "running low";
-  let phrase: string;
-  if (Math.abs(effect) < 1e-6) {
-    phrase = "neutral, holding the date steady";
-  } else if (factor.sign === 1) {
-    phrase = effect < 0 ? "a tailwind pulling the date sooner" : "a stalling tailwind nudging the date later";
-  } else {
-    phrase = effect > 0 ? "a headwind pushing the date later" : "an easing headwind nudging the date sooner";
-  }
+  // Directional: an accelerator always pulls sooner, a decelerator always pushes
+  // later; the reading is the *intensity* of that push (higher = stronger).
+  const level = normalized >= 0.66 ? "running high" : normalized >= 0.4 ? "moderate" : "running low";
+  const phrase =
+    factor.sign === 1
+      ? "a tailwind pulling the date sooner"
+      : "a headwind pushing the date later";
   return `${factor.label} is ${level} at ${normalized.toFixed(2)} — ${phrase}.`;
 }
 

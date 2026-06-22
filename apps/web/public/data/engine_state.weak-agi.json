@@ -1,111 +1,119 @@
 {
-  "runId": "refresh-all-20260622T075837528Z-weak-agi",
-  "ts": "2026-06-22T07:58:37.528Z",
+  "runId": "refresh-all-20260622T092600360Z-weak-agi",
+  "ts": "2026-06-22T09:26:00.360Z",
   "definition": "weak-agi",
-  "tAgi": "2027-04-04T15:21:42.763Z",
+  "tAgi": "2027-07-31T01:58:29.191Z",
   "progress": 84.8125,
   "band": {
-    "earlyP10": "2026-06-22T07:58:37.528Z",
-    "lateP90": "2038-10-20T08:24:00.051Z"
+    "earlyP10": "2026-06-22T09:26:00.360Z",
+    "lateP90": "2039-02-15T00:24:43.668Z",
+    "likelyEarly": "2027-01-30T10:07:52.217Z",
+    "likelyLate": "2032-10-09T16:52:17.706Z"
   },
   "anchor": "2028-06-15T06:57:42.712Z",
-  "deltaMonths": -14.37894,
+  "deltaMonths": -10.52039,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
-      "contributionMonths": -3.22686,
+      "contributionMonths": -2.875215,
       "rationale": "Frontier benchmark saturation is running high at 0.69 — a tailwind pulling the date sooner.",
       "citation": "https://aiindex.stanford.edu/report/"
     },
     {
       "factorId": "training-compute-growth",
-      "contributionMonths": -2.4684,
+      "contributionMonths": -2.0196,
       "rationale": "Training compute growth is running high at 0.72 — a tailwind pulling the date sooner.",
       "citation": "https://epoch.ai/data/notable-ai-models"
     },
     {
-      "factorId": "algorithmic-efficiency",
-      "contributionMonths": -1.3024,
-      "rationale": "Algorithmic efficiency is running high at 0.70 — a tailwind pulling the date sooner.",
-      "citation": "https://aiindex.stanford.edu/report/"
-    },
-    {
-      "factorId": "adoption-usage",
-      "contributionMonths": -1.26,
-      "rationale": "Adoption and usage is moderate at 0.64 — a tailwind pulling the date sooner.",
-      "citation": "https://openrouter.ai/rankings"
-    },
-    {
-      "factorId": "datacenter-capex",
-      "contributionMonths": -1.157824,
-      "rationale": "Datacenter capex is running high at 0.74 — a tailwind pulling the date sooner.",
-      "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
-    },
-    {
       "factorId": "autonomy-horizon",
-      "contributionMonths": -1.0296,
+      "contributionMonths": -1.5444,
       "rationale": "Autonomy horizon is moderate at 0.60 — a tailwind pulling the date sooner.",
       "citation": "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/"
     },
     {
+      "factorId": "adoption-usage",
+      "contributionMonths": -1.44,
+      "rationale": "Adoption and usage is moderate at 0.64 — a tailwind pulling the date sooner.",
+      "citation": "https://openrouter.ai/rankings"
+    },
+    {
+      "factorId": "algorithmic-efficiency",
+      "contributionMonths": -1.1396,
+      "rationale": "Algorithmic efficiency is running high at 0.70 — a tailwind pulling the date sooner.",
+      "citation": "https://aiindex.stanford.edu/report/"
+    },
+    {
+      "factorId": "energy-headroom",
+      "contributionMonths": 1.13778,
+      "rationale": "Energy headroom is running high at 0.90 — a headwind pushing the date later.",
+      "citation": "https://www.iea.org/reports/electricity-2025"
+    },
+    {
+      "factorId": "datacenter-capex",
+      "contributionMonths": -0.900123,
+      "rationale": "Datacenter capex is running high at 0.74 — a tailwind pulling the date sooner.",
+      "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
+    },
+    {
       "factorId": "hardware-supply",
-      "contributionMonths": -0.9984,
+      "contributionMonths": -0.8736,
       "rationale": "Hardware supply is running high at 0.70 — a tailwind pulling the date sooner.",
       "citation": "https://investor.tsmc.com/english"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.99456,
+      "contributionMonths": -0.84064,
       "rationale": "AI capital formation is running high at 0.71 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
-      "factorId": "policy-friction",
-      "contributionMonths": -0.46648,
-      "rationale": "Policy friction is running low at 0.38 — an easing headwind nudging the date sooner.",
-      "citation": "https://artificialintelligenceact.eu/"
-    },
-    {
-      "factorId": "macro-headwinds",
-      "contributionMonths": -0.432,
-      "rationale": "Macro & bubble risk is running low at 0.35 — an easing headwind nudging the date sooner.",
-      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
-    },
-    {
-      "factorId": "public-backlash-pressure",
-      "contributionMonths": -0.42744,
-      "rationale": "Public backlash pressure is running low at 0.36 — an easing headwind nudging the date sooner.",
-      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
+      "factorId": "labor-automation-exposure",
+      "contributionMonths": -0.59976,
+      "rationale": "Labor automation exposure is moderate at 0.51 — a tailwind pulling the date sooner.",
+      "citation": "https://www.anthropic.com/economic-index"
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.299936,
-      "rationale": "Research velocity is moderate at 0.56 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.492752,
+      "rationale": "Research velocity is running low at 0.37 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
-      "factorId": "energy-headroom",
-      "contributionMonths": -0.252,
-      "rationale": "Energy headroom is moderate at 0.45 — an easing headwind nudging the date sooner.",
-      "citation": "https://www.iea.org/reports/electricity-2025"
-    },
-    {
-      "factorId": "safety-eval-pressure",
-      "contributionMonths": -0.0952,
-      "rationale": "Safety-eval pressure is moderate at 0.45 — an easing headwind nudging the date sooner.",
-      "citation": "https://www.aisi.gov.uk/"
-    },
-    {
       "factorId": "robotics-embodiment",
-      "contributionMonths": 0.0792,
-      "rationale": "Robotics & embodiment is moderate at 0.48 — a stalling tailwind nudging the date later.",
+      "contributionMonths": -0.4752,
+      "rationale": "Robotics & embodiment is moderate at 0.48 — a tailwind pulling the date sooner.",
       "citation": "https://ifr.org/worldrobotics/"
     },
     {
-      "factorId": "labor-automation-exposure",
-      "contributionMonths": -0.04704,
-      "rationale": "Labor automation exposure is moderate at 0.51 — a tailwind pulling the date sooner.",
-      "citation": "https://www.anthropic.com/economic-index"
+      "factorId": "export-control-friction",
+      "contributionMonths": 0.42,
+      "rationale": "Export-control friction is moderate at 0.50 — a headwind pushing the date later.",
+      "citation": "https://www.bis.gov/"
+    },
+    {
+      "factorId": "policy-friction",
+      "contributionMonths": 0.37338,
+      "rationale": "Policy friction is running low at 0.38 — a headwind pushing the date later.",
+      "citation": "https://artificialintelligenceact.eu/"
+    },
+    {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": 0.28314,
+      "rationale": "Public backlash pressure is running low at 0.36 — a headwind pushing the date later.",
+      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
+    },
+    {
+      "factorId": "macro-headwinds",
+      "contributionMonths": 0.252,
+      "rationale": "Macro & bubble risk is running low at 0.35 — a headwind pushing the date later.",
+      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
+    },
+    {
+      "factorId": "safety-eval-pressure",
+      "contributionMonths": 0.2142,
+      "rationale": "Safety-eval pressure is moderate at 0.45 — a headwind pushing the date later.",
+      "citation": "https://www.aisi.gov.uk/"
     }
   ]
 }

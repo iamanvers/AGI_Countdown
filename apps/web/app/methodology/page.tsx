@@ -182,9 +182,9 @@ export default async function MethodologyPage() {
           (it falls back to the raw level until enough samples exist). <strong className="text-[rgb(var(--foreground))]">Weight</strong>{" "}
           is months of shift per unit. <strong className="text-[rgb(var(--foreground))]">Effect</strong>{" "}
           is this factor&apos;s contribution to each definition&apos;s date this run (W/T/S).{" "}
-          <strong className="text-[rgb(var(--foreground))]">Role</strong> is the factor&apos;s nature —
-          a decelerator that is <em>easing</em> (low reading) can still pull the date sooner, so Role
-          and Effect can point different ways.
+          <strong className="text-[rgb(var(--foreground))]">Role</strong> is directional: accelerators
+          only ever pull the date <em>sooner</em>, decelerators only ever push it <em>later</em> — the
+          reading sets the strength of the push, never its sign.
         </p>
         <div className="card overflow-x-auto">
           <table className="w-full min-w-[760px] border-collapse text-sm">

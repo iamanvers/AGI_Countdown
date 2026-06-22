@@ -69,9 +69,12 @@ T_AGI = Anchor + Δ_factors        // Δ clamped to ±maxShiftMonths, months
 ```
 
 - **Anchor**: weighted blend of forecast medians via `anchor.sources` (weighted quantile).
-- **Δ_factors**: `Σ −sign·weight·normalized·confidence`. Per-definition `domainEmphasis` scales each
-  factor's weight, so the shift and movers **differ across the three modes**. Then clamped to
-  `±maxShiftMonths` and EWMA-smoothed across runs (pipeline, α in `SMOOTHING_ALPHA`).
+- **Δ_factors**: `Σ −sign·weight·intensity·confidence`. **Directional model** — `intensity` is the
+  factor's 0..1 reading (no centering), so an accelerator always pulls **sooner** and a decelerator
+  always pushes **later**; the reading sets the *strength*, never the sign (a weak decelerator is a
+  weak headwind, not a tailwind). Weights are scaled by `CONTRIBUTION_SCALE` (pipeline calibration)
+  and per-definition `domainEmphasis`, so the shift and movers **differ across the three modes**.
+  Then clamped to `±maxShiftMonths` and EWMA-smoothed across runs (α in `SMOOTHING_ALPHA`).
 - **Rolling normalization** (pipeline, `normalizeAgainstHistory`): each factor's smoothed level is
   re-expressed against its own persisted history (`factor_history.json`) — a **z-score** (tanh-
   squashed; 0.5 = at trailing mean) for `zscore`/`log-zscore` factors, an **empirical percentile**
@@ -82,6 +85,8 @@ T_AGI = Anchor + Δ_factors        // Δ clamped to ±maxShiftMonths, months
 - **progress%**: separate 0–100 capability meter, scaled by each definition's `progressScale`
   (weak 1.25 → reads closer; strong 0.5 → reads farther). Not derived from the date.
 - **Floors**: `tAgi` and the band's earliest are floored to the present — never a past date.
+- **Confidence band**: outer `earlyP10`/`lateP90` (~80%) plus an inner `likelyEarly`/`likelyLate`
+  (~P25–P75, a fraction of each outer half-spread) — the more-likely-than-not window shown brighter.
 - **UI shows a range, not false precision**: the hero renders a coarse central estimate
   (`formatQuarterYear`, e.g. "≈ Q2 2027") plus the 80% window as a date range (`formatArrivalRange`);
   the live countdown still ticks to `tAgi`. Dates elsewhere use month-year, not datetime.
@@ -104,9 +109,10 @@ T_AGI = Anchor + Δ_factors        // Δ clamped to ±maxShiftMonths, months
 
 Add a `FactorDef` to `factor-registry.ts` (id, category, domain, `sources`, `sign` (+1 accelerator
 / −1 decelerator), `weight`, `bounds`). Provide samples for it (live or curated). The pipeline
-aggregates samples per factor (confidence-weighted) and centers them around the bounds midpoint
-before the engine applies sign/weight. `forecast-consensus-anchor` is special — it feeds the
-**anchor**, not Δ.
+aggregates samples per factor (confidence-weighted) and maps the reading onto a 0..1 **intensity**
+(`factorIntensity`) that the engine applies in the factor's natural direction (sign). A `+1` factor
+only ever pulls sooner; a `−1` factor only ever pushes later. `forecast-consensus-anchor` is special
+— it feeds the **anchor**, not Δ.
 
 ## Data contract (apps/web/public/data)
 
