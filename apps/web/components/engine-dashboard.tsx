@@ -11,6 +11,7 @@ import { LiveSignals } from "@/components/live-signals";
 import { MoversList } from "@/components/movers-list";
 import { ProgressMeter } from "@/components/progress-meter";
 import { RefreshButton } from "@/components/refresh-button";
+import { ShareButton } from "@/components/share-button";
 import { TrackRecord } from "@/components/track-record";
 import {
   type DefinitionId,
@@ -88,11 +89,14 @@ export function EngineDashboard() {
               arrives — blended from public forecasts, nudged by live signals.
             </p>
           </div>
-          <DefinitionToggle
-            active={activeDefinition}
-            disabled={loadState === "loading" && !state}
-            onChange={setActiveDefinition}
-          />
+          <div className="flex flex-wrap items-center gap-3">
+            <DefinitionToggle
+              active={activeDefinition}
+              disabled={loadState === "loading" && !state}
+              onChange={setActiveDefinition}
+            />
+            <ShareButton />
+          </div>
         </header>
 
         <AnimatePresence mode="wait">
