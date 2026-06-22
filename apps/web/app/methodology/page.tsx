@@ -1,6 +1,7 @@
 import { EngineFlowGraph, type FlowFactor, type FlowOutput } from "@/components/engine-flow-graph";
 import { EstimateHistoryChart } from "@/components/estimate-history-chart";
 import { PageFrame } from "@/components/page-frame";
+import { ScenarioExplorer, type ScenarioDef, type ScenarioFactor } from "@/components/scenario-explorer";
 import {
   type MethodologyFactor,
   readEngineState,
@@ -99,6 +100,31 @@ export default async function MethodologyPage() {
     "strong-agi": toOutput(strong)
   };
 
+  const stateById: Record<DefId, typeof weak> = {
+    "weak-agi": weak,
+    "transformative-ai": transformative,
+    "strong-agi": strong
+  };
+  const scenarioDefs: ScenarioDef[] = methodology.definitions.map((d) => {
+    const s = stateById[d.id as DefId];
+    return {
+      id: d.id as DefId,
+      name: d.name,
+      anchorIso: s.anchor,
+      baselineDeltaMonths: s.deltaMonths,
+      maxShiftMonths: d.maxShiftMonths
+    };
+  });
+  const scenarioFactors: ScenarioFactor[] = methodology.factors
+    .filter((f) => f.reading)
+    .map((f) => ({
+      id: f.id,
+      label: f.label,
+      sign: f.sign,
+      level: f.reading?.level ?? f.reading?.normalized ?? 0,
+      contributionMonths: f.contributionMonths
+    }));
+
   return (
     <PageFrame
       eyebrow="How it works"
@@ -164,6 +190,15 @@ export default async function MethodologyPage() {
           node to trace its contribution.
         </p>
         <EngineFlowGraph definitions={methodology.definitions.map((d) => ({ id: d.id as DefId, name: d.name }))} factors={flowFactors} outputs={flowOutputs} />
+      </section>
+
+      <section className="grid gap-3">
+        <h2 className="text-2xl font-semibold">What would change the date?</h2>
+        <p className="text-sm leading-6 text-[rgb(var(--muted))]">
+          Drag the biggest factors and watch the estimate respond. Accelerators pull sooner;
+          decelerators (headwinds) push later. An approximate, interactive view of the same math.
+        </p>
+        <ScenarioExplorer definitions={scenarioDefs} factors={scenarioFactors} />
       </section>
 
       <section className="grid gap-3">
