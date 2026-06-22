@@ -2,7 +2,7 @@
   {
     "factorId": "adoption-usage",
     "sourceId": "hugging-face-hub",
-    "ts": "2026-06-22T10:10:45.778Z",
+    "ts": "2026-06-22T12:26:05.374Z",
     "raw": 203271305,
     "normalized": 0.9231195639270838,
     "confidence": 0.6,
@@ -11,12 +11,12 @@
     "factorName": "Adoption and usage",
     "domain": "adoption",
     "unit": "top20-text-gen-downloads-30d",
-    "notes": "Sum of recent downloads across the top-20 text-generation models: 20,32,71,305."
+    "notes": "Sum of recent downloads across the top-20 text-generation models: 203,271,305."
   },
   {
     "factorId": "adoption-usage",
     "sourceId": "openrouter-usage",
-    "ts": "2026-06-22T10:10:45.778Z",
+    "ts": "2026-06-22T12:26:05.374Z",
     "raw": 0.66,
     "normalized": 0.66,
     "confidence": 0.76,
@@ -198,7 +198,7 @@
   {
     "factorId": "forecast-consensus-anchor",
     "sourceId": "metaculus-agi-questions",
-    "ts": "2026-06-22T10:10:45.778Z",
+    "ts": "2026-06-22T12:26:05.374Z",
     "raw": 0.6,
     "normalized": 0.6,
     "confidence": 0.7,
@@ -212,7 +212,7 @@
   {
     "factorId": "forecast-consensus-anchor",
     "sourceId": "polymarket-ai",
-    "ts": "2026-06-22T10:10:45.778Z",
+    "ts": "2026-06-22T12:26:05.374Z",
     "raw": 0.58,
     "normalized": 0.58,
     "confidence": 0.66,
@@ -254,7 +254,7 @@
   {
     "factorId": "frontier-benchmark-saturation",
     "sourceId": "lmarena-leaderboard",
-    "ts": "2026-06-22T10:10:45.778Z",
+    "ts": "2026-06-22T12:26:05.374Z",
     "raw": 0.7,
     "normalized": 0.7,
     "confidence": 0.78,
@@ -268,7 +268,7 @@
   {
     "factorId": "frontier-benchmark-saturation",
     "sourceId": "papers-with-code-leaderboards",
-    "ts": "2026-06-22T10:10:45.778Z",
+    "ts": "2026-06-22T12:26:05.374Z",
     "raw": 0.74,
     "normalized": 0.74,
     "confidence": 0.8,
@@ -422,30 +422,30 @@
   {
     "factorId": "research-velocity",
     "sourceId": "arxiv-ai-paper-volume",
-    "ts": "2026-06-22T10:10:45.778Z",
-    "raw": 1796,
-    "normalized": 0.3690916563912865,
+    "ts": "2026-06-22T12:26:05.374Z",
+    "raw": 1773,
+    "normalized": 0.36594427244582045,
     "confidence": 0.7,
     "citation": "https://arxiv.org/list/cs.AI/recent",
     "quarantined": false,
     "factorName": "Research velocity",
     "domain": "research",
     "unit": "cs.AI-submissions-14d",
-    "notes": "cs.AI submissions: 1796 (last 14d) vs 3070 (prior 14d)."
+    "notes": "cs.AI submissions: 1773 (last 14d) vs 3072 (prior 14d)."
   },
   {
     "factorId": "research-velocity",
     "sourceId": "github-frontier",
-    "ts": "2026-06-22T10:10:45.778Z",
-    "raw": 12147,
-    "normalized": 0.5559013317468308,
+    "ts": "2026-06-22T12:26:05.374Z",
+    "raw": 12215,
+    "normalized": 0.5572536496350365,
     "confidence": 0.62,
     "citation": "https://github.com/topics/llm",
     "quarantined": false,
     "factorName": "Research velocity",
     "domain": "research",
     "unit": "new-llm-repos-30d",
-    "notes": "New topic:llm repos: 12147 (last 30d) vs 9704 (prior 30d)."
+    "notes": "New topic:llm repos: 12215 (last 30d) vs 9705 (prior 30d)."
   },
   {
     "factorId": "research-velocity",
