@@ -11,6 +11,7 @@ import { LiveSignals } from "@/components/live-signals";
 import { MoversList } from "@/components/movers-list";
 import { ProgressMeter } from "@/components/progress-meter";
 import { RefreshButton } from "@/components/refresh-button";
+import { TrackRecord } from "@/components/track-record";
 import {
   type DefinitionId,
   type EngineState,
@@ -122,6 +123,10 @@ export function EngineDashboard() {
               <section className="mt-4 grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.5fr)]">
                 <MoversList movers={state.movers} />
                 <LiveSignals />
+              </section>
+
+              <section className="mt-4">
+                <TrackRecord definition={activeDefinition} />
               </section>
 
               <ExploreStrip />

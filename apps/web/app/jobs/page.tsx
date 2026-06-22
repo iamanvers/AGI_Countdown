@@ -47,7 +47,7 @@ export default async function JobsPage() {
             rel="noreferrer"
             target="_blank"
           >
-            Source: McKinsey ↗
+Source: 2026 AI Index ↗
           </a>
         </div>
         <p className="max-w-3xl text-sm leading-7 text-[rgb(var(--muted))]">{jobs.revenueAtRisk.description}</p>

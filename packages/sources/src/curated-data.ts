@@ -871,6 +871,7 @@ const AEI = "https://www.anthropic.com/economic-index";
 const IMF = "https://www.imf.org/en/Blogs/Articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity";
 const ILO = "https://www.ilo.org/publications/generative-ai-and-jobs-global-analysis-potential-effects-job-quantity-and";
 const MCKINSEY = "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier";
+const AI_INDEX_2026_ECONOMY = "https://hai.stanford.edu/ai-index/2026-ai-index-report/economy";
 
 // Workforce shares approximate US employment distribution (BLS); automation
 // exposure is a curated read of task-level AI exposure (Anthropic Economic
@@ -878,12 +879,12 @@ const MCKINSEY = "https://www.mckinsey.com/capabilities/mckinsey-digital/our-ins
 export const curatedJobs: CuratedJobsImpact = {
   overallAutomationPct: 31.7,
   revenueAtRisk: {
-    annualValueUsdTn: 4.4,
-    exposedRevenueSharePct: 24,
+    annualValueUsdTn: 7.9,
+    exposedRevenueSharePct: 30,
     description:
-      "Generative AI could automate activities worth up to ~$4.4T in annual productivity value, with roughly a quarter of all work tasks exposed to acceleration. An estimate of value at stake — not GDP that vanishes.",
-    source: MCKINSEY,
-    sourceId: "mckinsey-genai",
+      "Global AI spending reached ~$2.59T in 2026 (+47% YoY), yet roughly 74% of the gains accrue to the top 20% of firms (PwC 2026). When fully integrated into software, generative AI could unlock or displace up to ~$7.9T in annual value, with ~30% of work hours automatable by 2030 (McKinsey). This is the economic value AI puts in play — an estimate of value at stake, not GDP that vanishes.",
+    source: AI_INDEX_2026_ECONOMY,
+    sourceId: "ai-index-2026-economy",
   },
   regions: [
     {
