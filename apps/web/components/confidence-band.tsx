@@ -30,8 +30,8 @@ export function ConfidenceBand({ state }: ConfidenceBandProps) {
         Confidence band
       </h2>
       <p className="mt-1 text-xs leading-5 text-[rgb(var(--muted))]">
-        Outer bar = ~80% range (earliest to latest plausible). The brighter inner band is the
-        more-likely-than-not window.
+        A self-adjusting ±σ band: outer bar ≈ ±2σ (~95%), the brighter inner band ≈ ±1σ (~68%, the
+        likely window). It widens the further out — and the noisier the signals — the date is.
       </p>
 
       <div className="relative mt-5 h-3 rounded-full bg-[rgb(var(--panel-strong))]">

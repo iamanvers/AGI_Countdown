@@ -111,8 +111,8 @@ export function EngineDashboard() {
               <section className="py-2">
                 <CountdownClock
                   targetIso={state.tAgi}
-                  earliestIso={state.band.earlyP10}
-                  latestIso={state.band.lateP90}
+                  earliestIso={state.band.likelyEarly ?? state.band.earlyP10}
+                  latestIso={state.band.likelyLate ?? state.band.lateP90}
                 />
               </section>
 

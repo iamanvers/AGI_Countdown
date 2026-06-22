@@ -120,6 +120,8 @@ const AVERAGE_DAYS_PER_MONTH = 365.2425 / 12;
 const MS_PER_DAY = 24 * 60 * 60 * 1000;
 const MS_PER_AVERAGE_MONTH = AVERAGE_DAYS_PER_MONTH * MS_PER_DAY;
 const DEFAULT_MAX_SHIFT_MONTHS = 36;
+// 1σ of horizon uncertainty as a fraction of the time remaining to the estimate.
+const HORIZON_SIGMA = 0.3;
 const EPSILON = 1e-9;
 
 export const DEFAULT_PROGRESS_WEIGHTS: Record<AgiDefinition, ProgressWeights> = {
@@ -165,7 +167,7 @@ export function computeEngineState(input: EngineInput): EngineState {
 
   // The estimate can never be in the past — floor it to just after "now".
   const tAgiMs = Math.max(addMonths(anchor.medianMs, deltaMonths), addMonths(tsMs, 1));
-  const band = computeConfidenceBand(anchor, deltaMonths, tAgiMs, tsMs, contributions, input.confidence);
+  const band = computeConfidenceBand(tAgiMs, tsMs, contributions, input.confidence);
   const state: EngineState = {
     runId: input.runId ?? `${input.definition}:${ts}`,
     ts,
@@ -311,8 +313,6 @@ function computeRawFactorContributions(factors: FactorInput[]): FactorContributi
 }
 
 function computeConfidenceBand(
-  anchor: ResolvedAnchor,
-  deltaMonths: number,
   targetMs: number,
   nowMs: number,
   contributions: FactorContribution[],
@@ -336,25 +336,24 @@ function computeConfidenceBand(
       0
     ) || 0;
 
-  const rawEarlyMs = Math.min(
-    addMonths(anchor.earlyMs, deltaMonths - factorVolatilityMonths),
-    addMonths(targetMs, -minimumBandMonths)
-  );
-  // Earliest plausible arrival can't be in the past, nor after the estimate.
-  const earlyMs = Math.min(Math.max(rawEarlyMs, nowMs), targetMs);
-  const lateMs = Math.max(
-    addMonths(anchor.lateMs, deltaMonths + factorVolatilityMonths),
-    addMonths(targetMs, minimumBandMonths)
+  // Self-adjusting variance band. Two independent sources of uncertainty, added
+  // in quadrature to a single σ (in months):
+  //   • horizon uncertainty — the further out the estimate, the less certain it
+  //     is, so σ scales with the time remaining (HORIZON_SIGMA · monthsToArrival);
+  //   • live-model volatility — how much the factors are actually moving.
+  // The inner "likely" band is ±1σ (~68%), the outer band ±2σ (~95%). This stays
+  // tight when the date is near / signals agree and widens when it's far / noisy,
+  // instead of inheriting the decade-spanning spread of forecaster disagreement.
+  const monthsToArrival = Math.max(0, (targetMs - nowMs) / MS_PER_AVERAGE_MONTH);
+  const sigmaMonths = Math.max(
+    minimumBandMonths,
+    Math.hypot(HORIZON_SIGMA * monthsToArrival, factorVolatilityMonths)
   );
 
-  // Inner "likely" band (~P25–P75): a tighter, more-likely-than-not window around
-  // the central estimate, sized as a fraction of each outer half-spread.
-  const innerFraction = 0.45;
-  const likelyEarlyMs = Math.min(
-    Math.max(targetMs - innerFraction * (targetMs - earlyMs), nowMs),
-    targetMs
-  );
-  const likelyLateMs = Math.max(targetMs + innerFraction * (lateMs - targetMs), targetMs);
+  const earlyMs = Math.min(Math.max(addMonths(targetMs, -2 * sigmaMonths), nowMs), targetMs);
+  const lateMs = addMonths(targetMs, 2 * sigmaMonths);
+  const likelyEarlyMs = Math.min(Math.max(addMonths(targetMs, -sigmaMonths), nowMs), targetMs);
+  const likelyLateMs = addMonths(targetMs, sigmaMonths);
 
   return {
     earlyP10: toIso(earlyMs),

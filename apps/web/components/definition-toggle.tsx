@@ -9,6 +9,12 @@ type DefinitionToggleProps = {
   disabled?: boolean;
 };
 
+const mobileLabel: Record<DefinitionId, string> = {
+  "weak-agi": "Weak",
+  "transformative-ai": "Transf.",
+  "strong-agi": "Strong"
+};
+
 export function DefinitionToggle({ active, onChange, disabled }: DefinitionToggleProps) {
   return (
     <div
@@ -23,7 +29,7 @@ export function DefinitionToggle({ active, onChange, disabled }: DefinitionToggl
           <button
             aria-checked={isActive}
             className={[
-              "focus-ring tabular relative rounded-full px-3 py-2 text-xs font-semibold uppercase tracking-[0.12em] transition-colors sm:px-4",
+              "focus-ring tabular relative whitespace-nowrap rounded-full px-2 py-2 text-[0.7rem] font-semibold uppercase tracking-normal transition-colors sm:px-4 sm:text-xs sm:tracking-[0.12em]",
               isActive
                 ? "bg-[rgb(var(--accent-rgb))] text-[rgb(var(--accent-contrast))]"
                 : "text-[rgb(var(--muted))] hover:text-[rgb(var(--foreground))]"
@@ -35,7 +41,7 @@ export function DefinitionToggle({ active, onChange, disabled }: DefinitionToggl
             type="button"
           >
             <span className="hidden sm:inline">{definition.label}</span>
-            <span className="sm:hidden">{definition.shortLabel}</span>
+            <span className="sm:hidden">{mobileLabel[definition.id]}</span>
           </button>
         );
       })}

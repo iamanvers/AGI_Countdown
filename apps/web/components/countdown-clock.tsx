@@ -69,7 +69,7 @@ export function CountdownClock({ targetIso, earliestIso, latestIso }: CountdownC
           </p>
           {earliestIso && latestIso ? (
             <p className="mt-0.5 text-xs text-[rgb(var(--muted))] tabular">
-              80% window {formatArrivalRange(earliestIso, latestIso)}
+              likely window {formatArrivalRange(earliestIso, latestIso)}
             </p>
           ) : null}
           <p className="mt-0.5 text-[0.62rem] uppercase tracking-[0.18em] text-[rgb(var(--muted))]">
