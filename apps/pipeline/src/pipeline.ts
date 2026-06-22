@@ -378,7 +378,11 @@ function buildEngineInput(
       return [
         {
           factorId: factor.id,
-          normalized: factorIntensity(factor, aggregate.normalized),
+          // Decelerators (−1) get a precautionary convex response: √intensity
+          // amplifies an early/weak headwind so it meaningfully pushes the date
+          // later (relative boost is largest for low readings). It can never flip
+          // sign — a decelerator only ever pushes later, an accelerator sooner.
+          normalized: applyResponseCurve(factor, factorIntensity(factor, aggregate.normalized)),
           sign: factor.sign,
           weight: factor.weight * emphasis * CONTRIBUTION_SCALE,
           confidence: aggregate.confidence,
@@ -426,6 +430,18 @@ export function factorIntensity(factor: FactorDef, normalized: number): number {
   const min = factor.bounds?.min ?? 0;
   const span = max - min || 1;
   return clamp((normalized - min) / span, 0, 1);
+}
+
+/**
+ * Per-role response curve applied to a 0..1 intensity. Accelerators stay linear.
+ * Decelerators get a concave (√) curve — a *precautionary* response that
+ * amplifies an early / weak headwind (the relative boost is largest for low
+ * readings), so emerging risks are taken seriously. Stays in [0,1], so it can
+ * never flip a decelerator into acceleration.
+ */
+export function applyResponseCurve(factor: FactorDef, intensity: number): number {
+  const x = clamp(intensity, 0, 1);
+  return factor.sign === -1 ? Math.sqrt(x) : x;
 }
 
 function buildAnchorSources(

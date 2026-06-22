@@ -5,6 +5,7 @@ import type { FactorSample, NewsItem } from "@agi-countdown/sources";
 
 import {
   aggregateByFactor,
+  applyResponseCurve,
   computeNormalizationSignal,
   createMoverRationale,
   factorIntensity,
@@ -103,6 +104,26 @@ describe("aggregateByFactor", () => {
       sample({ factorId: "x", normalized: 0.0, confidence: 1, quarantined: true }),
     ]);
     expect(agg.get("x")?.normalized).toBeCloseTo(0.6, 6);
+  });
+});
+
+describe("applyResponseCurve (precautionary decelerators)", () => {
+  it("leaves accelerators linear", () => {
+    expect(applyResponseCurve(accelerator, 0.36)).toBeCloseTo(0.36, 6);
+  });
+
+  it("amplifies decelerators (concave) but never exceeds 1 or flips sign", () => {
+    const amplified = applyResponseCurve(decelerator, 0.36);
+    expect(amplified).toBeCloseTo(0.6, 6); // sqrt(0.36)
+    expect(amplified).toBeGreaterThan(0.36); // a weak headwind is amplified
+    expect(applyResponseCurve(decelerator, 1)).toBe(1);
+    expect(applyResponseCurve(decelerator, 0)).toBe(0);
+  });
+
+  it("amplifies early (low) readings proportionally more than strong ones", () => {
+    const lowBoost = applyResponseCurve(decelerator, 0.09) / 0.09; // 0.3/0.09 = 3.33x
+    const highBoost = applyResponseCurve(decelerator, 0.81) / 0.81; // 0.9/0.81 = 1.11x
+    expect(lowBoost).toBeGreaterThan(highBoost);
   });
 });
 

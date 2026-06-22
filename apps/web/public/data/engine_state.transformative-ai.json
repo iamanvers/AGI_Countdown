@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-all-20260622T094231787Z-transformative-ai",
-  "ts": "2026-06-22T09:42:31.787Z",
+  "runId": "refresh-all-20260622T094829617Z-transformative-ai",
+  "ts": "2026-06-22T09:48:29.617Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-04-17T08:46:31.080Z",
+  "tAgi": "2031-05-16T13:18:16.456Z",
   "progress": 58.02,
   "band": {
-    "earlyP10": "2027-04-27T12:47:37.773Z",
-    "lateP90": "2054-04-21T11:43:07.099Z",
-    "likelyEarly": "2029-07-03T11:47:01.092Z",
-    "likelyLate": "2041-08-24T16:05:59.289Z"
+    "earlyP10": "2027-05-26T00:57:54.955Z",
+    "lateP90": "2054-05-21T08:36:20.669Z",
+    "likelyEarly": "2029-08-01T08:57:06.781Z",
+    "likelyLate": "2041-09-23T03:59:24.352Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -8.497402,
+  "deltaMonths": -7.53841,
   "movers": [
     {
       "factorId": "adoption-usage",
@@ -21,8 +21,8 @@
     },
     {
       "factorId": "energy-headroom",
-      "contributionMonths": 2.01744,
-      "rationale": "Energy & grid constraints is running high at 0.93 — a headwind pushing the date later.",
+      "contributionMonths": 2.098649,
+      "rationale": "Energy & grid constraints is running high at 0.94 — a headwind pushing the date later.",
       "citation": "https://www.iea.org/reports/electricity-2025"
     },
     {
@@ -74,34 +74,40 @@
       "citation": "https://aiindex.stanford.edu/report/"
     },
     {
-      "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.911625,
-      "rationale": "Public backlash pressure is running high at 0.85 — a headwind pushing the date later.",
-      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
-    },
-    {
       "factorId": "policy-friction",
-      "contributionMonths": 0.5334,
+      "contributionMonths": 0.864153,
       "rationale": "Policy friction is running low at 0.38 — a headwind pushing the date later.",
       "citation": "https://artificialintelligenceact.eu/"
     },
     {
-      "factorId": "export-control-friction",
-      "contributionMonths": 0.525,
-      "rationale": "Export-control friction is moderate at 0.50 — a headwind pushing the date later.",
-      "citation": "https://www.bis.gov/"
-    },
-    {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.441,
+      "contributionMonths": 0.745426,
       "rationale": "Macro & bubble risk is running low at 0.35 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
+      "factorId": "export-control-friction",
+      "contributionMonths": 0.742462,
+      "rationale": "Export-control friction is moderate at 0.50 — a headwind pushing the date later.",
+      "citation": "https://www.bis.gov/"
+    },
+    {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": 0.653257,
+      "rationale": "Public backlash pressure is running low at 0.37 — a headwind pushing the date later.",
+      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
+    },
+    {
       "factorId": "data-availability",
-      "contributionMonths": 0.4185,
+      "contributionMonths": 0.591848,
       "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
       "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
+    },
+    {
+      "factorId": "safety-eval-pressure",
+      "contributionMonths": 0.456158,
+      "rationale": "Safety-eval pressure is moderate at 0.45 — a headwind pushing the date later.",
+      "citation": "https://www.aisi.gov.uk/"
     },
     {
       "factorId": "robotics-embodiment",
@@ -110,15 +116,9 @@
       "citation": "https://ifr.org/worldrobotics/"
     },
     {
-      "factorId": "safety-eval-pressure",
-      "contributionMonths": 0.306,
-      "rationale": "Safety-eval pressure is moderate at 0.45 — a headwind pushing the date later.",
-      "citation": "https://www.aisi.gov.uk/"
-    },
-    {
       "factorId": "research-velocity",
-      "contributionMonths": -0.141804,
-      "rationale": "Research velocity is running low at 0.16 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.1818,
+      "rationale": "Research velocity is running low at 0.20 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     }
   ]
