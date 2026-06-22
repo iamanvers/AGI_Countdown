@@ -44,6 +44,22 @@ function ContributionChips({ factor }: { factor: MethodologyFactor }) {
   );
 }
 
+/** Compact note on how this factor's reading was normalized this run. */
+function normalizationNote(factor: MethodologyFactor): string {
+  const rolling = factor.reading?.rolling;
+  const level = factor.reading?.level;
+  const levelPct = typeof level === "number" ? `level ${Math.round(level * 100)}` : "level";
+  if (!rolling || !rolling.applied) {
+    const n = rolling?.sampleSize ?? 0;
+    return `${levelPct} · building history (${n})`;
+  }
+  const detail =
+    rolling.method === "zscore" || rolling.method === "log-zscore"
+      ? `z ${rolling.zScore >= 0 ? "+" : ""}${rolling.zScore.toFixed(2)}`
+      : `p${Math.round(rolling.percentile * 100)}`;
+  return `${levelPct} · ${detail} · n ${rolling.sampleSize}`;
+}
+
 export default async function MethodologyPage() {
   const [methodology, status, history] = await Promise.all([
     readMethodology(),
@@ -116,11 +132,14 @@ export default async function MethodologyPage() {
           </p>
         </div>
         <p className="text-sm leading-6 text-[rgb(var(--muted))]">
-          <strong className="text-[rgb(var(--foreground))]">Reading</strong> is the current
-          normalized value, 0–100 (0 = low / quiet, 100 = maxed-out for that signal).{" "}
-          <strong className="text-[rgb(var(--foreground))]">Weight</strong> is months of shift per
-          unit. <strong className="text-[rgb(var(--foreground))]">Effect</strong> is this factor&apos;s
-          contribution to each definition&apos;s date this run (W/T/S).
+          <strong className="text-[rgb(var(--foreground))]">Reading</strong> is the engine signal,
+          0–100. Once a factor has enough history it is normalized against its own trend — a{" "}
+          <strong className="text-[rgb(var(--foreground))]">z-score</strong> (50 = at the trailing
+          mean) for level signals or an empirical <strong className="text-[rgb(var(--foreground))]">percentile</strong>{" "}
+          for momentum signals — so the date moves on deviation-from-trend, not on a static constant
+          (it falls back to the raw level until enough samples exist). <strong className="text-[rgb(var(--foreground))]">Weight</strong>{" "}
+          is months of shift per unit. <strong className="text-[rgb(var(--foreground))]">Effect</strong>{" "}
+          is this factor&apos;s contribution to each definition&apos;s date this run (W/T/S).
         </p>
         <div className="overflow-x-auto rounded-xl border border-[rgb(var(--line))]">
           <table className="w-full min-w-[760px] border-collapse text-sm">
@@ -162,11 +181,16 @@ export default async function MethodologyPage() {
                       {reading === null ? (
                         <span className="text-[rgb(var(--muted))]">—</span>
                       ) : (
-                        <div className="flex items-center gap-2">
-                          <div className="h-1.5 w-16 overflow-hidden rounded-full bg-[rgb(var(--panel-strong))]">
-                            <div className="h-full rounded-full bg-[rgb(var(--accent-rgb))]" style={{ width: `${reading}%` }} />
+                        <div className="grid gap-1">
+                          <div className="flex items-center gap-2">
+                            <div className="h-1.5 w-16 overflow-hidden rounded-full bg-[rgb(var(--panel-strong))]">
+                              <div className="h-full rounded-full bg-[rgb(var(--accent-rgb))]" style={{ width: `${reading}%` }} />
+                            </div>
+                            <span className="tabular text-xs">{reading}</span>
                           </div>
-                          <span className="tabular text-xs">{reading}</span>
+                          <span className="text-[0.66rem] text-[rgb(var(--muted))] tabular">
+                            {normalizationNote(factor)}
+                          </span>
                         </div>
                       )}
                     </td>

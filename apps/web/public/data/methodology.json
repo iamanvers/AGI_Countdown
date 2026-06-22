@@ -1,5 +1,5 @@
 {
-  "ts": "2026-06-22T03:50:30.543Z",
+  "ts": "2026-06-22T04:21:48.049Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -124,13 +124,22 @@
       "normalization": "momentum-01",
       "reading": {
         "normalized": 0.695,
+        "level": 0.695,
         "confidence": 0.788,
-        "citation": "https://aiindex.stanford.edu/report/"
+        "citation": "https://aiindex.stanford.edu/report/",
+        "rolling": {
+          "applied": false,
+          "method": "momentum-01",
+          "sampleSize": 2,
+          "zScore": 0,
+          "percentile": 0,
+          "volatility": 0
+        }
       },
       "contributionMonths": {
-        "weak-agi": -3.223,
-        "transformative-ai": -1.719,
-        "strong-agi": -2.149
+        "weak-agi": -3.227,
+        "transformative-ai": -1.721,
+        "strong-agi": -2.151
       },
       "sources": [
         {
@@ -171,8 +180,17 @@
       "normalization": "log-zscore",
       "reading": {
         "normalized": 0.72,
+        "level": 0.72,
         "confidence": 0.85,
-        "citation": "https://epoch.ai/data/notable-ai-models"
+        "citation": "https://epoch.ai/data/notable-ai-models",
+        "rolling": {
+          "applied": false,
+          "method": "log-zscore",
+          "sampleSize": 2,
+          "zScore": 0,
+          "percentile": 0,
+          "volatility": 0
+        }
       },
       "contributionMonths": {
         "weak-agi": -2.468,
@@ -197,14 +215,23 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.634,
-        "confidence": 0.653,
-        "citation": "https://www.semanticscholar.org/"
+        "normalized": 0.557,
+        "level": 0.557,
+        "confidence": 0.687,
+        "citation": "https://arxiv.org/list/cs.AI/recent",
+        "rolling": {
+          "applied": false,
+          "method": "zscore",
+          "sampleSize": 2,
+          "zScore": 0,
+          "percentile": 0,
+          "volatility": 0.02
+        }
       },
       "contributionMonths": {
-        "weak-agi": -0.685,
-        "transformative-ai": -0.474,
-        "strong-agi": -0.633
+        "weak-agi": -0.305,
+        "transformative-ai": -0.211,
+        "strong-agi": -0.282
       },
       "sources": [
         {
@@ -235,13 +262,22 @@
       "normalization": "momentum-01",
       "reading": {
         "normalized": 0.64,
+        "level": 0.64,
         "confidence": 0.75,
-        "citation": "https://openrouter.ai/rankings"
+        "citation": "https://openrouter.ai/rankings",
+        "rolling": {
+          "applied": false,
+          "method": "momentum-01",
+          "sampleSize": 2,
+          "zScore": 0,
+          "percentile": 0,
+          "volatility": 0
+        }
       },
       "contributionMonths": {
-        "weak-agi": -1.262,
-        "transformative-ai": -1.578,
-        "strong-agi": -0.736
+        "weak-agi": -1.26,
+        "transformative-ai": -1.575,
+        "strong-agi": -0.735
       },
       "sources": [
         {
@@ -267,8 +303,17 @@
       "normalization": "log-zscore",
       "reading": {
         "normalized": 0.737,
+        "level": 0.737,
         "confidence": 0.763,
-        "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
+        "citation": "https://investor.nvidia.com/financial-info/financial-reports/",
+        "rolling": {
+          "applied": false,
+          "method": "log-zscore",
+          "sampleSize": 2,
+          "zScore": 0,
+          "percentile": 0,
+          "volatility": 0
+        }
       },
       "contributionMonths": {
         "weak-agi": -1.158,
@@ -304,13 +349,22 @@
       "normalization": "zscore",
       "reading": {
         "normalized": 0.45,
+        "level": 0.45,
         "confidence": 0.72,
-        "citation": "https://www.iea.org/reports/electricity-2025"
+        "citation": "https://www.iea.org/reports/electricity-2025",
+        "rolling": {
+          "applied": false,
+          "method": "zscore",
+          "sampleSize": 2,
+          "zScore": 0,
+          "percentile": 0,
+          "volatility": 0
+        }
       },
       "contributionMonths": {
-        "weak-agi": -0.25,
-        "transformative-ai": -0.429,
-        "strong-agi": -0.429
+        "weak-agi": -0.252,
+        "transformative-ai": -0.432,
+        "strong-agi": -0.432
       },
       "sources": [
         {
@@ -341,13 +395,22 @@
       "normalization": "momentum-01",
       "reading": {
         "normalized": 0.381,
+        "level": 0.381,
         "confidence": 0.7,
-        "citation": "https://artificialintelligenceact.eu/"
+        "citation": "https://artificialintelligenceact.eu/",
+        "rolling": {
+          "applied": false,
+          "method": "momentum-01",
+          "sampleSize": 2,
+          "zScore": 0,
+          "percentile": 0,
+          "volatility": 0
+        }
       },
       "contributionMonths": {
-        "weak-agi": -0.467,
-        "transformative-ai": -0.668,
-        "strong-agi": -0.668
+        "weak-agi": -0.466,
+        "transformative-ai": -0.666,
+        "strong-agi": -0.666
       },
       "sources": [
         {
@@ -373,12 +436,21 @@
       "normalization": "zscore",
       "reading": {
         "normalized": 0.363,
+        "level": 0.363,
         "confidence": 0.65,
-        "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
+        "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/",
+        "rolling": {
+          "applied": false,
+          "method": "zscore",
+          "sampleSize": 2,
+          "zScore": 0,
+          "percentile": 0,
+          "volatility": 0
+        }
       },
       "contributionMonths": {
         "weak-agi": -0.427,
-        "transformative-ai": -0.587,
+        "transformative-ai": -0.588,
         "strong-agi": -0.534
       },
       "sources": [
@@ -405,13 +477,22 @@
       "normalization": "momentum-01",
       "reading": {
         "normalized": 0.51,
+        "level": 0.51,
         "confidence": 0.735,
-        "citation": "https://www.anthropic.com/economic-index"
+        "citation": "https://www.anthropic.com/economic-index",
+        "rolling": {
+          "applied": false,
+          "method": "momentum-01",
+          "sampleSize": 2,
+          "zScore": 0,
+          "percentile": 0,
+          "volatility": 0
+        }
       },
       "contributionMonths": {
-        "weak-agi": -0.048,
-        "transformative-ai": -0.084,
-        "strong-agi": -0.042
+        "weak-agi": -0.047,
+        "transformative-ai": -0.082,
+        "strong-agi": -0.041
       },
       "sources": [
         {
@@ -437,8 +518,17 @@
       "normalization": "momentum-01",
       "reading": {
         "normalized": 0.6,
+        "level": 0.6,
         "confidence": 0.78,
-        "citation": "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/"
+        "citation": "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/",
+        "rolling": {
+          "applied": false,
+          "method": "momentum-01",
+          "sampleSize": 2,
+          "zScore": 0,
+          "percentile": 0,
+          "volatility": 0
+        }
       },
       "contributionMonths": {
         "weak-agi": -1.03,
@@ -464,8 +554,17 @@
       "normalization": "momentum-01",
       "reading": {
         "normalized": 0.7,
+        "level": 0.7,
         "confidence": 0.74,
-        "citation": "https://aiindex.stanford.edu/report/"
+        "citation": "https://aiindex.stanford.edu/report/",
+        "rolling": {
+          "applied": false,
+          "method": "momentum-01",
+          "sampleSize": 2,
+          "zScore": 0,
+          "percentile": 0,
+          "volatility": 0
+        }
       },
       "contributionMonths": {
         "weak-agi": -1.302,
@@ -491,8 +590,17 @@
       "normalization": "momentum-01",
       "reading": {
         "normalized": 0.7,
+        "level": 0.7,
         "confidence": 0.78,
-        "citation": "https://investor.tsmc.com/english"
+        "citation": "https://investor.tsmc.com/english",
+        "rolling": {
+          "applied": false,
+          "method": "momentum-01",
+          "sampleSize": 2,
+          "zScore": 0,
+          "percentile": 0,
+          "volatility": 0
+        }
       },
       "contributionMonths": {
         "weak-agi": -0.998,
@@ -518,8 +626,17 @@
       "normalization": "momentum-01",
       "reading": {
         "normalized": 0.5,
+        "level": 0.5,
         "confidence": 0.7,
-        "citation": "https://www.bis.gov/"
+        "citation": "https://www.bis.gov/",
+        "rolling": {
+          "applied": false,
+          "method": "momentum-01",
+          "sampleSize": 2,
+          "zScore": 0,
+          "percentile": 0,
+          "volatility": 0
+        }
       },
       "contributionMonths": {},
       "sources": [
@@ -541,8 +658,17 @@
       "normalization": "momentum-01",
       "reading": {
         "normalized": 0.45,
+        "level": 0.45,
         "confidence": 0.68,
-        "citation": "https://www.aisi.gov.uk/"
+        "citation": "https://www.aisi.gov.uk/",
+        "rolling": {
+          "applied": false,
+          "method": "momentum-01",
+          "sampleSize": 2,
+          "zScore": 0,
+          "percentile": 0,
+          "volatility": 0
+        }
       },
       "contributionMonths": {
         "weak-agi": -0.095,
@@ -554,6 +680,114 @@
           "id": "uk-aisi-evals",
           "name": "UK AI Safety Institute evaluations",
           "url": "https://www.aisi.gov.uk/"
+        }
+      ]
+    },
+    {
+      "id": "capital-formation",
+      "label": "AI capital formation",
+      "category": "internal",
+      "domain": "economics",
+      "description": "Private AI investment and frontier-lab funding momentum — the capital that finances larger training runs and deployment, distinct from hyperscaler capex.",
+      "sign": 1,
+      "weight": 4,
+      "normalization": "log-zscore",
+      "reading": {
+        "normalized": 0.71,
+        "level": 0.71,
+        "confidence": 0.74,
+        "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
+        "rolling": {
+          "applied": false,
+          "method": "log-zscore",
+          "sampleSize": 2,
+          "zScore": 0,
+          "percentile": 0,
+          "volatility": 0
+        }
+      },
+      "contributionMonths": {
+        "weak-agi": -0.995,
+        "transformative-ai": -1.74,
+        "strong-agi": -1.243
+      },
+      "sources": [
+        {
+          "id": "ai-index-investment",
+          "name": "Stanford HAI AI Index — private AI investment",
+          "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
+        }
+      ]
+    },
+    {
+      "id": "macro-headwinds",
+      "label": "Macro & bubble risk",
+      "category": "external",
+      "domain": "economics",
+      "description": "Recession risk, tightening financial conditions, and AI-bubble concerns that could throttle the buildout if capital pulls back.",
+      "sign": -1,
+      "weight": 3,
+      "normalization": "zscore",
+      "reading": {
+        "normalized": 0.35,
+        "level": 0.35,
+        "confidence": 0.6,
+        "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N",
+        "rolling": {
+          "applied": false,
+          "method": "zscore",
+          "sampleSize": 2,
+          "zScore": 0,
+          "percentile": 0,
+          "volatility": 0
+        }
+      },
+      "contributionMonths": {
+        "weak-agi": -0.432,
+        "transformative-ai": -0.756,
+        "strong-agi": -0.54
+      },
+      "sources": [
+        {
+          "id": "macro-risk-index",
+          "name": "FRED recession & financial-conditions risk",
+          "url": "https://fred.stlouisfed.org/series/RECPROUSM156N"
+        }
+      ]
+    },
+    {
+      "id": "robotics-embodiment",
+      "label": "Robotics & embodiment",
+      "category": "internal",
+      "domain": "autonomy",
+      "description": "Progress in physical-world robotics and embodied agents — most relevant to robust, general autonomy (weighted heavily for Strong AGI).",
+      "sign": 1,
+      "weight": 3,
+      "normalization": "momentum-01",
+      "reading": {
+        "normalized": 0.48,
+        "level": 0.48,
+        "confidence": 0.6,
+        "citation": "https://ifr.org/worldrobotics/",
+        "rolling": {
+          "applied": false,
+          "method": "momentum-01",
+          "sampleSize": 2,
+          "zScore": 0,
+          "percentile": 0,
+          "volatility": 0
+        }
+      },
+      "contributionMonths": {
+        "weak-agi": 0.079,
+        "transformative-ai": 0.065,
+        "strong-agi": 0.108
+      },
+      "sources": [
+        {
+          "id": "ifr-world-robotics",
+          "name": "IFR World Robotics",
+          "url": "https://ifr.org/worldrobotics/"
         }
       ]
     }

@@ -15,8 +15,8 @@ export type NewsItem = {
 
 /** Detected org -> the keywords that map to it (case-insensitive, word-ish). */
 const ORG_KEYWORDS: Record<string, string[]> = {
-  OpenAI: ["openai", "chatgpt", "gpt-5", "gpt-4", "sora", "o3", "o4"],
-  Anthropic: ["anthropic", "claude", "fable"],
+  OpenAI: ["openai", "chatgpt", "gpt-5", "gpt-4", "sora", "o3", "o4", "deployment co"],
+  Anthropic: ["anthropic", "claude", "fable", "mythos", "glasswing", "opus 4", "sonnet 4"],
   "Google DeepMind": ["google deepmind", "deepmind", "gemini", "google ai"],
   Meta: ["meta ai", "llama", "fair "],
   NVIDIA: ["nvidia", "blackwell", "cuda", "gpu"],

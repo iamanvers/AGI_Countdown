@@ -134,7 +134,22 @@ export type MethodologyFactor = {
   sign: 1 | -1;
   weight: number;
   normalization: string;
-  reading: { normalized: number; confidence: number; citation: string } | null;
+  reading:
+    | {
+        normalized: number;
+        level?: number;
+        confidence: number;
+        citation: string;
+        rolling?: {
+          applied: boolean;
+          method: string;
+          sampleSize: number;
+          zScore: number;
+          percentile: number;
+          volatility: number;
+        } | null;
+      }
+    | null;
   contributionMonths: Record<string, number>;
   sources: Array<{ id: string; name: string; url: string }>;
 };

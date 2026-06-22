@@ -489,6 +489,39 @@ export const curatedFactorSeedsBySource: Record<string, CuratedFactorSeed[]> = {
       notes: "Pre-deployment safety evaluations add modest release friction.",
     },
   ],
+  "ai-index-investment": [
+    {
+      factorId: "capital-formation",
+      raw: 0.71,
+      unit: "investment-momentum-0-1",
+      normalized: 0.71,
+      confidence: 0.74,
+      citation: "https://hai.stanford.edu/ai-index/2025-ai-index-report",
+      notes: "Global private AI investment is at record highs, led by generative-AI funding (AI Index).",
+    },
+  ],
+  "macro-risk-index": [
+    {
+      factorId: "macro-headwinds",
+      raw: 0.35,
+      unit: "risk-0-1",
+      normalized: 0.35,
+      confidence: 0.6,
+      citation: "https://fred.stlouisfed.org/series/RECPROUSM156N",
+      notes: "Near-term recession probability is low-to-moderate; AI-bubble concerns add some downside risk.",
+    },
+  ],
+  "ifr-world-robotics": [
+    {
+      factorId: "robotics-embodiment",
+      raw: 0.48,
+      unit: "embodiment-momentum-0-1",
+      normalized: 0.48,
+      confidence: 0.6,
+      citation: "https://ifr.org/worldrobotics/",
+      notes: "Industrial-robot installs near record highs; humanoid/embodied progress accelerating but still early.",
+    },
+  ],
 };
 
 export type CuratedTimelineEvent = {
@@ -719,6 +752,70 @@ export const curatedTimeline: CuratedTimelineEvent[] = [
     significance: "landmark",
     category: "model-release",
     citation: "https://openai.com/index/introducing-gpt-5/",
+  },
+  {
+    date: "2025-12-11",
+    title: "OpenAI releases GPT-5.2",
+    summary:
+      "Instant, Thinking, and Pro tiers sharpen reasoning, coding, and long-document work across the GPT-5 line.",
+    significance: "major",
+    category: "model-release",
+    citation: "https://openai.com/index/introducing-gpt-5-2/",
+  },
+  {
+    date: "2026-02-05",
+    title: "Anthropic releases Claude Opus 4.6",
+    summary:
+      "A 1M-token context (beta), agent teams in Claude Code, and adaptive effort controls extend long-horizon work.",
+    significance: "major",
+    category: "model-release",
+    citation: "https://www.anthropic.com/news/claude-opus-4-6",
+  },
+  {
+    date: "2026-04-16",
+    title: "Anthropic releases Claude Opus 4.7",
+    summary:
+      "Higher coding and agent scores (+10.9 on SWE-bench Pro vs 4.6), file-system memory, and a new xhigh reasoning tier.",
+    significance: "major",
+    category: "model-release",
+    citation: "https://www.anthropic.com/news/claude-opus-4-7",
+  },
+  {
+    date: "2026-04-23",
+    title: "OpenAI releases GPT-5.5",
+    summary:
+      "The latest GPT-5-series flagship raises the bar on reasoning, coding, and agentic tasks.",
+    significance: "major",
+    category: "model-release",
+    citation: "https://openai.com/index/introducing-gpt-5-5/",
+  },
+  {
+    date: "2026-05-04",
+    title: "Anthropic and OpenAI launch enterprise AI deployment ventures",
+    summary:
+      "Both labs spin up services arms — OpenAI's Deployment Co. and Anthropic's PE-backed joint venture — to drive enterprise adoption.",
+    significance: "major",
+    category: "industry",
+    citation:
+      "https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/",
+  },
+  {
+    date: "2026-05-28",
+    title: "Anthropic releases Claude Opus 4.8",
+    summary:
+      "Gains in honesty, coding, and agentic work, plus dynamic workflows; Mythos-class models enter preview under Project Glasswing.",
+    significance: "major",
+    category: "model-release",
+    citation: "https://www.anthropic.com/news/claude-opus-4-8",
+  },
+  {
+    date: "2026-06-09",
+    title: "Anthropic releases Claude Fable 5 and Mythos 5",
+    summary:
+      "Fable 5 reaches state-of-the-art on nearly all benchmarks with new high-risk safeguards; Mythos 5 ships in limited Project Glasswing access.",
+    significance: "landmark",
+    category: "model-release",
+    citation: "https://www.anthropic.com/news/claude-fable-5-mythos-5",
   },
 ];
 

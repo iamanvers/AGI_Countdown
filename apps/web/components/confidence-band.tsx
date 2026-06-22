@@ -1,6 +1,6 @@
 import type { EngineState } from "@/lib/engine-state";
 import { clamp } from "@/lib/engine-state";
-import { formatDate, formatMonths } from "@/lib/format";
+import { formatMonthYear, formatMonths } from "@/lib/format";
 
 type ConfidenceBandProps = {
   state: EngineState;
@@ -36,20 +36,20 @@ export function ConfidenceBand({ state }: ConfidenceBandProps) {
       <div className="mt-3 flex items-start justify-between gap-4 text-sm">
         <div>
           <p className="text-[0.66rem] uppercase tracking-[0.14em] text-[rgb(var(--muted))]">Earliest</p>
-          <p className="mt-0.5 font-medium tabular">{formatDate(state.band.earlyP10)}</p>
+          <p className="mt-0.5 font-medium tabular">{formatMonthYear(state.band.earlyP10)}</p>
         </div>
         <div className="text-center">
           <p className="text-[0.66rem] uppercase tracking-[0.14em] text-[rgb(var(--accent-rgb))]">Estimate</p>
-          <p className="mt-0.5 font-semibold tabular">{formatDate(state.tAgi)}</p>
+          <p className="mt-0.5 font-semibold tabular">{formatMonthYear(state.tAgi)}</p>
         </div>
         <div className="text-right">
           <p className="text-[0.66rem] uppercase tracking-[0.14em] text-[rgb(var(--muted))]">Latest</p>
-          <p className="mt-0.5 font-medium tabular">{formatDate(state.band.lateP90)}</p>
+          <p className="mt-0.5 font-medium tabular">{formatMonthYear(state.band.lateP90)}</p>
         </div>
       </div>
 
       <p className="mt-4 border-t border-[rgb(var(--line)/0.5)] pt-3 text-xs text-[rgb(var(--muted))]">
-        Anchored at <span className="text-[rgb(var(--foreground))]">{formatDate(state.anchor)}</span>,
+        Anchored at <span className="text-[rgb(var(--foreground))]">{formatMonthYear(state.anchor)}</span>,
         live signals currently pull it{" "}
         <span style={{ color: sooner ? "rgb(var(--accent-rgb))" : "rgb(var(--later))" }}>
           {formatMonths(state.deltaMonths)} {sooner ? "sooner" : "later"}

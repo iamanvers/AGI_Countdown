@@ -19,7 +19,14 @@ import {
   definitions,
   fetchEngineState
 } from "@/lib/engine-state";
-import { cadenceFromRunId, formatDate, formatDateTime, formatMonths, formatRelativeTime } from "@/lib/format";
+import {
+  cadenceFromRunId,
+  formatArrivalRange,
+  formatDateTime,
+  formatMonthYear,
+  formatMonths,
+  formatRelativeTime
+} from "@/lib/format";
 
 type LoadState = "loading" | "ready" | "refreshing" | "error";
 
@@ -97,7 +104,11 @@ export function EngineDashboard() {
               transition={shouldReduceMotion ? { duration: 0 } : { type: "spring", stiffness: 140, damping: 22 }}
             >
               <section className="py-2">
-                <CountdownClock targetIso={state.tAgi} />
+                <CountdownClock
+                  targetIso={state.tAgi}
+                  earliestIso={state.band.earlyP10}
+                  latestIso={state.band.lateP90}
+                />
               </section>
 
               <SnapshotFooter loadState={loadState} state={state} />
@@ -143,13 +154,17 @@ function EstimateSummary({ state }: { state: EngineState }) {
           Start from the forecast consensus, then move it by live signals.
         </p>
       </div>
-      <Row label="1 · Forecast anchor" value={formatDate(state.anchor)} />
+      <Row label="1 · Forecast anchor" value={formatMonthYear(state.anchor)} />
       <Row
         label="2 · Live signal shift"
         value={`${formatMonths(state.deltaMonths)} ${direction}`}
         tone={sooner ? "accent" : "later"}
       />
-      <Row label="3 · Estimated arrival" value={formatDate(state.tAgi)} emphasize />
+      <Row
+        label="3 · Estimated arrival"
+        value={formatArrivalRange(state.band.earlyP10, state.band.lateP90)}
+        emphasize
+      />
     </section>
   );
 }

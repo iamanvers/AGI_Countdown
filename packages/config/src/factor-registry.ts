@@ -247,6 +247,48 @@ export const factorRegistry = [
     cadence: "monthly",
     bounds: { min: 0, max: 1 },
   },
+  {
+    id: "capital-formation",
+    label: "AI capital formation",
+    category: "internal",
+    domain: "economics",
+    description:
+      "Private AI investment and frontier-lab funding momentum — the capital that finances larger training runs and deployment, distinct from hyperscaler capex.",
+    sources: ["ai-index-investment"],
+    normalization: "log-zscore",
+    sign: 1,
+    weight: 4,
+    cadence: "monthly",
+    bounds: { min: 0, max: 1 },
+  },
+  {
+    id: "macro-headwinds",
+    label: "Macro & bubble risk",
+    category: "external",
+    domain: "economics",
+    description:
+      "Recession risk, tightening financial conditions, and AI-bubble concerns that could throttle the buildout if capital pulls back.",
+    sources: ["macro-risk-index"],
+    normalization: "zscore",
+    sign: -1,
+    weight: 3,
+    cadence: "weekly",
+    bounds: { min: 0, max: 1 },
+  },
+  {
+    id: "robotics-embodiment",
+    label: "Robotics & embodiment",
+    category: "internal",
+    domain: "autonomy",
+    description:
+      "Progress in physical-world robotics and embodied agents — most relevant to robust, general autonomy (weighted heavily for Strong AGI).",
+    sources: ["ifr-world-robotics"],
+    normalization: "momentum-01",
+    sign: 1,
+    weight: 3,
+    cadence: "monthly",
+    bounds: { min: 0, max: 1 },
+  },
 ] as const satisfies readonly FactorDef[];
 
 export const factorsById = indexById(factorRegistry);

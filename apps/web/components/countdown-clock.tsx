@@ -3,10 +3,13 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
 
-import { formatDateTime } from "@/lib/format";
+import { formatArrivalRange, formatQuarterYear } from "@/lib/format";
 
 type CountdownClockProps = {
   targetIso: string;
+  /** 80% confidence window — rendered as a range so we don't imply false precision. */
+  earliestIso?: string;
+  latestIso?: string;
 };
 
 type CountdownParts = {
@@ -24,7 +27,7 @@ const hourMs = minuteMs * 60;
 const dayMs = hourMs * 24;
 const yearMs = dayMs * 365;
 
-export function CountdownClock({ targetIso }: CountdownClockProps) {
+export function CountdownClock({ targetIso, earliestIso, latestIso }: CountdownClockProps) {
   const shouldReduceMotion = useReducedMotion();
   const targetMs = useMemo(() => new Date(targetIso).getTime(), [targetIso]);
   const [parts, setParts] = useState(() => getCountdownParts(targetMs));
@@ -60,9 +63,19 @@ export function CountdownClock({ targetIso }: CountdownClockProps) {
             AGI Countdown
           </h1>
         </div>
-        <p className="text-right text-sm text-[rgb(var(--muted))] tabular">
-          {formatDateTime(targetIso)}
-        </p>
+        <div className="text-right">
+          <p className="text-base font-semibold tabular sm:text-lg">
+            ≈ {formatQuarterYear(targetIso)}
+          </p>
+          {earliestIso && latestIso ? (
+            <p className="mt-0.5 text-xs text-[rgb(var(--muted))] tabular">
+              80% window {formatArrivalRange(earliestIso, latestIso)}
+            </p>
+          ) : null}
+          <p className="mt-0.5 text-[0.62rem] uppercase tracking-[0.18em] text-[rgb(var(--muted))]">
+            Central estimate · a range, not a date
+          </p>
+        </div>
       </div>
 
       <div

@@ -37,6 +37,29 @@ const HISTORY_LIMIT = 4000;
 const FORECAST_FACTOR_ID = "forecast-consensus-anchor";
 // EWMA weight on the newest reading; lower = smoother / more robust to jitter.
 const SMOOTHING_ALPHA = 0.5;
+// Rolling-normalization window. Each run appends every factor's level here; the
+// engine reading is then a z-score / empirical percentile of the latest level
+// within this trailing window (so the date moves on *momentum*, not absolute
+// curated constants). Falls back to the raw level until the window fills.
+const FACTOR_HISTORY_LIMIT = 180;
+const NORM_MIN_POINTS = 5;
+
+type FactorHistoryPoint = { ts: string; values: Record<string, number> };
+
+type NormalizationStat = {
+  factorId: string;
+  method: string;
+  /** the smoothed 0..1 level before rolling normalization */
+  level: number;
+  /** the 0..1 signal actually fed to the engine */
+  signal: number;
+  /** true once enough varied history exists to normalize against */
+  applied: boolean;
+  sampleSize: number;
+  zScore: number;
+  percentile: number;
+  std: number;
+};
 const LIVE_PARSERS = new Set(liveConnectors.map((connector) => connector.parser));
 
 /** A source produces a numeric factor sample (live connector or curated seed). */
@@ -85,10 +108,25 @@ export async function runRefresh(options: RefreshOptions): Promise<RefreshResult
 
   // EWMA-smooth each factor against its previously published value so the date
   // moves smoothly instead of jumping with every noisy live reading.
-  const aggregates = smoothAggregates(
+  const smoothed = smoothAggregates(
     aggregateByFactor(samples),
     aggregateByFactor(carriedFactors.map(snapshotToSample)),
   );
+
+  // Rolling normalization: re-express each smoothed level as a z-score /
+  // empirical percentile against its own persisted history, so the date reflects
+  // momentum, not absolute curated constants. Falls back to the level on cold start.
+  const factorHistory = await readJsonFile<FactorHistoryPoint[]>(
+    options.outDir,
+    "factor_history.json",
+    [],
+  );
+  const { adjusted: aggregates, stats: normalizationStats } = normalizeAgainstHistory(
+    smoothed,
+    factorHistory,
+  );
+  const nextFactorHistory = appendFactorHistory(factorHistory, generatedAt, smoothed);
+
   const marketOptimism = aggregates.get(FORECAST_FACTOR_ID)?.normalized;
   const engineStates = agiDefinitions.map((definition) =>
     computeEngineState(
@@ -127,9 +165,17 @@ export async function runRefresh(options: RefreshOptions): Promise<RefreshResult
     historicalMilestones,
   });
 
-  // Full transparency: factor weights, signs, normalization, current reading,
-  // per-definition contribution, and the forecast-anchor blend.
-  await writeJsonFile(options.outDir, "methodology.json", buildMethodology(generatedAt, aggregates, engineStates));
+  // Persist the per-factor level history that powers rolling normalization.
+  await writeJsonFile(options.outDir, "factor_history.json", nextFactorHistory);
+
+  // Full transparency: factor weights, signs, normalization (incl. rolling
+  // z-score / percentile + sample size), current reading, per-definition
+  // contribution, and the forecast-anchor blend.
+  await writeJsonFile(
+    options.outDir,
+    "methodology.json",
+    buildMethodology(generatedAt, aggregates, engineStates, normalizationStats),
+  );
 
   const manifest: RefreshManifest = {
     schemaVersion: 1,
@@ -265,6 +311,8 @@ type FactorAggregate = {
   confidence: number;
   citation: string;
   sourceId: string;
+  /** rolling volatility (std of the trailing window); widens the confidence band */
+  volatility?: number;
 };
 
 function aggregateByFactor(samples: FactorSample[]): Map<string, FactorAggregate> {
@@ -330,6 +378,7 @@ function buildEngineInput(
           sign: factor.sign,
           weight: factor.weight * emphasis,
           confidence: aggregate.confidence,
+          volatility: aggregate.volatility ?? 0,
           citation: aggregate.citation,
           rationale: createMoverRationale(factor, aggregate.normalized),
         },
@@ -633,10 +682,109 @@ function round3(value: number): number {
   return Math.round(value * 1000) / 1000;
 }
 
+/**
+ * Rolling normalization. Each factor's smoothed 0..1 level is re-expressed
+ * relative to its own trailing history:
+ *   - zscore / log-zscore factors → standard score, squashed to 0..1 via tanh
+ *     (0.5 = at trailing mean, so only deviation-from-trend moves the date);
+ *   - momentum-01 / others → empirical percentile rank (a p95-style position in
+ *     the observed distribution).
+ * Until the window has NORM_MIN_POINTS of *varied* data we fall back to the raw
+ * level, so constant curated values keep their meaningful absolute reading and
+ * the clock is never dead on a cold start. The trailing std is returned as
+ * volatility to widen the confidence band for genuinely jumpy factors.
+ */
+function normalizeAgainstHistory(
+  aggregates: Map<string, FactorAggregate>,
+  history: readonly FactorHistoryPoint[],
+): { adjusted: Map<string, FactorAggregate>; stats: Map<string, NormalizationStat> } {
+  const methodByFactor = new Map<string, string>(
+    factorRegistry.map((factor) => [factor.id as string, factor.normalization as string]),
+  );
+  const adjusted = new Map<string, FactorAggregate>();
+  const stats = new Map<string, NormalizationStat>();
+
+  for (const [factorId, aggregate] of aggregates) {
+    const level = aggregate.normalized;
+    // The forecast-anchor factor is a *level* (market optimism nudging the
+    // anchor), not a momentum signal — pass it through untouched.
+    if (factorId === FORECAST_FACTOR_ID) {
+      adjusted.set(factorId, aggregate);
+      continue;
+    }
+
+    const method = methodByFactor.get(factorId) ?? "momentum-01";
+    const past = history
+      .map((point) => point.values[factorId])
+      .filter((value): value is number => typeof value === "number" && Number.isFinite(value));
+    const series = [...past, level];
+    const stat = computeNormalizationSignal(factorId, series, method, level);
+    adjusted.set(factorId, {
+      ...aggregate,
+      normalized: stat.signal,
+      volatility: stat.applied ? clamp(stat.std, 0, 1) : 0,
+    });
+    stats.set(factorId, stat);
+  }
+
+  return { adjusted, stats };
+}
+
+function computeNormalizationSignal(
+  factorId: string,
+  series: readonly number[],
+  method: string,
+  level: number,
+): NormalizationStat {
+  const n = series.length;
+  const mean = series.reduce((sum, value) => sum + value, 0) / n;
+  const variance = series.reduce((sum, value) => sum + (value - mean) ** 2, 0) / n;
+  const std = Math.sqrt(variance);
+  const applied = n >= NORM_MIN_POINTS && std > 1e-4;
+
+  let signal = level;
+  let zScore = 0;
+  let percentile = 0;
+
+  if (applied) {
+    zScore = (level - mean) / std;
+    percentile = series.filter((value) => value <= level).length / n;
+    signal =
+      method === "zscore" || method === "log-zscore"
+        ? 0.5 + 0.5 * Math.tanh(zScore / 2)
+        : percentile;
+  }
+
+  return {
+    factorId,
+    method,
+    level: round3(level),
+    signal: round3(clamp(signal, 0, 1)),
+    applied,
+    sampleSize: n,
+    zScore: round3(zScore),
+    percentile: round3(percentile),
+    std: round3(std),
+  };
+}
+
+function appendFactorHistory(
+  history: readonly FactorHistoryPoint[],
+  ts: string,
+  levels: Map<string, FactorAggregate>,
+): FactorHistoryPoint[] {
+  const values: Record<string, number> = {};
+  for (const [factorId, aggregate] of levels) {
+    values[factorId] = round3(aggregate.normalized);
+  }
+  return [...history, { ts, values }].slice(-FACTOR_HISTORY_LIMIT);
+}
+
 function buildMethodology(
   generatedAt: string,
   aggregates: Map<string, FactorAggregate>,
   engineStates: EngineState[],
+  normalizationStats: Map<string, NormalizationStat>,
 ) {
   const sourceById = new Map(sourceRegistry.map((source) => [source.id, source]));
   const contributionByFactor = new Map<string, Record<string, number>>();
@@ -669,6 +817,7 @@ function buildMethodology(
       .filter((factor) => factor.id !== FORECAST_FACTOR_ID)
       .map((factor) => {
         const aggregate = aggregates.get(factor.id);
+        const stat = normalizationStats.get(factor.id);
         return {
           id: factor.id,
           label: factor.label,
@@ -682,9 +831,22 @@ function buildMethodology(
             aggregate === undefined
               ? null
               : {
+                  // `normalized` is the signal fed to the engine; `level` is the
+                  // raw smoothed reading before rolling normalization.
                   normalized: round3(aggregate.normalized),
+                  level: stat ? stat.level : round3(aggregate.normalized),
                   confidence: round3(aggregate.confidence),
                   citation: aggregate.citation,
+                  rolling: stat
+                    ? {
+                        applied: stat.applied,
+                        method: stat.method,
+                        sampleSize: stat.sampleSize,
+                        zScore: stat.zScore,
+                        percentile: stat.percentile,
+                        volatility: stat.std,
+                      }
+                    : null,
                 },
           contributionMonths: contributionByFactor.get(factor.id) ?? {},
           sources: factor.sources.map((id) => {
@@ -712,8 +874,20 @@ function averageDefined(values: ReadonlyArray<number | undefined>): number {
 }
 
 function createMoverRationale(factor: FactorDef, normalized: number): string {
-  const direction = factor.sign === 1 ? "accelerator" : "decelerator";
-  return `${factor.label} read ${normalized.toFixed(2)} (a ${direction} signal).`;
+  // Effect on the date: contribution = -sign * centered. Below the bounds
+  // midpoint a decelerator eases (sooner); an accelerator above it pulls sooner.
+  const centered = centerNormalized(factor, normalized); // -1..1
+  const effect = -factor.sign * centered;
+  const level = normalized >= 0.66 ? "running high" : normalized >= 0.45 ? "moderate" : "running low";
+  let phrase: string;
+  if (Math.abs(effect) < 1e-6) {
+    phrase = "neutral, holding the date steady";
+  } else if (factor.sign === 1) {
+    phrase = effect < 0 ? "a tailwind pulling the date sooner" : "a stalling tailwind nudging the date later";
+  } else {
+    phrase = effect > 0 ? "a headwind pushing the date later" : "an easing headwind nudging the date sooner";
+  }
+  return `${factor.label} is ${level} at ${normalized.toFixed(2)} — ${phrase}.`;
 }
 
 function bandWidthDays(state: EngineState): number {
@@ -745,7 +919,7 @@ type DerivedEvent = {
 };
 
 const RELEASE_RE = /\b(launch|launches|launched|releas|unveil|announce|introduc|debut|ships?|rolls? out|open-sources?)\b/i;
-const MODEL_RE = /\b(gpt-?\d|gpt|claude|gemini|llama|grok|deepseek|qwen|mistral|fable|model|agi|asi|reasoning model|o\d-|sora|superintelligence)\b/i;
+const MODEL_RE = /\b(gpt-?\d|gpt|claude|opus|sonnet|haiku|gemini|llama|grok|deepseek|qwen|mistral|fable|mythos|glasswing|model|agi|asi|reasoning model|o\d-|sora|superintelligence)\b/i;
 const ARCH_RE = /\b(architecture|mixture[- ]of[- ]experts|\bmoe\b|state[- ]space|mamba|diffusion model|world model|new approach)\b/i;
 const POLICY_RE = /\b(ai act|regulation|executive order|\bban\b|legislation|\bbill\b|safety institute|export control|moratorium|antitrust|sign(s|ed)? .*order)\b/i;
 const GOVRESEARCH_RE = /\b(eu|u\.?s\.?|uk|china|government|senate|congress|white house|nist|parliament|commission|court|regulator)\b/i;
