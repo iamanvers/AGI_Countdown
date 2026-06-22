@@ -1,15 +1,15 @@
 {
-  "runId": "refresh-all-20260622T034455548Z-strong-agi",
-  "ts": "2026-06-22T03:44:55.548Z",
+  "runId": "refresh-all-20260622T034601816Z-strong-agi",
+  "ts": "2026-06-22T03:46:01.816Z",
   "definition": "strong-agi",
-  "tAgi": "2038-10-07T09:23:16.764Z",
+  "tAgi": "2038-10-01T23:33:45.156Z",
   "progress": 34.0478,
   "band": {
-    "earlyP10": "2028-10-07T09:23:16.764Z",
-    "lateP90": "2058-10-07T09:23:16.764Z"
+    "earlyP10": "2028-10-01T23:33:45.156Z",
+    "lateP90": "2058-10-01T23:33:45.156Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -14.804701,
+  "deltaMonths": -14.982426,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -60,16 +60,16 @@
       "citation": "https://artificialintelligenceact.eu/"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.63264,
+      "rationale": "Research velocity read 0.63 (a accelerator signal).",
+      "citation": "https://www.semanticscholar.org/"
+    },
+    {
       "factorId": "public-backlash-pressure",
       "contributionMonths": -0.534,
       "rationale": "Public backlash pressure read 0.36 (a decelerator signal).",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.454915,
-      "rationale": "Research velocity read 0.60 (a accelerator signal).",
-      "citation": "https://www.semanticscholar.org/"
     },
     {
       "factorId": "energy-headroom",
