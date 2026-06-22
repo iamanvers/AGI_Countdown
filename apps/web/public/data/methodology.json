@@ -1,0 +1,561 @@
+{
+  "ts": "2026-06-22T03:50:30.543Z",
+  "smoothingAlpha": 0.5,
+  "formula": "T_AGI = Anchor + Δfactors",
+  "definitions": [
+    {
+      "id": "weak-agi",
+      "name": "Weak AGI",
+      "maxShiftMonths": 24,
+      "progressScale": 1.25,
+      "anchorBlend": [
+        {
+          "bucket": "metaculus",
+          "label": "Metaculus — weak AGI community",
+          "median": "2027-09-01T00:00:00.000Z",
+          "weight": 0.45,
+          "citation": "https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/"
+        },
+        {
+          "bucket": "markets",
+          "label": "Prediction markets (Manifold)",
+          "median": "2028-06-01T00:00:00.000Z",
+          "weight": 0.25,
+          "citation": "https://manifold.markets/search?term=AGI"
+        },
+        {
+          "bucket": "experts",
+          "label": "Expert survey (AI Impacts / AAAI)",
+          "median": "2032-01-01T00:00:00.000Z",
+          "weight": 0.15,
+          "citation": "https://aiimpacts.org/2023-ai-survey/"
+        },
+        {
+          "bucket": "computeModels",
+          "label": "Compute-based models (Epoch / bio-anchors)",
+          "median": "2030-01-01T00:00:00.000Z",
+          "weight": 0.15,
+          "citation": "https://epoch.ai/blog/the-direct-approach"
+        }
+      ]
+    },
+    {
+      "id": "transformative-ai",
+      "name": "Transformative AI",
+      "maxShiftMonths": 36,
+      "progressScale": 0.8,
+      "anchorBlend": [
+        {
+          "bucket": "metaculus",
+          "label": "Metaculus — AGI community",
+          "median": "2032-01-01T00:00:00.000Z",
+          "weight": 0.35,
+          "citation": "https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/"
+        },
+        {
+          "bucket": "markets",
+          "label": "Prediction markets (Manifold)",
+          "median": "2031-06-01T00:00:00.000Z",
+          "weight": 0.2,
+          "citation": "https://manifold.markets/search?term=transformative%20AI"
+        },
+        {
+          "bucket": "experts",
+          "label": "Expert survey (AI Impacts / AAAI)",
+          "median": "2040-01-01T00:00:00.000Z",
+          "weight": 0.25,
+          "citation": "https://aiimpacts.org/2023-ai-survey/"
+        },
+        {
+          "bucket": "computeModels",
+          "label": "Compute-based models (Cotra / Epoch)",
+          "median": "2036-01-01T00:00:00.000Z",
+          "weight": 0.2,
+          "citation": "https://www.openphilanthropy.org/research/forecasting-transformative-ai-the-biological-anchors-method-in-a-nutshell/"
+        }
+      ]
+    },
+    {
+      "id": "strong-agi",
+      "name": "Strong AGI",
+      "maxShiftMonths": 48,
+      "progressScale": 0.5,
+      "anchorBlend": [
+        {
+          "bucket": "metaculus",
+          "label": "Metaculus — general/strong AI",
+          "median": "2035-01-01T00:00:00.000Z",
+          "weight": 0.25,
+          "citation": "https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/"
+        },
+        {
+          "bucket": "markets",
+          "label": "Prediction markets (Manifold)",
+          "median": "2034-06-01T00:00:00.000Z",
+          "weight": 0.15,
+          "citation": "https://manifold.markets/search?term=superintelligence"
+        },
+        {
+          "bucket": "experts",
+          "label": "Expert survey (HLMI, AI Impacts)",
+          "median": "2047-01-01T00:00:00.000Z",
+          "weight": 0.3,
+          "citation": "https://aiimpacts.org/2023-ai-survey/"
+        },
+        {
+          "bucket": "computeModels",
+          "label": "Compute-based models (Epoch)",
+          "median": "2040-01-01T00:00:00.000Z",
+          "weight": 0.3,
+          "citation": "https://epoch.ai/blog/the-direct-approach"
+        }
+      ]
+    }
+  ],
+  "factors": [
+    {
+      "id": "frontier-benchmark-saturation",
+      "label": "Frontier benchmark saturation",
+      "category": "internal",
+      "domain": "benchmarks",
+      "description": "Composite saturation across frontier benchmark leaderboards, tracked separately from the date estimate.",
+      "sign": 1,
+      "weight": 7,
+      "normalization": "momentum-01",
+      "reading": {
+        "normalized": 0.695,
+        "confidence": 0.788,
+        "citation": "https://aiindex.stanford.edu/report/"
+      },
+      "contributionMonths": {
+        "weak-agi": -3.223,
+        "transformative-ai": -1.719,
+        "strong-agi": -2.149
+      },
+      "sources": [
+        {
+          "id": "papers-with-code-leaderboards",
+          "name": "Papers With Code leaderboards",
+          "url": "https://paperswithcode.com/sota"
+        },
+        {
+          "id": "lmarena-leaderboard",
+          "name": "LMArena leaderboard",
+          "url": "https://lmarena.ai/"
+        },
+        {
+          "id": "arc-prize",
+          "name": "ARC Prize (ARC-AGI)",
+          "url": "https://arcprize.org/leaderboard"
+        },
+        {
+          "id": "helm-crfm",
+          "name": "Stanford HELM",
+          "url": "https://crfm.stanford.edu/helm/"
+        },
+        {
+          "id": "stanford-ai-index",
+          "name": "Stanford HAI AI Index",
+          "url": "https://aiindex.stanford.edu/report/"
+        }
+      ]
+    },
+    {
+      "id": "training-compute-growth",
+      "label": "Training compute growth",
+      "category": "internal",
+      "domain": "compute",
+      "description": "Growth in frontier training compute and related scaling indicators.",
+      "sign": 1,
+      "weight": 6,
+      "normalization": "log-zscore",
+      "reading": {
+        "normalized": 0.72,
+        "confidence": 0.85,
+        "citation": "https://epoch.ai/data/notable-ai-models"
+      },
+      "contributionMonths": {
+        "weak-agi": -2.468,
+        "transformative-ai": -2.02,
+        "strong-agi": -3.366
+      },
+      "sources": [
+        {
+          "id": "epoch-ai-notable-models",
+          "name": "Epoch AI notable models",
+          "url": "https://epoch.ai/data/notable-ai-models"
+        }
+      ]
+    },
+    {
+      "id": "research-velocity",
+      "label": "Research velocity",
+      "category": "internal",
+      "domain": "research",
+      "description": "AI research output and citation momentum from structured paper feeds.",
+      "sign": 1,
+      "weight": 3,
+      "normalization": "zscore",
+      "reading": {
+        "normalized": 0.634,
+        "confidence": 0.653,
+        "citation": "https://www.semanticscholar.org/"
+      },
+      "contributionMonths": {
+        "weak-agi": -0.685,
+        "transformative-ai": -0.474,
+        "strong-agi": -0.633
+      },
+      "sources": [
+        {
+          "id": "arxiv-ai-paper-volume",
+          "name": "arXiv AI paper volume",
+          "url": "https://export.arxiv.org/api/query"
+        },
+        {
+          "id": "semantic-scholar",
+          "name": "Semantic Scholar (AI citations)",
+          "url": "https://www.semanticscholar.org/"
+        },
+        {
+          "id": "github-frontier",
+          "name": "GitHub frontier-AI activity",
+          "url": "https://github.com/topics/llm"
+        }
+      ]
+    },
+    {
+      "id": "adoption-usage",
+      "label": "Adoption and usage",
+      "category": "internal",
+      "domain": "adoption",
+      "description": "Public model usage, downloads, and deployment proxies from structured usage feeds.",
+      "sign": 1,
+      "weight": 5,
+      "normalization": "momentum-01",
+      "reading": {
+        "normalized": 0.64,
+        "confidence": 0.75,
+        "citation": "https://openrouter.ai/rankings"
+      },
+      "contributionMonths": {
+        "weak-agi": -1.262,
+        "transformative-ai": -1.578,
+        "strong-agi": -0.736
+      },
+      "sources": [
+        {
+          "id": "openrouter-usage",
+          "name": "OpenRouter model usage",
+          "url": "https://openrouter.ai/"
+        },
+        {
+          "id": "hugging-face-hub",
+          "name": "Hugging Face Hub",
+          "url": "https://huggingface.co/api/models"
+        }
+      ]
+    },
+    {
+      "id": "datacenter-capex",
+      "label": "Datacenter capex",
+      "category": "internal",
+      "domain": "economics",
+      "description": "Investment and revenue signals that proxy buildout capacity for frontier systems.",
+      "sign": 1,
+      "weight": 4,
+      "normalization": "log-zscore",
+      "reading": {
+        "normalized": 0.737,
+        "confidence": 0.763,
+        "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
+      },
+      "contributionMonths": {
+        "weak-agi": -1.158,
+        "transformative-ai": -2.026,
+        "strong-agi": -1.447
+      },
+      "sources": [
+        {
+          "id": "hyperscaler-ir",
+          "name": "Hyperscaler investor relations",
+          "url": "curated://hyperscaler-ir"
+        },
+        {
+          "id": "nvidia-earnings",
+          "name": "NVIDIA earnings",
+          "url": "curated://nvidia-earnings"
+        },
+        {
+          "id": "fred-macro",
+          "name": "FRED macro indicators",
+          "url": "https://fred.stlouisfed.org/"
+        }
+      ]
+    },
+    {
+      "id": "energy-headroom",
+      "label": "Energy headroom",
+      "category": "external",
+      "domain": "energy",
+      "description": "Electricity and grid constraints that can slow datacenter buildout.",
+      "sign": -1,
+      "weight": 5,
+      "normalization": "zscore",
+      "reading": {
+        "normalized": 0.45,
+        "confidence": 0.72,
+        "citation": "https://www.iea.org/reports/electricity-2025"
+      },
+      "contributionMonths": {
+        "weak-agi": -0.25,
+        "transformative-ai": -0.429,
+        "strong-agi": -0.429
+      },
+      "sources": [
+        {
+          "id": "eia-electricity",
+          "name": "EIA electricity data",
+          "url": "https://api.eia.gov/v2/"
+        },
+        {
+          "id": "ember-electricity",
+          "name": "Ember electricity data",
+          "url": "https://ember-climate.org/data/"
+        },
+        {
+          "id": "iea-energy",
+          "name": "IEA electricity & datacenter outlook",
+          "url": "https://www.iea.org/reports/electricity-2025"
+        }
+      ]
+    },
+    {
+      "id": "policy-friction",
+      "label": "Policy friction",
+      "category": "external",
+      "domain": "policy",
+      "description": "Regulatory and governance pressure that can slow deployment or constrain scaling.",
+      "sign": -1,
+      "weight": 4,
+      "normalization": "momentum-01",
+      "reading": {
+        "normalized": 0.381,
+        "confidence": 0.7,
+        "citation": "https://artificialintelligenceact.eu/"
+      },
+      "contributionMonths": {
+        "weak-agi": -0.467,
+        "transformative-ai": -0.668,
+        "strong-agi": -0.668
+      },
+      "sources": [
+        {
+          "id": "oecd-ai-policy",
+          "name": "OECD.AI Policy Observatory",
+          "url": "https://oecd.ai/en/data"
+        },
+        {
+          "id": "nist-ai-risk",
+          "name": "NIST AI risk management guidance",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ]
+    },
+    {
+      "id": "public-backlash-pressure",
+      "label": "Public backlash pressure",
+      "category": "external",
+      "domain": "sentiment",
+      "description": "News tone and public pressure that can create deployment drag.",
+      "sign": -1,
+      "weight": 3,
+      "normalization": "zscore",
+      "reading": {
+        "normalized": 0.363,
+        "confidence": 0.65,
+        "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
+      },
+      "contributionMonths": {
+        "weak-agi": -0.427,
+        "transformative-ai": -0.587,
+        "strong-agi": -0.534
+      },
+      "sources": [
+        {
+          "id": "gdelt-ai-tone",
+          "name": "GDELT AI news tone",
+          "url": "https://api.gdeltproject.org/api/v2/doc/doc"
+        },
+        {
+          "id": "pew-ai-sentiment",
+          "name": "Pew Research AI attitudes",
+          "url": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
+        }
+      ]
+    },
+    {
+      "id": "labor-automation-exposure",
+      "label": "Labor automation exposure",
+      "category": "external",
+      "domain": "jobs",
+      "description": "Occupation-level exposure and automation signals for broad economic deployment.",
+      "sign": 1,
+      "weight": 4,
+      "normalization": "momentum-01",
+      "reading": {
+        "normalized": 0.51,
+        "confidence": 0.735,
+        "citation": "https://www.anthropic.com/economic-index"
+      },
+      "contributionMonths": {
+        "weak-agi": -0.048,
+        "transformative-ai": -0.084,
+        "strong-agi": -0.042
+      },
+      "sources": [
+        {
+          "id": "onet-occupation-data",
+          "name": "O*NET occupation data",
+          "url": "https://www.onetcenter.org/database.html"
+        },
+        {
+          "id": "anthropic-economic-index",
+          "name": "Anthropic Economic Index",
+          "url": "https://www.anthropic.com/economic-index"
+        }
+      ]
+    },
+    {
+      "id": "autonomy-horizon",
+      "label": "Autonomy horizon",
+      "category": "internal",
+      "domain": "autonomy",
+      "description": "Length of tasks frontier agents can complete autonomously (METR task-horizon doubling).",
+      "sign": 1,
+      "weight": 6,
+      "normalization": "momentum-01",
+      "reading": {
+        "normalized": 0.6,
+        "confidence": 0.78,
+        "citation": "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/"
+      },
+      "contributionMonths": {
+        "weak-agi": -1.03,
+        "transformative-ai": -0.842,
+        "strong-agi": -1.404
+      },
+      "sources": [
+        {
+          "id": "metr-autonomy",
+          "name": "METR task-horizon evaluations",
+          "url": "https://metr.org/"
+        }
+      ]
+    },
+    {
+      "id": "algorithmic-efficiency",
+      "label": "Algorithmic efficiency",
+      "category": "internal",
+      "domain": "compute",
+      "description": "Improvement in capability per unit of compute (algorithmic progress doubling).",
+      "sign": 1,
+      "weight": 4,
+      "normalization": "momentum-01",
+      "reading": {
+        "normalized": 0.7,
+        "confidence": 0.74,
+        "citation": "https://aiindex.stanford.edu/report/"
+      },
+      "contributionMonths": {
+        "weak-agi": -1.302,
+        "transformative-ai": -1.066,
+        "strong-agi": -1.776
+      },
+      "sources": [
+        {
+          "id": "stanford-ai-index",
+          "name": "Stanford HAI AI Index",
+          "url": "https://aiindex.stanford.edu/report/"
+        }
+      ]
+    },
+    {
+      "id": "hardware-supply",
+      "label": "Hardware supply",
+      "category": "internal",
+      "domain": "hardware",
+      "description": "Advanced-node and accelerator supply growth that enables larger training runs.",
+      "sign": 1,
+      "weight": 4,
+      "normalization": "momentum-01",
+      "reading": {
+        "normalized": 0.7,
+        "confidence": 0.78,
+        "citation": "https://investor.tsmc.com/english"
+      },
+      "contributionMonths": {
+        "weak-agi": -0.998,
+        "transformative-ai": -1.248,
+        "strong-agi": -1.622
+      },
+      "sources": [
+        {
+          "id": "tsmc-capacity",
+          "name": "TSMC advanced-node capacity",
+          "url": "https://investor.tsmc.com/english"
+        }
+      ]
+    },
+    {
+      "id": "export-control-friction",
+      "label": "Export-control friction",
+      "category": "external",
+      "domain": "hardware",
+      "description": "Chip export controls and supply restrictions that can slow frontier scaling.",
+      "sign": -1,
+      "weight": 3,
+      "normalization": "momentum-01",
+      "reading": {
+        "normalized": 0.5,
+        "confidence": 0.7,
+        "citation": "https://www.bis.gov/"
+      },
+      "contributionMonths": {},
+      "sources": [
+        {
+          "id": "bis-export-controls",
+          "name": "US BIS export controls",
+          "url": "https://www.bis.gov/"
+        }
+      ]
+    },
+    {
+      "id": "safety-eval-pressure",
+      "label": "Safety-eval pressure",
+      "category": "external",
+      "domain": "safety",
+      "description": "Dangerous-capability evaluations and safety gating that can add release friction.",
+      "sign": -1,
+      "weight": 2,
+      "normalization": "momentum-01",
+      "reading": {
+        "normalized": 0.45,
+        "confidence": 0.68,
+        "citation": "https://www.aisi.gov.uk/"
+      },
+      "contributionMonths": {
+        "weak-agi": -0.095,
+        "transformative-ai": -0.136,
+        "strong-agi": -0.177
+      },
+      "sources": [
+        {
+          "id": "uk-aisi-evals",
+          "name": "UK AI Safety Institute evaluations",
+          "url": "https://www.aisi.gov.uk/"
+        }
+      ]
+    }
+  ]
+}

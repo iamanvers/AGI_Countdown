@@ -125,6 +125,38 @@ export async function readStatus() {
   return readJson<RunStatus>("status.json");
 }
 
+export type MethodologyFactor = {
+  id: string;
+  label: string;
+  category: "internal" | "external";
+  domain: string;
+  description: string;
+  sign: 1 | -1;
+  weight: number;
+  normalization: string;
+  reading: { normalized: number; confidence: number; citation: string } | null;
+  contributionMonths: Record<string, number>;
+  sources: Array<{ id: string; name: string; url: string }>;
+};
+
+export type Methodology = {
+  ts: string;
+  smoothingAlpha: number;
+  formula: string;
+  definitions: Array<{
+    id: string;
+    name: string;
+    maxShiftMonths: number;
+    progressScale: number;
+    anchorBlend: Array<{ bucket: string; label: string; median: string; weight: number; citation: string }>;
+  }>;
+  factors: MethodologyFactor[];
+};
+
+export async function readMethodology() {
+  return readJson<Methodology>("methodology.json");
+}
+
 async function readJson<T>(fileName: string): Promise<T> {
   const text = await readFile(join(dataDir, fileName), "utf8");
   return JSON.parse(text) as T;

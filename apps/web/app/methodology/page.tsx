@@ -1,142 +1,192 @@
 import { EstimateHistoryChart } from "@/components/estimate-history-chart";
 import { PageFrame } from "@/components/page-frame";
-import { type FactorSnapshot, readEstimateHistory, readFactors, readStatus } from "@/lib/static-data";
+import {
+  type MethodologyFactor,
+  readEstimateHistory,
+  readMethodology,
+  readStatus
+} from "@/lib/static-data";
 
 export const metadata = {
   title: "Methodology — AGI Countdown",
-  description: "Exactly how the AGI Countdown clock is computed."
+  description: "Exactly how the AGI Countdown clock is computed — every weight and source in the open."
 };
 
-const factorRole: Record<string, { role: "accelerator" | "decelerator"; blurb: string }> = {
-  "forecast-consensus-anchor": { role: "accelerator", blurb: "Crowd & market expectations that set the baseline date." },
-  "frontier-benchmark-saturation": { role: "accelerator", blurb: "How saturated frontier capability benchmarks are." },
-  "training-compute-growth": { role: "accelerator", blurb: "Growth in frontier training compute." },
-  "research-velocity": { role: "accelerator", blurb: "AI research output momentum (live: arXiv)." },
-  "adoption-usage": { role: "accelerator", blurb: "Real-world model usage and deployment." },
-  "datacenter-capex": { role: "accelerator", blurb: "Buildout investment & datacenter revenue." },
-  "energy-headroom": { role: "decelerator", blurb: "Power/grid constraints on buildout." },
-  "policy-friction": { role: "decelerator", blurb: "Regulatory & governance drag." },
-  "public-backlash-pressure": { role: "decelerator", blurb: "Public sentiment / backlash (live: GDELT)." },
-  "labor-automation-exposure": { role: "accelerator", blurb: "Economic deployment across occupations." }
-};
-
-type AggregatedFactor = {
-  factorId: string;
-  name: string;
-  domain: string;
-  normalized: number;
-  confidence: number;
-  citation: string;
-};
-
-function aggregate(factors: FactorSnapshot[]): AggregatedFactor[] {
-  const byId = new Map<string, FactorSnapshot[]>();
-  for (const factor of factors) {
-    if (factor.quarantined) continue;
-    byId.set(factor.factorId, [...(byId.get(factor.factorId) ?? []), factor]);
-  }
-  return [...byId.entries()]
-    .map(([factorId, list]) => {
-      const normalized = list.reduce((sum, f) => sum + f.normalized, 0) / list.length;
-      const confidence = list.reduce((sum, f) => sum + f.confidence, 0) / list.length;
-      const best = [...list].sort((a, b) => b.confidence - a.confidence)[0];
-      return {
-        factorId,
-        name: best?.factorName ?? factorId,
-        domain: best?.domain ?? "—",
-        normalized,
-        confidence,
-        citation: best?.citation ?? "#"
-      };
-    })
-    .sort((a, b) => a.name.localeCompare(b.name));
+function ContributionChips({ factor }: { factor: MethodologyFactor }) {
+  const order: Array<[string, string]> = [
+    ["weak-agi", "W"],
+    ["transformative-ai", "T"],
+    ["strong-agi", "S"]
+  ];
+  const chips = order.flatMap(([id, short]) => {
+    const v = factor.contributionMonths[id];
+    if (v === undefined) return [];
+    return [{ id, short, v }];
+  });
+  if (chips.length === 0) return <span className="text-[rgb(var(--muted))]">—</span>;
+  return (
+    <div className="flex flex-wrap gap-1">
+      {chips.map(({ id, short, v }) => {
+        const sooner = v < 0;
+        return (
+          <span
+            className="rounded bg-[rgb(var(--panel-strong)/0.7)] px-1.5 py-0.5 text-[0.66rem] tabular"
+            key={id}
+            style={{ color: sooner ? "rgb(var(--accent-rgb))" : "rgb(var(--later))" }}
+            title={`${short}: ${sooner ? "sooner" : "later"} ${Math.abs(v).toFixed(1)} mo`}
+          >
+            {short} {v > 0 ? "+" : ""}
+            {v.toFixed(1)}
+          </span>
+        );
+      })}
+    </div>
+  );
 }
 
 export default async function MethodologyPage() {
-  const [factors, status, history] = await Promise.all([
-    readFactors(),
+  const [methodology, status, history] = await Promise.all([
+    readMethodology(),
     readStatus(),
     readEstimateHistory()
   ]);
-  const aggregated = aggregate(factors);
+  const factors = [...methodology.factors].sort((a, b) => b.weight - a.weight);
 
   return (
     <PageFrame
       eyebrow="How it works"
-      intro="The clock is fully deterministic: no model invents the date. Live signals are validated, then a pure function computes the estimate from a forecast-blended anchor and a bounded factor model."
+      intro="The clock is fully deterministic — no model invents the date. Public forecasts set an anchor; a bounded, weighted model of live factors moves it. Every weight, normalization, reading, and source is shown below."
       title="Methodology"
     >
-      <section className="grid gap-3 rounded-lg border border-[rgb(var(--line)/0.66)] bg-[rgb(var(--panel)/0.6)] p-6">
-        <h2 className="text-xl font-semibold">The formula</h2>
-        <p className="font-mono text-lg text-[rgb(var(--accent-rgb))]">
-          T_AGI = Anchor + Δ_factors
-        </p>
+      <section className="grid gap-3 rounded-xl border border-[rgb(var(--line))] bg-[rgb(var(--panel)/0.6)] p-6">
+        <p className="font-mono text-lg text-[rgb(var(--accent-rgb))]">T_AGI = Anchor + Δfactors</p>
         <p className="text-sm leading-7 text-[rgb(var(--muted))]">
-          <strong className="text-[rgb(var(--foreground))]">Anchor</strong> is a weighted blend of
-          published forecasts — Metaculus community, prediction markets, expert surveys, and
-          compute-based models — giving the slow-moving consensus date.{" "}
-          <strong className="text-[rgb(var(--foreground))]">Δ_factors</strong> is the live shift: each
-          factor below is normalized, signed (accelerator / decelerator), weighted, smoothed, and
-          summed — then <em>clamped</em> so the live model can shape the date but never fabricate it.
+          <strong className="text-[rgb(var(--foreground))]">Anchor</strong> blends four published
+          forecasts (Metaculus, prediction markets, expert surveys, compute-based models) by a weighted
+          quantile. <strong className="text-[rgb(var(--foreground))]">Δfactors</strong> = Σ (−sign ×
+          weight × reading × confidence) across the factors below, EWMA-smoothed (α ={" "}
+          {methodology.smoothingAlpha}) and clamped to each definition&apos;s ± limit so no single
+          signal can run away with the date. The estimate and band are floored to the present.
         </p>
       </section>
 
       <section className="grid gap-3">
-        <h2 className="text-2xl font-semibold">How the estimate has moved</h2>
-        <p className="text-sm leading-7 text-[rgb(var(--muted))]">
-          The projected arrival year for each definition, across successive pipeline runs.
-        </p>
-        <EstimateHistoryChart history={history} />
+        <h2 className="text-2xl font-semibold">Per-definition settings</h2>
+        <div className="grid gap-3 md:grid-cols-3">
+          {methodology.definitions.map((def) => (
+            <div className="grid gap-3 rounded-xl border border-[rgb(var(--line)/0.7)] bg-[rgb(var(--panel)/0.55)] p-5" key={def.id}>
+              <p className="font-semibold">{def.name}</p>
+              <div className="flex justify-between text-sm">
+                <span className="text-[rgb(var(--muted))]">Max live shift</span>
+                <span className="tabular">±{def.maxShiftMonths} mo</span>
+              </div>
+              <div className="flex justify-between text-sm">
+                <span className="text-[rgb(var(--muted))]">Capability scale</span>
+                <span className="tabular">×{def.progressScale}</span>
+              </div>
+              <div className="border-t border-[rgb(var(--line)/0.5)] pt-2">
+                <p className="text-[0.66rem] uppercase tracking-[0.14em] text-[rgb(var(--muted))]">
+                  Forecast anchor blend
+                </p>
+                <div className="mt-1 grid gap-1">
+                  {def.anchorBlend.map((a) => (
+                    <a
+                      className="focus-ring flex justify-between rounded-sm text-xs hover:text-[rgb(var(--accent-rgb))]"
+                      href={a.citation}
+                      key={a.bucket}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      <span className="text-[rgb(var(--muted))]">{a.label}</span>
+                      <span className="tabular">{Math.round(a.weight * 100)}%</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="grid gap-3">
         <div className="flex flex-wrap items-end justify-between gap-3">
           <h2 className="text-2xl font-semibold">Live factors</h2>
           <p className="text-sm text-[rgb(var(--muted))]">
-            Last run {new Date(status.startedAt).toUTCString()} · {status.sourcesOk} sources ok ·{" "}
-            {status.quarantinedSamples} quarantined
+            Last run {new Date(status.startedAt).toUTCString()} · {status.sourcesOk} sources ok
           </p>
         </div>
-        <div className="overflow-hidden rounded-lg border border-[rgb(var(--line)/0.66)]">
-          <table className="w-full border-collapse text-sm">
-            <thead className="bg-[rgb(var(--panel-strong)/0.7)] text-left text-xs uppercase tracking-[0.12em] text-[rgb(var(--muted))]">
+        <p className="text-sm leading-6 text-[rgb(var(--muted))]">
+          <strong className="text-[rgb(var(--foreground))]">Reading</strong> is the current
+          normalized value, 0–100 (0 = low / quiet, 100 = maxed-out for that signal).{" "}
+          <strong className="text-[rgb(var(--foreground))]">Weight</strong> is months of shift per
+          unit. <strong className="text-[rgb(var(--foreground))]">Effect</strong> is this factor&apos;s
+          contribution to each definition&apos;s date this run (W/T/S).
+        </p>
+        <div className="overflow-x-auto rounded-xl border border-[rgb(var(--line))]">
+          <table className="w-full min-w-[760px] border-collapse text-sm">
+            <thead className="bg-[rgb(var(--panel-strong)/0.7)] text-left text-xs uppercase tracking-[0.1em] text-[rgb(var(--muted))]">
               <tr>
                 <th className="px-4 py-3 font-semibold">Factor</th>
-                <th className="px-4 py-3 font-semibold">Role</th>
+                <th className="px-4 py-3 font-semibold">Direction</th>
+                <th className="px-4 py-3 font-semibold">Weight</th>
                 <th className="px-4 py-3 font-semibold">Reading</th>
-                <th className="px-4 py-3 font-semibold">Source</th>
+                <th className="px-4 py-3 font-semibold">Effect (W/T/S, mo)</th>
+                <th className="px-4 py-3 font-semibold">Sources</th>
               </tr>
             </thead>
             <tbody>
-              {aggregated.map((factor) => {
-                const meta = factorRole[factor.factorId];
+              {factors.map((factor) => {
+                const reading = factor.reading ? Math.round(factor.reading.normalized * 100) : null;
+                const accel = factor.sign === 1;
                 return (
-                  <tr className="border-t border-[rgb(var(--line)/0.5)]" key={factor.factorId}>
+                  <tr className="border-t border-[rgb(var(--line)/0.5)] align-top" key={factor.id}>
                     <td className="px-4 py-3">
-                      <p className="font-medium">{factor.name}</p>
-                      <p className="text-xs text-[rgb(var(--muted))]">{meta?.blurb ?? factor.domain}</p>
+                      <p className="font-medium">{factor.label}</p>
+                      <p className="mt-0.5 text-xs text-[rgb(var(--muted))]">
+                        {factor.category} · {factor.normalization}
+                      </p>
                     </td>
                     <td className="px-4 py-3">
                       <span
-                        className={`rounded-full px-2.5 py-1 text-xs font-semibold ${
-                          meta?.role === "decelerator"
-                            ? "bg-[rgb(var(--later)/0.16)] text-[rgb(var(--later))]"
-                            : "bg-[rgb(var(--positive)/0.16)] text-[rgb(var(--positive))]"
-                        }`}
+                        className="rounded-full px-2 py-0.5 text-xs font-semibold"
+                        style={{
+                          background: accel ? "rgb(var(--accent-rgb)/0.16)" : "rgb(var(--later)/0.16)",
+                          color: accel ? "rgb(var(--accent-rgb))" : "rgb(var(--later))"
+                        }}
                       >
-                        {meta?.role ?? "signal"}
+                        {accel ? "↑ accelerator" : "↓ decelerator"}
                       </span>
                     </td>
-                    <td className="px-4 py-3 font-mono tabular">{factor.normalized.toFixed(2)}</td>
+                    <td className="px-4 py-3 tabular">{factor.weight}</td>
                     <td className="px-4 py-3">
-                      <a
-                        className="focus-ring rounded-sm text-[rgb(var(--accent-rgb))]"
-                        href={factor.citation}
-                        rel="noreferrer"
-                        target="_blank"
-                      >
-                        ↗
-                      </a>
+                      {reading === null ? (
+                        <span className="text-[rgb(var(--muted))]">—</span>
+                      ) : (
+                        <div className="flex items-center gap-2">
+                          <div className="h-1.5 w-16 overflow-hidden rounded-full bg-[rgb(var(--panel-strong))]">
+                            <div className="h-full rounded-full bg-[rgb(var(--accent-rgb))]" style={{ width: `${reading}%` }} />
+                          </div>
+                          <span className="tabular text-xs">{reading}</span>
+                        </div>
+                      )}
+                    </td>
+                    <td className="px-4 py-3">
+                      <ContributionChips factor={factor} />
+                    </td>
+                    <td className="px-4 py-3">
+                      <div className="flex flex-wrap gap-1">
+                        {factor.sources.map((s) => (
+                          <a
+                            className="focus-ring rounded-full border border-[rgb(var(--line)/0.6)] px-2 py-0.5 text-xs text-[rgb(var(--muted))] hover:border-[rgb(var(--accent-rgb)/0.6)] hover:text-[rgb(var(--accent-rgb))]"
+                            href={s.url}
+                            key={s.id}
+                            rel="noreferrer"
+                            target="_blank"
+                          >
+                            {s.name}
+                          </a>
+                        ))}
+                      </div>
                     </td>
                   </tr>
                 );
@@ -146,13 +196,18 @@ export default async function MethodologyPage() {
         </div>
       </section>
 
-      <section className="grid gap-3 rounded-lg border border-[rgb(var(--line)/0.66)] bg-[rgb(var(--panel)/0.55)] p-6">
+      <section className="grid gap-3">
+        <h2 className="text-2xl font-semibold">How the estimate has moved</h2>
+        <EstimateHistoryChart history={history} />
+      </section>
+
+      <section className="grid gap-3 rounded-xl border border-[rgb(var(--line))] bg-[rgb(var(--panel)/0.55)] p-6">
         <h2 className="text-xl font-semibold">Why you can trust the number</h2>
         <ul className="grid gap-2 text-sm leading-7 text-[rgb(var(--muted))]">
-          <li>• <strong className="text-[rgb(var(--foreground))]">Deterministic:</strong> identical inputs always produce the identical date — it&apos;s arithmetic, not a model&apos;s guess.</li>
-          <li>• <strong className="text-[rgb(var(--foreground))]">Bounded:</strong> the live shift is clamped, so no single signal can send the date to an absurd place.</li>
-          <li>• <strong className="text-[rgb(var(--foreground))]">Cited:</strong> every factor links to its source; failed sources are flagged, not faked.</li>
-          <li>• <strong className="text-[rgb(var(--foreground))]">Honest:</strong> a confidence band is always shown — this is an estimate, not a prediction of record.</li>
+          <li>• <strong className="text-[rgb(var(--foreground))]">Deterministic:</strong> identical inputs always produce the identical date — arithmetic, not a model&apos;s guess.</li>
+          <li>• <strong className="text-[rgb(var(--foreground))]">Bounded & smoothed:</strong> the live shift is EWMA-smoothed and clamped, so no signal sends the date somewhere absurd.</li>
+          <li>• <strong className="text-[rgb(var(--foreground))]">Cited:</strong> every factor lists its real sources; failed sources are flagged, not faked.</li>
+          <li>• <strong className="text-[rgb(var(--foreground))]">Honest:</strong> a confidence band is always shown and floored to the present — this is an estimate, not a prediction of record.</li>
         </ul>
       </section>
     </PageFrame>

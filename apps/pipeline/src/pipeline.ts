@@ -127,6 +127,10 @@ export async function runRefresh(options: RefreshOptions): Promise<RefreshResult
     historicalMilestones,
   });
 
+  // Full transparency: factor weights, signs, normalization, current reading,
+  // per-definition contribution, and the forecast-anchor blend.
+  await writeJsonFile(options.outDir, "methodology.json", buildMethodology(generatedAt, aggregates, engineStates));
+
   const manifest: RefreshManifest = {
     schemaVersion: 1,
     runId,
@@ -623,6 +627,73 @@ function smoothAggregates(
     smoothed.set(factorId, { ...aggregate, normalized });
   }
   return smoothed;
+}
+
+function round3(value: number): number {
+  return Math.round(value * 1000) / 1000;
+}
+
+function buildMethodology(
+  generatedAt: string,
+  aggregates: Map<string, FactorAggregate>,
+  engineStates: EngineState[],
+) {
+  const sourceById = new Map(sourceRegistry.map((source) => [source.id, source]));
+  const contributionByFactor = new Map<string, Record<string, number>>();
+  for (const state of engineStates) {
+    for (const mover of state.movers) {
+      const entry = contributionByFactor.get(mover.factorId) ?? {};
+      entry[state.definition] = round3(mover.contributionMonths);
+      contributionByFactor.set(mover.factorId, entry);
+    }
+  }
+
+  return {
+    ts: generatedAt,
+    smoothingAlpha: SMOOTHING_ALPHA,
+    formula: "T_AGI = Anchor + Δfactors",
+    definitions: agiDefinitions.map((definition) => ({
+      id: definition.id,
+      name: definition.name,
+      maxShiftMonths: definition.maxShiftMonths,
+      progressScale: definition.progressScale,
+      anchorBlend: curatedForecastAnchors[definition.id].map((anchor) => ({
+        bucket: anchor.bucket,
+        label: anchor.label,
+        median: anchor.median,
+        weight: definition.forecastWeights[anchor.bucket],
+        citation: anchor.citation,
+      })),
+    })),
+    factors: factorRegistry
+      .filter((factor) => factor.id !== FORECAST_FACTOR_ID)
+      .map((factor) => {
+        const aggregate = aggregates.get(factor.id);
+        return {
+          id: factor.id,
+          label: factor.label,
+          category: factor.category,
+          domain: factor.domain,
+          description: factor.description,
+          sign: factor.sign,
+          weight: factor.weight,
+          normalization: factor.normalization,
+          reading:
+            aggregate === undefined
+              ? null
+              : {
+                  normalized: round3(aggregate.normalized),
+                  confidence: round3(aggregate.confidence),
+                  citation: aggregate.citation,
+                },
+          contributionMonths: contributionByFactor.get(factor.id) ?? {},
+          sources: factor.sources.map((id) => {
+            const source = sourceById.get(id);
+            return { id, name: source?.name ?? id, url: source?.url ?? "#" };
+          }),
+        };
+      }),
+  };
 }
 
 function readSampleNormalized(sample: FactorSample): number {
