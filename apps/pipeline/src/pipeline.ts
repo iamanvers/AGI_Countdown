@@ -28,7 +28,8 @@ import {
   type FactorSample,
   type NewsItem,
 } from "@agi-countdown/sources";
-import { basename } from "node:path";
+import { basename, dirname, join } from "node:path";
+import { writeFile } from "node:fs/promises";
 import { readJsonFile, writeJsonFile } from "./file-store.js";
 import type { RefreshManifest, RefreshScope, SourceRunStatus } from "./types.js";
 
@@ -180,6 +181,10 @@ export async function runRefresh(options: RefreshOptions): Promise<RefreshResult
     "methodology.json",
     buildMethodology(generatedAt, aggregates, engineStates, normalizationStats),
   );
+
+  // Embeddable status badge (SVG + shields-endpoint JSON) at the site root, built
+  // from the default (transformative) definition — so anyone can <img> the clock.
+  await writeBadge(options.outDir, engineStates);
 
   const manifest: RefreshManifest = {
     schemaVersion: 1,
@@ -702,6 +707,50 @@ function smoothAggregates(
 
 function round3(value: number): number {
   return Math.round(value * 1000) / 1000;
+}
+
+function quarterYear(iso: string): string {
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return "unknown";
+  return `Q${Math.floor(date.getUTCMonth() / 3) + 1} ${date.getUTCFullYear()}`;
+}
+
+/**
+ * Write an embeddable badge (and a shields.io endpoint JSON) to the site root.
+ * Static, zero-cost — `<img src="https://…/badge.svg">` shows the live estimate.
+ */
+async function writeBadge(outDir: string, engineStates: EngineState[]): Promise<void> {
+  const state =
+    engineStates.find((s) => s.definition === "transformative-ai") ?? engineStates[0];
+  if (state === undefined) return;
+  const message = `~ ${quarterYear(state.tAgi)}`;
+  const root = dirname(outDir); // apps/web/public
+
+  const label = "AGI Countdown";
+  const labelW = 104;
+  const msgW = 8 + message.length * 7.4;
+  const total = labelW + msgW;
+  const accent = "#6366f1";
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${total.toFixed(0)}" height="28" role="img" aria-label="${label}: ${message}">
+  <rect rx="6" width="${total.toFixed(0)}" height="28" fill="#0b0b14"/>
+  <rect rx="6" x="${labelW}" width="${msgW.toFixed(0)}" height="28" fill="${accent}"/>
+  <rect x="${labelW}" width="8" height="28" fill="${accent}"/>
+  <g font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="12">
+    <text x="12" y="18" fill="#f4f4f7">${label}</text>
+    <text x="${(labelW + 12).toFixed(0)}" y="18" fill="#ffffff" font-weight="600">${message}</text>
+  </g>
+</svg>`;
+
+  const endpoint = {
+    schemaVersion: 1,
+    label: "AGI countdown",
+    message,
+    color: "blue",
+    cacheSeconds: 3600,
+  };
+
+  await writeFile(join(root, "badge.svg"), svg, "utf8");
+  await writeFile(join(root, "badge.json"), `${JSON.stringify(endpoint, null, 2)}\n`, "utf8");
 }
 
 /**

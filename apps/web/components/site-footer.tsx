@@ -16,6 +16,7 @@ const groups: Array<{ heading: string; links: Array<{ href: string; label: strin
     links: [
       { href: "/timeline", label: "Timeline" },
       { href: "/jobs", label: "Jobs & automation" },
+      { href: "/developers", label: "Developers / API" },
       { href: "/about", label: "About" }
     ]
   },

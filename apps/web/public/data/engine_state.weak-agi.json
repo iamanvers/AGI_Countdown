@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-all-20260622T095427180Z-weak-agi",
-  "ts": "2026-06-22T09:54:27.180Z",
+  "runId": "refresh-all-20260622T100144632Z-weak-agi",
+  "ts": "2026-06-22T10:01:44.632Z",
   "definition": "weak-agi",
-  "tAgi": "2027-09-08T05:52:57.072Z",
+  "tAgi": "2027-09-07T00:44:54.912Z",
   "progress": 89.3125,
   "band": {
-    "earlyP10": "2026-06-22T09:54:27.180Z",
-    "lateP90": "2039-03-30T03:28:41.123Z",
-    "likelyEarly": "2027-02-20T23:17:37.621Z",
-    "likelyLate": "2032-11-19T15:36:01.895Z"
+    "earlyP10": "2026-06-22T10:01:44.632Z",
+    "lateP90": "2039-03-29T04:56:48.404Z",
+    "likelyEarly": "2027-02-20T07:19:29.286Z",
+    "likelyLate": "2032-11-18T13:26:15.983Z"
   },
   "anchor": "2028-06-15T06:57:42.712Z",
-  "deltaMonths": -9.2337,
+  "deltaMonths": -9.273583,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -39,8 +39,8 @@
     },
     {
       "factorId": "energy-headroom",
-      "contributionMonths": 1.230034,
-      "rationale": "Energy & grid constraints is running high at 0.95 — a headwind pushing the date later.",
+      "contributionMonths": 1.237754,
+      "rationale": "Energy & grid constraints is running high at 0.96 — a headwind pushing the date later.",
       "citation": "https://www.iea.org/reports/electricity-2025"
     },
     {
@@ -93,8 +93,8 @@
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.480191,
-      "rationale": "Public backlash pressure is running low at 0.38 — a headwind pushing the date later.",
+      "contributionMonths": 0.487734,
+      "rationale": "Public backlash pressure is running low at 0.39 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
@@ -110,16 +110,16 @@
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.358449,
+      "rationale": "Research velocity is running low at 0.27 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
       "factorId": "safety-eval-pressure",
       "contributionMonths": 0.319311,
       "rationale": "Safety-eval pressure is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.aisi.gov.uk/"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.303303,
-      "rationale": "Research velocity is running low at 0.23 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     }
   ]
 }
