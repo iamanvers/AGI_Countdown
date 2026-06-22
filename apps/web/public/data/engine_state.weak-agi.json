@@ -1,15 +1,15 @@
 {
-  "runId": "refresh-hourly-20260622T001332603Z-weak-agi",
-  "ts": "2026-06-22T00:13:32.603Z",
+  "runId": "refresh-all-20260622T034455548Z-weak-agi",
+  "ts": "2026-06-22T03:44:55.548Z",
   "definition": "weak-agi",
-  "tAgi": "2027-05-15T05:30:21.579Z",
-  "progress": 67.8433,
+  "tAgi": "2027-05-09T20:03:11.142Z",
+  "progress": 84.8041,
   "band": {
-    "earlyP10": "2025-04-29T22:32:38.867Z",
-    "lateP90": "2038-11-29T22:32:38.867Z"
+    "earlyP10": "2026-06-22T03:44:55.548Z",
+    "lateP90": "2038-11-24T13:05:28.430Z"
   },
   "anchor": "2028-06-15T06:57:42.712Z",
-  "deltaMonths": -13.045382,
+  "deltaMonths": -13.222597,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -54,6 +54,12 @@
       "citation": "https://investor.tsmc.com/english"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.492824,
+      "rationale": "Research velocity read 0.60 (a accelerator signal).",
+      "citation": "https://www.semanticscholar.org/"
+    },
+    {
       "factorId": "policy-friction",
       "contributionMonths": -0.467413,
       "rationale": "Policy friction read 0.38 (a decelerator signal).",
@@ -64,12 +70,6 @@
       "contributionMonths": -0.4272,
       "rationale": "Public backlash pressure read 0.36 (a decelerator signal).",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.315609,
-      "rationale": "Research velocity read 0.56 (a accelerator signal).",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "energy-headroom",

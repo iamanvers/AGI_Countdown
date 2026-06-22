@@ -1,15 +1,15 @@
 {
-  "runId": "refresh-hourly-20260622T001332603Z-strong-agi",
-  "ts": "2026-06-22T00:13:32.603Z",
+  "runId": "refresh-all-20260622T034455548Z-strong-agi",
+  "ts": "2026-06-22T03:44:55.548Z",
   "definition": "strong-agi",
-  "tAgi": "2038-10-12T08:53:01.134Z",
-  "progress": 68.0956,
+  "tAgi": "2038-10-07T09:23:16.764Z",
+  "progress": 34.0478,
   "band": {
-    "earlyP10": "2028-10-12T08:53:01.134Z",
-    "lateP90": "2058-10-12T08:53:01.134Z"
+    "earlyP10": "2028-10-07T09:23:16.764Z",
+    "lateP90": "2058-10-07T09:23:16.764Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -14.641117,
+  "deltaMonths": -14.804701,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -66,16 +66,16 @@
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.454915,
+      "rationale": "Research velocity read 0.60 (a accelerator signal).",
+      "citation": "https://www.semanticscholar.org/"
+    },
+    {
       "factorId": "energy-headroom",
       "contributionMonths": -0.4288,
       "rationale": "Energy headroom read 0.45 (a decelerator signal).",
       "citation": "https://www.iea.org/reports/electricity-2025"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.291331,
-      "rationale": "Research velocity read 0.56 (a accelerator signal).",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "safety-eval-pressure",

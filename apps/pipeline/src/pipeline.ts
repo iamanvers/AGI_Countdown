@@ -346,6 +346,7 @@ function buildEngineInput(
         aggregates.get("labor-automation-exposure")?.normalized,
       ]),
       weights: definition.progressWeights,
+      scale: definition.progressScale,
     },
     maxShiftMonths: definition.maxShiftMonths,
     confidence: {

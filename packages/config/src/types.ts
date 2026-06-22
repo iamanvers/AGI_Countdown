@@ -24,6 +24,8 @@ export type AgiDefinition = {
   maxShiftMonths: number;
   progressWeights: ProgressWeights;
   forecastWeights: ForecastWeights;
+  /** Capability-index scaling: weak AGI is closer (>1), strong AGI farther (<1). */
+  progressScale: number;
   /**
    * Per-definition multipliers on each factor domain's weight, so the live
    * factor shift reflects what matters for *this* definition (e.g. benchmarks

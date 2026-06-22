@@ -9,6 +9,7 @@ export const agiDefinitions = [
       "A broadly capable AI system that can complete most knowledge-work tasks with human-level reliability under supervision.",
     baselineAnchorIso: "2029-01-01T00:00:00.000Z",
     maxShiftMonths: 24,
+    progressScale: 1.25,
     progressWeights: {
       benchmarkSaturation: 0.5,
       computeVsRequired: 0.3,
@@ -44,6 +45,7 @@ export const agiDefinitions = [
       "AI systems that measurably transform labor, research, and economic output across many sectors.",
     baselineAnchorIso: "2033-01-01T00:00:00.000Z",
     maxShiftMonths: 36,
+    progressScale: 0.8,
     progressWeights: {
       benchmarkSaturation: 0.35,
       computeVsRequired: 0.25,
@@ -76,6 +78,7 @@ export const agiDefinitions = [
       "A system with robust, general, autonomous capability across cognitive domains, including long-horizon tasks.",
     baselineAnchorIso: "2040-01-01T00:00:00.000Z",
     maxShiftMonths: 48,
+    progressScale: 0.5,
     progressWeights: {
       benchmarkSaturation: 0.4,
       computeVsRequired: 0.4,

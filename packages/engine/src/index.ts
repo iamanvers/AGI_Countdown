@@ -38,6 +38,8 @@ export type ProgressWeights = Record<ProgressComponent, number>;
 
 export type ProgressSignals = Partial<Record<ProgressComponent, number>> & {
   weights?: Partial<ProgressWeights>;
+  /** Per-definition capability scaling: weak AGI is nearer (>1), strong farther (<1). */
+  scale?: number;
 };
 
 export type ConfidenceOptions = {
@@ -158,8 +160,9 @@ export function computeEngineState(input: EngineInput): EngineState {
     appliedContributionMonths: round(contribution.rawContributionMonths * scale)
   }));
 
-  const tAgiMs = addMonths(anchor.medianMs, deltaMonths);
-  const band = computeConfidenceBand(anchor, deltaMonths, contributions, input.confidence);
+  // The estimate can never be in the past — floor it to just after "now".
+  const tAgiMs = Math.max(addMonths(anchor.medianMs, deltaMonths), addMonths(tsMs, 1));
+  const band = computeConfidenceBand(anchor, deltaMonths, tAgiMs, tsMs, contributions, input.confidence);
   const state: EngineState = {
     runId: input.runId ?? `${input.definition}:${ts}`,
     ts,
@@ -197,7 +200,8 @@ export function computeProgress(
     clamp01(signals.computeVsRequired ?? 0) * weights.computeVsRequired +
     clamp01(signals.economicDeployment ?? 0) * weights.economicDeployment;
 
-  return round(clamp(score * 100, 0, 100), 4);
+  const scale = readNonNegativeNumber(signals.scale ?? 1, "progress.scale");
+  return round(clamp(score * 100 * scale, 0, 100), 4);
 }
 
 export function addMonthsToIso(isoDate: string, months: number): string {
@@ -306,6 +310,8 @@ function computeRawFactorContributions(factors: FactorInput[]): FactorContributi
 function computeConfidenceBand(
   anchor: ResolvedAnchor,
   deltaMonths: number,
+  targetMs: number,
+  nowMs: number,
   contributions: FactorContribution[],
   confidence?: ConfidenceOptions
 ): ConfidenceBand {
@@ -327,11 +333,12 @@ function computeConfidenceBand(
       0
     ) || 0;
 
-  const targetMs = addMonths(anchor.medianMs, deltaMonths);
-  const earlyMs = Math.min(
+  const rawEarlyMs = Math.min(
     addMonths(anchor.earlyMs, deltaMonths - factorVolatilityMonths),
     addMonths(targetMs, -minimumBandMonths)
   );
+  // Earliest plausible arrival can't be in the past, nor after the estimate.
+  const earlyMs = Math.min(Math.max(rawEarlyMs, nowMs), targetMs);
   const lateMs = Math.max(
     addMonths(anchor.lateMs, deltaMonths + factorVolatilityMonths),
     addMonths(targetMs, minimumBandMonths)
