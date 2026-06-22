@@ -53,7 +53,7 @@ is the git history + `estimate_history.json`.
 
 | Path | Role |
 |---|---|
-| `apps/web` | Next.js App Router site. Pages: `/` (clock), `/timeline`, `/jobs`, `/methodology`, `/sources`, `/about`. Route: `/api/refresh`. |
+| `apps/web` | Next.js App Router site. Pages: `/` (clock + share + track record), `/timeline`, `/jobs` (sector + region + revenue-at-risk), `/methodology` (flow graph + scenario explorer), `/sources` (filterable), `/developers` (JSON API + badge), `/about`. Route: `/api/refresh`. Build-time `opengraph-image`. |
 | `apps/pipeline` | Deterministic refresh job (`src/pipeline.ts`, `src/refresh.ts`). |
 | `packages/engine` | Pure estimator math: anchor blend, bounded Δ, confidence band, movers. Unit-tested. |
 | `packages/sources` | Connectors + curated data. `live-connectors.ts`, `curated-connector.ts`, `curated-data.ts`, `connector-registry.ts`. |
@@ -72,9 +72,11 @@ T_AGI = Anchor + Δ_factors        // Δ clamped to ±maxShiftMonths, months
 - **Δ_factors**: `Σ −sign·weight·intensity·confidence`. **Directional model** — `intensity` is the
   factor's 0..1 reading (no centering), so an accelerator always pulls **sooner** and a decelerator
   always pushes **later**; the reading sets the *strength*, never the sign (a weak decelerator is a
-  weak headwind, not a tailwind). Weights are scaled by `CONTRIBUTION_SCALE` (pipeline calibration)
-  and per-definition `domainEmphasis`, so the shift and movers **differ across the three modes**.
-  Then clamped to `±maxShiftMonths` and EWMA-smoothed across runs (α in `SMOOTHING_ALPHA`).
+  weak headwind, not a tailwind). Decelerators get a **precautionary convex (√) response**
+  (`applyResponseCurve`) — an early/weak headwind is amplified — while accelerators stay linear.
+  Weights are scaled by `CONTRIBUTION_SCALE` (pipeline calibration) and per-definition
+  `domainEmphasis`, so the shift and movers **differ across the three modes**. Then clamped to
+  `±maxShiftMonths` and EWMA-smoothed across runs (α in `SMOOTHING_ALPHA`).
 - **Rolling normalization** (pipeline, `normalizeAgainstHistory`): each factor's smoothed level is
   re-expressed against its own persisted history (`factor_history.json`) — a **z-score** (tanh-
   squashed; 0.5 = at trailing mean) for `zscore`/`log-zscore` factors, an **empirical percentile**
@@ -85,11 +87,13 @@ T_AGI = Anchor + Δ_factors        // Δ clamped to ±maxShiftMonths, months
 - **progress%**: separate 0–100 capability meter, scaled by each definition's `progressScale`
   (weak 1.25 → reads closer; strong 0.5 → reads farther). Not derived from the date.
 - **Floors**: `tAgi` and the band's earliest are floored to the present — never a past date.
-- **Confidence band**: outer `earlyP10`/`lateP90` (~80%) plus an inner `likelyEarly`/`likelyLate`
-  (~P25–P75, a fraction of each outer half-spread) — the more-likely-than-not window shown brighter.
+- **Confidence band** (`computeConfidenceBand`): a **self-adjusting ±σ** band, not percentiles. σ (in
+  months) = horizon uncertainty (`HORIZON_SIGMA × months-to-arrival`) and live factor volatility added
+  in quadrature. Inner `likelyEarly`/`likelyLate` = ±1σ (~68%), outer `earlyP10`/`lateP90` = ±2σ
+  (~95%). Tightens near-term / when signals agree, widens far-out / when noisy. Earliest floored to now.
 - **UI shows a range, not false precision**: the hero renders a coarse central estimate
-  (`formatQuarterYear`, e.g. "≈ Q2 2027") plus the 80% window as a date range (`formatArrivalRange`);
-  the live countdown still ticks to `tAgi`. Dates elsewhere use month-year, not datetime.
+  (`formatQuarterYear`, e.g. "≈ Q2 2031") plus the **likely (±1σ) window** as a date range
+  (`formatArrivalRange`); the live countdown still ticks to `tAgi`. Dates elsewhere use month-year.
 - Weights/signs/definitions are **config** in `packages/config`, surfaced on `/methodology` (which
   reads `methodology.json`).
 
@@ -125,6 +129,9 @@ validated.
 
 - **`factor_history.json`** — trailing per-factor smoothed levels (last `FACTOR_HISTORY_LIMIT`
   runs); the rolling z-score / percentile normalization reads it. The git history is the long series.
+- **`badge.svg` / `badge.json`** — written by `writeBadge` to the **site root** (`apps/web/public`,
+  not `/data`) each refresh: an embeddable SVG + shields-endpoint badge of the default estimate,
+  documented on `/developers`. `jobs.json` now also carries `regions[]` and `revenueAtRisk`.
 
 - **`sources.json`** — all ~140 sources: live "signal" feeds (with health) + a tiered reference
   catalog (primary/secondary/tertiary, `status: "reference"`). Only signal sources are fetched.

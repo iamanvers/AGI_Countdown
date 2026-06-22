@@ -47,22 +47,29 @@ T_AGI  =  Anchor  +  Δ_factors
 
 - **Anchor** — a weighted blend of published forecasts (Metaculus, prediction markets, expert
   surveys, compute-based models): the slow-moving consensus date.
-- **Δ_factors** — a live, *bounded* shift from ~17 signals (benchmark saturation, training compute,
-  autonomy, capital formation, energy, policy, sentiment, robotics, macro risk, …), weighted
-  differently **per AGI definition** and EWMA-smoothed so the date glides instead of jumping. Each
-  factor is normalized against its **own rolling history** (z-score / empirical percentile), so the
-  date moves on momentum rather than static constants. The three modes (Weak / Transformative /
-  Strong) get distinct dates, capability levels, and movers.
+- **Δ_factors** — a live, *bounded* shift from ~18 signals (benchmark saturation, training compute,
+  autonomy, capital formation, energy, policy, sentiment, robotics, macro risk, the data wall, …),
+  weighted differently **per AGI definition** and EWMA-smoothed so the date glides instead of jumping.
+  It's a **directional** model: accelerators only ever pull the date *sooner*, decelerators only ever
+  push it *later* (an early/weak headwind is amplified, never flipped). Each factor is normalized
+  against its **own rolling history** (z-score / empirical percentile), so the date moves on momentum
+  rather than static constants. The three modes (Weak / Transformative / Strong) get distinct dates,
+  capability levels, and movers.
 
 The arrival is shown as a **range**, not a false-precision timestamp: a coarse central estimate
-(e.g. "≈ Q2 2027") plus an 80% confidence window — while the live counter still ticks down.
+(e.g. "≈ Q2 2031") plus a **self-adjusting ±σ confidence band** (±1σ likely / ±2σ outer) that
+tightens when the date is near and signals agree, and widens when it's far or noisy — while the live
+counter still ticks down.
 
 > **The one rule:** validated data goes in; a pure function computes the date. No model ever invents
 > the number — see [`docs/adr/0005-determinism-boundary.md`](docs/adr/0005-determinism-boundary.md).
 
 Around the clock: **~140 cited sources** (live signal feeds + a tiered reference catalog), a live
-**news feed** + curated **milestones**, a **jobs/automation** breakdown by sector, and a fully
-transparent **methodology** page (every weight, normalization, reading, and source in the open).
+**news feed** + curated **milestones**, a **jobs & automation** breakdown by sector *and region* with
+**revenue-at-risk**, an interactive **engine flow graph** and **"what would change the date?"**
+scenario explorer, a **track record** of how the estimate has moved, a fully transparent
+**methodology** page, and a **[/developers](apps/web/app/developers/page.tsx)** JSON API + embeddable
+**badge**. Every page link unfurls with a live **Open Graph** card.
 
 Three switchable definitions (**Weak AGI**, **Transformative AI**, **Strong AGI**) each get their own
 anchor and clock.
@@ -122,7 +129,7 @@ edge; the time-series history *is* the git history.
 
 ```
 apps/
-  web/        Next.js site (clock, timeline, jobs, methodology, sources, about)
+  web/        Next.js site (clock, timeline, jobs, methodology, sources, developers, about)
   pipeline/   deterministic refresh: fetch → validate → compute → write JSON
 packages/
   engine/     pure TS estimator math (anchor blend, bounded Δ, band) — unit-tested
