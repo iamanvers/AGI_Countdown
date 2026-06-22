@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-weekly-20260622T123510093Z-strong-agi",
-  "ts": "2026-06-22T12:35:10.093Z",
+  "runId": "refresh-hourly-20260622T125119257Z-strong-agi",
+  "ts": "2026-06-22T12:51:19.257Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-12T18:40:01.576Z",
+  "tAgi": "2039-04-12T12:22:28.944Z",
   "progress": 35.85,
   "band": {
-    "earlyP10": "2031-08-06T10:04:56.738Z",
-    "lateP90": "2046-12-18T03:15:06.414Z",
-    "likelyEarly": "2035-06-09T14:22:29.157Z",
-    "likelyLate": "2043-02-13T22:57:33.995Z"
+    "earlyP10": "2031-08-06T07:43:38.259Z",
+    "lateP90": "2046-12-17T17:01:19.629Z",
+    "likelyEarly": "2035-06-09T10:03:03.601Z",
+    "likelyLate": "2043-02-13T14:41:54.287Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.648135,
+  "deltaMonths": -8.656749,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -93,7 +93,7 @@
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.620486,
+      "contributionMonths": 0.62278,
       "rationale": "Public backlash pressure is moderate at 0.41 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
@@ -117,8 +117,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.36966,
-      "rationale": "Research velocity is running low at 0.30 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.380568,
+      "rationale": "Research velocity is running low at 0.31 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     }
   ]
