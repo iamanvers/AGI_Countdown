@@ -59,12 +59,21 @@ export function TrackRecord({ definition }: { definition: DefinitionId }) {
       ) : (
         <>
           <p className="mt-3 text-sm leading-6 text-[rgb(var(--muted))]">
-            Since <span className="text-[rgb(var(--foreground))]">{formatMonthYear(first.ts)}</span>, the
-            estimate has moved{" "}
-            <span style={{ color: sooner ? "rgb(var(--accent-rgb))" : "rgb(var(--later))" }}>
-              {magnitude < 0.1 ? "essentially unchanged" : `${magnitude.toFixed(1)} mo ${sooner ? "sooner" : "later"}`}
-            </span>
-            .
+            {magnitude < 0.1 ? (
+              <>
+                Since <span className="text-[rgb(var(--foreground))]">{formatMonthYear(first.ts)}</span>, the
+                estimate has held essentially steady.
+              </>
+            ) : (
+              <>
+                Since <span className="text-[rgb(var(--foreground))]">{formatMonthYear(first.ts)}</span>, the
+                estimate has moved{" "}
+                <span style={{ color: sooner ? "rgb(var(--accent-rgb))" : "rgb(var(--later))" }}>
+                  {magnitude.toFixed(1)} mo {sooner ? "sooner" : "later"}
+                </span>
+                .
+              </>
+            )}
           </p>
           <Sparkline points={points} />
         </>

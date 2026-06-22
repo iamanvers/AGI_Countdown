@@ -55,7 +55,7 @@ export default function AboutPage() {
             { name: "Transformative AI", blurb: "AI that measurably reshapes labor, research, and economic output across whole sectors." },
             { name: "Strong AGI", blurb: "Robust, general, autonomous capability across cognitive domains and long horizons." }
           ].map((def) => (
-            <div className="rounded-lg border border-[rgb(var(--line)/0.66)] bg-[rgb(var(--panel)/0.55)] p-5" key={def.name}>
+            <div className="card p-5" key={def.name}>
               <p className="font-semibold">{def.name}</p>
               <p className="mt-2 text-sm leading-6 text-[rgb(var(--muted))]">{def.blurb}</p>
             </div>
@@ -63,7 +63,30 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="grid max-w-3xl gap-3 rounded-lg border border-[rgb(var(--line)/0.5)] bg-[rgb(var(--panel)/0.5)] p-6">
+      <section className="grid gap-3">
+        <h2 className="text-2xl font-semibold">Glossary</h2>
+        <p className="max-w-3xl text-sm leading-7 text-[rgb(var(--muted))]">
+          A quick decoder for the terms on the clock.
+        </p>
+        <div className="card divide-y divide-[rgb(var(--line)/0.5)]">
+          {[
+            ["Anchor", "The slow-moving baseline date — a weighted blend of published forecasts (Metaculus, prediction markets, expert surveys, compute models)."],
+            ["Δ factors (live signals)", "The bounded monthly shift the live signals apply to the anchor. Accelerators pull the date sooner; decelerators push it later."],
+            ["Capability index", "A 0–100 meter of how far along capability is — a separate read from the date, scaled per definition (Weak reads closer, Strong farther)."],
+            ["Confidence band", "A self-adjusting ±σ range around the estimate. The brighter inner band (±1σ) is the likely window; the outer (±2σ) is the plausible range."],
+            ["Likely window", "The ~68% range we'd bet the arrival falls inside — it tightens when the date is near and signals agree, widens when far or noisy."],
+            ["Top movers", "The factors doing the most to shift the date this run, with their contribution in months and a link to the source."],
+            ["Rolling normalization", "Each factor is scored against its own history (z-score / percentile), so the date moves on momentum rather than a static number."]
+          ].map(([term, def]) => (
+            <div className="grid gap-1 p-4 sm:grid-cols-[200px_1fr] sm:gap-4" key={term}>
+              <p className="font-medium text-[rgb(var(--foreground))]">{term}</p>
+              <p className="text-sm leading-6 text-[rgb(var(--muted))]">{def}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="card grid max-w-3xl gap-3 p-6">
         <h2 className="text-lg font-semibold">A note on certainty</h2>
         <p className="text-sm leading-7 text-[rgb(var(--muted))]">
           The projected date is an estimate, not a prediction of record. The confidence band is wide

@@ -38,6 +38,7 @@ export function DefinitionToggle({ active, onChange, disabled }: DefinitionToggl
             key={definition.id}
             onClick={() => onChange(definition.id)}
             role="radio"
+            title={definition.blurb}
             type="button"
           >
             <span className="hidden sm:inline">{definition.label}</span>

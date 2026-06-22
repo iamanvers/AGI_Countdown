@@ -1,4 +1,5 @@
 import { EngineFlowGraph, type FlowFactor, type FlowOutput } from "@/components/engine-flow-graph";
+import { ForecasterComparison, type ForecasterDef } from "@/components/forecaster-comparison";
 import { EstimateHistoryChart } from "@/components/estimate-history-chart";
 import { PageFrame } from "@/components/page-frame";
 import { ScenarioExplorer, type ScenarioDef, type ScenarioFactor } from "@/components/scenario-explorer";
@@ -124,6 +125,17 @@ export default async function MethodologyPage() {
       level: f.reading?.level ?? f.reading?.normalized ?? 0,
       contributionMonths: f.contributionMonths
     }));
+  const forecasterDefs: ForecasterDef[] = methodology.definitions.map((d) => {
+    const s = stateById[d.id as DefId];
+    return {
+      id: d.id as DefId,
+      name: d.name,
+      anchorIso: s.anchor,
+      tAgiIso: s.tAgi,
+      deltaMonths: s.deltaMonths,
+      blend: d.anchorBlend
+    };
+  });
 
   return (
     <PageFrame
@@ -179,6 +191,15 @@ export default async function MethodologyPage() {
             </div>
           ))}
         </div>
+      </section>
+
+      <section className="grid gap-3">
+        <h2 className="text-2xl font-semibold">Are we just agreeing with the crowd?</h2>
+        <p className="text-sm leading-6 text-[rgb(var(--muted))]">
+          Where each published forecast sits, our weighted blend of them, and where our live signals
+          actually move the estimate. The gap between the blend and the estimate is our own signal.
+        </p>
+        <ForecasterComparison definitions={forecasterDefs} />
       </section>
 
       <section className="grid gap-3">
@@ -313,6 +334,21 @@ export default async function MethodologyPage() {
           <li>• <strong className="text-[rgb(var(--foreground))]">Bounded & smoothed:</strong> the live shift is EWMA-smoothed and clamped, so no signal sends the date somewhere absurd.</li>
           <li>• <strong className="text-[rgb(var(--foreground))]">Cited:</strong> every factor lists its real sources; failed sources are flagged, not faked.</li>
           <li>• <strong className="text-[rgb(var(--foreground))]">Honest:</strong> a confidence band is always shown and floored to the present — this is an estimate, not a prediction of record.</li>
+        </ul>
+      </section>
+
+      <section className="card grid gap-3 p-6">
+        <h2 className="text-xl font-semibold">Limitations &amp; calibration</h2>
+        <p className="text-sm leading-6 text-[rgb(var(--muted))]">
+          Being transparent cuts both ways — here&apos;s what this clock <em>cannot</em> tell you, and how
+          honest it&apos;s trying to be about its own uncertainty.
+        </p>
+        <ul className="grid gap-2 text-sm leading-7 text-[rgb(var(--muted))]">
+          <li>• <strong className="text-[rgb(var(--foreground))]">It&apos;s an estimate, not a forecast of record.</strong> Expert forecasts disagree by <em>decades</em>; the band reflects that, and the central date is a blend, not a claim.</li>
+          <li>• <strong className="text-[rgb(var(--foreground))]">&ldquo;AGI&rdquo; is contested.</strong> We expose three definitions because there is no single agreed bar — the date you get depends on which you pick.</li>
+          <li>• <strong className="text-[rgb(var(--foreground))]">Anchored to the crowd.</strong> The baseline inherits whatever bias is in public forecasts; our live signals only move it within a bounded range.</li>
+          <li>• <strong className="text-[rgb(var(--foreground))]">Some inputs are curated.</strong> Where no free, structured live feed exists, a factor uses a cited curated value — a reasonable read, not a measurement.</li>
+          <li>• <strong className="text-[rgb(var(--foreground))]">Calibration is young.</strong> The track record only deepens as snapshots accrue. The right test is whether past estimates land inside their own bands over time — the band is meant to be <em>honest</em>, not precise.</li>
         </ul>
       </section>
     </PageFrame>

@@ -30,10 +30,25 @@ export type Mover = {
   citation: string;
 };
 
-export const definitions: Array<{ id: DefinitionId; label: string; shortLabel: string }> = [
-  { id: "weak-agi", label: "Weak AGI", shortLabel: "Weak" },
-  { id: "transformative-ai", label: "Transformative AI", shortLabel: "Transformative" },
-  { id: "strong-agi", label: "Strong AGI", shortLabel: "Strong" }
+export const definitions: Array<{ id: DefinitionId; label: string; shortLabel: string; blurb: string }> = [
+  {
+    id: "weak-agi",
+    label: "Weak AGI",
+    shortLabel: "Weak",
+    blurb: "Matches expert humans across most economically valuable cognitive tasks; passes adversarial Turing tests."
+  },
+  {
+    id: "transformative-ai",
+    label: "Transformative AI",
+    shortLabel: "Transformative",
+    blurb: "AI that measurably transforms labor, research, and economic output across many sectors."
+  },
+  {
+    id: "strong-agi",
+    label: "Strong AGI",
+    shortLabel: "Strong",
+    blurb: "Human-level across essentially all cognitive domains, including robust long-horizon autonomy."
+  }
 ];
 
 export const defaultDefinition: DefinitionId = "transformative-ai";

@@ -108,6 +108,8 @@ export function EngineDashboard() {
               key={state.definition}
               transition={shouldReduceMotion ? { duration: 0 } : { type: "spring", stiffness: 140, damping: 22 }}
             >
+              <StaleBanner ts={state.ts} />
+
               <section className="py-2">
                 <CountdownClock
                   targetIso={state.tAgi}
@@ -147,6 +149,27 @@ export function EngineDashboard() {
         </AnimatePresence>
       </div>
     </main>
+  );
+}
+
+const STALE_HOURS = 12;
+
+function StaleBanner({ ts }: { ts: string }) {
+  const ageHours = (Date.now() - new Date(ts).getTime()) / 3_600_000;
+  if (!Number.isFinite(ageHours) || ageHours < STALE_HOURS) {
+    return null;
+  }
+  const label = ageHours >= 48 ? `${Math.floor(ageHours / 24)} days` : `${Math.round(ageHours)} hours`;
+  return (
+    <div className="mb-4 flex items-start gap-3 rounded-lg border border-[rgb(var(--warn)/0.5)] bg-[rgb(var(--warn)/0.12)] px-4 py-3 text-sm">
+      <span className="mt-0.5 text-[rgb(var(--warn))]" aria-hidden>
+        ⚠
+      </span>
+      <span className="text-[rgb(var(--foreground))]">
+        Data is <strong>{label} stale</strong> — the refresh pipeline looks delayed. These are the last
+        successful numbers, not live.
+      </span>
+    </div>
   );
 }
 
