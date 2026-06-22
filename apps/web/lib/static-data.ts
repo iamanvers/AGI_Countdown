@@ -121,6 +121,19 @@ export async function readJobs() {
   return readJson<JobsImpact>("jobs.json");
 }
 
+export type EngineStateFile = {
+  definition: "weak-agi" | "transformative-ai" | "strong-agi";
+  tAgi: string;
+  progress: number;
+  anchor: string;
+  deltaMonths: number;
+  band: { earlyP10: string; lateP90: string };
+};
+
+export async function readEngineState(definition: EngineStateFile["definition"]) {
+  return readJson<EngineStateFile>(`engine_state.${definition}.json`);
+}
+
 export async function readStatus() {
   return readJson<RunStatus>("status.json");
 }

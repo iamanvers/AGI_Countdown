@@ -1,11 +1,15 @@
+import { EngineFlowGraph, type FlowFactor, type FlowOutput } from "@/components/engine-flow-graph";
 import { EstimateHistoryChart } from "@/components/estimate-history-chart";
 import { PageFrame } from "@/components/page-frame";
 import {
   type MethodologyFactor,
+  readEngineState,
   readEstimateHistory,
   readMethodology,
   readStatus
 } from "@/lib/static-data";
+
+type DefId = "weak-agi" | "transformative-ai" | "strong-agi";
 
 export const metadata = {
   title: "Methodology — AGI Countdown",
@@ -61,12 +65,39 @@ function normalizationNote(factor: MethodologyFactor): string {
 }
 
 export default async function MethodologyPage() {
-  const [methodology, status, history] = await Promise.all([
+  const [methodology, status, history, weak, transformative, strong] = await Promise.all([
     readMethodology(),
     readStatus(),
-    readEstimateHistory()
+    readEstimateHistory(),
+    readEngineState("weak-agi"),
+    readEngineState("transformative-ai"),
+    readEngineState("strong-agi")
   ]);
   const factors = [...methodology.factors].sort((a, b) => b.weight - a.weight);
+
+  const flowFactors: FlowFactor[] = methodology.factors.map((f) => ({
+    id: f.id,
+    label: f.label,
+    sign: f.sign,
+    weight: f.weight,
+    domain: f.domain,
+    category: f.category,
+    level: f.reading ? (f.reading.level ?? f.reading.normalized) : null,
+    contributionMonths: f.contributionMonths,
+    sources: f.sources
+  }));
+  const toOutput = (s: typeof weak): FlowOutput => ({
+    tAgi: s.tAgi,
+    anchor: s.anchor,
+    deltaMonths: s.deltaMonths,
+    progress: s.progress,
+    band: s.band
+  });
+  const flowOutputs: Record<DefId, FlowOutput> = {
+    "weak-agi": toOutput(weak),
+    "transformative-ai": toOutput(transformative),
+    "strong-agi": toOutput(strong)
+  };
 
   return (
     <PageFrame
@@ -122,6 +153,17 @@ export default async function MethodologyPage() {
             </div>
           ))}
         </div>
+      </section>
+
+      <section className="grid gap-3">
+        <h2 className="text-2xl font-semibold">The flow, end to end</h2>
+        <p className="text-sm leading-6 text-[rgb(var(--muted))]">
+          Forecasts set the <strong className="text-[rgb(var(--foreground))]">anchor</strong>; each live
+          factor feeds <strong className="text-[rgb(var(--foreground))]">Δ factors</strong>; the two
+          combine into the date. Switch definition to see the same factors re-weighted, and hover any
+          node to trace its contribution.
+        </p>
+        <EngineFlowGraph definitions={methodology.definitions.map((d) => ({ id: d.id as DefId, name: d.name }))} factors={flowFactors} outputs={flowOutputs} />
       </section>
 
       <section className="grid gap-3">

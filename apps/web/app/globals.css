@@ -144,6 +144,18 @@ h3 {
     0 0 0 4px rgb(var(--accent-rgb) / 0.85);
 }
 
+/* Flow-graph edges: a gentle conveyor of dashes toward the engine. */
+.flow-edge {
+  stroke-dasharray: 9 7;
+  animation: flow-dash 2.2s linear infinite;
+}
+
+@keyframes flow-dash {
+  to {
+    stroke-dashoffset: -32;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -152,5 +164,9 @@ h3 {
     transition-duration: 0.001ms !important;
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
+  }
+
+  .flow-edge {
+    stroke-dasharray: none;
   }
 }
