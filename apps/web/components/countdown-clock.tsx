@@ -67,7 +67,7 @@ export function CountdownClock({ targetIso }: CountdownClockProps) {
 
       <div
         aria-label={`${parts.years} years, ${parts.days} days, ${parts.hours} hours, ${parts.minutes} minutes, and ${parts.seconds} seconds remaining`}
-        className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-5 md:gap-4"
+        className="mt-6 grid grid-cols-3 gap-2.5 sm:mt-8 sm:grid-cols-5 sm:gap-3 md:gap-4"
       >
         <TimeBlock label="Years" reduceMotion={shouldReduceMotion} value={parts.years} />
         <TimeBlock label="Days" reduceMotion={shouldReduceMotion} value={parts.days} />
@@ -97,11 +97,11 @@ function TimeBlock({
         wideOnMobile ? "col-span-2 sm:col-span-1" : ""
       ].join(" ")}
     >
-      <div className="relative h-20 sm:h-28 xl:h-32">
+      <div className="relative h-16 sm:h-28 xl:h-32">
         <AnimatePresence initial={false} mode="popLayout">
           <motion.span
             animate={{ opacity: 1, y: 0 }}
-            className="absolute inset-0 flex items-center justify-center font-mono text-5xl font-semibold leading-none tracking-tight tabular sm:text-7xl xl:text-8xl"
+            className="absolute inset-0 flex items-center justify-center font-mono text-4xl font-semibold leading-none tracking-tight tabular sm:text-7xl xl:text-8xl"
             exit={reduceMotion ? { opacity: 0 } : { opacity: 0, y: "-34%" }}
             initial={reduceMotion ? { opacity: 0 } : { opacity: 0, y: "34%" }}
             key={value}

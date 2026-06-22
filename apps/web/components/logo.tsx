@@ -32,7 +32,7 @@ export function Logo({ className, withWordmark = true }: LogoProps) {
       </svg>
       {withWordmark ? (
         <span className="font-semibold tracking-tight">
-          AGI<span className="text-[rgb(var(--muted))]"> Countdown</span>
+          AGI<span className="hidden text-[rgb(var(--muted))] sm:inline"> Countdown</span>
         </span>
       ) : null}
     </span>
