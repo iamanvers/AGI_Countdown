@@ -48,11 +48,16 @@ T_AGI  =  Anchor  +  Δ_factors
 - **Anchor** — a weighted blend of published forecasts (Metaculus, prediction markets, expert
   surveys, compute-based models): the slow-moving consensus date.
 - **Δ_factors** — a live, *bounded* shift from ~15 signals (benchmark saturation, training compute,
-  autonomy, capital, energy, policy, sentiment, …), weighted differently per AGI definition and
-  EWMA-smoothed so the date glides instead of jumping.
+  autonomy, capital, energy, policy, sentiment, …), weighted differently **per AGI definition** and
+  EWMA-smoothed so the date glides instead of jumping. The three modes (Weak / Transformative /
+  Strong) therefore get distinct dates, capability levels, and movers.
 
 > **The one rule:** validated data goes in; a pure function computes the date. No model ever invents
 > the number — see [`docs/adr/0005-determinism-boundary.md`](docs/adr/0005-determinism-boundary.md).
+
+Around the clock: **~140 cited sources** (live signal feeds + a tiered reference catalog), a live
+**news feed** + curated **milestones**, a **jobs/automation** breakdown by sector, and a fully
+transparent **methodology** page (every weight, normalization, reading, and source in the open).
 
 Three switchable definitions (**Weak AGI**, **Transformative AI**, **Strong AGI**) each get their own
 anchor and clock.
