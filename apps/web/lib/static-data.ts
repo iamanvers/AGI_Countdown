@@ -44,15 +44,33 @@ export type JobsSector = {
   sector: string;
   workforceSharePct: number;
   automationExposurePct: number;
+  revenueAtRiskPct: number;
   source: string;
   sourceId?: string;
   emergingRoles: Array<{ title: string; demandSignal: number }>;
   decliningRoles: string[];
 };
 
+export type JobsRegion = {
+  region: string;
+  automationExposurePct: number;
+  revenueAtRiskPct: number;
+  note: string;
+  source: string;
+  sourceId?: string;
+};
+
 export type JobsImpact = {
   ts: string;
   overallAutomationPct: number;
+  revenueAtRisk: {
+    annualValueUsdTn: number;
+    exposedRevenueSharePct: number;
+    description: string;
+    source: string;
+    sourceId?: string;
+  };
+  regions: JobsRegion[];
   sectors: JobsSector[];
   highlights: Array<{
     title: string;

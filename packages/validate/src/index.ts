@@ -119,12 +119,34 @@ export const jobsImpactSchema = z
   .object({
     ts: isoDateTimeSchema,
     overallAutomationPct: percentSchema,
+    revenueAtRisk: z
+      .object({
+        annualValueUsdTn: z.number().finite().nonnegative(),
+        exposedRevenueSharePct: percentSchema,
+        description: nonEmptyStringSchema,
+        source: urlSchema,
+        sourceId: nonEmptyStringSchema.optional()
+      })
+      .strict(),
+    regions: z.array(
+      z
+        .object({
+          region: nonEmptyStringSchema,
+          automationExposurePct: percentSchema,
+          revenueAtRiskPct: percentSchema,
+          note: nonEmptyStringSchema,
+          source: urlSchema,
+          sourceId: nonEmptyStringSchema.optional()
+        })
+        .strict()
+    ),
     sectors: z.array(
       z
         .object({
           sector: nonEmptyStringSchema,
           workforceSharePct: percentSchema,
           automationExposurePct: percentSchema,
+          revenueAtRiskPct: percentSchema,
           source: urlSchema,
           sourceId: nonEmptyStringSchema.optional(),
           emergingRoles: z.array(

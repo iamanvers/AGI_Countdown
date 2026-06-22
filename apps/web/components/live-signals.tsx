@@ -51,7 +51,7 @@ export function LiveSignals() {
   }, []);
 
   return (
-    <section className="grid content-start gap-3 rounded-lg border border-[rgb(var(--line)/0.7)] bg-[rgb(var(--panel)/0.66)] p-5 backdrop-blur">
+    <section className="card grid content-start gap-3 p-5 backdrop-blur">
       <div className="flex items-center justify-between">
         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[rgb(var(--muted))]">
           Live signals

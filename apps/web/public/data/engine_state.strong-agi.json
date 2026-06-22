@@ -1,15 +1,15 @@
 {
-  "runId": "refresh-hourly-20260622T063019538Z-strong-agi",
-  "ts": "2026-06-22T06:30:19.538Z",
+  "runId": "refresh-all-20260622T075837528Z-strong-agi",
+  "ts": "2026-06-22T07:58:37.528Z",
   "definition": "strong-agi",
-  "tAgi": "2038-08-22T14:05:26.195Z",
+  "tAgi": "2038-08-22T17:42:07.660Z",
   "progress": 34.05,
   "band": {
-    "earlyP10": "2028-08-22T14:05:26.195Z",
-    "lateP90": "2058-08-22T14:05:26.195Z"
+    "earlyP10": "2028-08-22T17:42:07.660Z",
+    "lateP90": "2058-08-22T17:42:07.660Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -16.309588,
+  "deltaMonths": -16.304644,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -85,7 +85,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.281808,
+      "contributionMonths": -0.276864,
       "rationale": "Research velocity is moderate at 0.56 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },

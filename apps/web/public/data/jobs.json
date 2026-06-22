@@ -1,11 +1,69 @@
 {
-  "ts": "2026-06-22T06:30:19.538Z",
+  "ts": "2026-06-22T07:58:37.528Z",
   "overallAutomationPct": 31.7,
+  "revenueAtRisk": {
+    "annualValueUsdTn": 4.4,
+    "exposedRevenueSharePct": 24,
+    "description": "Generative AI could automate activities worth up to ~$4.4T in annual productivity value, with roughly a quarter of all work tasks exposed to acceleration. An estimate of value at stake — not GDP that vanishes.",
+    "source": "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier",
+    "sourceId": "mckinsey-genai"
+  },
+  "regions": [
+    {
+      "region": "North America",
+      "automationExposurePct": 60,
+      "revenueAtRiskPct": 30,
+      "note": "Advanced economy — ~60% of jobs exposed; high white-collar / knowledge-work share.",
+      "source": "https://www.imf.org/en/Blogs/Articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity",
+      "sourceId": "imf-ai-economy"
+    },
+    {
+      "region": "Europe",
+      "automationExposurePct": 58,
+      "revenueAtRiskPct": 28,
+      "note": "Advanced economies with strong services exposure; AI Act adds governance friction.",
+      "source": "https://www.imf.org/en/Blogs/Articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity",
+      "sourceId": "imf-ai-economy"
+    },
+    {
+      "region": "East Asia",
+      "automationExposurePct": 50,
+      "revenueAtRiskPct": 24,
+      "note": "Mixed advanced/emerging; large manufacturing plus a fast-growing AI/tech base.",
+      "source": "https://www.ilo.org/publications/generative-ai-and-jobs-global-analysis-potential-effects-job-quantity-and",
+      "sourceId": "ilo-genai-jobs"
+    },
+    {
+      "region": "Latin America",
+      "automationExposurePct": 40,
+      "revenueAtRiskPct": 16,
+      "note": "Emerging markets ~40% exposure; lower deployment penetration so far.",
+      "source": "https://www.imf.org/en/Blogs/Articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity",
+      "sourceId": "imf-ai-economy"
+    },
+    {
+      "region": "South & Southeast Asia",
+      "automationExposurePct": 35,
+      "revenueAtRiskPct": 14,
+      "note": "Heavy IT-services exposure, but lower overall automation reach near-term.",
+      "source": "https://www.ilo.org/publications/generative-ai-and-jobs-global-analysis-potential-effects-job-quantity-and",
+      "sourceId": "ilo-genai-jobs"
+    },
+    {
+      "region": "Middle East & Africa",
+      "automationExposurePct": 28,
+      "revenueAtRiskPct": 10,
+      "note": "Lower-income economies ~26% exposure; infrastructure and access are the gating factors.",
+      "source": "https://www.imf.org/en/Blogs/Articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity",
+      "sourceId": "imf-ai-economy"
+    }
+  ],
   "sectors": [
     {
       "sector": "Information & software",
       "workforceSharePct": 3,
       "automationExposurePct": 52,
+      "revenueAtRiskPct": 34,
       "source": "https://www.anthropic.com/economic-index",
       "sourceId": "anthropic-economic-index",
       "emergingRoles": [
@@ -32,6 +90,7 @@
       "sector": "Professional & business services",
       "workforceSharePct": 14,
       "automationExposurePct": 41,
+      "revenueAtRiskPct": 28,
       "source": "https://www.onetonline.org/",
       "sourceId": "onet-occupation-data",
       "emergingRoles": [
@@ -58,6 +117,7 @@
       "sector": "Financial activities",
       "workforceSharePct": 6,
       "automationExposurePct": 40,
+      "revenueAtRiskPct": 30,
       "source": "https://www.anthropic.com/economic-index",
       "sourceId": "anthropic-economic-index",
       "emergingRoles": [
@@ -84,6 +144,7 @@
       "sector": "Government & public sector",
       "workforceSharePct": 15,
       "automationExposurePct": 28,
+      "revenueAtRiskPct": 12,
       "source": "https://www.bls.gov/oes/",
       "sourceId": "bls-oes",
       "emergingRoles": [
@@ -105,6 +166,7 @@
       "sector": "Education",
       "workforceSharePct": 9,
       "automationExposurePct": 32,
+      "revenueAtRiskPct": 14,
       "source": "https://www.onetonline.org/",
       "sourceId": "onet-occupation-data",
       "emergingRoles": [
@@ -126,6 +188,7 @@
       "sector": "Healthcare & social assistance",
       "workforceSharePct": 14,
       "automationExposurePct": 20,
+      "revenueAtRiskPct": 12,
       "source": "https://www.anthropic.com/economic-index",
       "sourceId": "anthropic-economic-index",
       "emergingRoles": [
@@ -152,6 +215,7 @@
       "sector": "Retail & wholesale trade",
       "workforceSharePct": 13,
       "automationExposurePct": 24,
+      "revenueAtRiskPct": 16,
       "source": "https://www.onetonline.org/",
       "sourceId": "onet-occupation-data",
       "emergingRoles": [
@@ -174,6 +238,7 @@
       "sector": "Manufacturing",
       "workforceSharePct": 8,
       "automationExposurePct": 25,
+      "revenueAtRiskPct": 15,
       "source": "https://www.bls.gov/oes/",
       "sourceId": "bls-oes",
       "emergingRoles": [
@@ -195,6 +260,7 @@
       "sector": "Transportation & logistics",
       "workforceSharePct": 6,
       "automationExposurePct": 22,
+      "revenueAtRiskPct": 14,
       "source": "https://www.bls.gov/oes/",
       "sourceId": "bls-oes",
       "emergingRoles": [
@@ -216,6 +282,7 @@
       "sector": "Leisure & hospitality",
       "workforceSharePct": 7,
       "automationExposurePct": 13,
+      "revenueAtRiskPct": 7,
       "source": "https://www.onetonline.org/",
       "sourceId": "onet-occupation-data",
       "emergingRoles": [
@@ -233,6 +300,7 @@
       "sector": "Construction & trades",
       "workforceSharePct": 5,
       "automationExposurePct": 9,
+      "revenueAtRiskPct": 5,
       "source": "https://www.onetonline.org/",
       "sourceId": "onet-occupation-data",
       "emergingRoles": [

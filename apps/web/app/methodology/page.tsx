@@ -105,7 +105,7 @@ export default async function MethodologyPage() {
       intro="The clock is fully deterministic — no model invents the date. Public forecasts set an anchor; a bounded, weighted model of live factors moves it. Every weight, normalization, reading, and source is shown below."
       title="Methodology"
     >
-      <section className="grid gap-3 rounded-xl border border-[rgb(var(--line))] bg-[rgb(var(--panel)/0.6)] p-6">
+      <section className="card card-accent grid gap-3 p-6">
         <p className="font-mono text-lg text-[rgb(var(--accent-rgb))]">T_AGI = Anchor + Δfactors</p>
         <p className="text-sm leading-7 text-[rgb(var(--muted))]">
           <strong className="text-[rgb(var(--foreground))]">Anchor</strong> blends four published
@@ -121,7 +121,7 @@ export default async function MethodologyPage() {
         <h2 className="text-2xl font-semibold">Per-definition settings</h2>
         <div className="grid gap-3 md:grid-cols-3">
           {methodology.definitions.map((def) => (
-            <div className="grid gap-3 rounded-xl border border-[rgb(var(--line)/0.7)] bg-[rgb(var(--panel)/0.55)] p-5" key={def.id}>
+            <div className="card grid gap-3 p-5" key={def.id}>
               <p className="font-semibold">{def.name}</p>
               <div className="flex justify-between text-sm">
                 <span className="text-[rgb(var(--muted))]">Max live shift</span>
@@ -181,14 +181,17 @@ export default async function MethodologyPage() {
           for momentum signals — so the date moves on deviation-from-trend, not on a static constant
           (it falls back to the raw level until enough samples exist). <strong className="text-[rgb(var(--foreground))]">Weight</strong>{" "}
           is months of shift per unit. <strong className="text-[rgb(var(--foreground))]">Effect</strong>{" "}
-          is this factor&apos;s contribution to each definition&apos;s date this run (W/T/S).
+          is this factor&apos;s contribution to each definition&apos;s date this run (W/T/S).{" "}
+          <strong className="text-[rgb(var(--foreground))]">Role</strong> is the factor&apos;s nature —
+          a decelerator that is <em>easing</em> (low reading) can still pull the date sooner, so Role
+          and Effect can point different ways.
         </p>
-        <div className="overflow-x-auto rounded-xl border border-[rgb(var(--line))]">
+        <div className="card overflow-x-auto">
           <table className="w-full min-w-[760px] border-collapse text-sm">
             <thead className="bg-[rgb(var(--panel-strong)/0.7)] text-left text-xs uppercase tracking-[0.1em] text-[rgb(var(--muted))]">
               <tr>
                 <th className="px-4 py-3 font-semibold">Factor</th>
-                <th className="px-4 py-3 font-semibold">Direction</th>
+                <th className="px-4 py-3 font-semibold">Role</th>
                 <th className="px-4 py-3 font-semibold">Weight</th>
                 <th className="px-4 py-3 font-semibold">Reading</th>
                 <th className="px-4 py-3 font-semibold">Effect (W/T/S, mo)</th>
@@ -209,11 +212,12 @@ export default async function MethodologyPage() {
                     </td>
                     <td className="px-4 py-3">
                       <span
-                        className="rounded-full px-2 py-0.5 text-xs font-semibold"
-                        style={{
-                          background: accel ? "rgb(var(--accent-rgb)/0.16)" : "rgb(var(--later)/0.16)",
-                          color: accel ? "rgb(var(--accent-rgb))" : "rgb(var(--later))"
-                        }}
+                        className="inline-flex items-center gap-1 rounded-full border border-[rgb(var(--line)/0.7)] bg-[rgb(var(--panel-strong)/0.6)] px-2 py-0.5 text-xs font-medium text-[rgb(var(--muted))]"
+                        title={
+                          accel
+                            ? "Higher reading pulls the date sooner"
+                            : "Higher reading pushes the date later; an easing (low) reading pulls it sooner"
+                        }
                       >
                         {accel ? "↑ accelerator" : "↓ decelerator"}
                       </span>
@@ -267,7 +271,7 @@ export default async function MethodologyPage() {
         <EstimateHistoryChart history={history} />
       </section>
 
-      <section className="grid gap-3 rounded-xl border border-[rgb(var(--line))] bg-[rgb(var(--panel)/0.55)] p-6">
+      <section className="card grid gap-3 p-6">
         <h2 className="text-xl font-semibold">Why you can trust the number</h2>
         <ul className="grid gap-2 text-sm leading-7 text-[rgb(var(--muted))]">
           <li>• <strong className="text-[rgb(var(--foreground))]">Deterministic:</strong> identical inputs always produce the identical date — arithmetic, not a model&apos;s guess.</li>

@@ -821,10 +821,30 @@ export const curatedTimeline: CuratedTimelineEvent[] = [
 
 export type CuratedJobsImpact = {
   overallAutomationPct: number;
+  // "Revenue at risk" — the scale of economic value exposed to AI automation.
+  // Curated from published macro estimates; an estimate of exposure, not lost GDP.
+  revenueAtRisk: {
+    annualValueUsdTn: number;
+    exposedRevenueSharePct: number;
+    description: string;
+    source: string;
+    sourceId?: string;
+  };
+  // Automation exposure and revenue-at-risk vary sharply by region (advanced vs
+  // emerging economies). Curated from IMF / ILO regional analyses.
+  regions: Array<{
+    region: string;
+    automationExposurePct: number;
+    revenueAtRiskPct: number;
+    note: string;
+    source: string;
+    sourceId?: string;
+  }>;
   sectors: Array<{
     sector: string;
     workforceSharePct: number;
     automationExposurePct: number;
+    revenueAtRiskPct: number;
     source: string;
     sourceId?: string;
     emergingRoles: Array<{ title: string; demandSignal: number }>;
@@ -836,17 +856,79 @@ export type CuratedJobsImpact = {
 const ONET = "https://www.onetonline.org/";
 const BLS = "https://www.bls.gov/oes/";
 const AEI = "https://www.anthropic.com/economic-index";
+const IMF = "https://www.imf.org/en/Blogs/Articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity";
+const ILO = "https://www.ilo.org/publications/generative-ai-and-jobs-global-analysis-potential-effects-job-quantity-and";
+const MCKINSEY = "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier";
 
 // Workforce shares approximate US employment distribution (BLS); automation
 // exposure is a curated read of task-level AI exposure (Anthropic Economic
 // Index, OpenAI "GPTs are GPTs", OECD). Shares are normalized to ~100%.
 export const curatedJobs: CuratedJobsImpact = {
   overallAutomationPct: 31.7,
+  revenueAtRisk: {
+    annualValueUsdTn: 4.4,
+    exposedRevenueSharePct: 24,
+    description:
+      "Generative AI could automate activities worth up to ~$4.4T in annual productivity value, with roughly a quarter of all work tasks exposed to acceleration. An estimate of value at stake — not GDP that vanishes.",
+    source: MCKINSEY,
+    sourceId: "mckinsey-genai",
+  },
+  regions: [
+    {
+      region: "North America",
+      automationExposurePct: 60,
+      revenueAtRiskPct: 30,
+      note: "Advanced economy — ~60% of jobs exposed; high white-collar / knowledge-work share.",
+      source: IMF,
+      sourceId: "imf-ai-economy",
+    },
+    {
+      region: "Europe",
+      automationExposurePct: 58,
+      revenueAtRiskPct: 28,
+      note: "Advanced economies with strong services exposure; AI Act adds governance friction.",
+      source: IMF,
+      sourceId: "imf-ai-economy",
+    },
+    {
+      region: "East Asia",
+      automationExposurePct: 50,
+      revenueAtRiskPct: 24,
+      note: "Mixed advanced/emerging; large manufacturing plus a fast-growing AI/tech base.",
+      source: ILO,
+      sourceId: "ilo-genai-jobs",
+    },
+    {
+      region: "Latin America",
+      automationExposurePct: 40,
+      revenueAtRiskPct: 16,
+      note: "Emerging markets ~40% exposure; lower deployment penetration so far.",
+      source: IMF,
+      sourceId: "imf-ai-economy",
+    },
+    {
+      region: "South & Southeast Asia",
+      automationExposurePct: 35,
+      revenueAtRiskPct: 14,
+      note: "Heavy IT-services exposure, but lower overall automation reach near-term.",
+      source: ILO,
+      sourceId: "ilo-genai-jobs",
+    },
+    {
+      region: "Middle East & Africa",
+      automationExposurePct: 28,
+      revenueAtRiskPct: 10,
+      note: "Lower-income economies ~26% exposure; infrastructure and access are the gating factors.",
+      source: IMF,
+      sourceId: "imf-ai-economy",
+    },
+  ],
   sectors: [
     {
       sector: "Information & software",
       workforceSharePct: 3,
       automationExposurePct: 52,
+      revenueAtRiskPct: 34,
       source: AEI,
       sourceId: "anthropic-economic-index",
       emergingRoles: [
@@ -860,6 +942,7 @@ export const curatedJobs: CuratedJobsImpact = {
       sector: "Professional & business services",
       workforceSharePct: 14,
       automationExposurePct: 41,
+      revenueAtRiskPct: 28,
       source: ONET,
       sourceId: "onet-occupation-data",
       emergingRoles: [
@@ -873,6 +956,7 @@ export const curatedJobs: CuratedJobsImpact = {
       sector: "Financial activities",
       workforceSharePct: 6,
       automationExposurePct: 40,
+      revenueAtRiskPct: 30,
       source: AEI,
       sourceId: "anthropic-economic-index",
       emergingRoles: [
@@ -886,6 +970,7 @@ export const curatedJobs: CuratedJobsImpact = {
       sector: "Government & public sector",
       workforceSharePct: 15,
       automationExposurePct: 28,
+      revenueAtRiskPct: 12,
       source: BLS,
       sourceId: "bls-oes",
       emergingRoles: [
@@ -898,6 +983,7 @@ export const curatedJobs: CuratedJobsImpact = {
       sector: "Education",
       workforceSharePct: 9,
       automationExposurePct: 32,
+      revenueAtRiskPct: 14,
       source: ONET,
       sourceId: "onet-occupation-data",
       emergingRoles: [
@@ -910,6 +996,7 @@ export const curatedJobs: CuratedJobsImpact = {
       sector: "Healthcare & social assistance",
       workforceSharePct: 14,
       automationExposurePct: 20,
+      revenueAtRiskPct: 12,
       source: AEI,
       sourceId: "anthropic-economic-index",
       emergingRoles: [
@@ -923,6 +1010,7 @@ export const curatedJobs: CuratedJobsImpact = {
       sector: "Retail & wholesale trade",
       workforceSharePct: 13,
       automationExposurePct: 24,
+      revenueAtRiskPct: 16,
       source: ONET,
       sourceId: "onet-occupation-data",
       emergingRoles: [
@@ -935,6 +1023,7 @@ export const curatedJobs: CuratedJobsImpact = {
       sector: "Manufacturing",
       workforceSharePct: 8,
       automationExposurePct: 25,
+      revenueAtRiskPct: 15,
       source: BLS,
       sourceId: "bls-oes",
       emergingRoles: [
@@ -947,6 +1036,7 @@ export const curatedJobs: CuratedJobsImpact = {
       sector: "Transportation & logistics",
       workforceSharePct: 6,
       automationExposurePct: 22,
+      revenueAtRiskPct: 14,
       source: BLS,
       sourceId: "bls-oes",
       emergingRoles: [
@@ -959,6 +1049,7 @@ export const curatedJobs: CuratedJobsImpact = {
       sector: "Leisure & hospitality",
       workforceSharePct: 7,
       automationExposurePct: 13,
+      revenueAtRiskPct: 7,
       source: ONET,
       sourceId: "onet-occupation-data",
       emergingRoles: [{ title: "AI guest-experience designer", demandSignal: 0.45 }],
@@ -968,6 +1059,7 @@ export const curatedJobs: CuratedJobsImpact = {
       sector: "Construction & trades",
       workforceSharePct: 5,
       automationExposurePct: 9,
+      revenueAtRiskPct: 5,
       source: ONET,
       sourceId: "onet-occupation-data",
       emergingRoles: [{ title: "AI estimating & planning specialist", demandSignal: 0.42 }],

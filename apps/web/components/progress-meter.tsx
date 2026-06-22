@@ -9,7 +9,7 @@ export function ProgressMeter({ value, definitionLabel = "AGI" }: ProgressMeterP
   const progress = clamp(value, 0, 100);
 
   return (
-    <section className="rounded-lg border border-[rgb(var(--line)/0.7)] bg-[rgb(var(--panel)/0.72)] p-5 backdrop-blur">
+    <section className="card p-5 backdrop-blur">
       <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-[rgb(var(--muted))]">
         Capability index
       </h2>

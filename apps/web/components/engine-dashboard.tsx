@@ -145,7 +145,7 @@ function EstimateSummary({ state }: { state: EngineState }) {
   const sooner = state.deltaMonths < 0;
   const direction = state.deltaMonths === 0 ? "no change" : sooner ? "sooner" : "later";
   return (
-    <section className="grid content-start gap-3 rounded-lg border border-[rgb(var(--line)/0.7)] bg-[rgb(var(--panel)/0.66)] p-5 backdrop-blur">
+    <section className="card grid content-start gap-3 p-5 backdrop-blur">
       <div>
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[rgb(var(--muted))]">
           How the date is built
@@ -237,7 +237,7 @@ function ExploreStrip() {
     <section className="mt-10 grid gap-3 sm:grid-cols-3">
       {cards.map((card) => (
         <Link
-          className="focus-ring group rounded-lg border border-[rgb(var(--line)/0.66)] bg-[rgb(var(--panel)/0.55)] p-5 transition-colors hover:border-[rgb(var(--accent-rgb)/0.6)]"
+          className="focus-ring group card p-5 transition-colors hover:border-[rgb(var(--accent-rgb)/0.6)]"
           href={card.href}
           key={card.href}
         >
@@ -270,7 +270,7 @@ function LoadingPanel({
       initial={reduceMotion ? { opacity: 0 } : { opacity: 0, y: 18 }}
       transition={reduceMotion ? { duration: 0 } : { type: "spring", stiffness: 140, damping: 22 }}
     >
-      <div className="w-full max-w-2xl rounded-lg border border-[rgb(var(--line)/0.7)] bg-[rgb(var(--panel)/0.72)] p-6 text-center backdrop-blur">
+      <div className="card w-full max-w-2xl p-6 text-center backdrop-blur">
         <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(var(--accent-rgb))]">
           {loadState === "error" ? "Snapshot unavailable" : "Loading snapshot"}
         </p>

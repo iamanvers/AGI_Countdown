@@ -10,7 +10,7 @@ export function MoversList({ movers }: MoversListProps) {
   const max = Math.max(0.001, ...items.map((m) => Math.abs(m.contributionMonths)));
 
   return (
-    <section className="rounded-lg border border-[rgb(var(--line)/0.7)] bg-[rgb(var(--panel)/0.72)] p-5 backdrop-blur">
+    <section className="card p-5 backdrop-blur">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-[rgb(var(--muted))]">
           What&apos;s moving the clock
