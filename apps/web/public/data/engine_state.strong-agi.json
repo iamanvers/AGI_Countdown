@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-all-20260622T093444265Z-strong-agi",
-  "ts": "2026-06-22T09:34:44.265Z",
+  "runId": "refresh-all-20260622T094231787Z-strong-agi",
+  "ts": "2026-06-22T09:42:31.787Z",
   "definition": "strong-agi",
-  "tAgi": "2039-03-11T22:27:01.795Z",
+  "tAgi": "2039-04-01T21:22:21.432Z",
   "progress": 35.85,
   "band": {
-    "earlyP10": "2029-03-10T15:06:21.091Z",
-    "lateP90": "2059-03-13T05:47:42.500Z",
-    "likelyEarly": "2034-09-09T22:44:43.478Z",
-    "likelyLate": "2048-03-11T18:33:20.112Z"
+    "earlyP10": "2029-03-30T17:16:43.884Z",
+    "lateP90": "2059-04-04T01:27:58.981Z",
+    "likelyEarly": "2034-09-30T12:19:49.535Z",
+    "likelyLate": "2048-04-02T02:48:53.329Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -9.694312,
+  "deltaMonths": -9.005835,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -27,8 +27,8 @@
     },
     {
       "factorId": "energy-headroom",
-      "contributionMonths": 1.98936,
-      "rationale": "Energy headroom is running high at 0.92 — a headwind pushing the date later.",
+      "contributionMonths": 2.01744,
+      "rationale": "Energy & grid constraints is running high at 0.93 — a headwind pushing the date later.",
       "citation": "https://www.iea.org/reports/electricity-2025"
     },
     {
@@ -69,9 +69,15 @@
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.932513,
-      "rationale": "Public backlash pressure is running high at 0.92 — a headwind pushing the date later.",
+      "contributionMonths": 0.82875,
+      "rationale": "Public backlash pressure is running high at 0.85 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
+    },
+    {
+      "factorId": "data-availability",
+      "contributionMonths": 0.6975,
+      "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
+      "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
     },
     {
       "factorId": "export-control-friction",
@@ -111,8 +117,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.255732,
-      "rationale": "Research velocity is running low at 0.21 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.189072,
+      "rationale": "Research velocity is running low at 0.16 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     }
   ]

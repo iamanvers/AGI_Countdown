@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-all-20260622T093444265Z-transformative-ai",
-  "ts": "2026-06-22T09:34:44.265Z",
+  "runId": "refresh-all-20260622T094231787Z-transformative-ai",
+  "ts": "2026-06-22T09:42:31.787Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-04-05T17:24:41.539Z",
+  "tAgi": "2031-04-17T08:46:31.080Z",
   "progress": 58.02,
   "band": {
-    "earlyP10": "2027-04-17T17:11:01.187Z",
-    "lateP90": "2054-04-08T00:36:04.603Z",
-    "likelyEarly": "2029-06-22T16:06:32.381Z",
-    "likelyLate": "2041-08-12T05:02:48.918Z"
+    "earlyP10": "2027-04-27T12:47:37.773Z",
+    "lateP90": "2054-04-21T11:43:07.099Z",
+    "likelyEarly": "2029-07-03T11:47:01.092Z",
+    "likelyLate": "2041-08-24T16:05:59.289Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -8.879838,
+  "deltaMonths": -8.497402,
   "movers": [
     {
       "factorId": "adoption-usage",
@@ -21,8 +21,8 @@
     },
     {
       "factorId": "energy-headroom",
-      "contributionMonths": 1.98936,
-      "rationale": "Energy headroom is running high at 0.92 — a headwind pushing the date later.",
+      "contributionMonths": 2.01744,
+      "rationale": "Energy & grid constraints is running high at 0.93 — a headwind pushing the date later.",
       "citation": "https://www.iea.org/reports/electricity-2025"
     },
     {
@@ -68,16 +68,16 @@
       "citation": "https://www.anthropic.com/economic-index"
     },
     {
-      "factorId": "public-backlash-pressure",
-      "contributionMonths": 1.025764,
-      "rationale": "Public backlash pressure is running high at 0.92 — a headwind pushing the date later.",
-      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
-    },
-    {
       "factorId": "algorithmic-efficiency",
       "contributionMonths": -0.9324,
       "rationale": "Algorithmic efficiency is running high at 0.70 — a tailwind pulling the date sooner.",
       "citation": "https://aiindex.stanford.edu/report/"
+    },
+    {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": 0.911625,
+      "rationale": "Public backlash pressure is running high at 0.85 — a headwind pushing the date later.",
+      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
       "factorId": "policy-friction",
@@ -98,6 +98,12 @@
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
+      "factorId": "data-availability",
+      "contributionMonths": 0.4185,
+      "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
+      "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
+    },
+    {
       "factorId": "robotics-embodiment",
       "contributionMonths": -0.3888,
       "rationale": "Robotics & embodiment is moderate at 0.48 — a tailwind pulling the date sooner.",
@@ -111,8 +117,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.191799,
-      "rationale": "Research velocity is running low at 0.21 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.141804,
+      "rationale": "Research velocity is running low at 0.16 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     }
   ]

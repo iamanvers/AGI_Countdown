@@ -405,6 +405,17 @@ export const sourceRegistry: readonly SourceDef[] = [
     parser: "ifr-robotics",
     url: "https://ifr.org/worldrobotics/",
   },
+  {
+    id: "epoch-data-wall",
+    name: "Epoch AI — training-data limits ('data wall')",
+    domain: "compute",
+    accessMethod: "file",
+    ingestion: "curated",
+    authNeeded: false,
+    cadence: "monthly",
+    parser: "epoch-data-wall",
+    url: "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data",
+  },
 
   // ---------------------------------------------------------------------------
   // Reference catalog — sources we attribute and monitor for credibility but

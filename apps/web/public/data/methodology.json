@@ -1,5 +1,5 @@
 {
-  "ts": "2026-06-22T09:34:44.265Z",
+  "ts": "2026-06-22T09:42:31.787Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -130,7 +130,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 7,
+          "sampleSize": 8,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -186,7 +186,7 @@
         "rolling": {
           "applied": false,
           "method": "log-zscore",
-          "sampleSize": 7,
+          "sampleSize": 8,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -215,23 +215,23 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.211,
-        "level": 0.537,
+        "normalized": 0.156,
+        "level": 0.52,
         "confidence": 0.673,
         "citation": "https://arxiv.org/list/cs.AI/recent",
         "rolling": {
           "applied": true,
           "method": "zscore",
-          "sampleSize": 7,
-          "zScore": -1.318,
-          "percentile": 0.143,
-          "volatility": 0.016
+          "sampleSize": 8,
+          "zScore": -1.688,
+          "percentile": 0.125,
+          "volatility": 0.02
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.277,
-        "transformative-ai": -0.192,
-        "strong-agi": -0.256
+        "weak-agi": -0.205,
+        "transformative-ai": -0.142,
+        "strong-agi": -0.189
       },
       "sources": [
         {
@@ -262,16 +262,16 @@
       "normalization": "momentum-01",
       "reading": {
         "normalized": 1,
-        "level": 0.708,
+        "level": 0.776,
         "confidence": 0.68,
         "citation": "https://openrouter.ai/rankings",
         "rolling": {
           "applied": true,
           "method": "momentum-01",
-          "sampleSize": 7,
-          "zScore": 2.449,
+          "sampleSize": 8,
+          "zScore": 2.335,
           "percentile": 1,
-          "volatility": 0.024
+          "volatility": 0.047
         }
       },
       "contributionMonths": {
@@ -309,7 +309,7 @@
         "rolling": {
           "applied": false,
           "method": "log-zscore",
-          "sampleSize": 7,
+          "sampleSize": 8,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -340,31 +340,31 @@
     },
     {
       "id": "energy-headroom",
-      "label": "Energy headroom",
+      "label": "Energy & grid constraints",
       "category": "external",
       "domain": "energy",
-      "description": "Electricity and grid constraints that can slow datacenter buildout.",
+      "description": "Electricity supply and grid limits on datacenter buildout — a higher reading means a tighter constraint (more drag on the date).",
       "sign": -1,
       "weight": 5,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.921,
+        "normalized": 0.934,
         "level": 0.45,
         "confidence": 0.72,
         "citation": "https://www.iea.org/reports/electricity-2025",
         "rolling": {
           "applied": true,
           "method": "zscore",
-          "sampleSize": 7,
-          "zScore": 2.449,
+          "sampleSize": 8,
+          "zScore": 2.646,
           "percentile": 1,
           "volatility": 0
         }
       },
       "contributionMonths": {
-        "weak-agi": 1.16,
-        "transformative-ai": 1.989,
-        "strong-agi": 1.989
+        "weak-agi": 1.177,
+        "transformative-ai": 2.017,
+        "strong-agi": 2.017
       },
       "sources": [
         {
@@ -401,7 +401,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 7,
+          "sampleSize": 8,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -435,23 +435,23 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.921,
+        "normalized": 0.85,
         "level": 0.395,
-        "confidence": 0.675,
+        "confidence": 0.65,
         "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/",
         "rolling": {
           "applied": true,
           "method": "zscore",
-          "sampleSize": 7,
-          "zScore": 2.449,
+          "sampleSize": 8,
+          "zScore": 1.732,
           "percentile": 1,
-          "volatility": 0.011
+          "volatility": 0.014
         }
       },
       "contributionMonths": {
-        "weak-agi": 0.746,
-        "transformative-ai": 1.026,
-        "strong-agi": 0.933
+        "weak-agi": 0.663,
+        "transformative-ai": 0.912,
+        "strong-agi": 0.829
       },
       "sources": [
         {
@@ -483,7 +483,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 7,
+          "sampleSize": 8,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -524,7 +524,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 7,
+          "sampleSize": 8,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -560,7 +560,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 7,
+          "sampleSize": 8,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -596,7 +596,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 7,
+          "sampleSize": 8,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -632,7 +632,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 7,
+          "sampleSize": 8,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -668,7 +668,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 7,
+          "sampleSize": 8,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -704,7 +704,7 @@
         "rolling": {
           "applied": false,
           "method": "log-zscore",
-          "sampleSize": 7,
+          "sampleSize": 8,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -740,7 +740,7 @@
         "rolling": {
           "applied": false,
           "method": "zscore",
-          "sampleSize": 7,
+          "sampleSize": 8,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -776,7 +776,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 7,
+          "sampleSize": 8,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -792,6 +792,42 @@
           "id": "ifr-world-robotics",
           "name": "IFR World Robotics",
           "url": "https://ifr.org/worldrobotics/"
+        }
+      ]
+    },
+    {
+      "id": "data-availability",
+      "label": "Training-data scarcity",
+      "category": "internal",
+      "domain": "compute",
+      "description": "The 'data wall' — scarcity of high-quality training data that can slow further pre-training scaling. A higher reading means a tighter limit (more drag). Most relevant to the largest models.",
+      "sign": -1,
+      "weight": 3,
+      "normalization": "momentum-01",
+      "reading": {
+        "normalized": 0.5,
+        "level": 0.5,
+        "confidence": 0.62,
+        "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data",
+        "rolling": {
+          "applied": false,
+          "method": "momentum-01",
+          "sampleSize": 1,
+          "zScore": 0,
+          "percentile": 0,
+          "volatility": 0
+        }
+      },
+      "contributionMonths": {
+        "weak-agi": 0.511,
+        "transformative-ai": 0.419,
+        "strong-agi": 0.698
+      },
+      "sources": [
+        {
+          "id": "epoch-data-wall",
+          "name": "Epoch AI — training-data limits ('data wall')",
+          "url": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
         }
       ]
     }

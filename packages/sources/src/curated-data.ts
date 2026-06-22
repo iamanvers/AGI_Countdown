@@ -523,6 +523,17 @@ export const curatedFactorSeedsBySource: Record<string, CuratedFactorSeed[]> = {
       notes: "Industrial-robot installs near record highs; humanoid/embodied progress accelerating but still early.",
     },
   ],
+  "epoch-data-wall": [
+    {
+      factorId: "data-availability",
+      raw: 0.5,
+      unit: "constraint-0-1",
+      normalized: 0.5,
+      confidence: 0.62,
+      citation: "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data",
+      notes: "Epoch projects the stock of high-quality public text is used up ~2026-2032; synthetic/multimodal data partly offsets, so a moderate constraint.",
+    },
+  ],
 };
 
 export type CuratedTimelineEvent = {
