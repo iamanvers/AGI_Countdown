@@ -416,6 +416,28 @@ export const sourceRegistry: readonly SourceDef[] = [
     parser: "epoch-data-wall",
     url: "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data",
   },
+  {
+    id: "nasdaq-index",
+    name: "NASDAQ Composite (live, FRED)",
+    domain: "economics",
+    accessMethod: "api",
+    ingestion: "structured",
+    authNeeded: false,
+    cadence: "daily",
+    parser: "fred-csv",
+    url: "https://fred.stlouisfed.org/series/NASDAQCOM",
+  },
+  {
+    id: "fred-recession",
+    name: "FRED US recession probability (live)",
+    domain: "economics",
+    accessMethod: "api",
+    ingestion: "structured",
+    authNeeded: false,
+    cadence: "weekly",
+    parser: "fred-csv",
+    url: "https://fred.stlouisfed.org/series/RECPROUSM156N",
+  },
 
   // ---------------------------------------------------------------------------
   // Reference catalog — sources we attribute and monitor for credibility but

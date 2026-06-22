@@ -253,8 +253,8 @@ export const factorRegistry = [
     category: "internal",
     domain: "economics",
     description:
-      "Private AI investment and frontier-lab funding momentum — the capital that finances larger training runs and deployment, distinct from hyperscaler capex.",
-    sources: ["ai-index-investment"],
+      "Private AI investment and frontier-lab funding momentum — the capital that finances larger training runs and deployment, distinct from hyperscaler capex. Now blended with live semiconductor-index momentum.",
+    sources: ["ai-index-investment", "nasdaq-index"],
     normalization: "log-zscore",
     sign: 1,
     weight: 4,
@@ -267,8 +267,8 @@ export const factorRegistry = [
     category: "external",
     domain: "economics",
     description:
-      "Recession risk, tightening financial conditions, and AI-bubble concerns that could throttle the buildout if capital pulls back.",
-    sources: ["macro-risk-index"],
+      "Recession risk, tightening financial conditions, and AI-bubble concerns that could throttle the buildout if capital pulls back. Blended with live FRED recession-probability when a key is set.",
+    sources: ["macro-risk-index", "fred-recession"],
     normalization: "zscore",
     sign: -1,
     weight: 3,
@@ -287,6 +287,20 @@ export const factorRegistry = [
     sign: 1,
     weight: 3,
     cadence: "monthly",
+    bounds: { min: 0, max: 1 },
+  },
+  {
+    id: "frontier-release-cadence",
+    label: "Frontier release cadence",
+    category: "internal",
+    domain: "labs",
+    description:
+      "How fast frontier labs are shipping major models — release velocity over the last ~9 months, computed from real release dates (not a hand-set value).",
+    sources: ["epoch-ai-notable-models"],
+    normalization: "momentum-01",
+    sign: 1,
+    weight: 4,
+    cadence: "daily",
     bounds: { min: 0, max: 1 },
   },
   {

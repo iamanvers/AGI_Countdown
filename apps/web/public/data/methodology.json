@@ -1,5 +1,5 @@
 {
-  "ts": "2026-06-22T17:41:01.918Z",
+  "ts": "2026-06-22T18:27:13.535Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -130,7 +130,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 17,
+          "sampleSize": 19,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -186,7 +186,7 @@
         "rolling": {
           "applied": false,
           "method": "log-zscore",
-          "sampleSize": 17,
+          "sampleSize": 19,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -215,23 +215,23 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.321,
-        "level": 0.52,
+        "normalized": 0.302,
+        "level": 0.516,
         "confidence": 0.673,
         "citation": "https://arxiv.org/list/cs.AI/recent",
         "rolling": {
           "applied": true,
           "method": "zscore",
-          "sampleSize": 17,
-          "zScore": -0.748,
-          "percentile": 0.059,
+          "sampleSize": 19,
+          "zScore": -0.839,
+          "percentile": 0.053,
           "volatility": 0.022
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.421,
-        "transformative-ai": -0.292,
-        "strong-agi": -0.389
+        "weak-agi": -0.397,
+        "transformative-ai": -0.275,
+        "strong-agi": -0.366
       },
       "sources": [
         {
@@ -268,10 +268,10 @@
         "rolling": {
           "applied": true,
           "method": "momentum-01",
-          "sampleSize": 17,
-          "zScore": 0.814,
+          "sampleSize": 19,
+          "zScore": 0.744,
           "percentile": 1,
-          "volatility": 0.064
+          "volatility": 0.063
         }
       },
       "contributionMonths": {
@@ -309,7 +309,7 @@
         "rolling": {
           "applied": false,
           "method": "log-zscore",
-          "sampleSize": 17,
+          "sampleSize": 19,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -355,7 +355,7 @@
         "rolling": {
           "applied": false,
           "method": "zscore",
-          "sampleSize": 17,
+          "sampleSize": 19,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -401,7 +401,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 17,
+          "sampleSize": 19,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -435,23 +435,23 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.411,
+        "normalized": 0.417,
         "level": 0.363,
         "confidence": 0.65,
         "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/",
         "rolling": {
           "applied": true,
           "method": "zscore",
-          "sampleSize": 17,
-          "zScore": -0.358,
-          "percentile": 0.882,
+          "sampleSize": 19,
+          "zScore": -0.336,
+          "percentile": 0.895,
           "volatility": 0.01
         }
       },
       "contributionMonths": {
-        "weak-agi": 0.5,
-        "transformative-ai": 0.688,
-        "strong-agi": 0.625
+        "weak-agi": 0.504,
+        "transformative-ai": 0.693,
+        "strong-agi": 0.63
       },
       "sources": [
         {
@@ -483,7 +483,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 17,
+          "sampleSize": 19,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -524,7 +524,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 17,
+          "sampleSize": 19,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -560,7 +560,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 17,
+          "sampleSize": 19,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -596,7 +596,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 17,
+          "sampleSize": 19,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -632,7 +632,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 17,
+          "sampleSize": 19,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -668,7 +668,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 17,
+          "sampleSize": 19,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -692,34 +692,39 @@
       "label": "AI capital formation",
       "category": "internal",
       "domain": "economics",
-      "description": "Private AI investment and frontier-lab funding momentum — the capital that finances larger training runs and deployment, distinct from hyperscaler capex.",
+      "description": "Private AI investment and frontier-lab funding momentum — the capital that finances larger training runs and deployment, distinct from hyperscaler capex. Now blended with live semiconductor-index momentum.",
       "sign": 1,
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.71,
-        "level": 0.71,
-        "confidence": 0.74,
+        "normalized": 0.014,
+        "level": 0.698,
+        "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
         "rolling": {
-          "applied": false,
+          "applied": true,
           "method": "log-zscore",
-          "sampleSize": 17,
-          "zScore": 0,
-          "percentile": 0,
-          "volatility": 0
+          "sampleSize": 19,
+          "zScore": -4.243,
+          "percentile": 0.053,
+          "volatility": 0.003
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.841,
-        "transformative-ai": -1.471,
-        "strong-agi": -1.051
+        "weak-agi": -0.015,
+        "transformative-ai": -0.027,
+        "strong-agi": -0.019
       },
       "sources": [
         {
           "id": "ai-index-investment",
           "name": "Stanford HAI AI Index — private AI investment",
           "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
+        },
+        {
+          "id": "nasdaq-index",
+          "name": "NASDAQ Composite (live, FRED)",
+          "url": "https://fred.stlouisfed.org/series/NASDAQCOM"
         }
       ]
     },
@@ -728,33 +733,38 @@
       "label": "Macro & bubble risk",
       "category": "external",
       "domain": "economics",
-      "description": "Recession risk, tightening financial conditions, and AI-bubble concerns that could throttle the buildout if capital pulls back.",
+      "description": "Recession risk, tightening financial conditions, and AI-bubble concerns that could throttle the buildout if capital pulls back. Blended with live FRED recession-probability when a key is set.",
       "sign": -1,
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.35,
-        "level": 0.35,
-        "confidence": 0.6,
+        "normalized": 0.014,
+        "level": 0.257,
+        "confidence": 0.65,
         "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N",
         "rolling": {
-          "applied": false,
+          "applied": true,
           "method": "zscore",
-          "sampleSize": 17,
-          "zScore": 0,
-          "percentile": 0,
-          "volatility": 0
+          "sampleSize": 19,
+          "zScore": -4.243,
+          "percentile": 0.053,
+          "volatility": 0.021
         }
       },
       "contributionMonths": {
-        "weak-agi": 0.426,
-        "transformative-ai": 0.745,
-        "strong-agi": 0.532
+        "weak-agi": 0.092,
+        "transformative-ai": 0.162,
+        "strong-agi": 0.115
       },
       "sources": [
         {
           "id": "macro-risk-index",
           "name": "FRED recession & financial-conditions risk",
+          "url": "https://fred.stlouisfed.org/series/RECPROUSM156N"
+        },
+        {
+          "id": "fred-recession",
+          "name": "FRED US recession probability (live)",
           "url": "https://fred.stlouisfed.org/series/RECPROUSM156N"
         }
       ]
@@ -776,7 +786,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 17,
+          "sampleSize": 19,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -792,6 +802,42 @@
           "id": "ifr-world-robotics",
           "name": "IFR World Robotics",
           "url": "https://ifr.org/worldrobotics/"
+        }
+      ]
+    },
+    {
+      "id": "frontier-release-cadence",
+      "label": "Frontier release cadence",
+      "category": "internal",
+      "domain": "labs",
+      "description": "How fast frontier labs are shipping major models — release velocity over the last ~9 months, computed from real release dates (not a hand-set value).",
+      "sign": 1,
+      "weight": 4,
+      "normalization": "momentum-01",
+      "reading": {
+        "normalized": 0.75,
+        "level": 0.75,
+        "confidence": 0.7,
+        "citation": "https://epoch.ai/data/notable-ai-models",
+        "rolling": {
+          "applied": false,
+          "method": "momentum-01",
+          "sampleSize": 2,
+          "zScore": 0,
+          "percentile": 0,
+          "volatility": 0
+        }
+      },
+      "contributionMonths": {
+        "weak-agi": -1.05,
+        "transformative-ai": -1.05,
+        "strong-agi": -1.05
+      },
+      "sources": [
+        {
+          "id": "epoch-ai-notable-models",
+          "name": "Epoch AI notable models",
+          "url": "https://epoch.ai/data/notable-ai-models"
         }
       ]
     },
@@ -812,7 +858,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 10,
+          "sampleSize": 12,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0

@@ -368,6 +368,121 @@ export const huggingFaceConnector: FreeStructuredConnector = {
   },
 };
 
+/**
+ * FRED (St. Louis Fed) — live economic data via the **keyless** CSV download
+ * (`fredgraph.csv?id=…`), routed by source id:
+ *   • `nasdaq-index`  → NASDAQ Composite momentum → `capital-formation` (AI-heavy
+ *     market = the cleanest live proxy for capital flowing into the buildout);
+ *   • `fred-recession` → smoothed US recession probability → `macro-headwinds`.
+ * Real government data, no API key. Graceful fallback to each factor's curated
+ * co-source on failure.
+ */
+type FredCsvConfig = {
+  series: string;
+  factorId: string;
+  kind: "momentum" | "level-pct";
+  label: string;
+  citation: string;
+  confidence: number;
+};
+
+const FRED_CSV_SOURCES: Record<string, FredCsvConfig> = {
+  "nasdaq-index": {
+    series: "NASDAQCOM",
+    factorId: "capital-formation",
+    kind: "momentum",
+    label: "NASDAQ Composite",
+    citation: "https://fred.stlouisfed.org/series/NASDAQCOM",
+    confidence: 0.64,
+  },
+  "fred-recession": {
+    series: "RECPROUSM156N",
+    factorId: "macro-headwinds",
+    kind: "level-pct",
+    label: "US recession probability",
+    citation: "https://fred.stlouisfed.org/series/RECPROUSM156N",
+    confidence: 0.7,
+  },
+};
+
+export const fredCsvConnector: FreeStructuredConnector = {
+  parser: "fred-csv",
+  mode: "free-structured",
+  rateLimitKey: "fred",
+  supports: (source) => source.parser === "fred-csv",
+  async fetch(source: SourceDef, context: ConnectorContext): Promise<ConnectorResult> {
+    const fetchedAt = context.now.toISOString();
+    const config = FRED_CSV_SOURCES[source.id];
+    if (config === undefined) {
+      return { sourceId: source.id, fetchedAt, samples: [], warnings: [`No FRED series mapped for ${source.id}.`] };
+    }
+    try {
+      const start = new Date(context.now.getTime() - 150 * 86_400_000).toISOString().slice(0, 10);
+      const url = `https://fred.stlouisfed.org/graph/fredgraph.csv?id=${config.series}&cosd=${start}`;
+      const response = await fetchWithTimeout(url);
+      if (!response.ok) {
+        throw new Error(`FRED responded ${response.status}`);
+      }
+      const csv = await response.text();
+      const values = csv
+        .trim()
+        .split(/\r?\n/)
+        .slice(1) // drop header
+        .map((line) => Number(line.split(",")[1]))
+        .filter((value) => Number.isFinite(value));
+      if (values.length < 4) {
+        throw new Error("FRED returned insufficient data");
+      }
+
+      let normalized: number;
+      let raw: number;
+      let notes: string;
+      if (config.kind === "level-pct") {
+        raw = values[values.length - 1] as number;
+        normalized = clamp01(raw / 100);
+        notes = `${config.label} ${raw.toFixed(2)}% (FRED, live).`;
+      } else {
+        const mean = (xs: number[]) => xs.reduce((a, b) => a + b, 0) / xs.length;
+        const window = Math.min(10, Math.floor(values.length / 3));
+        const recent = mean(values.slice(-window));
+        const prior = mean(values.slice(-3 * window, -window));
+        const momentum = prior > 0 ? recent / prior - 1 : 0;
+        raw = Number((momentum * 100).toFixed(2));
+        normalized = clamp01(0.5 + momentum * 5); // ±10% spans 0..1
+        notes = `${config.label} momentum ${(momentum * 100).toFixed(1)}% (recent vs prior, FRED).`;
+      }
+
+      return {
+        sourceId: source.id,
+        fetchedAt,
+        warnings: [],
+        samples: [
+          sample(
+            {
+              factorId: config.factorId,
+              sourceId: source.id,
+              raw,
+              unit: config.kind,
+              normalized,
+              confidence: config.confidence,
+              citation: config.citation,
+              notes,
+            },
+            context.now,
+          ),
+        ],
+      };
+    } catch (error) {
+      return {
+        sourceId: source.id,
+        fetchedAt,
+        samples: [],
+        warnings: [`FRED CSV fetch failed for ${config.series}: ${describeError(error)}`],
+      };
+    }
+  },
+};
+
 function describeError(error: unknown): string {
   return error instanceof Error ? error.message : String(error);
 }
@@ -378,4 +493,5 @@ export const liveConnectors: readonly FreeStructuredConnector[] = [
   gdeltConnector,
   githubConnector,
   huggingFaceConnector,
+  fredCsvConnector,
 ];

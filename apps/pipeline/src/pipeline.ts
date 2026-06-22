@@ -85,6 +85,35 @@ export type RefreshResult = {
   engineStates: EngineState[];
 };
 
+const RELEASE_CADENCE_WINDOW_MS = 270 * 24 * 60 * 60 * 1000; // ~9 months
+const RELEASE_CADENCE_SATURATION = 8; // ~8 frontier releases / 9mo reads as full
+
+/**
+ * Frontier release velocity, derived from real model-release dates in the curated
+ * timeline (deterministic — no hand-set number). Injected as a factor sample.
+ */
+function buildReleaseCadenceSample(generatedAt: string): FactorSample {
+  const now = new Date(generatedAt).getTime();
+  const count = curatedTimeline.filter((event) => {
+    if (event.category !== "model-release") return false;
+    const age = now - new Date(event.date).getTime();
+    return age >= 0 && age <= RELEASE_CADENCE_WINDOW_MS;
+  }).length;
+  return {
+    factorId: "frontier-release-cadence",
+    sourceId: "epoch-ai-notable-models",
+    observedAt: generatedAt,
+    collectedAt: generatedAt,
+    raw: count,
+    unit: "frontier-releases-270d",
+    normalized: clamp(count / RELEASE_CADENCE_SATURATION, 0, 1),
+    confidence: 0.7,
+    citation: "https://epoch.ai/data/notable-ai-models",
+    quarantined: false,
+    notes: `${count} major frontier model releases in the last ~9 months (release velocity).`,
+  };
+}
+
 export async function runRefresh(options: RefreshOptions): Promise<RefreshResult> {
   const generatedAt = options.now.toISOString();
   const dueCadences = resolveDueCadences(options.cadence);
@@ -109,7 +138,10 @@ export async function runRefresh(options: RefreshOptions): Promise<RefreshResult
     "factors.json",
     [],
   );
-  const samples = mergeWithCarriedFactors(freshSamples, carriedFactors);
+  const samples = [
+    ...mergeWithCarriedFactors(freshSamples, carriedFactors),
+    buildReleaseCadenceSample(generatedAt),
+  ];
 
   // EWMA-smooth each factor against its previously published value so the date
   // moves smoothly instead of jumping with every noisy live reading.
@@ -194,7 +226,7 @@ export async function runRefresh(options: RefreshOptions): Promise<RefreshResult
     dueCadences,
     outputFiles: outputFiles.map((filePath) => basename(filePath)),
     notes: [
-      "Live connectors: Manifold, arXiv, GDELT, GitHub, Hugging Face. All other sources use cited curated values.",
+      "Live connectors: Manifold, arXiv, GDELT, GitHub, Hugging Face, FRED (NASDAQ + recession). All other sources use cited curated values.",
       "Date is computed deterministically from a forecast-blended anchor plus bounded live factors.",
     ],
   };

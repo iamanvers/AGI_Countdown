@@ -47,8 +47,9 @@ T_AGI  =  Anchor  +  Δ_factors
 
 - **Anchor** — a weighted blend of published forecasts (Metaculus, prediction markets, expert
   surveys, compute-based models): the slow-moving consensus date.
-- **Δ_factors** — a live, *bounded* shift from ~18 signals (benchmark saturation, training compute,
-  autonomy, capital formation, energy, policy, sentiment, robotics, macro risk, the data wall, …),
+- **Δ_factors** — a live, *bounded* shift from ~19 signals (benchmark saturation, training compute,
+  autonomy, capital formation, energy, policy, sentiment, robotics, macro risk, the data wall,
+  frontier release cadence, …),
   weighted differently **per AGI definition** and EWMA-smoothed so the date glides instead of jumping.
   It's a **directional** model: accelerators only ever pull the date *sooner*, decelerators only ever
   push it *later* (an early/weak headwind is amplified, never flipped). Each factor is normalized
@@ -119,7 +120,7 @@ GitHub Actions (cron / on-demand)                 Vercel (free) / any static hos
 │  fetch (live + curated)  →  validate │  JSON →   │ clock animates locally,      │
 │  →  engine.compute()  →  write JSON  │ ───────→  │ revalidates on cadence       │
 └─────────────────────────────────────┘           └──────────────────────────────┘
-        live: Manifold·arXiv·GDELT·GitHub·HF              no DB · no server · no LLM
+        live: Manifold·arXiv·GDELT·GitHub·HF·FRED         no DB · no server · no LLM
 ```
 
 No always-on worker, no database, no paid APIs. The request path just serves static JSON from the
