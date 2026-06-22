@@ -432,9 +432,12 @@ async function writeStaticDataArtifacts(
     id: slugify(event.title),
     curatedBy: "curated" as const,
   }));
-  const recentDerived = deriveMilestones(artifacts.news);
-  // Historical items are already the AI-relevant top stories of each month.
-  const historicalDerived = artifacts.historicalMilestones.map(newsItemToEvent);
+  // Milestones are STRICTLY major model releases / new architectures / major
+  // policy changes from frontier labs, governments, or research — not opinion.
+  const recentDerived = artifacts.news.filter(isReleaseMilestone).slice(0, 6).map(newsItemToEvent);
+  const historicalDerived = artifacts.historicalMilestones
+    .filter(isReleaseMilestone)
+    .map(newsItemToEvent);
   const timeline = dedupeTimeline([...recentDerived, ...historicalDerived, ...curatedEvents]);
   const jobs = { ts: artifacts.generatedAt, ...curatedJobs };
 
@@ -670,32 +673,34 @@ type DerivedEvent = {
   id: string;
 };
 
-const RELEASE_RE = /\b(launch|launches|launched|releas|unveil|announce|introduc|debut|ships?|rolls? out)\b/i;
-const MODEL_RE = /\b(gpt-?\d|gpt|claude|gemini|llama|grok|deepseek|qwen|mistral|fable|model|agi|frontier|reasoning|o\d|sora|superintelligence)\b/i;
+const RELEASE_RE = /\b(launch|launches|launched|releas|unveil|announce|introduc|debut|ships?|rolls? out|open-sources?)\b/i;
+const MODEL_RE = /\b(gpt-?\d|gpt|claude|gemini|llama|grok|deepseek|qwen|mistral|fable|model|agi|asi|reasoning model|o\d-|sora|superintelligence)\b/i;
+const ARCH_RE = /\b(architecture|mixture[- ]of[- ]experts|\bmoe\b|state[- ]space|mamba|diffusion model|world model|new approach)\b/i;
+const POLICY_RE = /\b(ai act|regulation|executive order|\bban\b|legislation|\bbill\b|safety institute|export control|moratorium|antitrust|sign(s|ed)? .*order)\b/i;
+const GOVRESEARCH_RE = /\b(eu|u\.?s\.?|uk|china|government|senate|congress|white house|nist|parliament|commission|court|regulator)\b/i;
 
 /**
- * Auto-derive recent major-milestone candidates from the live news feed:
- * org-tagged stories using release/launch language about a model or AGI. Keeps
- * the "Major milestones" section current (incl. the present year) deterministically.
+ * A timeline milestone must be a MAJOR model release / new architecture / major
+ * policy change from a frontier lab, government, or research body — not opinion
+ * or commentary. Strict on purpose.
  */
-function deriveMilestones(news: NewsItem[]): DerivedEvent[] {
-  return news
-    .filter(
-      (item) =>
-        item.orgs.length > 0 && (RELEASE_RE.test(item.title) || MODEL_RE.test(item.title)),
-    )
-    .slice(0, 6)
-    .map(newsItemToEvent);
+function isReleaseMilestone(item: NewsItem): boolean {
+  const title = item.title;
+  const fromLab = item.orgs.length > 0;
+  const isRelease = RELEASE_RE.test(title) && (MODEL_RE.test(title) || ARCH_RE.test(title));
+  const isPolicy = POLICY_RE.test(title);
+  return (fromLab && isRelease) || (isPolicy && (fromLab || GOVRESEARCH_RE.test(title)));
 }
 
 function newsItemToEvent(item: NewsItem): DerivedEvent {
-  const tag = item.orgs.length > 0 ? item.orgs.join(", ") : "AI";
+  const policy = POLICY_RE.test(item.title);
+  const tag = item.orgs.length > 0 ? item.orgs.join(", ") : policy ? "Policy" : "AI";
   return {
     date: item.publishedAt.slice(0, 10),
     title: item.title,
     summary: `${tag} — surfaced from ${item.source}.`,
     significance: "major" as const,
-    category: "model-release",
+    category: policy ? "policy" : "model-release",
     citation: item.url,
     curatedBy: "feed" as const,
     id: slugify(item.title),
