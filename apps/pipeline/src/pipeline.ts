@@ -319,7 +319,7 @@ type FactorAggregate = {
   volatility?: number;
 };
 
-function aggregateByFactor(samples: FactorSample[]): Map<string, FactorAggregate> {
+export function aggregateByFactor(samples: FactorSample[]): Map<string, FactorAggregate> {
   const byFactor = new Map<string, FactorSample[]>();
   for (const sample of samples) {
     if (sample.quarantined) {
@@ -421,7 +421,7 @@ function buildEngineInput(
  * the factor's full weight in its natural direction. (No centering — a weak
  * decelerator is a weak headwind, not a tailwind.)
  */
-function factorIntensity(factor: FactorDef, normalized: number): number {
+export function factorIntensity(factor: FactorDef, normalized: number): number {
   const max = factor.bounds?.max ?? 1;
   const min = factor.bounds?.min ?? 0;
   const span = max - min || 1;
@@ -736,7 +736,7 @@ function normalizeAgainstHistory(
   return { adjusted, stats };
 }
 
-function computeNormalizationSignal(
+export function computeNormalizationSignal(
   factorId: string,
   series: readonly number[],
   method: string,
@@ -879,7 +879,7 @@ function averageDefined(values: ReadonlyArray<number | undefined>): number {
   return finite.reduce((sum, value) => sum + value, 0) / finite.length;
 }
 
-function createMoverRationale(factor: FactorDef, normalized: number): string {
+export function createMoverRationale(factor: FactorDef, normalized: number): string {
   // Directional: an accelerator always pulls sooner, a decelerator always pushes
   // later; the reading is the *intensity* of that push (higher = stronger).
   const level = normalized >= 0.66 ? "running high" : normalized >= 0.4 ? "moderate" : "running low";
@@ -918,7 +918,9 @@ type DerivedEvent = {
   id: string;
 };
 
-const RELEASE_RE = /\b(launch|launches|launched|releas|unveil|announce|introduc|debut|ships?|rolls? out|open-sources?)\b/i;
+// Stems with \w* suffixes so "releases/released/launching/unveils/…" all match
+// (a trailing \b after a stem like "releas" never matches the real word).
+const RELEASE_RE = /\b(launch\w*|releas\w*|unveil\w*|announc\w*|introduc\w*|debut\w*|ship\w*|rolls? out|open-sourc\w*)/i;
 const MODEL_RE = /\b(gpt-?\d|gpt|claude|opus|sonnet|haiku|gemini|llama|grok|deepseek|qwen|mistral|fable|mythos|glasswing|model|agi|asi|reasoning model|o\d-|sora|superintelligence)\b/i;
 const ARCH_RE = /\b(architecture|mixture[- ]of[- ]experts|\bmoe\b|state[- ]space|mamba|diffusion model|world model|new approach)\b/i;
 const POLICY_RE = /\b(ai act|regulation|executive order|\bban\b|legislation|\bbill\b|safety institute|export control|moratorium|antitrust|sign(s|ed)? .*order)\b/i;
@@ -929,7 +931,7 @@ const GOVRESEARCH_RE = /\b(eu|u\.?s\.?|uk|china|government|senate|congress|white
  * policy change from a frontier lab, government, or research body — not opinion
  * or commentary. Strict on purpose.
  */
-function isReleaseMilestone(item: NewsItem): boolean {
+export function isReleaseMilestone(item: NewsItem): boolean {
   const title = item.title;
   const fromLab = item.orgs.length > 0;
   const isRelease = RELEASE_RE.test(title) && (MODEL_RE.test(title) || ARCH_RE.test(title));
