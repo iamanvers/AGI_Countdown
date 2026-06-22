@@ -67,7 +67,16 @@ export async function POST() {
     }
 
     const detail = (await response.text()).slice(0, 300);
-    return reply("error", `GitHub did not accept the dispatch (HTTP ${response.status}).`, 502, detail);
+    // GitHub's status tells us exactly what to fix — surface it plainly.
+    const hint =
+      response.status === 401
+        ? "GITHUB_DISPATCH_TOKEN is invalid or expired — regenerate it."
+        : response.status === 403
+          ? "The token lacks permission. A classic PAT needs the `workflow` scope; a fine-grained PAT needs Actions: Read and write on this repo (and SSO authorized if the org uses it)."
+          : response.status === 404
+            ? `Workflow or repo not found — check GITHUB_REPOSITORY ("${repo}") and that ${workflow} exists on the "${ref}" branch.`
+            : `GitHub rejected the dispatch (HTTP ${response.status}).`;
+    return reply("error", hint, response.status, detail);
   } catch (error) {
     return reply("error", "Could not reach GitHub to queue the refresh.", 502, String(error).slice(0, 200));
   }
