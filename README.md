@@ -112,7 +112,7 @@ GitHub Actions (cron / on-demand)                 Vercel (free) / any static hos
 │  fetch (live + curated)  →  validate │  JSON →   │ clock animates locally,      │
 │  →  engine.compute()  →  write JSON  │ ───────→  │ revalidates on cadence       │
 └─────────────────────────────────────┘           └──────────────────────────────┘
-        live: Manifold · arXiv · GDELT                    no DB · no server · no LLM
+        live: Manifold·arXiv·GDELT·GitHub·HF              no DB · no server · no LLM
 ```
 
 No always-on worker, no database, no paid APIs. The request path just serves static JSON from the
@@ -126,7 +126,7 @@ apps/
   pipeline/   deterministic refresh: fetch → validate → compute → write JSON
 packages/
   engine/     pure TS estimator math (anchor blend, bounded Δ, band) — unit-tested
-  sources/    live connectors (Manifold/arXiv/GDELT) + cited curated dataset
+  sources/    live connectors (Manifold/arXiv/GDELT/GitHub/HF) + cited curated dataset
   config/     factor registry, AGI definitions, source registry
   validate/   zod schemas for every static data file
   shared/     shared types

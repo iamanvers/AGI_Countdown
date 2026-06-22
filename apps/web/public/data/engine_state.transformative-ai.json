@@ -1,29 +1,29 @@
 {
-  "runId": "refresh-all-20260622T092600360Z-transformative-ai",
-  "ts": "2026-06-22T09:26:00.360Z",
+  "runId": "refresh-all-20260622T093444265Z-transformative-ai",
+  "ts": "2026-06-22T09:34:44.265Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-04-03T10:52:16.813Z",
-  "progress": 52.26,
+  "tAgi": "2031-04-05T17:24:41.539Z",
+  "progress": 58.02,
   "band": {
-    "earlyP10": "2027-04-17T14:05:43.010Z",
-    "lateP90": "2054-04-03T14:36:33.329Z",
-    "likelyEarly": "2029-06-21T08:43:19.602Z",
-    "likelyLate": "2041-08-08T23:21:12.245Z"
+    "earlyP10": "2027-04-17T17:11:01.187Z",
+    "lateP90": "2054-04-08T00:36:04.603Z",
+    "likelyEarly": "2029-06-22T16:06:32.381Z",
+    "likelyLate": "2041-08-12T05:02:48.918Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -8.954501,
+  "deltaMonths": -8.879838,
   "movers": [
     {
-      "factorId": "energy-headroom",
-      "contributionMonths": 1.95048,
-      "rationale": "Energy headroom is running high at 0.90 — a headwind pushing the date later.",
-      "citation": "https://www.iea.org/reports/electricity-2025"
+      "factorId": "adoption-usage",
+      "contributionMonths": -2.55,
+      "rationale": "Adoption and usage is running high at 1.00 — a tailwind pulling the date sooner.",
+      "citation": "https://openrouter.ai/rankings"
     },
     {
-      "factorId": "adoption-usage",
-      "contributionMonths": -1.8,
-      "rationale": "Adoption and usage is moderate at 0.64 — a tailwind pulling the date sooner.",
-      "citation": "https://openrouter.ai/rankings"
+      "factorId": "energy-headroom",
+      "contributionMonths": 1.98936,
+      "rationale": "Energy headroom is running high at 0.92 — a headwind pushing the date later.",
+      "citation": "https://www.iea.org/reports/electricity-2025"
     },
     {
       "factorId": "training-compute-growth",
@@ -68,6 +68,12 @@
       "citation": "https://www.anthropic.com/economic-index"
     },
     {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": 1.025764,
+      "rationale": "Public backlash pressure is running high at 0.92 — a headwind pushing the date later.",
+      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
+    },
+    {
       "factorId": "algorithmic-efficiency",
       "contributionMonths": -0.9324,
       "rationale": "Algorithmic efficiency is running high at 0.70 — a tailwind pulling the date sooner.",
@@ -92,28 +98,22 @@
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
-      "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.389318,
-      "rationale": "Public backlash pressure is running low at 0.36 — a headwind pushing the date later.",
-      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
-    },
-    {
       "factorId": "robotics-embodiment",
       "contributionMonths": -0.3888,
       "rationale": "Robotics & embodiment is moderate at 0.48 — a tailwind pulling the date sooner.",
       "citation": "https://ifr.org/worldrobotics/"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.341136,
-      "rationale": "Research velocity is running low at 0.37 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
       "factorId": "safety-eval-pressure",
       "contributionMonths": 0.306,
       "rationale": "Safety-eval pressure is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.aisi.gov.uk/"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.191799,
+      "rationale": "Research velocity is running low at 0.21 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     }
   ]
 }

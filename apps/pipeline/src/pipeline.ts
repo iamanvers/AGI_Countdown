@@ -189,7 +189,7 @@ export async function runRefresh(options: RefreshOptions): Promise<RefreshResult
     dueCadences,
     outputFiles: outputFiles.map((filePath) => basename(filePath)),
     notes: [
-      "Live connectors: Manifold, arXiv, GDELT. All other sources use cited curated values.",
+      "Live connectors: Manifold, arXiv, GDELT, GitHub, Hugging Face. All other sources use cited curated values.",
       "Date is computed deterministically from a forecast-blended anchor plus bounded live factors.",
     ],
   };

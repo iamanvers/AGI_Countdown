@@ -5,7 +5,8 @@ import type { AgiDefinitionId } from "@agi-countdown/config";
  *
  * These are hand-maintained values drawn from published forecasts, reports, and
  * datasets. They are deliberately conservative and carry a real citation so the
- * UI can attribute every number. Live connectors (Manifold / arXiv / GDELT)
+ * UI can attribute every number. Live connectors (Manifold / arXiv / GDELT /
+ * GitHub / Hugging Face)
  * override the relevant signals when a fetch succeeds; otherwise these provide a
  * sensible, attributable baseline so the app is always functional and honest.
  *

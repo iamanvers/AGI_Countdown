@@ -244,6 +244,130 @@ export const gdeltConnector: FreeStructuredConnector = {
   },
 };
 
+/**
+ * GitHub — live research/engineering velocity. Compares the count of new
+ * `topic:llm` repositories created in the last 30 days against the prior 30 days
+ * to produce a 0..1 momentum signal (no auth; search API).
+ */
+export const githubConnector: FreeStructuredConnector = {
+  parser: "github",
+  mode: "free-structured",
+  rateLimitKey: "github",
+  supports: (source) => source.parser === "github",
+  async fetch(source: SourceDef, context: ConnectorContext): Promise<ConnectorResult> {
+    const fetchedAt = context.now.toISOString();
+    try {
+      const day = 86_400_000;
+      const now = context.now.getTime();
+      const recent = await githubRepoCount(now - 30 * day, now);
+      const prior = await githubRepoCount(now - 60 * day, now - 30 * day);
+      if (recent + prior === 0) {
+        throw new Error("GitHub returned zero repos for both windows");
+      }
+      const momentum = clamp01(recent / (recent + prior));
+      return {
+        sourceId: source.id,
+        fetchedAt,
+        warnings: [],
+        samples: [
+          sample(
+            {
+              factorId: "research-velocity",
+              sourceId: source.id,
+              raw: recent,
+              unit: "new-llm-repos-30d",
+              normalized: momentum,
+              confidence: 0.62,
+              citation: "https://github.com/topics/llm",
+              notes: `New topic:llm repos: ${recent} (last 30d) vs ${prior} (prior 30d).`,
+            },
+            context.now,
+          ),
+        ],
+      };
+    } catch (error) {
+      return {
+        sourceId: source.id,
+        fetchedAt,
+        samples: [],
+        warnings: [`GitHub live fetch failed: ${describeError(error)}`],
+      };
+    }
+  },
+};
+
+async function githubRepoCount(fromMs: number, toMs: number): Promise<number> {
+  const day = (ms: number) => new Date(ms).toISOString().slice(0, 10);
+  const query = encodeURIComponent(`topic:llm created:${day(fromMs)}..${day(toMs)}`);
+  const url = `https://api.github.com/search/repositories?q=${query}&per_page=1`;
+  const response = await fetchWithTimeout(url, { headers: { accept: "application/vnd.github+json" } });
+  if (!response.ok) {
+    throw new Error(`GitHub responded ${response.status}`);
+  }
+  const payload = (await response.json()) as { total_count?: number };
+  return typeof payload.total_count === "number" ? payload.total_count : 0;
+}
+
+/**
+ * Hugging Face Hub — live adoption proxy. Sums recent downloads across the top
+ * text-generation models and maps to 0..1 with a saturating log scale (rolling
+ * normalization relativizes the absolute level over time). No auth.
+ */
+export const huggingFaceConnector: FreeStructuredConnector = {
+  parser: "hugging-face",
+  mode: "free-structured",
+  rateLimitKey: "hugging-face",
+  supports: (source) => source.parser === "hugging-face",
+  async fetch(source: SourceDef, context: ConnectorContext): Promise<ConnectorResult> {
+    const fetchedAt = context.now.toISOString();
+    try {
+      const url =
+        "https://huggingface.co/api/models?sort=downloads&direction=-1&limit=20&filter=text-generation";
+      const response = await fetchWithTimeout(url);
+      if (!response.ok) {
+        throw new Error(`Hugging Face responded ${response.status}`);
+      }
+      const models = (await response.json()) as Array<{ downloads?: number }>;
+      const total = models.reduce(
+        (sum, model) => sum + (typeof model.downloads === "number" ? model.downloads : 0),
+        0,
+      );
+      if (total <= 0) {
+        throw new Error("Hugging Face returned no downloads");
+      }
+      // ~1e9 monthly downloads across the top models reads as ~1.0.
+      const normalized = clamp01(Math.log10(total) / 9);
+      return {
+        sourceId: source.id,
+        fetchedAt,
+        warnings: [],
+        samples: [
+          sample(
+            {
+              factorId: "adoption-usage",
+              sourceId: source.id,
+              raw: total,
+              unit: "top20-text-gen-downloads-30d",
+              normalized,
+              confidence: 0.6,
+              citation: "https://huggingface.co/models",
+              notes: `Sum of recent downloads across the top-20 text-generation models: ${total.toLocaleString()}.`,
+            },
+            context.now,
+          ),
+        ],
+      };
+    } catch (error) {
+      return {
+        sourceId: source.id,
+        fetchedAt,
+        samples: [],
+        warnings: [`Hugging Face live fetch failed: ${describeError(error)}`],
+      };
+    }
+  },
+};
+
 function describeError(error: unknown): string {
   return error instanceof Error ? error.message : String(error);
 }
@@ -252,4 +376,6 @@ export const liveConnectors: readonly FreeStructuredConnector[] = [
   manifoldConnector,
   arxivConnector,
   gdeltConnector,
+  githubConnector,
+  huggingFaceConnector,
 ];
