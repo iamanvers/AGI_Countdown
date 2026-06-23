@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260623T200745571Z-transformative-ai",
-  "ts": "2026-06-23T20:07:45.571Z",
+  "runId": "refresh-hourly-20260623T221457924Z-transformative-ai",
+  "ts": "2026-06-23T22:14:57.924Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-04-24T10:47:47.091Z",
+  "tAgi": "2031-04-23T17:47:37.123Z",
   "progress": 58.02,
   "band": {
-    "earlyP10": "2028-05-29T23:52:36.646Z",
-    "lateP90": "2034-03-18T21:42:57.536Z",
-    "likelyEarly": "2029-11-10T17:20:11.869Z",
-    "likelyLate": "2032-10-05T04:15:22.313Z"
+    "earlyP10": "2028-05-29T18:16:51.335Z",
+    "lateP90": "2034-03-17T17:18:22.911Z",
+    "likelyEarly": "2029-11-10T06:02:14.229Z",
+    "likelyLate": "2032-10-04T05:33:00.017Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -8.264651,
+  "deltaMonths": -8.287927,
   "movers": [
     {
       "factorId": "adoption-usage",
@@ -87,14 +87,14 @@
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.708175,
+      "contributionMonths": 0.708987,
       "rationale": "Public backlash pressure is moderate at 0.44 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.632924,
-      "rationale": "Macro & bubble risk is running low at 0.21 — a headwind pushing the date later.",
+      "contributionMonths": 0.647476,
+      "rationale": "Macro & bubble risk is running low at 0.23 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -123,8 +123,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.156492,
-      "rationale": "AI capital formation is running low at 0.08 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.195132,
+      "rationale": "AI capital formation is running low at 0.10 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
   ]
