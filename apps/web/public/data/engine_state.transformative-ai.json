@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260623T050220637Z-transformative-ai",
-  "ts": "2026-06-23T05:02:20.637Z",
+  "runId": "refresh-hourly-20260623T083304678Z-transformative-ai",
+  "ts": "2026-06-23T08:33:04.678Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-04-22T02:16:01.567Z",
+  "tAgi": "2031-04-21T23:16:45.906Z",
   "progress": 58.02,
   "band": {
-    "earlyP10": "2028-05-28T16:35:47.659Z",
-    "lateP90": "2034-03-15T11:56:15.475Z",
-    "likelyEarly": "2029-11-08T21:25:54.613Z",
-    "likelyLate": "2032-10-02T07:06:08.521Z"
+    "earlyP10": "2028-05-28T17:28:20.444Z",
+    "lateP90": "2034-03-15T05:05:11.368Z",
+    "likelyEarly": "2029-11-08T20:22:33.175Z",
+    "likelyLate": "2032-10-02T02:10:58.637Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -8.342037,
+  "deltaMonths": -8.346127,
   "movers": [
     {
       "factorId": "adoption-usage",
@@ -87,7 +87,7 @@
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.700828,
+      "contributionMonths": 0.702467,
       "rationale": "Public backlash pressure is moderate at 0.43 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
@@ -99,8 +99,8 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.494047,
-      "rationale": "Macro & bubble risk is running low at 0.13 — a headwind pushing the date later.",
+      "contributionMonths": 0.528662,
+      "rationale": "Macro & bubble risk is running low at 0.15 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -117,14 +117,14 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.29997,
+      "contributionMonths": -0.303606,
       "rationale": "Research velocity is running low at 0.33 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.253092,
-      "rationale": "AI capital formation is running low at 0.13 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.2898,
+      "rationale": "AI capital formation is running low at 0.15 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
   ]
