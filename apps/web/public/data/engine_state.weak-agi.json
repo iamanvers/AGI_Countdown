@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260623T154912257Z-weak-agi",
-  "ts": "2026-06-23T15:49:12.257Z",
+  "runId": "refresh-hourly-20260623T175736915Z-weak-agi",
+  "ts": "2026-06-23T17:57:36.915Z",
   "definition": "weak-agi",
-  "tAgi": "2027-08-07T06:04:45.238Z",
+  "tAgi": "2027-08-06T18:36:22.447Z",
   "progress": 89.3125,
   "band": {
-    "earlyP10": "2026-08-07T00:15:33.238Z",
-    "lateP90": "2028-08-06T11:53:57.238Z",
-    "likelyEarly": "2027-02-05T15:10:09.238Z",
-    "likelyLate": "2028-02-05T20:59:21.238Z"
+    "earlyP10": "2026-08-06T12:47:10.447Z",
+    "lateP90": "2028-08-06T00:25:34.447Z",
+    "likelyEarly": "2027-02-05T03:41:46.447Z",
+    "likelyLate": "2028-02-05T09:30:58.447Z"
   },
   "anchor": "2028-06-15T06:57:42.712Z",
-  "deltaMonths": -10.284787,
+  "deltaMonths": -10.300493,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -99,7 +99,7 @@
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.513261,
+      "contributionMonths": 0.514445,
       "rationale": "Public backlash pressure is moderate at 0.43 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
@@ -111,8 +111,8 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.343554,
-      "rationale": "Macro & bubble risk is running low at 0.19 — a headwind pushing the date later.",
+      "contributionMonths": 0.35316,
+      "rationale": "Macro & bubble risk is running low at 0.20 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -123,8 +123,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.03864,
-      "rationale": "AI capital formation is running low at 0.04 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.065136,
+      "rationale": "AI capital formation is running low at 0.06 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
   ]
