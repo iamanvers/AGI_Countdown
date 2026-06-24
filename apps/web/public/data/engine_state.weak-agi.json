@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260624T132339535Z-weak-agi",
-  "ts": "2026-06-24T13:23:39.535Z",
+  "runId": "refresh-hourly-20260624T162258807Z-weak-agi",
+  "ts": "2026-06-24T16:22:58.807Z",
   "definition": "weak-agi",
-  "tAgi": "2027-08-03T09:07:57.465Z",
+  "tAgi": "2027-08-03T07:16:20.611Z",
   "progress": 89.3125,
   "band": {
-    "earlyP10": "2026-08-03T03:18:45.465Z",
-    "lateP90": "2028-08-02T14:57:09.465Z",
-    "likelyEarly": "2027-02-01T18:13:21.465Z",
-    "likelyLate": "2028-02-02T00:02:33.465Z"
+    "earlyP10": "2026-08-03T01:27:08.611Z",
+    "lateP90": "2028-08-02T13:05:32.611Z",
+    "likelyEarly": "2027-02-01T16:21:44.611Z",
+    "likelyLate": "2028-02-01T22:10:56.611Z"
   },
-  "anchor": "2028-06-15T09:10:55.618Z",
-  "deltaMonths": -10.415066,
+  "anchor": "2028-06-15T11:24:08.525Z",
+  "deltaMonths": -10.420652,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -99,7 +99,7 @@
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.519154,
+      "contributionMonths": 0.51974,
       "rationale": "Public backlash pressure is moderate at 0.44 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
@@ -111,7 +111,7 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.402286,
+      "contributionMonths": 0.40605,
       "rationale": "Macro & bubble risk is running low at 0.27 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
@@ -123,8 +123,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.202032,
-      "rationale": "AI capital formation is running low at 0.18 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.211968,
+      "rationale": "AI capital formation is running low at 0.19 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
   ]
