@@ -1,5 +1,5 @@
 {
-  "ts": "2026-06-23T23:59:03.430Z",
+  "ts": "2026-06-24T03:41:35.758Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -130,7 +130,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 32,
+          "sampleSize": 33,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -186,7 +186,7 @@
         "rolling": {
           "applied": false,
           "method": "log-zscore",
-          "sampleSize": 32,
+          "sampleSize": 33,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -222,9 +222,9 @@
         "rolling": {
           "applied": true,
           "method": "zscore",
-          "sampleSize": 32,
+          "sampleSize": 33,
           "zScore": 0.048,
-          "percentile": 0.781,
+          "percentile": 0.788,
           "volatility": 0.018
         }
       },
@@ -268,8 +268,8 @@
         "rolling": {
           "applied": true,
           "method": "momentum-01",
-          "sampleSize": 32,
-          "zScore": 0.519,
+          "sampleSize": 33,
+          "zScore": 0.509,
           "percentile": 1,
           "volatility": 0.053
         }
@@ -309,7 +309,7 @@
         "rolling": {
           "applied": false,
           "method": "log-zscore",
-          "sampleSize": 32,
+          "sampleSize": 33,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -355,7 +355,7 @@
         "rolling": {
           "applied": false,
           "method": "zscore",
-          "sampleSize": 32,
+          "sampleSize": 33,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -401,7 +401,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 32,
+          "sampleSize": 33,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -435,23 +435,23 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.438,
+        "normalized": 0.439,
         "level": 0.363,
         "confidence": 0.65,
         "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/",
         "rolling": {
           "applied": true,
           "method": "zscore",
-          "sampleSize": 32,
-          "zScore": -0.249,
-          "percentile": 0.938,
+          "sampleSize": 33,
+          "zScore": -0.244,
+          "percentile": 0.939,
           "volatility": 0.008
         }
       },
       "contributionMonths": {
-        "weak-agi": 0.516,
-        "transformative-ai": 0.71,
-        "strong-agi": 0.645
+        "weak-agi": 0.517,
+        "transformative-ai": 0.711,
+        "strong-agi": 0.646
       },
       "sources": [
         {
@@ -483,7 +483,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 32,
+          "sampleSize": 33,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -524,7 +524,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 32,
+          "sampleSize": 33,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -560,7 +560,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 32,
+          "sampleSize": 33,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -596,7 +596,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 32,
+          "sampleSize": 33,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -632,7 +632,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 32,
+          "sampleSize": 33,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -668,7 +668,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 32,
+          "sampleSize": 33,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -697,23 +697,23 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.118,
+        "normalized": 0.134,
         "level": 0.454,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
         "rolling": {
           "applied": true,
           "method": "log-zscore",
-          "sampleSize": 32,
-          "zScore": -2.01,
-          "percentile": 0.188,
-          "volatility": 0.099
+          "sampleSize": 33,
+          "zScore": -1.868,
+          "percentile": 0.212,
+          "volatility": 0.103
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.13,
-        "transformative-ai": -0.228,
-        "strong-agi": -0.163
+        "weak-agi": -0.148,
+        "transformative-ai": -0.259,
+        "strong-agi": -0.185
       },
       "sources": [
         {
@@ -738,23 +738,23 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.233,
+        "normalized": 0.241,
         "level": 0.164,
         "confidence": 0.65,
         "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N",
         "rolling": {
           "applied": true,
           "method": "zscore",
-          "sampleSize": 32,
-          "zScore": -1.191,
-          "percentile": 0.031,
-          "volatility": 0.09
+          "sampleSize": 33,
+          "zScore": -1.148,
+          "percentile": 0.03,
+          "volatility": 0.091
         }
       },
       "contributionMonths": {
-        "weak-agi": 0.377,
-        "transformative-ai": 0.659,
-        "strong-agi": 0.471
+        "weak-agi": 0.383,
+        "transformative-ai": 0.67,
+        "strong-agi": 0.479
       },
       "sources": [
         {
@@ -786,7 +786,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 32,
+          "sampleSize": 33,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -822,7 +822,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 15,
+          "sampleSize": 16,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -858,7 +858,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 25,
+          "sampleSize": 26,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
