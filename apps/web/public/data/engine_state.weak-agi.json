@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260624T105139116Z-weak-agi",
-  "ts": "2026-06-24T10:51:39.116Z",
+  "runId": "refresh-hourly-20260624T132339535Z-weak-agi",
+  "ts": "2026-06-24T13:23:39.535Z",
   "definition": "weak-agi",
-  "tAgi": "2027-08-03T11:12:59.022Z",
+  "tAgi": "2027-08-03T09:07:57.465Z",
   "progress": 89.3125,
   "band": {
-    "earlyP10": "2026-08-03T05:23:47.022Z",
-    "lateP90": "2028-08-02T17:02:11.022Z",
-    "likelyEarly": "2027-02-01T20:18:23.022Z",
-    "likelyLate": "2028-02-02T02:07:35.022Z"
+    "earlyP10": "2026-08-03T03:18:45.465Z",
+    "lateP90": "2028-08-02T14:57:09.465Z",
+    "likelyEarly": "2027-02-01T18:13:21.465Z",
+    "likelyLate": "2028-02-02T00:02:33.465Z"
   },
-  "anchor": "2028-06-15T06:57:42.712Z",
-  "deltaMonths": -10.409174,
+  "anchor": "2028-06-15T09:10:55.618Z",
+  "deltaMonths": -10.415066,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -99,7 +99,7 @@
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.518568,
+      "contributionMonths": 0.519154,
       "rationale": "Public backlash pressure is moderate at 0.44 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
@@ -111,8 +111,8 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.397724,
-      "rationale": "Macro & bubble risk is running low at 0.26 — a headwind pushing the date later.",
+      "contributionMonths": 0.402286,
+      "rationale": "Macro & bubble risk is running low at 0.27 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -123,8 +123,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.190992,
-      "rationale": "AI capital formation is running low at 0.17 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.202032,
+      "rationale": "AI capital formation is running low at 0.18 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
   ]
