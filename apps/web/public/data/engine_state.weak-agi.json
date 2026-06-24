@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260624T185229988Z-weak-agi",
-  "ts": "2026-06-24T18:52:29.988Z",
+  "runId": "refresh-hourly-20260624T204911314Z-weak-agi",
+  "ts": "2026-06-24T20:49:11.314Z",
   "definition": "weak-agi",
-  "tAgi": "2027-08-11T14:29:01.272Z",
+  "tAgi": "2027-08-10T08:13:05.636Z",
   "progress": 89.3125,
   "band": {
-    "earlyP10": "2026-08-11T08:39:49.272Z",
-    "lateP90": "2028-08-10T20:18:13.272Z",
-    "likelyEarly": "2027-02-09T23:34:25.272Z",
-    "likelyLate": "2028-02-10T05:23:37.272Z"
+    "earlyP10": "2026-08-10T02:23:53.636Z",
+    "lateP90": "2028-08-09T14:02:17.636Z",
+    "likelyEarly": "2027-02-08T17:18:29.636Z",
+    "likelyLate": "2028-02-08T23:07:41.636Z"
   },
   "anchor": "2028-06-15T11:24:08.525Z",
-  "deltaMonths": -10.147941,
+  "deltaMonths": -10.189373,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -69,8 +69,8 @@
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.797346,
-      "rationale": "Public backlash pressure is running high at 0.97 — a headwind pushing the date later.",
+      "contributionMonths": 0.76105,
+      "rationale": "Public backlash pressure is running high at 0.95 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
@@ -111,7 +111,7 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.409778,
+      "contributionMonths": 0.413474,
       "rationale": "Macro & bubble risk is running low at 0.28 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
@@ -123,8 +123,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.221904,
-      "rationale": "AI capital formation is running low at 0.20 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.230736,
+      "rationale": "AI capital formation is running low at 0.21 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
   ]
