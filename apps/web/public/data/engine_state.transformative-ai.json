@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260625T122300232Z-transformative-ai",
-  "ts": "2026-06-25T12:23:00.232Z",
+  "runId": "refresh-hourly-20260625T153954594Z-transformative-ai",
+  "ts": "2026-06-25T15:39:54.594Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-06-18T21:57:54.265Z",
-  "progress": 44.804,
+  "tAgi": "2031-06-19T02:19:49.627Z",
+  "progress": 44.74,
   "band": {
-    "earlyP10": "2028-06-22T05:32:00.723Z",
-    "lateP90": "2034-06-14T14:23:47.807Z",
-    "likelyEarly": "2029-12-20T01:44:57.494Z",
-    "likelyLate": "2032-12-15T18:10:51.036Z"
+    "earlyP10": "2028-06-22T09:14:05.872Z",
+    "lateP90": "2034-06-14T19:25:33.382Z",
+    "likelyEarly": "2029-12-20T05:46:57.750Z",
+    "likelyLate": "2032-12-15T22:52:41.504Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -6.442343,
+  "deltaMonths": -6.436367,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -75,8 +75,8 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.752609,
-      "rationale": "Macro & bubble risk is running low at 0.30 — a headwind pushing the date later.",
+      "contributionMonths": 0.756313,
+      "rationale": "Macro & bubble risk is running low at 0.31 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -87,8 +87,8 @@
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.699184,
-      "rationale": "Public backlash pressure is moderate at 0.42 — a headwind pushing the date later.",
+      "contributionMonths": 0.700007,
+      "rationale": "Public backlash pressure is moderate at 0.43 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
@@ -99,13 +99,13 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.51813,
+      "contributionMonths": -0.517221,
       "rationale": "Research velocity is moderate at 0.57 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.498456,
+      "contributionMonths": -0.508116,
       "rationale": "AI capital formation is running low at 0.26 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -117,7 +117,7 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.4437,
+      "contributionMonths": -0.4335,
       "rationale": "Adoption and usage is running low at 0.17 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
