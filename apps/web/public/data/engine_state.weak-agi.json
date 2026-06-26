@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260626T001103131Z-weak-agi",
-  "ts": "2026-06-26T00:11:03.131Z",
+  "runId": "refresh-hourly-20260626T050946565Z-weak-agi",
+  "ts": "2026-06-26T05:09:46.565Z",
   "definition": "weak-agi",
-  "tAgi": "2027-09-21T08:11:06.951Z",
-  "progress": 78.775,
+  "tAgi": "2027-09-21T11:14:42.957Z",
+  "progress": 78.7375,
   "band": {
-    "earlyP10": "2026-09-21T02:21:54.951Z",
-    "lateP90": "2028-09-20T14:00:18.951Z",
-    "likelyEarly": "2027-03-22T17:16:30.951Z",
-    "likelyLate": "2028-03-21T23:05:42.951Z"
+    "earlyP10": "2026-09-21T05:25:30.957Z",
+    "lateP90": "2028-09-20T17:03:54.957Z",
+    "likelyEarly": "2027-03-22T20:20:06.957Z",
+    "likelyLate": "2028-03-22T02:09:18.957Z"
   },
   "anchor": "2028-06-15T11:24:08.525Z",
-  "deltaMonths": -8.809513,
+  "deltaMonths": -8.805324,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -105,15 +105,9 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.439854,
+      "contributionMonths": 0.441235,
       "rationale": "Macro & bubble risk is running low at 0.32 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
-    },
-    {
-      "factorId": "adoption-usage",
-      "contributionMonths": -0.32028,
-      "rationale": "Adoption and usage is running low at 0.16 — a tailwind pulling the date sooner.",
-      "citation": "https://openrouter.ai/rankings"
     },
     {
       "factorId": "safety-eval-pressure",
@@ -122,8 +116,14 @@
       "citation": "https://www.aisi.gov.uk/"
     },
     {
+      "factorId": "adoption-usage",
+      "contributionMonths": -0.31416,
+      "rationale": "Adoption and usage is running low at 0.15 — a tailwind pulling the date sooner.",
+      "citation": "https://openrouter.ai/rankings"
+    },
+    {
       "factorId": "capital-formation",
-      "contributionMonths": -0.308016,
+      "contributionMonths": -0.311328,
       "rationale": "AI capital formation is running low at 0.28 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
