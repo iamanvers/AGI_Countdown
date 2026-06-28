@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20260628T093210316Z-transformative-ai",
-  "ts": "2026-06-28T09:32:10.316Z",
+  "runId": "refresh-hourly-20260628T110831170Z-transformative-ai",
+  "ts": "2026-06-28T11:08:31.170Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-06-23T08:00:21.343Z",
-  "progress": 43.732,
+  "tAgi": "2031-06-24T03:40:06.216Z",
+  "progress": 43.7,
   "band": {
-    "earlyP10": "2028-06-25T17:29:22.552Z",
-    "lateP90": "2034-06-19T22:31:20.134Z",
-    "likelyEarly": "2029-12-24T00:44:51.947Z",
-    "likelyLate": "2032-12-20T15:15:50.739Z"
+    "earlyP10": "2028-06-26T02:19:04.167Z",
+    "lateP90": "2034-06-21T05:01:08.265Z",
+    "likelyEarly": "2029-12-24T14:59:35.192Z",
+    "likelyLate": "2032-12-21T16:20:37.240Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -6.297178,
+  "deltaMonths": -6.270261,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -75,7 +75,7 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.817862,
+      "contributionMonths": 0.819,
       "rationale": "Macro & bubble risk is running low at 0.36 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
@@ -93,7 +93,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.631764,
+      "contributionMonths": -0.635628,
       "rationale": "AI capital formation is running low at 0.33 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -104,16 +104,16 @@
       "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.479043,
-      "rationale": "Research velocity is moderate at 0.53 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
       "factorId": "safety-eval-pressure",
       "contributionMonths": 0.456158,
       "rationale": "Safety-eval pressure is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.aisi.gov.uk/"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.4545,
+      "rationale": "Research velocity is moderate at 0.50 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "robotics-embodiment",
@@ -123,8 +123,8 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.27285,
-      "rationale": "Adoption and usage is running low at 0.11 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.26775,
+      "rationale": "Adoption and usage is running low at 0.10 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     }
   ]
