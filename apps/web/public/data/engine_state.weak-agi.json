@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260628T151829570Z-weak-agi",
-  "ts": "2026-06-28T15:18:29.570Z",
+  "runId": "refresh-hourly-20260628T171349506Z-weak-agi",
+  "ts": "2026-06-28T17:13:49.506Z",
   "definition": "weak-agi",
-  "tAgi": "2027-10-04T05:50:52.113Z",
-  "progress": 78.1,
+  "tAgi": "2027-09-26T09:49:30.039Z",
+  "progress": 78.075,
   "band": {
-    "earlyP10": "2026-10-04T00:01:40.113Z",
-    "lateP90": "2028-10-03T11:40:04.113Z",
-    "likelyEarly": "2027-04-04T14:56:16.113Z",
-    "likelyLate": "2028-04-03T20:45:28.113Z"
+    "earlyP10": "2026-09-26T04:00:18.039Z",
+    "lateP90": "2028-09-25T15:38:42.039Z",
+    "likelyEarly": "2027-03-27T18:54:54.039Z",
+    "likelyLate": "2028-03-27T00:44:06.039Z"
   },
-  "anchor": "2028-06-15T16:24:47.598Z",
-  "deltaMonths": -8.392459,
+  "anchor": "2028-06-15T13:09:07.180Z",
+  "deltaMonths": -8.645389,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -62,12 +62,6 @@
       "citation": "https://www.iea.org/reports/electricity-2025"
     },
     {
-      "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.761449,
-      "rationale": "Public backlash pressure is running high at 0.95 — a headwind pushing the date later.",
-      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
-    },
-    {
       "factorId": "data-availability",
       "contributionMonths": 0.72337,
       "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
@@ -98,6 +92,12 @@
       "citation": "https://www.bis.gov/"
     },
     {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": 0.504896,
+      "rationale": "Public backlash pressure is moderate at 0.42 — a headwind pushing the date later.",
+      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
+    },
+    {
       "factorId": "robotics-embodiment",
       "contributionMonths": -0.4752,
       "rationale": "Robotics & embodiment is moderate at 0.48 — a tailwind pulling the date sooner.",
@@ -105,13 +105,13 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.469946,
+      "contributionMonths": 0.470593,
       "rationale": "Macro & bubble risk is running low at 0.36 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.366528,
+      "contributionMonths": -0.367632,
       "rationale": "AI capital formation is running low at 0.33 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -123,7 +123,7 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.21012,
+      "contributionMonths": -0.20604,
       "rationale": "Adoption and usage is running low at 0.10 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     }

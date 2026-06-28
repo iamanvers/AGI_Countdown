@@ -1,5 +1,5 @@
 {
-  "ts": "2026-06-28T15:18:29.570Z",
+  "ts": "2026-06-28T17:13:49.506Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -130,7 +130,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 78,
+          "sampleSize": 79,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -186,7 +186,7 @@
         "rolling": {
           "applied": false,
           "method": "log-zscore",
-          "sampleSize": 78,
+          "sampleSize": 79,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -222,9 +222,9 @@
         "rolling": {
           "applied": true,
           "method": "zscore",
-          "sampleSize": 78,
-          "zScore": -0.001,
-          "percentile": 0.513,
+          "sampleSize": 79,
+          "zScore": 0,
+          "percentile": 0.519,
           "volatility": 0.012
         }
       },
@@ -261,23 +261,23 @@
       "weight": 5,
       "normalization": "momentum-01",
       "reading": {
-        "normalized": 0.103,
+        "normalized": 0.101,
         "level": 0.776,
         "confidence": 0.68,
         "citation": "https://openrouter.ai/rankings",
         "rolling": {
           "applied": true,
           "method": "momentum-01",
-          "sampleSize": 78,
-          "zScore": 0.304,
-          "percentile": 0.103,
+          "sampleSize": 79,
+          "zScore": 0.302,
+          "percentile": 0.101,
           "volatility": 0.037
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.21,
-        "transformative-ai": -0.263,
-        "strong-agi": -0.123
+        "weak-agi": -0.206,
+        "transformative-ai": -0.258,
+        "strong-agi": -0.12
       },
       "sources": [
         {
@@ -309,7 +309,7 @@
         "rolling": {
           "applied": false,
           "method": "log-zscore",
-          "sampleSize": 78,
+          "sampleSize": 79,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -355,7 +355,7 @@
         "rolling": {
           "applied": false,
           "method": "zscore",
-          "sampleSize": 78,
+          "sampleSize": 79,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -401,7 +401,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 78,
+          "sampleSize": 79,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -435,23 +435,23 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.953,
-        "level": 0.395,
+        "normalized": 0.419,
+        "level": 0.363,
         "confidence": 0.65,
         "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/",
         "rolling": {
           "applied": true,
           "method": "zscore",
-          "sampleSize": 78,
-          "zScore": 3.001,
-          "percentile": 1,
+          "sampleSize": 79,
+          "zScore": -0.328,
+          "percentile": 0.899,
           "volatility": 0.01
         }
       },
       "contributionMonths": {
-        "weak-agi": 0.761,
-        "transformative-ai": 1.047,
-        "strong-agi": 0.952
+        "weak-agi": 0.505,
+        "transformative-ai": 0.694,
+        "strong-agi": 0.631
       },
       "sources": [
         {
@@ -483,7 +483,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 78,
+          "sampleSize": 79,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -524,7 +524,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 78,
+          "sampleSize": 79,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -560,7 +560,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 78,
+          "sampleSize": 79,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -596,7 +596,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 78,
+          "sampleSize": 79,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -632,7 +632,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 78,
+          "sampleSize": 79,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -668,7 +668,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 78,
+          "sampleSize": 79,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -697,23 +697,23 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.332,
+        "normalized": 0.333,
         "level": 0.459,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
         "rolling": {
           "applied": true,
           "method": "log-zscore",
-          "sampleSize": 78,
-          "zScore": -0.7,
-          "percentile": 0.244,
+          "sampleSize": 79,
+          "zScore": -0.693,
+          "percentile": 0.241,
           "volatility": 0.114
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.367,
-        "transformative-ai": -0.641,
-        "strong-agi": -0.458
+        "weak-agi": -0.368,
+        "transformative-ai": -0.643,
+        "strong-agi": -0.46
       },
       "sources": [
         {
@@ -738,23 +738,23 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.363,
+        "normalized": 0.364,
         "level": 0.164,
         "confidence": 0.65,
         "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N",
         "rolling": {
           "applied": true,
           "method": "zscore",
-          "sampleSize": 78,
-          "zScore": -0.564,
+          "sampleSize": 79,
+          "zScore": -0.559,
           "percentile": 0.013,
           "volatility": 0.078
         }
       },
       "contributionMonths": {
-        "weak-agi": 0.47,
-        "transformative-ai": 0.822,
-        "strong-agi": 0.587
+        "weak-agi": 0.471,
+        "transformative-ai": 0.824,
+        "strong-agi": 0.588
       },
       "sources": [
         {
@@ -786,7 +786,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 78,
+          "sampleSize": 79,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -822,7 +822,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 61,
+          "sampleSize": 62,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -858,7 +858,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 71,
+          "sampleSize": 72,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0

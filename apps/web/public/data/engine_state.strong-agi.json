@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260628T151829570Z-strong-agi",
-  "ts": "2026-06-28T15:18:29.570Z",
+  "runId": "refresh-hourly-20260628T171349506Z-strong-agi",
+  "ts": "2026-06-28T17:13:49.506Z",
   "definition": "strong-agi",
-  "tAgi": "2039-05-05T21:51:56.356Z",
-  "progress": 31.365,
+  "tAgi": "2039-04-26T04:55:35.062Z",
+  "progress": 31.355,
   "band": {
-    "earlyP10": "2031-08-19T08:06:22.347Z",
-    "lateP90": "2047-01-20T11:37:30.365Z",
-    "likelyEarly": "2035-06-27T14:59:09.352Z",
-    "likelyLate": "2043-03-14T04:44:43.360Z"
+    "earlyP10": "2031-08-15T12:05:41.368Z",
+    "lateP90": "2047-01-04T21:45:28.756Z",
+    "likelyEarly": "2035-06-20T20:30:38.215Z",
+    "likelyLate": "2043-03-01T13:20:31.909Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -7.888094,
+  "deltaMonths": -8.206977,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -74,12 +74,6 @@
       "citation": "https://www.bis.gov/"
     },
     {
-      "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.951812,
-      "rationale": "Public backlash pressure is running high at 0.95 — a headwind pushing the date later.",
-      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
-    },
-    {
       "factorId": "policy-friction",
       "contributionMonths": 0.864153,
       "rationale": "Policy friction is running low at 0.38 — a headwind pushing the date later.",
@@ -90,6 +84,12 @@
       "contributionMonths": -0.648,
       "rationale": "Robotics & embodiment is moderate at 0.48 — a tailwind pulling the date sooner.",
       "citation": "https://ifr.org/worldrobotics/"
+    },
+    {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": 0.63112,
+      "rationale": "Public backlash pressure is moderate at 0.42 — a headwind pushing the date later.",
+      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
       "factorId": "research-velocity",
@@ -105,7 +105,7 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.587432,
+      "contributionMonths": 0.588241,
       "rationale": "Macro & bubble risk is running low at 0.36 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
@@ -117,13 +117,13 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.45816,
+      "contributionMonths": -0.45954,
       "rationale": "AI capital formation is running low at 0.33 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.12257,
+      "contributionMonths": -0.12019,
       "rationale": "Adoption and usage is running low at 0.10 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     }

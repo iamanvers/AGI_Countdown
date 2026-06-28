@@ -198,9 +198,9 @@
   {
     "factorId": "forecast-consensus-anchor",
     "sourceId": "manifold-ai-markets",
-    "ts": "2026-06-28T15:18:29.570Z",
-    "raw": 0.26631865332580257,
-    "normalized": 0.26631865332580257,
+    "ts": "2026-06-28T17:13:49.506Z",
+    "raw": 0.2656070535129948,
+    "normalized": 0.2656070535129948,
     "confidence": 0.7,
     "citation": "https://manifold.markets/search?term=AGI",
     "quarantined": false,
@@ -1148,6 +1148,20 @@
     "notes": "6 major frontier model releases in the last ~9 months (release velocity)."
   },
   {
+    "factorId": "frontier-release-cadence",
+    "sourceId": "epoch-ai-notable-models",
+    "ts": "2026-06-28T15:18:29.570Z",
+    "raw": 6,
+    "normalized": 0.75,
+    "confidence": 0.7,
+    "citation": "https://epoch.ai/data/notable-ai-models",
+    "quarantined": false,
+    "factorName": "Frontier release cadence",
+    "domain": "labs",
+    "unit": "frontier-releases-270d",
+    "notes": "6 major frontier model releases in the last ~9 months (release velocity)."
+  },
+  {
     "factorId": "hardware-supply",
     "sourceId": "tsmc-capacity",
     "ts": "2026-06-22T18:48:24.301Z",
@@ -1262,7 +1276,7 @@
   {
     "factorId": "public-backlash-pressure",
     "sourceId": "gdelt-ai-tone",
-    "ts": "2026-06-28T15:18:29.570Z",
+    "ts": "2026-06-28T17:13:49.506Z",
     "raw": 0.32,
     "normalized": 0.32,
     "confidence": 0.6,
@@ -1374,7 +1388,7 @@
   {
     "factorId": "frontier-release-cadence",
     "sourceId": "epoch-ai-notable-models",
-    "ts": "2026-06-28T15:18:29.570Z",
+    "ts": "2026-06-28T17:13:49.506Z",
     "raw": 6,
     "normalized": 0.75,
     "confidence": 0.7,
