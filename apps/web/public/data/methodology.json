@@ -1,5 +1,5 @@
 {
-  "ts": "2026-06-28T21:02:41.092Z",
+  "ts": "2026-06-28T22:08:32.976Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -130,7 +130,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 81,
+          "sampleSize": 82,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -186,7 +186,7 @@
         "rolling": {
           "applied": false,
           "method": "log-zscore",
-          "sampleSize": 81,
+          "sampleSize": 82,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -222,9 +222,9 @@
         "rolling": {
           "applied": true,
           "method": "zscore",
-          "sampleSize": 81,
+          "sampleSize": 82,
           "zScore": 0.001,
-          "percentile": 0.531,
+          "percentile": 0.537,
           "volatility": 0.012
         }
       },
@@ -261,23 +261,23 @@
       "weight": 5,
       "normalization": "momentum-01",
       "reading": {
-        "normalized": 0.099,
+        "normalized": 0.098,
         "level": 0.776,
         "confidence": 0.68,
         "citation": "https://openrouter.ai/rankings",
         "rolling": {
           "applied": true,
           "method": "momentum-01",
-          "sampleSize": 81,
-          "zScore": 0.297,
-          "percentile": 0.099,
+          "sampleSize": 82,
+          "zScore": 0.295,
+          "percentile": 0.098,
           "volatility": 0.036
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.202,
-        "transformative-ai": -0.252,
-        "strong-agi": -0.118
+        "weak-agi": -0.2,
+        "transformative-ai": -0.25,
+        "strong-agi": -0.117
       },
       "sources": [
         {
@@ -309,7 +309,7 @@
         "rolling": {
           "applied": false,
           "method": "log-zscore",
-          "sampleSize": 81,
+          "sampleSize": 82,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -355,7 +355,7 @@
         "rolling": {
           "applied": false,
           "method": "zscore",
-          "sampleSize": 81,
+          "sampleSize": 82,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -401,7 +401,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 81,
+          "sampleSize": 82,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -442,10 +442,10 @@
         "rolling": {
           "applied": true,
           "method": "zscore",
-          "sampleSize": 81,
-          "zScore": -0.323,
-          "percentile": 0.901,
-          "volatility": 0.01
+          "sampleSize": 82,
+          "zScore": -0.321,
+          "percentile": 0.902,
+          "volatility": 0.009
         }
       },
       "contributionMonths": {
@@ -483,7 +483,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 81,
+          "sampleSize": 82,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -524,7 +524,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 81,
+          "sampleSize": 82,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -560,7 +560,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 81,
+          "sampleSize": 82,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -596,7 +596,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 81,
+          "sampleSize": 82,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -632,7 +632,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 81,
+          "sampleSize": 82,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -668,7 +668,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 81,
+          "sampleSize": 82,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -697,23 +697,23 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.336,
+        "normalized": 0.337,
         "level": 0.459,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
         "rolling": {
           "applied": true,
           "method": "log-zscore",
-          "sampleSize": 81,
-          "zScore": -0.681,
-          "percentile": 0.235,
+          "sampleSize": 82,
+          "zScore": -0.675,
+          "percentile": 0.232,
           "volatility": 0.113
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.371,
-        "transformative-ai": -0.649,
-        "strong-agi": -0.464
+        "weak-agi": -0.372,
+        "transformative-ai": -0.651,
+        "strong-agi": -0.465
       },
       "sources": [
         {
@@ -738,23 +738,23 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.366,
+        "normalized": 0.367,
         "level": 0.164,
         "confidence": 0.65,
         "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N",
         "rolling": {
           "applied": true,
           "method": "zscore",
-          "sampleSize": 81,
-          "zScore": -0.55,
+          "sampleSize": 82,
+          "zScore": -0.546,
           "percentile": 0.012,
           "volatility": 0.077
         }
       },
       "contributionMonths": {
-        "weak-agi": 0.472,
-        "transformative-ai": 0.826,
-        "strong-agi": 0.59
+        "weak-agi": 0.473,
+        "transformative-ai": 0.827,
+        "strong-agi": 0.591
       },
       "sources": [
         {
@@ -786,7 +786,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 81,
+          "sampleSize": 82,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -822,7 +822,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 64,
+          "sampleSize": 65,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -858,7 +858,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 74,
+          "sampleSize": 75,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
