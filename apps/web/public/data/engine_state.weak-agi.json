@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260629T145024123Z-weak-agi",
-  "ts": "2026-06-29T14:50:24.123Z",
+  "runId": "refresh-hourly-20260629T173813867Z-weak-agi",
+  "ts": "2026-06-29T17:38:13.867Z",
   "definition": "weak-agi",
-  "tAgi": "2027-09-26T16:36:11.300Z",
-  "progress": 77.95,
+  "tAgi": "2027-09-26T21:19:24.139Z",
+  "progress": 77.9375,
   "band": {
-    "earlyP10": "2026-09-26T10:46:59.300Z",
-    "lateP90": "2028-09-25T22:25:23.300Z",
-    "likelyEarly": "2027-03-28T01:41:35.300Z",
-    "likelyLate": "2028-03-27T07:30:47.300Z"
+    "earlyP10": "2026-09-26T15:30:12.139Z",
+    "lateP90": "2028-09-26T03:08:36.139Z",
+    "likelyEarly": "2027-03-28T06:24:48.139Z",
+    "likelyLate": "2028-03-27T12:14:00.139Z"
   },
-  "anchor": "2028-06-15T14:30:35.726Z",
-  "deltaMonths": -8.637969,
+  "anchor": "2028-06-15T18:04:46.715Z",
+  "deltaMonths": -8.636394,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -99,7 +99,7 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.475736,
+      "contributionMonths": 0.476375,
       "rationale": "Macro & bubble risk is running low at 0.37 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
@@ -111,8 +111,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.38088,
-      "rationale": "AI capital formation is running low at 0.34 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.381984,
+      "rationale": "AI capital formation is running low at 0.35 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
@@ -123,7 +123,7 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.18564,
+      "contributionMonths": -0.1836,
       "rationale": "Adoption and usage is running low at 0.09 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     }
