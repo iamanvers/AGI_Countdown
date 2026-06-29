@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260629T173813867Z-weak-agi",
-  "ts": "2026-06-29T17:38:13.867Z",
+  "runId": "refresh-hourly-20260629T195941960Z-weak-agi",
+  "ts": "2026-06-29T19:59:41.960Z",
   "definition": "weak-agi",
-  "tAgi": "2027-09-26T21:19:24.139Z",
-  "progress": 77.9375,
+  "tAgi": "2027-09-26T21:47:21.268Z",
+  "progress": 77.925,
   "band": {
-    "earlyP10": "2026-09-26T15:30:12.139Z",
-    "lateP90": "2028-09-26T03:08:36.139Z",
-    "likelyEarly": "2027-03-28T06:24:48.139Z",
-    "likelyLate": "2028-03-27T12:14:00.139Z"
+    "earlyP10": "2026-09-26T15:58:09.268Z",
+    "lateP90": "2028-09-26T03:36:33.268Z",
+    "likelyEarly": "2027-03-28T06:52:45.268Z",
+    "likelyLate": "2028-03-27T12:41:57.268Z"
   },
-  "anchor": "2028-06-15T18:04:46.715Z",
-  "deltaMonths": -8.636394,
+  "anchor": "2028-06-15T16:57:29.406Z",
+  "deltaMonths": -8.634221,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -93,13 +93,13 @@
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.507899,
+      "contributionMonths": 0.508498,
       "rationale": "Public backlash pressure is moderate at 0.42 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.476375,
+      "contributionMonths": 0.477013,
       "rationale": "Macro & bubble risk is running low at 0.37 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
@@ -111,7 +111,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.381984,
+      "contributionMonths": -0.383088,
       "rationale": "AI capital formation is running low at 0.35 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -123,7 +123,7 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.1836,
+      "contributionMonths": -0.18156,
       "rationale": "Adoption and usage is running low at 0.09 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     }
