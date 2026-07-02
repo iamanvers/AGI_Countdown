@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260702T073400071Z-strong-agi",
-  "ts": "2026-07-02T07:34:00.071Z",
+  "runId": "refresh-daily-20260702T093126726Z-strong-agi",
+  "ts": "2026-07-02T09:31:26.726Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-17T20:35:29.851Z",
-  "progress": 31.205,
+  "tAgi": "2039-04-12T04:06:14.960Z",
+  "progress": 31.2,
   "band": {
-    "earlyP10": "2031-08-14T07:47:07.457Z",
-    "lateP90": "2046-12-20T09:23:52.245Z",
-    "likelyEarly": "2035-06-16T02:11:18.654Z",
-    "likelyLate": "2043-02-17T14:59:41.048Z"
+    "earlyP10": "2031-08-12T02:21:22.647Z",
+    "lateP90": "2046-12-11T05:51:07.273Z",
+    "likelyEarly": "2035-06-12T03:13:48.804Z",
+    "likelyLate": "2043-02-10T04:58:41.116Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.481226,
+  "deltaMonths": -8.668071,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -56,6 +56,12 @@
       "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -1.113984,
+      "rationale": "Research velocity is running high at 0.97 — a tailwind pulling the date sooner.",
+      "citation": "https://www.semanticscholar.org/"
+    },
+    {
       "factorId": "frontier-release-cadence",
       "contributionMonths": -1.05,
       "rationale": "Frontier release cadence is running high at 0.75 — a tailwind pulling the date sooner.",
@@ -74,12 +80,6 @@
       "citation": "https://www.bis.gov/"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.92718,
-      "rationale": "Research velocity is running high at 0.77 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
       "factorId": "policy-friction",
       "contributionMonths": 0.864153,
       "rationale": "Policy friction is running low at 0.38 — a headwind pushing the date later.",
@@ -93,13 +93,13 @@
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.634125,
+      "contributionMonths": 0.634874,
       "rationale": "Public backlash pressure is moderate at 0.42 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.608887,
+      "contributionMonths": 0.609667,
       "rationale": "Macro & bubble risk is running low at 0.39 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
@@ -117,13 +117,13 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.47196,
+      "contributionMonths": -0.47472,
       "rationale": "AI capital formation is running low at 0.34 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.08449,
+      "contributionMonths": -0.0833,
       "rationale": "Adoption and usage is running low at 0.07 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     }
