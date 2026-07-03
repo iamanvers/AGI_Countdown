@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260703T072147547Z-transformative-ai",
-  "ts": "2026-07-03T07:21:47.547Z",
+  "runId": "refresh-daily-20260703T093439420Z-transformative-ai",
+  "ts": "2026-07-03T09:34:39.420Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-06-15T18:40:42.123Z",
+  "tAgi": "2031-06-17T20:31:28.101Z",
   "progress": 43.06,
   "band": {
-    "earlyP10": "2028-06-25T15:43:36.539Z",
-    "lateP90": "2034-06-04T21:37:47.707Z",
-    "likelyEarly": "2029-12-20T05:12:09.331Z",
-    "likelyLate": "2032-12-09T08:09:14.915Z"
+    "earlyP10": "2028-06-26T13:01:34.200Z",
+    "lateP90": "2034-06-08T04:01:22.002Z",
+    "likelyEarly": "2029-12-21T16:46:31.151Z",
+    "likelyLate": "2032-12-12T00:16:25.051Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -6.545407,
+  "deltaMonths": -6.47717,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -75,15 +75,15 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.857889,
+      "contributionMonths": 0.858974,
       "rationale": "Macro & bubble risk is running low at 0.40 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.822528,
-      "rationale": "Research velocity is running high at 0.95 — a tailwind pulling the date sooner.",
-      "citation": "https://www.semanticscholar.org/"
+      "contributionMonths": -0.770832,
+      "rationale": "Research velocity is running high at 0.85 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "export-control-friction",
@@ -99,8 +99,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.681996,
-      "rationale": "AI capital formation is running low at 0.35 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.66654,
+      "rationale": "AI capital formation is running low at 0.34 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
