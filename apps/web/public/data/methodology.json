@@ -1,5 +1,5 @@
 {
-  "ts": "2026-07-04T11:27:49.214Z",
+  "ts": "2026-07-04T13:28:22.163Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -130,7 +130,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 136,
+          "sampleSize": 137,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -186,7 +186,7 @@
         "rolling": {
           "applied": false,
           "method": "log-zscore",
-          "sampleSize": 136,
+          "sampleSize": 137,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -222,9 +222,9 @@
         "rolling": {
           "applied": true,
           "method": "zscore",
-          "sampleSize": 136,
-          "zScore": 0.311,
-          "percentile": 0.735,
+          "sampleSize": 137,
+          "zScore": 0.309,
+          "percentile": 0.73,
           "volatility": 0.019
         }
       },
@@ -261,23 +261,23 @@
       "weight": 5,
       "normalization": "momentum-01",
       "reading": {
-        "normalized": 0.059,
+        "normalized": 0.058,
         "level": 0.776,
         "confidence": 0.68,
         "citation": "https://openrouter.ai/rankings",
         "rolling": {
           "applied": true,
           "method": "momentum-01",
-          "sampleSize": 136,
-          "zScore": 0.219,
-          "percentile": 0.059,
+          "sampleSize": 137,
+          "zScore": 0.218,
+          "percentile": 0.058,
           "volatility": 0.028
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.12,
-        "transformative-ai": -0.15,
-        "strong-agi": -0.07
+        "weak-agi": -0.118,
+        "transformative-ai": -0.148,
+        "strong-agi": -0.069
       },
       "sources": [
         {
@@ -309,7 +309,7 @@
         "rolling": {
           "applied": false,
           "method": "log-zscore",
-          "sampleSize": 136,
+          "sampleSize": 137,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -355,7 +355,7 @@
         "rolling": {
           "applied": false,
           "method": "zscore",
-          "sampleSize": 136,
+          "sampleSize": 137,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -401,7 +401,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 136,
+          "sampleSize": 137,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -442,9 +442,9 @@
         "rolling": {
           "applied": true,
           "method": "zscore",
-          "sampleSize": 136,
-          "zScore": -0.279,
-          "percentile": 0.919,
+          "sampleSize": 137,
+          "zScore": -0.278,
+          "percentile": 0.92,
           "volatility": 0.01
         }
       },
@@ -483,7 +483,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 136,
+          "sampleSize": 137,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -524,7 +524,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 136,
+          "sampleSize": 137,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -560,7 +560,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 136,
+          "sampleSize": 137,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -596,7 +596,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 136,
+          "sampleSize": 137,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -632,7 +632,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 136,
+          "sampleSize": 137,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -668,7 +668,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 136,
+          "sampleSize": 137,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -704,8 +704,8 @@
         "rolling": {
           "applied": true,
           "method": "log-zscore",
-          "sampleSize": 136,
-          "zScore": -0.634,
+          "sampleSize": 137,
+          "zScore": -0.631,
           "percentile": 0.007,
           "volatility": 0.097
         }
@@ -745,8 +745,8 @@
         "rolling": {
           "applied": true,
           "method": "zscore",
-          "sampleSize": 136,
-          "zScore": -0.401,
+          "sampleSize": 137,
+          "zScore": -0.4,
           "percentile": 0.007,
           "volatility": 0.063
         }
@@ -786,7 +786,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 136,
+          "sampleSize": 137,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -822,7 +822,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 119,
+          "sampleSize": 120,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -858,7 +858,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 129,
+          "sampleSize": 130,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
