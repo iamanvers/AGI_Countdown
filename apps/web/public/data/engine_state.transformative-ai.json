@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260705T101423287Z-transformative-ai",
-  "ts": "2026-07-05T10:14:23.287Z",
+  "runId": "refresh-hourly-20260705T121706517Z-transformative-ai",
+  "ts": "2026-07-05T12:17:06.517Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-07-08T11:40:29.870Z",
+  "tAgi": "2031-07-07T04:17:35.982Z",
   "progress": 42.884,
   "band": {
-    "earlyP10": "2028-07-06T00:23:39.025Z",
-    "lateP90": "2034-07-09T22:57:20.715Z",
-    "likelyEarly": "2030-01-05T18:02:04.447Z",
-    "likelyLate": "2033-01-07T05:18:55.293Z"
+    "earlyP10": "2028-07-05T13:04:22.971Z",
+    "lateP90": "2034-07-07T19:30:48.993Z",
+    "likelyEarly": "2030-01-04T20:40:59.477Z",
+    "likelyLate": "2033-01-05T11:54:12.487Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -5.799332,
+  "deltaMonths": -5.842292,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -50,12 +50,6 @@
       "citation": "https://investor.tsmc.com/english"
     },
     {
-      "factorId": "public-backlash-pressure",
-      "contributionMonths": 1.085549,
-      "rationale": "Public backlash pressure is running high at 0.95 — a headwind pushing the date later.",
-      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
-    },
-    {
       "factorId": "frontier-release-cadence",
       "contributionMonths": -1.05,
       "rationale": "Frontier release cadence is running high at 0.75 — a tailwind pulling the date sooner.",
@@ -66,6 +60,12 @@
       "contributionMonths": -1.04958,
       "rationale": "Labor automation exposure is moderate at 0.51 — a tailwind pulling the date sooner.",
       "citation": "https://www.anthropic.com/economic-index"
+    },
+    {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": 1.042589,
+      "rationale": "Public backlash pressure is running high at 0.94 — a headwind pushing the date later.",
+      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
       "factorId": "algorithmic-efficiency",

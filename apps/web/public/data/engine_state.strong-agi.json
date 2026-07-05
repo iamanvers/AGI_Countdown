@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260705T101423287Z-strong-agi",
-  "ts": "2026-07-05T10:14:23.287Z",
+  "runId": "refresh-hourly-20260705T121706517Z-strong-agi",
+  "ts": "2026-07-05T12:17:06.517Z",
   "definition": "strong-agi",
-  "tAgi": "2039-05-07T01:58:21.093Z",
+  "tAgi": "2039-05-05T21:26:36.363Z",
   "progress": 31.12,
   "band": {
-    "earlyP10": "2031-08-23T21:08:46.829Z",
-    "lateP90": "2047-01-18T06:47:55.357Z",
-    "likelyEarly": "2035-06-30T11:33:33.961Z",
-    "likelyLate": "2043-03-13T16:23:08.225Z"
+    "earlyP10": "2031-08-23T10:57:47.514Z",
+    "lateP90": "2047-01-16T07:55:25.212Z",
+    "likelyEarly": "2035-06-29T16:12:11.938Z",
+    "likelyLate": "2043-03-12T02:41:00.788Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -7.849617,
+  "deltaMonths": -7.888672,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -62,12 +62,6 @@
       "citation": "https://epoch.ai/data/notable-ai-models"
     },
     {
-      "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.986863,
-      "rationale": "Public backlash pressure is running high at 0.95 — a headwind pushing the date later.",
-      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
-    },
-    {
       "factorId": "data-availability",
       "contributionMonths": 0.986414,
       "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
@@ -78,6 +72,12 @@
       "contributionMonths": 0.965201,
       "rationale": "Export-control friction is moderate at 0.50 — a headwind pushing the date later.",
       "citation": "https://www.bis.gov/"
+    },
+    {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": 0.947808,
+      "rationale": "Public backlash pressure is running high at 0.94 — a headwind pushing the date later.",
+      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
       "factorId": "policy-friction",

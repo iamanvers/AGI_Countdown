@@ -198,7 +198,7 @@
   {
     "factorId": "forecast-consensus-anchor",
     "sourceId": "manifold-ai-markets",
-    "ts": "2026-07-05T10:14:23.287Z",
+    "ts": "2026-07-05T12:17:06.517Z",
     "raw": 0.2643212473174928,
     "normalized": 0.2643212473174928,
     "confidence": 0.7,
@@ -2128,6 +2128,20 @@
     "notes": "6 major frontier model releases in the last ~9 months (release velocity)."
   },
   {
+    "factorId": "frontier-release-cadence",
+    "sourceId": "epoch-ai-notable-models",
+    "ts": "2026-07-05T10:14:23.287Z",
+    "raw": 6,
+    "normalized": 0.75,
+    "confidence": 0.7,
+    "citation": "https://epoch.ai/data/notable-ai-models",
+    "quarantined": false,
+    "factorName": "Frontier release cadence",
+    "domain": "labs",
+    "unit": "frontier-releases-270d",
+    "notes": "6 major frontier model releases in the last ~9 months (release velocity)."
+  },
+  {
     "factorId": "hardware-supply",
     "sourceId": "tsmc-capacity",
     "ts": "2026-06-29T11:33:13.611Z",
@@ -2242,16 +2256,16 @@
   {
     "factorId": "public-backlash-pressure",
     "sourceId": "gdelt-ai-tone",
-    "ts": "2026-07-05T10:14:23.287Z",
-    "raw": 0.556,
-    "normalized": 0.45364880952380954,
-    "confidence": 0.65,
+    "ts": "2026-07-05T12:17:06.517Z",
+    "raw": 0.32,
+    "normalized": 0.32,
+    "confidence": 0.6,
     "citation": "https://www.gdeltproject.org/",
     "quarantined": false,
     "factorName": "Public backlash pressure",
     "domain": "sentiment",
-    "unit": "avg-tone",
-    "notes": "Mean GDELT tone for AI coverage over ~14d: 0.56."
+    "unit": "backlash-0-1",
+    "notes": "Fallback estimate; replaced by live GDELT tone when available."
   },
   {
     "factorId": "public-backlash-pressure",
@@ -2354,7 +2368,7 @@
   {
     "factorId": "frontier-release-cadence",
     "sourceId": "epoch-ai-notable-models",
-    "ts": "2026-07-05T10:14:23.287Z",
+    "ts": "2026-07-05T12:17:06.517Z",
     "raw": 6,
     "normalized": 0.75,
     "confidence": 0.7,
