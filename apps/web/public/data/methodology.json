@@ -1,5 +1,5 @@
 {
-  "ts": "2026-07-05T19:38:38.731Z",
+  "ts": "2026-07-05T21:02:03.294Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -130,7 +130,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 153,
+          "sampleSize": 154,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -186,7 +186,7 @@
         "rolling": {
           "applied": false,
           "method": "log-zscore",
-          "sampleSize": 153,
+          "sampleSize": 154,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -222,9 +222,9 @@
         "rolling": {
           "applied": true,
           "method": "zscore",
-          "sampleSize": 153,
-          "zScore": 0.186,
-          "percentile": 0.647,
+          "sampleSize": 154,
+          "zScore": 0.185,
+          "percentile": 0.643,
           "volatility": 0.018
         }
       },
@@ -268,8 +268,8 @@
         "rolling": {
           "applied": true,
           "method": "momentum-01",
-          "sampleSize": 153,
-          "zScore": 0.208,
+          "sampleSize": 154,
+          "zScore": 0.207,
           "percentile": 0.052,
           "volatility": 0.027
         }
@@ -309,7 +309,7 @@
         "rolling": {
           "applied": false,
           "method": "log-zscore",
-          "sampleSize": 153,
+          "sampleSize": 154,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -355,7 +355,7 @@
         "rolling": {
           "applied": false,
           "method": "zscore",
-          "sampleSize": 153,
+          "sampleSize": 154,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -401,7 +401,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 153,
+          "sampleSize": 154,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -435,23 +435,23 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.422,
+        "normalized": 0.423,
         "level": 0.363,
         "confidence": 0.65,
         "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/",
         "rolling": {
           "applied": true,
           "method": "zscore",
-          "sampleSize": 153,
-          "zScore": -0.313,
-          "percentile": 0.902,
+          "sampleSize": 154,
+          "zScore": -0.312,
+          "percentile": 0.903,
           "volatility": 0.01
         }
       },
       "contributionMonths": {
         "weak-agi": 0.507,
-        "transformative-ai": 0.697,
-        "strong-agi": 0.633
+        "transformative-ai": 0.698,
+        "strong-agi": 0.634
       },
       "sources": [
         {
@@ -483,7 +483,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 153,
+          "sampleSize": 154,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -524,7 +524,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 153,
+          "sampleSize": 154,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -560,7 +560,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 153,
+          "sampleSize": 154,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -596,7 +596,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 153,
+          "sampleSize": 154,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -632,7 +632,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 153,
+          "sampleSize": 154,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -668,7 +668,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 153,
+          "sampleSize": 154,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -704,9 +704,9 @@
         "rolling": {
           "applied": true,
           "method": "log-zscore",
-          "sampleSize": 153,
-          "zScore": -0.586,
-          "percentile": 0.007,
+          "sampleSize": 154,
+          "zScore": -0.583,
+          "percentile": 0.006,
           "volatility": 0.094
         }
       },
@@ -738,23 +738,23 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.407,
+        "normalized": 0.408,
         "level": 0.164,
         "confidence": 0.65,
         "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N",
         "rolling": {
           "applied": true,
           "method": "zscore",
-          "sampleSize": 153,
-          "zScore": -0.375,
-          "percentile": 0.007,
+          "sampleSize": 154,
+          "zScore": -0.374,
+          "percentile": 0.006,
           "volatility": 0.06
         }
       },
       "contributionMonths": {
         "weak-agi": 0.498,
-        "transformative-ai": 0.871,
-        "strong-agi": 0.622
+        "transformative-ai": 0.872,
+        "strong-agi": 0.623
       },
       "sources": [
         {
@@ -786,7 +786,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 153,
+          "sampleSize": 154,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -822,7 +822,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 136,
+          "sampleSize": 137,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -858,7 +858,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 146,
+          "sampleSize": 147,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
