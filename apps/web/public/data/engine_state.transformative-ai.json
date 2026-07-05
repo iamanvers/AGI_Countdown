@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260705T144422682Z-transformative-ai",
-  "ts": "2026-07-05T14:44:22.682Z",
+  "runId": "refresh-hourly-20260705T161011819Z-transformative-ai",
+  "ts": "2026-07-05T16:10:11.819Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-07-08T08:21:41.342Z",
+  "tAgi": "2031-07-07T02:17:48.886Z",
   "progress": 42.868,
   "band": {
-    "earlyP10": "2028-07-06T01:46:32.592Z",
-    "lateP90": "2034-07-09T14:56:50.092Z",
-    "likelyEarly": "2030-01-05T17:04:06.967Z",
-    "likelyLate": "2033-01-06T23:39:15.717Z"
+    "earlyP10": "2028-07-05T14:36:41.731Z",
+    "lateP90": "2034-07-07T13:58:56.041Z",
+    "likelyEarly": "2030-01-04T20:27:15.309Z",
+    "likelyLate": "2033-01-05T08:08:22.463Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -5.803868,
+  "deltaMonths": -5.845025,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -50,12 +50,6 @@
       "citation": "https://investor.tsmc.com/english"
     },
     {
-      "factorId": "public-backlash-pressure",
-      "contributionMonths": 1.080395,
-      "rationale": "Public backlash pressure is running high at 0.94 — a headwind pushing the date later.",
-      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
-    },
-    {
       "factorId": "frontier-release-cadence",
       "contributionMonths": -1.05,
       "rationale": "Frontier release cadence is running high at 0.75 — a tailwind pulling the date sooner.",
@@ -68,6 +62,12 @@
       "citation": "https://www.anthropic.com/economic-index"
     },
     {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": 1.038167,
+      "rationale": "Public backlash pressure is running high at 0.94 — a headwind pushing the date later.",
+      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
+    },
+    {
       "factorId": "algorithmic-efficiency",
       "contributionMonths": -0.9324,
       "rationale": "Algorithmic efficiency is running high at 0.70 — a tailwind pulling the date sooner.",
@@ -75,7 +75,7 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.869752,
+      "contributionMonths": 0.870823,
       "rationale": "Macro & bubble risk is moderate at 0.41 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },

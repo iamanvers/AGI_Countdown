@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260705T144422682Z-strong-agi",
-  "ts": "2026-07-05T14:44:22.682Z",
+  "runId": "refresh-hourly-20260705T161011819Z-strong-agi",
+  "ts": "2026-07-05T16:10:11.819Z",
   "definition": "strong-agi",
-  "tAgi": "2039-05-06T22:24:38.451Z",
+  "tAgi": "2039-05-05T18:55:34.258Z",
   "progress": 31.115,
   "band": {
-    "earlyP10": "2031-08-23T22:25:22.780Z",
-    "lateP90": "2047-01-17T22:23:54.122Z",
-    "likelyEarly": "2035-06-30T10:25:00.616Z",
-    "likelyLate": "2043-03-13T10:24:16.286Z"
+    "earlyP10": "2031-08-23T12:17:18.562Z",
+    "lateP90": "2047-01-16T01:33:49.954Z",
+    "likelyEarly": "2035-06-29T15:36:26.410Z",
+    "likelyLate": "2043-03-11T22:14:42.106Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -7.854493,
+  "deltaMonths": -7.892118,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -68,16 +68,16 @@
       "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
     },
     {
-      "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.982177,
-      "rationale": "Public backlash pressure is running high at 0.94 — a headwind pushing the date later.",
-      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
-    },
-    {
       "factorId": "export-control-friction",
       "contributionMonths": 0.965201,
       "rationale": "Export-control friction is moderate at 0.50 — a headwind pushing the date later.",
       "citation": "https://www.bis.gov/"
+    },
+    {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": 0.943788,
+      "rationale": "Public backlash pressure is running high at 0.94 — a headwind pushing the date later.",
+      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
       "factorId": "policy-friction",
@@ -99,7 +99,7 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.621252,
+      "contributionMonths": 0.622016,
       "rationale": "Macro & bubble risk is moderate at 0.41 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
