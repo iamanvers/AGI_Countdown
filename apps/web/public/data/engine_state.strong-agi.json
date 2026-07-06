@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260706T000703393Z-strong-agi",
-  "ts": "2026-07-06T00:07:03.393Z",
+  "runId": "refresh-hourly-20260706T051244506Z-strong-agi",
+  "ts": "2026-07-06T05:12:44.506Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-26T08:52:47.248Z",
+  "tAgi": "2039-04-26T08:58:34.374Z",
   "progress": 31.105,
   "band": {
-    "earlyP10": "2031-08-19T22:39:11.871Z",
-    "lateP90": "2046-12-31T19:06:22.625Z",
-    "likelyEarly": "2035-06-23T03:45:59.560Z",
-    "likelyLate": "2043-02-27T13:59:34.936Z"
+    "earlyP10": "2031-08-20T01:44:53.219Z",
+    "lateP90": "2046-12-31T16:12:15.529Z",
+    "likelyEarly": "2035-06-23T05:21:43.797Z",
+    "likelyLate": "2043-02-27T12:35:24.951Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.201565,
+  "deltaMonths": -8.201433,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -93,13 +93,13 @@
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.634125,
+      "contributionMonths": 0.634874,
       "rationale": "Public backlash pressure is moderate at 0.42 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.62278,
+      "contributionMonths": 0.623543,
       "rationale": "Macro & bubble risk is moderate at 0.41 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
@@ -117,7 +117,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.49542,
+      "contributionMonths": -0.4968,
       "rationale": "AI capital formation is running low at 0.36 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
