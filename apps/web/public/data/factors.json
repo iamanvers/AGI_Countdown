@@ -30,7 +30,7 @@
   {
     "factorId": "algorithmic-efficiency",
     "sourceId": "stanford-ai-index",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.7,
     "normalized": 0.7,
     "confidence": 0.74,
@@ -44,7 +44,7 @@
   {
     "factorId": "autonomy-horizon",
     "sourceId": "metr-autonomy",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.6,
     "normalized": 0.6,
     "confidence": 0.78,
@@ -58,7 +58,7 @@
   {
     "factorId": "capital-formation",
     "sourceId": "ai-index-investment",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.71,
     "normalized": 0.71,
     "confidence": 0.74,
@@ -86,7 +86,7 @@
   {
     "factorId": "data-availability",
     "sourceId": "epoch-data-wall",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.5,
     "normalized": 0.5,
     "confidence": 0.62,
@@ -100,7 +100,7 @@
   {
     "factorId": "datacenter-capex",
     "sourceId": "fred-macro",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.6,
     "normalized": 0.6,
     "confidence": 0.64,
@@ -114,7 +114,7 @@
   {
     "factorId": "datacenter-capex",
     "sourceId": "hyperscaler-ir",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.78,
     "normalized": 0.78,
     "confidence": 0.82,
@@ -128,7 +128,7 @@
   {
     "factorId": "datacenter-capex",
     "sourceId": "nvidia-earnings",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.8,
     "normalized": 0.8,
     "confidence": 0.83,
@@ -142,7 +142,7 @@
   {
     "factorId": "energy-headroom",
     "sourceId": "eia-electricity",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.45,
     "normalized": 0.45,
     "confidence": 0.72,
@@ -156,7 +156,7 @@
   {
     "factorId": "energy-headroom",
     "sourceId": "ember-electricity",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.43,
     "normalized": 0.43,
     "confidence": 0.7,
@@ -170,7 +170,7 @@
   {
     "factorId": "energy-headroom",
     "sourceId": "iea-energy",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.47,
     "normalized": 0.47,
     "confidence": 0.74,
@@ -184,7 +184,7 @@
   {
     "factorId": "export-control-friction",
     "sourceId": "bis-export-controls",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.5,
     "normalized": 0.5,
     "confidence": 0.7,
@@ -240,7 +240,7 @@
   {
     "factorId": "frontier-benchmark-saturation",
     "sourceId": "arc-prize",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.55,
     "normalized": 0.55,
     "confidence": 0.78,
@@ -254,7 +254,7 @@
   {
     "factorId": "frontier-benchmark-saturation",
     "sourceId": "helm-crfm",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.72,
     "normalized": 0.72,
     "confidence": 0.76,
@@ -296,7 +296,7 @@
   {
     "factorId": "frontier-benchmark-saturation",
     "sourceId": "stanford-ai-index",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.76,
     "normalized": 0.76,
     "confidence": 0.82,
@@ -2282,9 +2282,23 @@
     "notes": "6 major frontier model releases in the last ~9 months (release velocity)."
   },
   {
+    "factorId": "frontier-release-cadence",
+    "sourceId": "epoch-ai-notable-models",
+    "ts": "2026-07-06T11:01:42.920Z",
+    "raw": 6,
+    "normalized": 0.75,
+    "confidence": 0.7,
+    "citation": "https://epoch.ai/data/notable-ai-models",
+    "quarantined": false,
+    "factorName": "Frontier release cadence",
+    "domain": "labs",
+    "unit": "frontier-releases-270d",
+    "notes": "6 major frontier model releases in the last ~9 months (release velocity)."
+  },
+  {
     "factorId": "hardware-supply",
     "sourceId": "tsmc-capacity",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.7,
     "normalized": 0.7,
     "confidence": 0.78,
@@ -2298,7 +2312,7 @@
   {
     "factorId": "labor-automation-exposure",
     "sourceId": "anthropic-economic-index",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.52,
     "normalized": 0.52,
     "confidence": 0.75,
@@ -2312,7 +2326,7 @@
   {
     "factorId": "labor-automation-exposure",
     "sourceId": "onet-occupation-data",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.5,
     "normalized": 0.5,
     "confidence": 0.72,
@@ -2326,21 +2340,21 @@
   {
     "factorId": "macro-headwinds",
     "sourceId": "fred-recession",
-    "ts": "2026-06-29T11:33:13.611Z",
-    "raw": 0.44,
-    "normalized": 0.0044,
+    "ts": "2026-07-06T11:13:25.169Z",
+    "raw": 0.54,
+    "normalized": 0.0054,
     "confidence": 0.7,
     "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N",
     "quarantined": false,
     "factorName": "Macro & bubble risk",
     "domain": "economics",
     "unit": "level-pct",
-    "notes": "US recession probability 0.44% (FRED, live)."
+    "notes": "US recession probability 0.54% (FRED, live)."
   },
   {
     "factorId": "macro-headwinds",
     "sourceId": "macro-risk-index",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.35,
     "normalized": 0.35,
     "confidence": 0.6,
@@ -2354,7 +2368,7 @@
   {
     "factorId": "policy-friction",
     "sourceId": "eu-ai-act",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.42,
     "normalized": 0.42,
     "confidence": 0.72,
@@ -2368,7 +2382,7 @@
   {
     "factorId": "policy-friction",
     "sourceId": "nist-ai-risk",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.34,
     "normalized": 0.34,
     "confidence": 0.68,
@@ -2382,7 +2396,7 @@
   {
     "factorId": "policy-friction",
     "sourceId": "oecd-ai-policy",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.38,
     "normalized": 0.38,
     "confidence": 0.7,
@@ -2410,7 +2424,7 @@
   {
     "factorId": "public-backlash-pressure",
     "sourceId": "pew-ai-sentiment",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.4,
     "normalized": 0.4,
     "confidence": 0.7,
@@ -2452,7 +2466,7 @@
   {
     "factorId": "research-velocity",
     "sourceId": "semantic-scholar",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.64,
     "normalized": 0.64,
     "confidence": 0.7,
@@ -2466,7 +2480,7 @@
   {
     "factorId": "robotics-embodiment",
     "sourceId": "ifr-world-robotics",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.48,
     "normalized": 0.48,
     "confidence": 0.6,
@@ -2480,7 +2494,7 @@
   {
     "factorId": "safety-eval-pressure",
     "sourceId": "uk-aisi-evals",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.45,
     "normalized": 0.45,
     "confidence": 0.68,
@@ -2494,7 +2508,7 @@
   {
     "factorId": "training-compute-growth",
     "sourceId": "epoch-ai-notable-models",
-    "ts": "2026-06-29T11:33:13.611Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 0.72,
     "normalized": 0.72,
     "confidence": 0.85,
@@ -2508,7 +2522,7 @@
   {
     "factorId": "frontier-release-cadence",
     "sourceId": "epoch-ai-notable-models",
-    "ts": "2026-07-06T11:01:42.920Z",
+    "ts": "2026-07-06T11:13:25.169Z",
     "raw": 6,
     "normalized": 0.75,
     "confidence": 0.7,
