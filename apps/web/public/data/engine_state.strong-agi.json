@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260706T213826495Z-strong-agi",
-  "ts": "2026-07-06T21:38:26.495Z",
+  "runId": "refresh-hourly-20260706T230923048Z-strong-agi",
+  "ts": "2026-07-06T23:09:23.048Z",
   "definition": "strong-agi",
-  "tAgi": "2039-03-26T11:45:40.035Z",
+  "tAgi": "2039-03-26T11:25:19.833Z",
   "progress": 35.85,
   "band": {
-    "earlyP10": "2031-08-08T03:01:14.257Z",
-    "lateP90": "2046-11-11T20:30:05.813Z",
-    "likelyEarly": "2035-06-01T19:23:27.146Z",
-    "likelyLate": "2043-01-18T04:07:52.924Z"
+    "earlyP10": "2031-08-08T03:47:47.124Z",
+    "lateP90": "2046-11-11T19:02:52.542Z",
+    "likelyEarly": "2035-06-01T19:36:33.479Z",
+    "likelyLate": "2043-01-18T03:14:06.187Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -9.216122,
+  "deltaMonths": -9.216586,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -93,8 +93,8 @@
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.635622,
-      "rationale": "Public backlash pressure is moderate at 0.42 — a headwind pushing the date later.",
+      "contributionMonths": 0.63637,
+      "rationale": "Public backlash pressure is moderate at 0.43 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
@@ -111,7 +111,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.5454,
+      "contributionMonths": -0.546612,
       "rationale": "Research velocity is moderate at 0.45 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
