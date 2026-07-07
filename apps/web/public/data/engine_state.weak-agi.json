@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20260707T095949581Z-weak-agi",
-  "ts": "2026-07-07T09:59:49.581Z",
+  "runId": "refresh-hourly-20260707T105800490Z-weak-agi",
+  "ts": "2026-07-07T10:58:00.490Z",
   "definition": "weak-agi",
-  "tAgi": "2027-07-30T21:27:13.547Z",
+  "tAgi": "2027-07-26T23:05:20.329Z",
   "progress": 89.3125,
   "band": {
-    "earlyP10": "2026-07-30T15:38:01.547Z",
-    "lateP90": "2028-07-30T03:16:25.547Z",
-    "likelyEarly": "2027-01-29T06:32:37.547Z",
-    "likelyLate": "2028-01-29T12:21:49.547Z"
+    "earlyP10": "2026-07-26T17:16:08.329Z",
+    "lateP90": "2028-07-26T04:54:32.329Z",
+    "likelyEarly": "2027-01-25T08:10:44.329Z",
+    "likelyLate": "2028-01-25T13:59:56.329Z"
   },
   "anchor": "2028-06-15T23:59:21.945Z",
-  "deltaMonths": -10.549889,
+  "deltaMonths": -10.67907,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -62,16 +62,16 @@
       "citation": "https://investor.tsmc.com/english"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.854763,
+      "rationale": "Research velocity is moderate at 0.65 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
       "factorId": "energy-headroom",
       "contributionMonths": 0.845234,
       "rationale": "Energy & grid constraints is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.iea.org/reports/electricity-2025"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.726089,
-      "rationale": "Research velocity is moderate at 0.55 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "data-availability",
@@ -99,7 +99,7 @@
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.509096,
+      "contributionMonths": 0.509693,
       "rationale": "Public backlash pressure is moderate at 0.43 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
@@ -117,7 +117,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.404064,
+      "contributionMonths": -0.405168,
       "rationale": "AI capital formation is running low at 0.37 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
