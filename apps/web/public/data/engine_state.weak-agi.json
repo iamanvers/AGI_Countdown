@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260707T190321912Z-weak-agi",
-  "ts": "2026-07-07T19:03:21.912Z",
+  "runId": "refresh-hourly-20260707T205432624Z-weak-agi",
+  "ts": "2026-07-07T20:54:32.624Z",
   "definition": "weak-agi",
-  "tAgi": "2027-07-27T00:38:36.428Z",
+  "tAgi": "2027-07-27T01:40:24.370Z",
   "progress": 89.3125,
   "band": {
-    "earlyP10": "2026-07-26T18:49:24.428Z",
-    "lateP90": "2028-07-26T06:27:48.428Z",
-    "likelyEarly": "2027-01-25T09:44:00.428Z",
-    "likelyLate": "2028-01-25T15:33:12.428Z"
+    "earlyP10": "2026-07-26T19:51:12.370Z",
+    "lateP90": "2028-07-26T07:29:36.370Z",
+    "likelyEarly": "2027-01-25T10:45:48.370Z",
+    "likelyLate": "2028-01-25T16:35:00.370Z"
   },
   "anchor": "2028-06-15T23:59:21.945Z",
-  "deltaMonths": -10.676942,
+  "deltaMonths": -10.675532,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -63,7 +63,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.852137,
+      "contributionMonths": -0.850824,
       "rationale": "Research velocity is moderate at 0.65 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
@@ -99,14 +99,14 @@
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.509693,
+      "contributionMonths": 0.510289,
       "rationale": "Public backlash pressure is moderate at 0.43 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.50248,
-      "rationale": "Macro & bubble risk is moderate at 0.41 — a headwind pushing the date later.",
+      "contributionMonths": 0.503085,
+      "rationale": "Macro & bubble risk is moderate at 0.42 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -117,7 +117,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.406272,
+      "contributionMonths": -0.407376,
       "rationale": "AI capital formation is running low at 0.37 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
