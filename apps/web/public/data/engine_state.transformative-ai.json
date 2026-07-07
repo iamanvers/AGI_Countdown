@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260707T073944580Z-transformative-ai",
-  "ts": "2026-07-07T07:39:44.580Z",
+  "runId": "refresh-daily-20260707T095949581Z-transformative-ai",
+  "ts": "2026-07-07T09:59:49.581Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-04-16T15:45:17.998Z",
+  "tAgi": "2031-04-13T18:36:52.539Z",
   "progress": 58.02,
   "band": {
-    "earlyP10": "2028-06-03T23:40:14.766Z",
-    "lateP90": "2034-02-26T07:50:21.230Z",
-    "likelyEarly": "2029-11-09T07:42:46.382Z",
-    "likelyLate": "2032-09-20T23:47:49.614Z"
+    "earlyP10": "2028-06-02T21:22:54.364Z",
+    "lateP90": "2034-02-21T15:50:50.714Z",
+    "likelyEarly": "2029-11-07T07:59:53.452Z",
+    "likelyLate": "2032-09-17T05:13:51.626Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -8.520702,
+  "deltaMonths": -8.615352,
   "movers": [
     {
       "factorId": "adoption-usage",
@@ -93,8 +93,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.70518,
-      "rationale": "AI capital formation is running low at 0.36 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.707112,
+      "rationale": "AI capital formation is running low at 0.37 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
@@ -110,16 +110,16 @@
       "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.502677,
+      "rationale": "Research velocity is moderate at 0.55 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
       "factorId": "safety-eval-pressure",
       "contributionMonths": 0.456158,
       "rationale": "Safety-eval pressure is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.aisi.gov.uk/"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.409959,
-      "rationale": "Research velocity is moderate at 0.45 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "robotics-embodiment",
