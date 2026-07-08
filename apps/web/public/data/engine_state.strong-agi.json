@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20260708T084328527Z-strong-agi",
-  "ts": "2026-07-08T08:43:28.527Z",
+  "runId": "refresh-hourly-20260708T110552145Z-strong-agi",
+  "ts": "2026-07-08T11:05:52.145Z",
   "definition": "strong-agi",
-  "tAgi": "2039-03-19T01:34:39.242Z",
+  "tAgi": "2039-03-18T21:41:39.512Z",
   "progress": 35.85,
   "band": {
-    "earlyP10": "2031-08-06T00:47:26.153Z",
-    "lateP90": "2046-10-30T02:21:52.331Z",
-    "likelyEarly": "2035-05-28T01:11:02.698Z",
-    "likelyLate": "2043-01-08T01:58:15.786Z"
+    "earlyP10": "2031-08-06T00:39:23.940Z",
+    "lateP90": "2046-10-29T18:43:55.084Z",
+    "likelyEarly": "2035-05-27T23:10:31.726Z",
+    "likelyLate": "2043-01-07T20:12:47.298Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -9.460047,
+  "deltaMonths": -9.465363,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -87,8 +87,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.773256,
-      "rationale": "Research velocity is moderate at 0.64 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.764772,
+      "rationale": "Research velocity is moderate at 0.63 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -116,16 +116,16 @@
       "citation": "https://www.aisi.gov.uk/"
     },
     {
+      "factorId": "capital-formation",
+      "contributionMonths": -0.5382,
+      "rationale": "AI capital formation is running low at 0.39 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
+    },
+    {
       "factorId": "labor-automation-exposure",
       "contributionMonths": -0.52479,
       "rationale": "Labor automation exposure is moderate at 0.51 — a tailwind pulling the date sooner.",
       "citation": "https://www.anthropic.com/economic-index"
-    },
-    {
-      "factorId": "capital-formation",
-      "contributionMonths": -0.5244,
-      "rationale": "AI capital formation is running low at 0.38 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
   ]
 }
