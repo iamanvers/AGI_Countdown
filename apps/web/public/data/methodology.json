@@ -1,5 +1,5 @@
 {
-  "ts": "2026-07-08T08:30:39.643Z",
+  "ts": "2026-07-08T08:43:28.527Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -130,7 +130,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 178,
+          "sampleSize": 179,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -186,7 +186,7 @@
         "rolling": {
           "applied": false,
           "method": "log-zscore",
-          "sampleSize": 178,
+          "sampleSize": 179,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -215,23 +215,23 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.646,
+        "normalized": 0.638,
         "level": 0.552,
         "confidence": 0.673,
         "citation": "https://arxiv.org/list/cs.AI/recent",
         "rolling": {
           "applied": true,
           "method": "zscore",
-          "sampleSize": 178,
-          "zScore": 0.6,
-          "percentile": 0.904,
+          "sampleSize": 179,
+          "zScore": 0.568,
+          "percentile": 0.849,
           "volatility": 0.017
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.848,
-        "transformative-ai": -0.587,
-        "strong-agi": -0.783
+        "weak-agi": -0.838,
+        "transformative-ai": -0.58,
+        "strong-agi": -0.773
       },
       "sources": [
         {
@@ -268,8 +268,8 @@
         "rolling": {
           "applied": true,
           "method": "momentum-01",
-          "sampleSize": 178,
-          "zScore": 0.205,
+          "sampleSize": 179,
+          "zScore": 0.208,
           "percentile": 1,
           "volatility": 0.025
         }
@@ -309,7 +309,7 @@
         "rolling": {
           "applied": false,
           "method": "log-zscore",
-          "sampleSize": 178,
+          "sampleSize": 179,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -355,7 +355,7 @@
         "rolling": {
           "applied": false,
           "method": "zscore",
-          "sampleSize": 178,
+          "sampleSize": 179,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -401,7 +401,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 178,
+          "sampleSize": 179,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -442,8 +442,8 @@
         "rolling": {
           "applied": true,
           "method": "zscore",
-          "sampleSize": 178,
-          "zScore": -0.287,
+          "sampleSize": 179,
+          "zScore": -0.286,
           "percentile": 0.916,
           "volatility": 0.01
         }
@@ -483,7 +483,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 178,
+          "sampleSize": 179,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -524,7 +524,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 178,
+          "sampleSize": 179,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -560,7 +560,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 178,
+          "sampleSize": 179,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -596,7 +596,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 178,
+          "sampleSize": 179,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -632,7 +632,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 178,
+          "sampleSize": 179,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -668,7 +668,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 178,
+          "sampleSize": 179,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -697,23 +697,23 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.371,
-        "level": 0.439,
+        "normalized": 0.38,
+        "level": 0.442,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
         "rolling": {
           "applied": true,
           "method": "log-zscore",
-          "sampleSize": 178,
-          "zScore": -0.527,
-          "percentile": 0.006,
+          "sampleSize": 179,
+          "zScore": -0.488,
+          "percentile": 0.313,
           "volatility": 0.089
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.41,
-        "transformative-ai": -0.717,
-        "strong-agi": -0.512
+        "weak-agi": -0.42,
+        "transformative-ai": -0.734,
+        "strong-agi": -0.524
       },
       "sources": [
         {
@@ -745,9 +745,9 @@
         "rolling": {
           "applied": true,
           "method": "zscore",
-          "sampleSize": 178,
-          "zScore": -0.335,
-          "percentile": 0.893,
+          "sampleSize": 179,
+          "zScore": -0.334,
+          "percentile": 0.894,
           "volatility": 0.056
         }
       },
@@ -786,7 +786,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 178,
+          "sampleSize": 179,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -822,7 +822,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 161,
+          "sampleSize": 162,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
@@ -858,7 +858,7 @@
         "rolling": {
           "applied": false,
           "method": "momentum-01",
-          "sampleSize": 171,
+          "sampleSize": 172,
           "zScore": 0,
           "percentile": 0,
           "volatility": 0
