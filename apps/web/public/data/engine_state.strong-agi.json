@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260709T045401729Z-strong-agi",
-  "ts": "2026-07-09T04:54:01.729Z",
+  "runId": "refresh-hourly-20260709T082909688Z-strong-agi",
+  "ts": "2026-07-09T08:29:09.688Z",
   "definition": "strong-agi",
-  "tAgi": "2039-03-18T09:54:10.152Z",
-  "progress": 35.85,
+  "tAgi": "2039-03-26T14:44:13.620Z",
+  "progress": 34.73,
   "band": {
-    "earlyP10": "2031-08-06T06:44:39.919Z",
-    "lateP90": "2046-10-28T13:03:40.385Z",
-    "likelyEarly": "2035-05-27T20:19:25.035Z",
-    "likelyLate": "2043-01-06T23:28:55.269Z"
+    "earlyP10": "2031-08-09T15:39:21.541Z",
+    "lateP90": "2046-11-10T13:49:05.699Z",
+    "likelyEarly": "2035-06-02T15:11:47.580Z",
+    "likelyLate": "2043-01-17T14:16:39.660Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -9.481505,
+  "deltaMonths": -9.212048,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -50,12 +50,6 @@
       "citation": "https://investor.tsmc.com/english"
     },
     {
-      "factorId": "adoption-usage",
-      "contributionMonths": -1.19,
-      "rationale": "Adoption and usage is running high at 1.00 — a tailwind pulling the date sooner.",
-      "citation": "https://openrouter.ai/rankings"
-    },
-    {
       "factorId": "datacenter-capex",
       "contributionMonths": -1.125153,
       "rationale": "Datacenter capex is running high at 0.74 — a tailwind pulling the date sooner.",
@@ -80,6 +74,12 @@
       "citation": "https://www.bis.gov/"
     },
     {
+      "factorId": "adoption-usage",
+      "contributionMonths": -0.92344,
+      "rationale": "Adoption and usage is running high at 0.78 — a tailwind pulling the date sooner.",
+      "citation": "https://openrouter.ai/rankings"
+    },
+    {
       "factorId": "policy-friction",
       "contributionMonths": 0.864153,
       "rationale": "Policy friction is running low at 0.38 — a headwind pushing the date later.",
@@ -87,7 +87,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.77568,
+      "contributionMonths": -0.774468,
       "rationale": "Research velocity is moderate at 0.64 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
@@ -99,13 +99,13 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.642317,
-      "rationale": "Macro & bubble risk is moderate at 0.43 — a headwind pushing the date later.",
+      "contributionMonths": 0.644533,
+      "rationale": "Macro & bubble risk is moderate at 0.44 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.638606,
+      "contributionMonths": 0.640835,
       "rationale": "Public backlash pressure is moderate at 0.43 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
@@ -117,8 +117,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.55614,
-      "rationale": "AI capital formation is moderate at 0.40 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.5589,
+      "rationale": "AI capital formation is moderate at 0.41 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
