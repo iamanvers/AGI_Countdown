@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260709T175735603Z-transformative-ai",
-  "ts": "2026-07-09T17:57:35.603Z",
+  "runId": "refresh-hourly-20260709T194758785Z-transformative-ai",
+  "ts": "2026-07-09T19:47:58.785Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-04-08T00:42:38.571Z",
+  "tAgi": "2031-04-07T23:21:33.540Z",
   "progress": 58.02,
   "band": {
-    "earlyP10": "2028-06-02T00:58:10.179Z",
-    "lateP90": "2034-02-11T00:27:06.963Z",
-    "likelyEarly": "2029-11-04T00:50:24.375Z",
-    "likelyLate": "2032-09-09T00:34:52.767Z"
+    "earlyP10": "2028-06-02T01:34:01.030Z",
+    "lateP90": "2034-02-10T21:09:06.050Z",
+    "likelyEarly": "2029-11-04T00:27:47.285Z",
+    "likelyLate": "2032-09-08T22:15:19.795Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -8.804136,
+  "deltaMonths": -8.805986,
   "movers": [
     {
       "factorId": "adoption-usage",
@@ -75,21 +75,21 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.91567,
+      "contributionMonths": 0.91973,
       "rationale": "Macro & bubble risk is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
+    },
+    {
+      "factorId": "capital-formation",
+      "contributionMonths": -0.867468,
+      "rationale": "AI capital formation is moderate at 0.45 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "policy-friction",
       "contributionMonths": 0.864153,
       "rationale": "Policy friction is running low at 0.38 — a headwind pushing the date later.",
       "citation": "https://artificialintelligenceact.eu/"
-    },
-    {
-      "factorId": "capital-formation",
-      "contributionMonths": -0.85974,
-      "rationale": "AI capital formation is moderate at 0.45 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "export-control-friction",
@@ -111,7 +111,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.583578,
+      "contributionMonths": -0.58176,
       "rationale": "Research velocity is moderate at 0.64 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
