@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260710T131242677Z-transformative-ai",
-  "ts": "2026-07-10T13:12:42.677Z",
+  "runId": "refresh-hourly-20260710T162632292Z-transformative-ai",
+  "ts": "2026-07-10T16:26:32.292Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-03-21T14:27:27.533Z",
+  "tAgi": "2031-03-20T22:51:00.380Z",
   "progress": 58.02,
   "band": {
-    "earlyP10": "2028-05-26T13:32:14.934Z",
-    "lateP90": "2034-01-13T15:22:40.132Z",
-    "likelyEarly": "2029-10-23T01:59:51.233Z",
-    "likelyLate": "2032-08-17T02:55:03.833Z"
+    "earlyP10": "2028-05-26T09:15:03.496Z",
+    "lateP90": "2034-01-12T12:26:57.264Z",
+    "likelyEarly": "2029-10-22T16:03:01.938Z",
+    "likelyLate": "2032-08-16T05:38:58.822Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -9.376705,
+  "deltaMonths": -9.398071,
   "movers": [
     {
       "factorId": "adoption-usage",
@@ -50,16 +50,16 @@
       "citation": "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/"
     },
     {
+      "factorId": "capital-formation",
+      "contributionMonths": -1.108968,
+      "rationale": "AI capital formation is moderate at 0.57 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
+    },
+    {
       "factorId": "hardware-supply",
       "contributionMonths": -1.092,
       "rationale": "Hardware supply is running high at 0.70 — a tailwind pulling the date sooner.",
       "citation": "https://investor.tsmc.com/english"
-    },
-    {
-      "factorId": "capital-formation",
-      "contributionMonths": -1.085784,
-      "rationale": "AI capital formation is moderate at 0.56 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "frontier-release-cadence",
@@ -105,7 +105,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.567216,
+      "contributionMonths": -0.565398,
       "rationale": "Research velocity is moderate at 0.62 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
