@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20260710T095158288Z-transformative-ai",
-  "ts": "2026-07-10T09:51:58.288Z",
+  "runId": "refresh-hourly-20260710T105528741Z-transformative-ai",
+  "ts": "2026-07-10T10:55:28.741Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-04-05T20:02:20.735Z",
+  "tAgi": "2031-04-03T15:48:02.339Z",
   "progress": 58.02,
   "band": {
-    "earlyP10": "2028-06-01T13:39:53.080Z",
-    "lateP90": "2034-02-07T02:24:48.390Z",
-    "likelyEarly": "2029-11-02T16:51:06.908Z",
-    "likelyLate": "2032-09-05T23:13:34.562Z"
+    "earlyP10": "2028-05-31T17:27:04.523Z",
+    "lateP90": "2034-02-03T14:09:00.155Z",
+    "likelyEarly": "2029-11-01T04:37:33.431Z",
+    "likelyLate": "2032-09-03T02:58:31.247Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -8.876241,
+  "deltaMonths": -8.947753,
   "movers": [
     {
       "factorId": "adoption-usage",
@@ -56,6 +56,12 @@
       "citation": "https://investor.tsmc.com/english"
     },
     {
+      "factorId": "capital-formation",
+      "contributionMonths": -1.064532,
+      "rationale": "AI capital formation is moderate at 0.55 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
+    },
+    {
       "factorId": "frontier-release-cadence",
       "contributionMonths": -1.05,
       "rationale": "Frontier release cadence is running high at 0.75 — a tailwind pulling the date sooner.",
@@ -68,15 +74,9 @@
       "citation": "https://www.anthropic.com/economic-index"
     },
     {
-      "factorId": "capital-formation",
-      "contributionMonths": -0.97566,
-      "rationale": "AI capital formation is moderate at 0.51 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
-    },
-    {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.947668,
-      "rationale": "Macro & bubble risk is moderate at 0.48 — a headwind pushing the date later.",
+      "contributionMonths": 0.962301,
+      "rationale": "Macro & bubble risk is moderate at 0.50 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -111,7 +111,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.571761,
+      "contributionMonths": -0.569034,
       "rationale": "Research velocity is moderate at 0.63 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
