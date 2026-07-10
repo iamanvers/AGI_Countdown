@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260710T105528741Z-transformative-ai",
-  "ts": "2026-07-10T10:55:28.741Z",
+  "runId": "refresh-hourly-20260710T131242677Z-transformative-ai",
+  "ts": "2026-07-10T13:12:42.677Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-04-03T15:48:02.339Z",
+  "tAgi": "2031-03-21T14:27:27.533Z",
   "progress": 58.02,
   "band": {
-    "earlyP10": "2028-05-31T17:27:04.523Z",
-    "lateP90": "2034-02-03T14:09:00.155Z",
-    "likelyEarly": "2029-11-01T04:37:33.431Z",
-    "likelyLate": "2032-09-03T02:58:31.247Z"
+    "earlyP10": "2028-05-26T13:32:14.934Z",
+    "lateP90": "2034-01-13T15:22:40.132Z",
+    "likelyEarly": "2029-10-23T01:59:51.233Z",
+    "likelyLate": "2032-08-17T02:55:03.833Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -8.947753,
+  "deltaMonths": -9.376705,
   "movers": [
     {
       "factorId": "adoption-usage",
@@ -57,8 +57,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.064532,
-      "rationale": "AI capital formation is moderate at 0.55 — a tailwind pulling the date sooner.",
+      "contributionMonths": -1.085784,
+      "rationale": "AI capital formation is moderate at 0.56 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
@@ -72,12 +72,6 @@
       "contributionMonths": -1.04958,
       "rationale": "Labor automation exposure is moderate at 0.51 — a tailwind pulling the date sooner.",
       "citation": "https://www.anthropic.com/economic-index"
-    },
-    {
-      "factorId": "macro-headwinds",
-      "contributionMonths": 0.962301,
-      "rationale": "Macro & bubble risk is moderate at 0.50 — a headwind pushing the date later.",
-      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "algorithmic-efficiency",
@@ -111,9 +105,15 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.569034,
-      "rationale": "Research velocity is moderate at 0.63 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.567216,
+      "rationale": "Research velocity is moderate at 0.62 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
+      "factorId": "macro-headwinds",
+      "contributionMonths": 0.552783,
+      "rationale": "Macro & bubble risk is running low at 0.16 — a headwind pushing the date later.",
+      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "safety-eval-pressure",

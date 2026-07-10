@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260710T105528741Z-weak-agi",
-  "ts": "2026-07-10T10:55:28.741Z",
+  "runId": "refresh-hourly-20260710T131242677Z-weak-agi",
+  "ts": "2026-07-10T13:12:42.677Z",
   "definition": "weak-agi",
-  "tAgi": "2027-07-23T12:24:54.395Z",
+  "tAgi": "2027-07-16T02:31:17.611Z",
   "progress": 89.3125,
   "band": {
-    "earlyP10": "2026-07-23T06:35:42.395Z",
-    "lateP90": "2028-07-22T18:14:06.395Z",
-    "likelyEarly": "2027-01-21T21:30:18.395Z",
-    "likelyLate": "2028-01-22T03:19:30.395Z"
+    "earlyP10": "2026-07-15T20:42:05.611Z",
+    "lateP90": "2028-07-15T08:20:29.611Z",
+    "likelyEarly": "2027-01-14T11:36:41.611Z",
+    "likelyLate": "2028-01-14T17:25:53.611Z"
   },
   "anchor": "2028-06-16T03:10:54.764Z",
-  "deltaMonths": -10.796617,
+  "deltaMonths": -11.040145,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -69,8 +69,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.821938,
-      "rationale": "Research velocity is moderate at 0.63 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.819312,
+      "rationale": "Research velocity is moderate at 0.62 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -81,8 +81,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.608304,
-      "rationale": "AI capital formation is moderate at 0.55 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.620448,
+      "rationale": "AI capital formation is moderate at 0.56 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
@@ -104,12 +104,6 @@
       "citation": "https://www.bis.gov/"
     },
     {
-      "factorId": "macro-headwinds",
-      "contributionMonths": 0.549886,
-      "rationale": "Macro & bubble risk is moderate at 0.50 — a headwind pushing the date later.",
-      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
-    },
-    {
       "factorId": "public-backlash-pressure",
       "contributionMonths": 0.514445,
       "rationale": "Public backlash pressure is moderate at 0.43 — a headwind pushing the date later.",
@@ -126,6 +120,12 @@
       "contributionMonths": 0.319311,
       "rationale": "Safety-eval pressure is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.aisi.gov.uk/"
+    },
+    {
+      "factorId": "macro-headwinds",
+      "contributionMonths": 0.315876,
+      "rationale": "Macro & bubble risk is running low at 0.16 — a headwind pushing the date later.",
+      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     }
   ]
 }
