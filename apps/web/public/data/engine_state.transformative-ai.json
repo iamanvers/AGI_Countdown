@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260710T220421670Z-transformative-ai",
-  "ts": "2026-07-10T22:04:21.670Z",
+  "runId": "refresh-hourly-20260710T230850841Z-transformative-ai",
+  "ts": "2026-07-10T23:08:50.841Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-03-17T08:30:40.181Z",
+  "tAgi": "2031-03-14T14:05:48.934Z",
   "progress": 58.02,
   "band": {
-    "earlyP10": "2028-05-25T02:08:34.280Z",
-    "lateP90": "2034-01-06T14:52:46.082Z",
-    "likelyEarly": "2029-10-20T05:19:37.231Z",
-    "likelyLate": "2032-08-11T11:41:43.131Z"
+    "earlyP10": "2028-05-24T00:14:37.022Z",
+    "lateP90": "2034-01-02T03:57:00.846Z",
+    "likelyEarly": "2029-10-18T07:10:12.978Z",
+    "likelyLate": "2032-08-07T21:01:24.890Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -9.516265,
+  "deltaMonths": -9.607183,
   "movers": [
     {
       "factorId": "adoption-usage",
@@ -44,16 +44,16 @@
       "citation": "https://www.iea.org/reports/electricity-2025"
     },
     {
+      "factorId": "capital-formation",
+      "contributionMonths": -1.325352,
+      "rationale": "AI capital formation is running high at 0.69 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
+    },
+    {
       "factorId": "autonomy-horizon",
       "contributionMonths": -1.2636,
       "rationale": "Autonomy horizon is moderate at 0.60 — a tailwind pulling the date sooner.",
       "citation": "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/"
-    },
-    {
-      "factorId": "capital-formation",
-      "contributionMonths": -1.232616,
-      "rationale": "AI capital formation is moderate at 0.64 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "hardware-supply",
@@ -105,8 +105,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.559944,
-      "rationale": "Research velocity is moderate at 0.62 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.558126,
+      "rationale": "Research velocity is moderate at 0.61 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
