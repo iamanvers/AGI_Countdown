@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260709T231240871Z-strong-agi",
-  "ts": "2026-07-09T23:12:40.871Z",
+  "runId": "refresh-hourly-20260710T032621897Z-strong-agi",
+  "ts": "2026-07-10T03:26:21.897Z",
   "definition": "strong-agi",
-  "tAgi": "2039-03-17T02:41:26.365Z",
+  "tAgi": "2039-03-17T03:02:20.754Z",
   "progress": 35.85,
   "band": {
-    "earlyP10": "2031-08-06T05:18:51.850Z",
-    "lateP90": "2046-10-26T00:04:00.880Z",
-    "likelyEarly": "2035-05-27T04:00:09.107Z",
-    "likelyLate": "2043-01-05T01:22:43.623Z"
+    "earlyP10": "2031-08-06T07:59:55.624Z",
+    "lateP90": "2046-10-25T22:04:45.884Z",
+    "likelyEarly": "2035-05-27T05:31:08.189Z",
+    "likelyLate": "2043-01-05T00:33:33.319Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -9.524233,
+  "deltaMonths": -9.523756,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -87,14 +87,14 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.770832,
-      "rationale": "Research velocity is moderate at 0.64 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.768408,
+      "rationale": "Research velocity is moderate at 0.63 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.66343,
-      "rationale": "Macro & bubble risk is moderate at 0.46 — a headwind pushing the date later.",
+      "contributionMonths": 0.667003,
+      "rationale": "Macro & bubble risk is moderate at 0.47 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -111,7 +111,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.62928,
+      "contributionMonths": -0.6348,
       "rationale": "AI capital formation is moderate at 0.46 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
