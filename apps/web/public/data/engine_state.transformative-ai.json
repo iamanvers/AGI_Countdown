@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260711T054215136Z-transformative-ai",
-  "ts": "2026-07-11T05:42:15.136Z",
+  "runId": "refresh-hourly-20260711T075756925Z-transformative-ai",
+  "ts": "2026-07-11T07:57:56.925Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-03-03T15:25:44.868Z",
+  "tAgi": "2031-03-03T20:59:27.754Z",
   "progress": 58.02,
   "band": {
-    "earlyP10": "2028-05-19T19:09:02.284Z",
-    "lateP90": "2033-12-15T11:42:27.452Z",
-    "likelyEarly": "2029-10-10T17:17:23.576Z",
-    "likelyLate": "2032-07-24T13:34:06.160Z"
+    "earlyP10": "2028-05-19T22:43:57.370Z",
+    "lateP90": "2033-12-15T19:14:58.138Z",
+    "likelyEarly": "2029-10-10T21:51:42.562Z",
+    "likelyLate": "2032-07-24T20:07:12.946Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -9.966763,
+  "deltaMonths": -9.959149,
   "movers": [
     {
       "factorId": "adoption-usage",
@@ -21,7 +21,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.688568,
+      "contributionMonths": -1.682772,
       "rationale": "AI capital formation is running high at 0.87 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -104,16 +104,16 @@
       "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.55449,
-      "rationale": "Research velocity is moderate at 0.61 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
       "factorId": "macro-headwinds",
       "contributionMonths": 0.552783,
       "rationale": "Macro & bubble risk is running low at 0.16 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.552672,
+      "rationale": "Research velocity is moderate at 0.61 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "safety-eval-pressure",
