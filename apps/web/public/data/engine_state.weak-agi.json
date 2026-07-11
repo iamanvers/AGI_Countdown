@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260710T230850841Z-weak-agi",
-  "ts": "2026-07-10T23:08:50.841Z",
+  "runId": "refresh-hourly-20260711T024334680Z-weak-agi",
+  "ts": "2026-07-11T02:43:34.680Z",
   "definition": "weak-agi",
-  "tAgi": "2027-07-12T07:54:44.651Z",
+  "tAgi": "2027-07-08T13:05:17.812Z",
   "progress": 89.3125,
   "band": {
-    "earlyP10": "2026-07-12T02:05:32.651Z",
-    "lateP90": "2028-07-11T13:43:56.651Z",
-    "likelyEarly": "2027-01-10T17:00:08.651Z",
-    "likelyLate": "2028-01-10T22:49:20.651Z"
+    "earlyP10": "2026-07-11T02:43:34.680Z",
+    "lateP90": "2028-07-07T18:54:29.812Z",
+    "likelyEarly": "2027-01-06T22:10:41.812Z",
+    "likelyLate": "2028-01-07T03:59:53.812Z"
   },
   "anchor": "2028-06-16T02:58:54.948Z",
-  "deltaMonths": -11.163911,
+  "deltaMonths": -11.288245,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -56,6 +56,12 @@
       "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
     },
     {
+      "factorId": "capital-formation",
+      "contributionMonths": -0.884304,
+      "rationale": "AI capital formation is running high at 0.80 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
+    },
+    {
       "factorId": "hardware-supply",
       "contributionMonths": -0.8736,
       "rationale": "Hardware supply is running high at 0.70 — a tailwind pulling the date sooner.",
@@ -69,15 +75,9 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.806182,
+      "contributionMonths": -0.803556,
       "rationale": "Research velocity is moderate at 0.61 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
-      "factorId": "capital-formation",
-      "contributionMonths": -0.757344,
-      "rationale": "AI capital formation is running high at 0.69 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "data-availability",

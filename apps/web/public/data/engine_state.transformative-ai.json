@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260710T230850841Z-transformative-ai",
-  "ts": "2026-07-10T23:08:50.841Z",
+  "runId": "refresh-hourly-20260711T024334680Z-transformative-ai",
+  "ts": "2026-07-11T02:43:34.680Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-03-14T14:05:48.934Z",
+  "tAgi": "2031-03-07T21:07:32.846Z",
   "progress": 58.02,
   "band": {
-    "earlyP10": "2028-05-24T00:14:37.022Z",
-    "lateP90": "2034-01-02T03:57:00.846Z",
-    "likelyEarly": "2029-10-18T07:10:12.978Z",
-    "likelyLate": "2032-08-07T21:01:24.890Z"
+    "earlyP10": "2028-05-21T10:01:59.653Z",
+    "lateP90": "2033-12-22T08:13:06.039Z",
+    "likelyEarly": "2029-10-13T15:34:46.249Z",
+    "likelyLate": "2032-07-30T02:40:19.443Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -9.607183,
+  "deltaMonths": -9.827545,
   "movers": [
     {
       "factorId": "adoption-usage",
@@ -32,6 +32,12 @@
       "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
     },
     {
+      "factorId": "capital-formation",
+      "contributionMonths": -1.547532,
+      "rationale": "AI capital formation is running high at 0.80 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
+    },
+    {
       "factorId": "frontier-benchmark-saturation",
       "contributionMonths": -1.533448,
       "rationale": "Frontier benchmark saturation is running high at 0.69 — a tailwind pulling the date sooner.",
@@ -42,12 +48,6 @@
       "contributionMonths": 1.448972,
       "rationale": "Energy & grid constraints is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.iea.org/reports/electricity-2025"
-    },
-    {
-      "factorId": "capital-formation",
-      "contributionMonths": -1.325352,
-      "rationale": "AI capital formation is running high at 0.69 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "autonomy-horizon",
@@ -105,7 +105,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.558126,
+      "contributionMonths": -0.556308,
       "rationale": "Research velocity is moderate at 0.61 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
