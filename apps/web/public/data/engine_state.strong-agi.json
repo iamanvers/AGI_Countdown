@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260711T175518366Z-strong-agi",
-  "ts": "2026-07-11T17:55:18.366Z",
+  "runId": "refresh-hourly-20260711T190448744Z-strong-agi",
+  "ts": "2026-07-11T19:04:48.744Z",
   "definition": "strong-agi",
-  "tAgi": "2039-03-10T19:45:59.804Z",
-  "progress": 35.105,
+  "tAgi": "2039-03-10T01:29:57.745Z",
+  "progress": 35.075,
   "band": {
-    "earlyP10": "2031-08-04T18:38:33.925Z",
-    "lateP90": "2046-10-14T20:53:25.683Z",
-    "likelyEarly": "2035-05-23T07:12:16.865Z",
-    "likelyLate": "2042-12-27T08:19:42.743Z"
+    "earlyP10": "2031-08-04T12:01:49.335Z",
+    "lateP90": "2046-10-13T14:58:06.155Z",
+    "likelyEarly": "2035-05-22T18:45:53.540Z",
+    "likelyLate": "2042-12-26T08:14:01.950Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -9.730841,
+  "deltaMonths": -9.755848,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -51,7 +51,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.30134,
+      "contributionMonths": -1.29582,
       "rationale": "AI capital formation is running high at 0.94 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -69,15 +69,9 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -1.01269,
-      "rationale": "Adoption and usage is running high at 0.85 — a tailwind pulling the date sooner.",
+      "contributionMonths": -1.00555,
+      "rationale": "Adoption and usage is running high at 0.84 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
-    },
-    {
-      "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.996168,
-      "rationale": "Public backlash pressure is running high at 0.97 — a headwind pushing the date later.",
-      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
       "factorId": "data-availability",
@@ -90,6 +84,12 @@
       "contributionMonths": 0.965201,
       "rationale": "Export-control friction is moderate at 0.50 — a headwind pushing the date later.",
       "citation": "https://www.bis.gov/"
+    },
+    {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": 0.957289,
+      "rationale": "Public backlash pressure is running high at 0.96 — a headwind pushing the date later.",
+      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
       "factorId": "policy-friction",
@@ -111,7 +111,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.567216,
+      "contributionMonths": -0.566004,
       "rationale": "Research velocity is moderate at 0.47 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
