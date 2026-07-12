@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260712T025132941Z-weak-agi",
-  "ts": "2026-07-12T02:51:32.941Z",
+  "runId": "refresh-hourly-20260712T060520610Z-weak-agi",
+  "ts": "2026-07-12T06:05:20.610Z",
   "definition": "weak-agi",
-  "tAgi": "2027-07-22T00:02:00.261Z",
-  "progress": 87.0375,
+  "tAgi": "2027-07-22T13:40:25.793Z",
+  "progress": 86.9625,
   "band": {
-    "earlyP10": "2026-07-21T18:12:48.261Z",
-    "lateP90": "2028-07-21T05:51:12.261Z",
-    "likelyEarly": "2027-01-20T09:07:24.261Z",
-    "likelyLate": "2028-01-20T14:56:36.261Z"
+    "earlyP10": "2026-07-22T07:51:13.793Z",
+    "lateP90": "2028-07-21T19:29:37.793Z",
+    "likelyEarly": "2027-01-20T22:45:49.793Z",
+    "likelyLate": "2028-01-21T04:35:01.793Z"
   },
-  "anchor": "2028-06-16T05:02:46.242Z",
-  "deltaMonths": -10.848974,
+  "anchor": "2028-06-16T05:33:37.868Z",
+  "deltaMonths": -10.831005,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -27,8 +27,8 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -1.66872,
-      "rationale": "Adoption and usage is running high at 0.82 — a tailwind pulling the date sooner.",
+      "contributionMonths": -1.65648,
+      "rationale": "Adoption and usage is running high at 0.81 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
     {
@@ -51,7 +51,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.014576,
+      "contributionMonths": -1.01016,
       "rationale": "AI capital formation is running high at 0.92 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -80,16 +80,16 @@
       "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.605293,
-      "rationale": "Research velocity is moderate at 0.46 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
       "factorId": "policy-friction",
       "contributionMonths": 0.604907,
       "rationale": "Policy friction is running low at 0.38 — a headwind pushing the date later.",
       "citation": "https://artificialintelligenceact.eu/"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.60398,
+      "rationale": "Research velocity is moderate at 0.46 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "labor-automation-exposure",
