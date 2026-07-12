@@ -1,5 +1,5 @@
 {
-  "ts": "2026-07-12T16:59:49.395Z",
+  "ts": "2026-07-12T17:59:07.995Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -223,7 +223,7 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -0.587,
+          "zScore": -0.589,
           "percentile": 0.337,
           "volatility": 0.014
         }
@@ -697,7 +697,7 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.888,
+        "normalized": 0.885,
         "level": 0.486,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -705,15 +705,15 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": 2.068,
-          "percentile": 0.884,
+          "zScore": 2.037,
+          "percentile": 0.878,
           "volatility": 0.015
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.98,
-        "transformative-ai": -1.716,
-        "strong-agi": -1.225
+        "weak-agi": -0.977,
+        "transformative-ai": -1.71,
+        "strong-agi": -1.221
       },
       "sources": [
         {
