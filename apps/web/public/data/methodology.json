@@ -1,5 +1,5 @@
 {
-  "ts": "2026-07-13T06:21:17.713Z",
+  "ts": "2026-07-13T09:46:51.612Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -215,23 +215,23 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.356,
-        "level": 0.538,
+        "normalized": 0.335,
+        "level": 0.537,
         "confidence": 0.673,
         "citation": "https://arxiv.org/list/cs.AI/recent",
         "rolling": {
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -0.594,
-          "percentile": 0.337,
+          "zScore": -0.687,
+          "percentile": 0.182,
           "volatility": 0.014
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.467,
-        "transformative-ai": -0.324,
-        "strong-agi": -0.431
+        "weak-agi": -0.44,
+        "transformative-ai": -0.305,
+        "strong-agi": -0.406
       },
       "sources": [
         {
@@ -269,7 +269,7 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": 0.608,
+          "zScore": 0.511,
           "percentile": 0.801,
           "volatility": 0
         }
@@ -697,7 +697,7 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.864,
+        "normalized": 0.861,
         "level": 0.486,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -705,15 +705,15 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": 1.847,
-          "percentile": 0.84,
-          "volatility": 0.016
+          "zScore": 1.823,
+          "percentile": 0.834,
+          "volatility": 0.017
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.954,
-        "transformative-ai": -1.669,
-        "strong-agi": -1.192
+        "weak-agi": -0.951,
+        "transformative-ai": -1.663,
+        "strong-agi": -1.188
       },
       "sources": [
         {
