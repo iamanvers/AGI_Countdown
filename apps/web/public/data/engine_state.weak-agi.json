@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260714T145234544Z-weak-agi",
-  "ts": "2026-07-14T14:52:34.544Z",
+  "runId": "refresh-hourly-20260714T161613904Z-weak-agi",
+  "ts": "2026-07-14T16:16:13.904Z",
   "definition": "weak-agi",
-  "tAgi": "2027-08-05T07:33:13.102Z",
-  "progress": 86.6875,
+  "tAgi": "2027-07-28T23:33:59.955Z",
+  "progress": 86.625,
   "band": {
-    "earlyP10": "2026-08-05T01:44:01.102Z",
-    "lateP90": "2028-08-04T13:22:25.102Z",
-    "likelyEarly": "2027-02-03T16:38:37.102Z",
-    "likelyLate": "2028-02-03T22:27:49.102Z"
+    "earlyP10": "2026-07-28T17:44:47.955Z",
+    "lateP90": "2028-07-28T05:23:11.955Z",
+    "likelyEarly": "2027-01-27T08:39:23.955Z",
+    "likelyLate": "2028-01-27T14:28:35.955Z"
   },
   "anchor": "2028-06-16T04:20:44.913Z",
-  "deltaMonths": -10.377752,
+  "deltaMonths": -10.61867,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -27,7 +27,7 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -1.6116,
+      "contributionMonths": -1.6014,
       "rationale": "Adoption and usage is running high at 0.79 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
@@ -51,7 +51,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.94944,
+      "contributionMonths": -0.946128,
       "rationale": "AI capital formation is running high at 0.86 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -72,12 +72,6 @@
       "contributionMonths": 0.845234,
       "rationale": "Energy & grid constraints is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.iea.org/reports/electricity-2025"
-    },
-    {
-      "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.770188,
-      "rationale": "Public backlash pressure is running high at 0.97 — a headwind pushing the date later.",
-      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
       "factorId": "data-availability",
@@ -104,8 +98,14 @@
       "citation": "https://www.bis.gov/"
     },
     {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": 0.514445,
+      "rationale": "Public backlash pressure is moderate at 0.43 — a headwind pushing the date later.",
+      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
+    },
+    {
       "factorId": "research-velocity",
-      "contributionMonths": -0.51207,
+      "contributionMonths": -0.510757,
       "rationale": "Research velocity is running low at 0.39 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
