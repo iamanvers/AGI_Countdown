@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260714T121342789Z-strong-agi",
-  "ts": "2026-07-14T12:13:42.789Z",
+  "runId": "refresh-hourly-20260714T145234544Z-strong-agi",
+  "ts": "2026-07-14T14:52:34.544Z",
   "definition": "strong-agi",
-  "tAgi": "2039-03-19T05:01:44.792Z",
-  "progress": 34.83,
+  "tAgi": "2039-03-18T09:05:49.542Z",
+  "progress": 34.8,
   "band": {
-    "earlyP10": "2031-08-09T18:55:31.263Z",
-    "lateP90": "2046-10-26T15:07:58.321Z",
-    "likelyEarly": "2035-05-29T23:58:38.027Z",
-    "likelyLate": "2043-01-06T10:04:51.557Z"
+    "earlyP10": "2031-08-09T12:32:30.065Z",
+    "lateP90": "2046-10-25T05:39:09.019Z",
+    "likelyEarly": "2035-05-29T10:49:09.804Z",
+    "likelyLate": "2043-01-05T07:22:29.280Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -9.455322,
+  "deltaMonths": -9.482608,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -51,7 +51,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.19094,
+      "contributionMonths": -1.1868,
       "rationale": "AI capital formation is running high at 0.86 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -68,12 +68,6 @@
       "citation": "https://epoch.ai/data/notable-ai-models"
     },
     {
-      "factorId": "public-backlash-pressure",
-      "contributionMonths": 1.001301,
-      "rationale": "Public backlash pressure is running high at 0.98 — a headwind pushing the date later.",
-      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
-    },
-    {
       "factorId": "data-availability",
       "contributionMonths": 0.986414,
       "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
@@ -86,9 +80,15 @@
       "citation": "https://www.bis.gov/"
     },
     {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": 0.962735,
+      "rationale": "Public backlash pressure is running high at 0.97 — a headwind pushing the date later.",
+      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
+    },
+    {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.94724,
-      "rationale": "Adoption and usage is running high at 0.80 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.9401,
+      "rationale": "Adoption and usage is running high at 0.79 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
     {
