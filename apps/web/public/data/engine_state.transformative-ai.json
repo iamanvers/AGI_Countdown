@@ -1,35 +1,35 @@
 {
-  "runId": "refresh-hourly-20260714T161613904Z-transformative-ai",
-  "ts": "2026-07-14T16:16:13.904Z",
+  "runId": "refresh-hourly-20260714T180406172Z-transformative-ai",
+  "ts": "2026-07-14T18:04:06.172Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-03-27T10:39:21.534Z",
-  "progress": 54.58,
+  "tAgi": "2031-03-28T04:08:29.764Z",
+  "progress": 54.484,
   "band": {
-    "earlyP10": "2028-05-31T09:08:44.595Z",
-    "lateP90": "2034-01-20T12:09:58.473Z",
-    "likelyEarly": "2029-10-28T09:54:03.065Z",
-    "likelyLate": "2032-08-23T11:24:40.003Z"
+    "earlyP10": "2028-05-31T17:13:09.473Z",
+    "lateP90": "2034-01-21T15:03:50.055Z",
+    "likelyEarly": "2029-10-28T22:40:49.619Z",
+    "likelyLate": "2032-08-24T09:36:09.909Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -9.18478,
+  "deltaMonths": -9.160843,
   "movers": [
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -2.00175,
-      "rationale": "Adoption and usage is running high at 0.79 — a tailwind pulling the date sooner.",
+      "contributionMonths": -1.98645,
+      "rationale": "Adoption and usage is running high at 0.78 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
-    },
-    {
-      "factorId": "capital-formation",
-      "contributionMonths": -1.655724,
-      "rationale": "AI capital formation is running high at 0.86 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "training-compute-growth",
       "contributionMonths": -1.6524,
       "rationale": "Training compute growth is running high at 0.72 — a tailwind pulling the date sooner.",
       "citation": "https://epoch.ai/data/notable-ai-models"
+    },
+    {
+      "factorId": "capital-formation",
+      "contributionMonths": -1.647996,
+      "rationale": "AI capital formation is running high at 0.85 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "datacenter-capex",
@@ -123,7 +123,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.353601,
+      "contributionMonths": -0.352692,
       "rationale": "Research velocity is running low at 0.39 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     }
