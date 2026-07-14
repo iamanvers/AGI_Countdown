@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20260714T082658398Z-weak-agi",
-  "ts": "2026-07-14T08:26:58.398Z",
+  "runId": "refresh-hourly-20260714T104712156Z-weak-agi",
+  "ts": "2026-07-14T10:47:12.156Z",
   "definition": "weak-agi",
-  "tAgi": "2027-07-29T20:14:45.435Z",
+  "tAgi": "2027-07-27T17:07:48.958Z",
   "progress": 86.825,
   "band": {
-    "earlyP10": "2026-07-29T14:25:33.435Z",
-    "lateP90": "2028-07-29T02:03:57.435Z",
-    "likelyEarly": "2027-01-28T05:20:09.435Z",
-    "likelyLate": "2028-01-28T11:09:21.435Z"
+    "earlyP10": "2026-07-27T11:18:36.958Z",
+    "lateP90": "2028-07-26T22:57:00.958Z",
+    "likelyEarly": "2027-01-26T02:13:12.958Z",
+    "likelyLate": "2028-01-26T08:02:24.958Z"
   },
   "anchor": "2028-06-16T04:20:44.913Z",
-  "deltaMonths": -10.590361,
+  "deltaMonths": -10.660336,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -51,8 +51,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.937296,
-      "rationale": "AI capital formation is running high at 0.85 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.956064,
+      "rationale": "AI capital formation is running high at 0.87 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
@@ -104,16 +104,16 @@
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.513383,
+      "rationale": "Research velocity is running low at 0.39 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
       "factorId": "robotics-embodiment",
       "contributionMonths": -0.4752,
       "rationale": "Robotics & embodiment is moderate at 0.48 — a tailwind pulling the date sooner.",
       "citation": "https://ifr.org/worldrobotics/"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.462176,
-      "rationale": "Research velocity is running low at 0.35 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "safety-eval-pressure",
