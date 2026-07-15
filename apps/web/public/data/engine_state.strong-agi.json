@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260715T220153752Z-strong-agi",
-  "ts": "2026-07-15T22:01:53.752Z",
+  "runId": "refresh-hourly-20260715T230130608Z-strong-agi",
+  "ts": "2026-07-15T23:01:30.608Z",
   "definition": "strong-agi",
-  "tAgi": "2039-03-16T21:30:25.688Z",
-  "progress": 34.305,
+  "tAgi": "2039-03-17T06:37:56.475Z",
+  "progress": 34.275,
   "band": {
-    "earlyP10": "2031-08-09T17:00:04.929Z",
-    "lateP90": "2046-10-22T02:00:46.447Z",
-    "likelyEarly": "2035-05-28T19:15:15.308Z",
-    "likelyLate": "2043-01-02T23:45:36.068Z"
+    "earlyP10": "2031-08-09T21:14:51.802Z",
+    "lateP90": "2046-10-22T16:01:01.148Z",
+    "likelyEarly": "2035-05-29T01:56:24.139Z",
+    "likelyLate": "2043-01-03T11:19:28.811Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -9.531329,
+  "deltaMonths": -9.518837,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -51,8 +51,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.13988,
-      "rationale": "AI capital formation is running high at 0.83 — a tailwind pulling the date sooner.",
+      "contributionMonths": -1.13574,
+      "rationale": "AI capital formation is running high at 0.82 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
@@ -87,7 +87,7 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.82229,
+      "contributionMonths": -0.81515,
       "rationale": "Adoption and usage is running high at 0.69 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
@@ -123,8 +123,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.370872,
-      "rationale": "Research velocity is running low at 0.31 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.36966,
+      "rationale": "Research velocity is running low at 0.30 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     }
   ]
