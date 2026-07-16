@@ -1,5 +1,5 @@
 {
-  "ts": "2026-07-16T19:12:40.312Z",
+  "ts": "2026-07-16T21:00:22.195Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -215,7 +215,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.245,
+        "normalized": 0.246,
         "level": 0.531,
         "confidence": 0.673,
         "citation": "https://arxiv.org/list/cs.AI/recent",
@@ -223,15 +223,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -1.128,
-          "percentile": 0.033,
+          "zScore": -1.119,
+          "percentile": 0.039,
           "volatility": 0.014
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.322,
-        "transformative-ai": -0.223,
-        "strong-agi": -0.297
+        "weak-agi": -0.323,
+        "transformative-ai": -0.224,
+        "strong-agi": -0.298
       },
       "sources": [
         {
@@ -261,7 +261,7 @@
       "weight": 5,
       "normalization": "momentum-01",
       "reading": {
-        "normalized": 0.033,
+        "normalized": 0.039,
         "level": 0.64,
         "confidence": 0.75,
         "citation": "https://openrouter.ai/rankings",
@@ -269,15 +269,15 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": -5.277,
-          "percentile": 0.033,
-          "volatility": 0.025
+          "zScore": -4.886,
+          "percentile": 0.039,
+          "volatility": 0.027
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.074,
-        "transformative-ai": -0.093,
-        "strong-agi": -0.043
+        "weak-agi": -0.088,
+        "transformative-ai": -0.11,
+        "strong-agi": -0.051
       },
       "sources": [
         {
@@ -697,7 +697,7 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.829,
+        "normalized": 0.826,
         "level": 0.5,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -705,15 +705,15 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": 1.579,
+          "zScore": 1.559,
           "percentile": 1,
           "volatility": 0.023
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.915,
-        "transformative-ai": -1.602,
-        "strong-agi": -1.144
+        "weak-agi": -0.912,
+        "transformative-ai": -1.596,
+        "strong-agi": -1.14
       },
       "sources": [
         {

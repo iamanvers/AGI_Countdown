@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260716T191240312Z-weak-agi",
-  "ts": "2026-07-16T19:12:40.312Z",
+  "runId": "refresh-hourly-20260716T210022195Z-weak-agi",
+  "ts": "2026-07-16T21:00:22.195Z",
   "definition": "weak-agi",
-  "tAgi": "2027-09-21T20:35:00.099Z",
-  "progress": 77.225,
+  "tAgi": "2027-09-21T09:25:22.757Z",
+  "progress": 77.3,
   "band": {
-    "earlyP10": "2026-09-21T14:45:48.099Z",
-    "lateP90": "2028-09-21T02:24:12.099Z",
-    "likelyEarly": "2027-03-23T05:40:24.099Z",
-    "likelyLate": "2028-03-22T11:29:36.099Z"
+    "earlyP10": "2026-09-21T03:36:10.757Z",
+    "lateP90": "2028-09-20T15:14:34.757Z",
+    "likelyEarly": "2027-03-22T18:30:46.757Z",
+    "likelyLate": "2028-03-22T00:19:58.757Z"
   },
-  "anchor": "2028-06-17T18:31:27.627Z",
-  "deltaMonths": -8.868,
+  "anchor": "2028-06-17T15:45:54.994Z",
+  "deltaMonths": -8.879501,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -45,7 +45,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.915216,
+      "contributionMonths": -0.911904,
       "rationale": "AI capital formation is running high at 0.83 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -105,8 +105,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.321685,
-      "rationale": "Research velocity is running low at 0.24 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.322998,
+      "rationale": "Research velocity is running low at 0.25 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -123,8 +123,8 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.07425,
-      "rationale": "Adoption and usage is running low at 0.03 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.08775,
+      "rationale": "Adoption and usage is running low at 0.04 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     }
   ]

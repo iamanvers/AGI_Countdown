@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260716T191240312Z-transformative-ai",
-  "ts": "2026-07-16T19:12:40.312Z",
+  "runId": "refresh-hourly-20260716T210022195Z-transformative-ai",
+  "ts": "2026-07-16T21:00:22.195Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-05-30T07:47:31.401Z",
-  "progress": 42.548,
+  "tAgi": "2031-05-29T23:02:06.006Z",
+  "progress": 42.644,
   "band": {
-    "earlyP10": "2028-06-27T04:56:41.171Z",
-    "lateP90": "2034-05-01T10:38:21.631Z",
-    "likelyEarly": "2029-12-12T18:22:06.286Z",
-    "likelyLate": "2032-11-13T21:12:56.516Z"
+    "earlyP10": "2028-06-27T02:31:00.407Z",
+    "lateP90": "2034-04-30T19:33:11.605Z",
+    "likelyEarly": "2029-12-12T12:46:33.206Z",
+    "likelyLate": "2032-11-13T09:17:38.806Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -7.085988,
+  "deltaMonths": -7.097976,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -21,7 +21,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.601628,
+      "contributionMonths": -1.595832,
       "rationale": "AI capital formation is running high at 0.83 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -117,14 +117,14 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.222705,
-      "rationale": "Research velocity is running low at 0.24 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.223614,
+      "rationale": "Research velocity is running low at 0.25 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.092812,
-      "rationale": "Adoption and usage is running low at 0.03 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.109687,
+      "rationale": "Adoption and usage is running low at 0.04 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     }
   ]
