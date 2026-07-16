@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260716T031829576Z-weak-agi",
-  "ts": "2026-07-16T03:18:29.576Z",
+  "runId": "refresh-hourly-20260716T061929756Z-weak-agi",
+  "ts": "2026-07-16T06:19:29.756Z",
   "definition": "weak-agi",
-  "tAgi": "2027-08-09T20:05:56.360Z",
-  "progress": 85.2375,
+  "tAgi": "2027-08-11T03:12:03.639Z",
+  "progress": 85.175,
   "band": {
-    "earlyP10": "2026-08-09T14:16:44.360Z",
-    "lateP90": "2028-08-09T01:55:08.360Z",
-    "likelyEarly": "2027-02-08T05:11:20.360Z",
-    "likelyLate": "2028-02-08T11:00:32.360Z"
+    "earlyP10": "2026-08-10T21:22:51.639Z",
+    "lateP90": "2028-08-10T09:01:15.639Z",
+    "likelyEarly": "2027-02-09T12:17:27.639Z",
+    "likelyLate": "2028-02-09T18:06:39.639Z"
   },
-  "anchor": "2028-06-16T07:06:00.466Z",
-  "deltaMonths": -10.232929,
+  "anchor": "2028-06-17T04:19:54.617Z",
+  "deltaMonths": -10.219417,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -33,7 +33,7 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -1.37496,
+      "contributionMonths": -1.36476,
       "rationale": "Adoption and usage is running high at 0.67 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
@@ -50,16 +50,16 @@
       "citation": "https://epoch.ai/data/notable-ai-models"
     },
     {
-      "factorId": "capital-formation",
-      "contributionMonths": -0.901968,
-      "rationale": "AI capital formation is running high at 0.82 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
-    },
-    {
       "factorId": "datacenter-capex",
       "contributionMonths": -0.900123,
       "rationale": "Datacenter capex is running high at 0.74 — a tailwind pulling the date sooner.",
       "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
+    },
+    {
+      "factorId": "capital-formation",
+      "contributionMonths": -0.898656,
+      "rationale": "AI capital formation is running high at 0.81 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "hardware-supply",
