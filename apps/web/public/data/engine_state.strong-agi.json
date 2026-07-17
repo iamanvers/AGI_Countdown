@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260717T225158410Z-strong-agi",
-  "ts": "2026-07-17T22:51:58.410Z",
+  "runId": "refresh-hourly-20260717T235351400Z-strong-agi",
+  "ts": "2026-07-17T23:53:51.400Z",
   "definition": "strong-agi",
-  "tAgi": "2039-03-21T03:56:37.599Z",
+  "tAgi": "2039-03-21T13:09:55.512Z",
   "progress": 34.165,
   "band": {
-    "earlyP10": "2031-08-12T15:14:01.670Z",
-    "lateP90": "2046-10-27T16:39:13.528Z",
-    "likelyEarly": "2035-06-01T09:35:19.635Z",
-    "likelyLate": "2043-01-07T22:17:55.563Z"
+    "earlyP10": "2031-08-12T19:32:32.119Z",
+    "lateP90": "2046-10-28T06:47:18.905Z",
+    "likelyEarly": "2035-06-01T16:21:13.815Z",
+    "likelyLate": "2043-01-08T09:58:37.209Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -9.391098,
+  "deltaMonths": -9.378474,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -50,16 +50,16 @@
       "citation": "https://investor.tsmc.com/english"
     },
     {
-      "factorId": "capital-formation",
-      "contributionMonths": -1.12608,
-      "rationale": "AI capital formation is running high at 0.82 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
-    },
-    {
       "factorId": "datacenter-capex",
       "contributionMonths": -1.125153,
       "rationale": "Datacenter capex is running high at 0.74 — a tailwind pulling the date sooner.",
       "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
+    },
+    {
+      "factorId": "capital-formation",
+      "contributionMonths": -1.12194,
+      "rationale": "AI capital formation is running high at 0.81 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "frontier-release-cadence",
@@ -123,7 +123,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.283608,
+      "contributionMonths": -0.275124,
       "rationale": "Research velocity is running low at 0.23 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     }
