@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260717T104745792Z-strong-agi",
-  "ts": "2026-07-17T10:47:45.792Z",
+  "runId": "refresh-hourly-20260717T121003042Z-strong-agi",
+  "ts": "2026-07-17T12:10:03.042Z",
   "definition": "strong-agi",
-  "tAgi": "2039-03-19T22:55:44.088Z",
+  "tAgi": "2039-03-20T00:10:56.732Z",
   "progress": 34.165,
   "band": {
-    "earlyP10": "2031-08-11T20:23:06.673Z",
-    "lateP90": "2046-10-26T01:28:21.503Z",
-    "likelyEarly": "2035-05-31T09:39:25.380Z",
-    "likelyLate": "2043-01-06T12:12:02.796Z"
+    "earlyP10": "2031-08-11T21:42:34.557Z",
+    "lateP90": "2046-10-26T02:39:18.907Z",
+    "likelyEarly": "2035-05-31T10:56:45.644Z",
+    "likelyLate": "2043-01-06T13:25:07.820Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -9.430818,
+  "deltaMonths": -9.429102,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -51,8 +51,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.15368,
-      "rationale": "AI capital formation is running high at 0.84 — a tailwind pulling the date sooner.",
+      "contributionMonths": -1.14954,
+      "rationale": "AI capital formation is running high at 0.83 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
@@ -123,8 +123,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.295728,
-      "rationale": "Research velocity is running low at 0.24 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.298152,
+      "rationale": "Research velocity is running low at 0.25 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     }
   ]
