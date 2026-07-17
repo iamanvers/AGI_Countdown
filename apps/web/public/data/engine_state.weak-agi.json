@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260717T081108729Z-weak-agi",
-  "ts": "2026-07-17T08:11:08.729Z",
+  "runId": "refresh-daily-20260717T082713248Z-weak-agi",
+  "ts": "2026-07-17T08:27:13.248Z",
   "definition": "weak-agi",
-  "tAgi": "2027-09-20T07:27:34.811Z",
-  "progress": 77.6375,
+  "tAgi": "2027-09-19T22:07:24.028Z",
+  "progress": 77.775,
   "band": {
-    "earlyP10": "2026-09-20T01:38:22.811Z",
-    "lateP90": "2028-09-19T13:16:46.811Z",
-    "likelyEarly": "2027-03-21T16:32:58.811Z",
-    "likelyLate": "2028-03-20T22:22:10.811Z"
+    "earlyP10": "2026-09-19T16:18:12.028Z",
+    "lateP90": "2028-09-19T03:56:36.028Z",
+    "likelyEarly": "2027-03-21T07:12:48.028Z",
+    "likelyLate": "2028-03-20T13:02:00.028Z"
   },
   "anchor": "2028-06-18T07:11:41.605Z",
-  "deltaMonths": -8.936166,
+  "deltaMonths": -8.948947,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -44,16 +44,16 @@
       "citation": "https://epoch.ai/data/notable-ai-models"
     },
     {
+      "factorId": "capital-formation",
+      "contributionMonths": -0.909696,
+      "rationale": "AI capital formation is running high at 0.82 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
+    },
+    {
       "factorId": "datacenter-capex",
       "contributionMonths": -0.900123,
       "rationale": "Datacenter capex is running high at 0.74 — a tailwind pulling the date sooner.",
       "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
-    },
-    {
-      "factorId": "capital-formation",
-      "contributionMonths": -0.896448,
-      "rationale": "AI capital formation is running high at 0.81 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "hardware-supply",
@@ -93,8 +93,8 @@
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.51974,
-      "rationale": "Public backlash pressure is moderate at 0.44 — a headwind pushing the date later.",
+      "contributionMonths": 0.520909,
+      "rationale": "Public backlash pressure is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
@@ -105,8 +105,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.336128,
-      "rationale": "Research velocity is running low at 0.26 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.32825,
+      "rationale": "Research velocity is running low at 0.25 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -123,8 +123,8 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.1485,
-      "rationale": "Adoption and usage is running low at 0.07 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.15708,
+      "rationale": "Adoption and usage is running low at 0.08 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     }
   ]
