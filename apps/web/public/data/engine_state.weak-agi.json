@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260718T225113507Z-weak-agi",
-  "ts": "2026-07-18T22:51:13.507Z",
+  "runId": "refresh-hourly-20260718T235456950Z-weak-agi",
+  "ts": "2026-07-18T23:54:56.950Z",
   "definition": "weak-agi",
-  "tAgi": "2027-08-19T00:23:34.574Z",
-  "progress": 84.3375,
+  "tAgi": "2027-08-19T12:07:10.613Z",
+  "progress": 84.275,
   "band": {
-    "earlyP10": "2026-08-18T18:34:22.574Z",
-    "lateP90": "2028-08-18T06:12:46.574Z",
-    "likelyEarly": "2027-02-17T09:28:58.574Z",
-    "likelyLate": "2028-02-17T15:18:10.574Z"
+    "earlyP10": "2026-08-19T06:17:58.613Z",
+    "lateP90": "2028-08-18T17:56:22.613Z",
+    "likelyEarly": "2027-02-17T21:12:34.613Z",
+    "likelyLate": "2028-02-18T03:01:46.613Z"
   },
-  "anchor": "2028-06-18T14:10:30.619Z",
-  "deltaMonths": -10.006752,
+  "anchor": "2028-06-18T19:03:41.716Z",
+  "deltaMonths": -9.997388,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -33,7 +33,7 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -1.22808,
+      "contributionMonths": -1.21788,
       "rationale": "Adoption and usage is moderate at 0.60 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
@@ -45,7 +45,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.074192,
+      "contributionMonths": -1.069776,
       "rationale": "AI capital formation is running high at 0.97 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -123,7 +123,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.152308,
+      "contributionMonths": -0.15756,
       "rationale": "Research velocity is running low at 0.12 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     }
