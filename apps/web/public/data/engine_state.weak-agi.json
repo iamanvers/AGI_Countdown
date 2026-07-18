@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260718T110504243Z-weak-agi",
-  "ts": "2026-07-18T11:05:04.243Z",
+  "runId": "refresh-hourly-20260718T120034164Z-weak-agi",
+  "ts": "2026-07-18T12:00:34.164Z",
   "definition": "weak-agi",
-  "tAgi": "2027-08-16T01:01:30.294Z",
-  "progress": 85.025,
+  "tAgi": "2027-08-16T04:38:22.277Z",
+  "progress": 84.9625,
   "band": {
-    "earlyP10": "2026-08-15T19:12:18.294Z",
-    "lateP90": "2028-08-15T06:50:42.294Z",
-    "likelyEarly": "2027-02-14T10:06:54.294Z",
-    "likelyLate": "2028-02-14T15:56:06.294Z"
+    "earlyP10": "2026-08-15T22:49:10.277Z",
+    "lateP90": "2028-08-15T10:27:34.277Z",
+    "likelyEarly": "2027-02-14T13:43:46.277Z",
+    "likelyLate": "2028-02-14T19:32:58.277Z"
   },
   "anchor": "2028-06-18T09:17:19.522Z",
-  "deltaMonths": -10.097762,
+  "deltaMonths": -10.092814,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -33,8 +33,8 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -1.34028,
-      "rationale": "Adoption and usage is moderate at 0.66 — a tailwind pulling the date sooner.",
+      "contributionMonths": -1.33008,
+      "rationale": "Adoption and usage is moderate at 0.65 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
     {
@@ -123,7 +123,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.102414,
+      "contributionMonths": -0.107666,
       "rationale": "Research velocity is running low at 0.08 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     }
