@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260719T190803472Z-strong-agi",
-  "ts": "2026-07-19T19:08:03.472Z",
+  "runId": "refresh-hourly-20260719T205117047Z-strong-agi",
+  "ts": "2026-07-19T20:51:17.047Z",
   "definition": "strong-agi",
-  "tAgi": "2039-03-24T11:39:52.299Z",
+  "tAgi": "2039-03-24T13:45:08.113Z",
   "progress": 33.725,
   "band": {
-    "earlyP10": "2031-08-15T01:08:00.245Z",
-    "lateP90": "2046-10-31T22:11:44.353Z",
-    "likelyEarly": "2035-06-04T06:23:56.272Z",
-    "likelyLate": "2043-01-11T16:55:48.326Z"
+    "earlyP10": "2031-08-15T02:59:34.988Z",
+    "lateP90": "2046-11-01T00:30:41.238Z",
+    "likelyEarly": "2035-06-04T08:22:21.551Z",
+    "likelyLate": "2043-01-11T19:07:54.675Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -9.281964,
+  "deltaMonths": -9.279106,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -51,7 +51,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.27098,
+      "contributionMonths": -1.26546,
       "rationale": "AI capital formation is running high at 0.92 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -93,7 +93,7 @@
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.651137,
+      "contributionMonths": 0.653323,
       "rationale": "Public backlash pressure is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
@@ -123,7 +123,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.132108,
+      "contributionMonths": -0.136956,
       "rationale": "Research velocity is running low at 0.11 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     }
