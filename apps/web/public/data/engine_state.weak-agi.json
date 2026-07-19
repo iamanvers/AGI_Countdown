@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260719T215346917Z-weak-agi",
-  "ts": "2026-07-19T21:53:46.917Z",
+  "runId": "refresh-hourly-20260719T225343988Z-weak-agi",
+  "ts": "2026-07-19T22:53:43.988Z",
   "definition": "weak-agi",
-  "tAgi": "2027-08-23T00:39:35.412Z",
+  "tAgi": "2027-08-22T22:58:28.358Z",
   "progress": 84,
   "band": {
-    "earlyP10": "2026-08-22T18:50:23.412Z",
-    "lateP90": "2028-08-22T06:28:47.412Z",
-    "likelyEarly": "2027-02-21T09:44:59.412Z",
-    "likelyLate": "2028-02-21T15:34:11.412Z"
+    "earlyP10": "2026-08-22T17:09:16.358Z",
+    "lateP90": "2028-08-22T04:47:40.358Z",
+    "likelyEarly": "2027-02-21T08:03:52.358Z",
+    "likelyLate": "2028-02-21T13:53:04.358Z"
   },
-  "anchor": "2028-06-18T21:04:54.629Z",
-  "deltaMonths": -9.884422,
+  "anchor": "2028-06-18T17:21:30.583Z",
+  "deltaMonths": -9.881632,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -51,7 +51,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.007952,
+      "contributionMonths": -1.003536,
       "rationale": "AI capital formation is running high at 0.91 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -99,8 +99,8 @@
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.524981,
-      "rationale": "Public backlash pressure is moderate at 0.45 — a headwind pushing the date later.",
+      "contributionMonths": 0.527294,
+      "rationale": "Public backlash pressure is moderate at 0.46 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
@@ -123,7 +123,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.153621,
+      "contributionMonths": -0.15756,
       "rationale": "Research velocity is running low at 0.12 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     }
