@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260719T145634789Z-weak-agi",
-  "ts": "2026-07-19T14:56:34.789Z",
+  "runId": "refresh-hourly-20260719T155848577Z-weak-agi",
+  "ts": "2026-07-19T15:58:48.577Z",
   "definition": "weak-agi",
-  "tAgi": "2027-08-31T13:32:19.798Z",
+  "tAgi": "2027-08-30T19:54:16.539Z",
   "progress": 84,
   "band": {
-    "earlyP10": "2026-08-31T07:43:07.798Z",
-    "lateP90": "2028-08-30T19:21:31.798Z",
-    "likelyEarly": "2027-03-01T22:37:43.798Z",
-    "likelyLate": "2028-03-01T04:26:55.798Z"
+    "earlyP10": "2026-08-30T14:05:04.539Z",
+    "lateP90": "2028-08-30T01:43:28.539Z",
+    "likelyEarly": "2027-03-01T04:59:40.539Z",
+    "likelyLate": "2028-02-29T10:48:52.539Z"
   },
-  "anchor": "2028-06-18T17:43:19.952Z",
-  "deltaMonths": -9.599353,
+  "anchor": "2028-06-18T23:22:25.107Z",
+  "deltaMonths": -9.63123,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -51,8 +51,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.034448,
-      "rationale": "AI capital formation is running high at 0.94 — a tailwind pulling the date sooner.",
+      "contributionMonths": -1.030032,
+      "rationale": "AI capital formation is running high at 0.93 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
@@ -75,7 +75,7 @@
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.806347,
+      "contributionMonths": 0.775306,
       "rationale": "Public backlash pressure is running high at 0.99 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
@@ -123,8 +123,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.123422,
-      "rationale": "Research velocity is running low at 0.09 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.128674,
+      "rationale": "Research velocity is running low at 0.10 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     }
   ]
