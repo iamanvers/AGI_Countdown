@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260721T225803529Z-weak-agi",
-  "ts": "2026-07-21T22:58:03.529Z",
+  "runId": "refresh-hourly-20260721T235613408Z-weak-agi",
+  "ts": "2026-07-21T23:56:13.408Z",
   "definition": "weak-agi",
-  "tAgi": "2027-09-20T10:05:56.783Z",
+  "tAgi": "2027-09-20T10:36:00.789Z",
   "progress": 77.85,
   "band": {
-    "earlyP10": "2026-09-20T04:16:44.783Z",
-    "lateP90": "2028-09-19T15:55:08.783Z",
-    "likelyEarly": "2027-03-21T19:11:20.783Z",
-    "likelyLate": "2028-03-21T01:00:32.783Z"
+    "earlyP10": "2026-09-20T04:46:48.789Z",
+    "lateP90": "2028-09-19T16:25:12.789Z",
+    "likelyEarly": "2027-03-21T19:41:24.789Z",
+    "likelyLate": "2028-03-21T01:30:36.789Z"
   },
   "anchor": "2028-06-18T18:11:38.390Z",
-  "deltaMonths": -8.94761,
+  "deltaMonths": -8.946924,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -45,8 +45,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.913008,
-      "rationale": "AI capital formation is running high at 0.83 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.909696,
+      "rationale": "AI capital formation is running high at 0.82 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
@@ -104,16 +104,16 @@
       "citation": "https://ifr.org/worldrobotics/"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.320372,
+      "rationale": "Research velocity is running low at 0.24 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
       "factorId": "safety-eval-pressure",
       "contributionMonths": 0.319311,
       "rationale": "Safety-eval pressure is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.aisi.gov.uk/"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.317746,
-      "rationale": "Research velocity is running low at 0.24 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "macro-headwinds",
