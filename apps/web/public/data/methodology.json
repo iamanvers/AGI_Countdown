@@ -1,5 +1,5 @@
 {
-  "ts": "2026-07-21T08:42:57.119Z",
+  "ts": "2026-07-21T11:09:30.344Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -215,23 +215,23 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.192,
-        "level": 0.519,
+        "normalized": 0.229,
+        "level": 0.521,
         "confidence": 0.673,
         "citation": "https://arxiv.org/list/cs.AI/recent",
         "rolling": {
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -1.437,
-          "percentile": 0.155,
+          "zScore": -1.215,
+          "percentile": 0.166,
           "volatility": 0.012
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.252,
-        "transformative-ai": -0.175,
-        "strong-agi": -0.233
+        "weak-agi": -0.301,
+        "transformative-ai": -0.208,
+        "strong-agi": -0.278
       },
       "sources": [
         {
@@ -269,7 +269,7 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": 0.265,
+          "zScore": 0.271,
           "percentile": 0.083,
           "volatility": 0.035
         }
@@ -697,7 +697,7 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.849,
+        "normalized": 0.845,
         "level": 0.844,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -705,15 +705,15 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": 1.723,
+          "zScore": 1.699,
           "percentile": 1,
-          "volatility": 0.158
+          "volatility": 0.159
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.937,
-        "transformative-ai": -1.64,
-        "strong-agi": -1.172
+        "weak-agi": -0.933,
+        "transformative-ai": -1.633,
+        "strong-agi": -1.166
       },
       "sources": [
         {
