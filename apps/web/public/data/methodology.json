@@ -1,5 +1,5 @@
 {
-  "ts": "2026-07-22T05:51:34.564Z",
+  "ts": "2026-07-22T08:30:40.664Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -215,7 +215,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.249,
+        "normalized": 0.251,
         "level": 0.521,
         "confidence": 0.673,
         "citation": "https://arxiv.org/list/cs.AI/recent",
@@ -223,15 +223,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -1.106,
-          "percentile": 0.215,
-          "volatility": 0.012
+          "zScore": -1.094,
+          "percentile": 0.221,
+          "volatility": 0.011
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.327,
-        "transformative-ai": -0.226,
-        "strong-agi": -0.302
+        "weak-agi": -0.33,
+        "transformative-ai": -0.228,
+        "strong-agi": -0.304
       },
       "sources": [
         {
@@ -697,7 +697,7 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.818,
+        "normalized": 0.816,
         "level": 0.844,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -705,15 +705,15 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": 1.505,
+          "zScore": 1.486,
           "percentile": 1,
-          "volatility": 0.166
+          "volatility": 0.167
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.903,
-        "transformative-ai": -1.58,
-        "strong-agi": -1.129
+        "weak-agi": -0.901,
+        "transformative-ai": -1.577,
+        "strong-agi": -1.126
       },
       "sources": [
         {
