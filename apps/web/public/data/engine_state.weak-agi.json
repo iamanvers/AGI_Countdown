@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260722T230446597Z-weak-agi",
-  "ts": "2026-07-22T23:04:46.597Z",
+  "runId": "refresh-hourly-20260723T001015188Z-weak-agi",
+  "ts": "2026-07-23T00:10:15.188Z",
   "definition": "weak-agi",
-  "tAgi": "2027-08-20T08:09:32.571Z",
-  "progress": 83.575,
+  "tAgi": "2027-08-20T11:08:34.392Z",
+  "progress": 83.5125,
   "band": {
-    "earlyP10": "2026-08-20T02:20:20.571Z",
-    "lateP90": "2028-08-19T13:58:44.571Z",
-    "likelyEarly": "2027-02-18T17:14:56.571Z",
-    "likelyLate": "2028-02-18T23:04:08.571Z"
+    "earlyP10": "2026-08-20T05:19:22.392Z",
+    "lateP90": "2028-08-19T16:57:46.392Z",
+    "likelyEarly": "2027-02-18T20:13:58.392Z",
+    "likelyLate": "2028-02-19T02:03:10.392Z"
   },
-  "anchor": "2028-06-17T12:34:21.514Z",
-  "deltaMonths": -9.928217,
+  "anchor": "2028-06-17T07:36:15.920Z",
+  "deltaMonths": -9.917331,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -39,7 +39,7 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -1.10364,
+      "contributionMonths": -1.09344,
       "rationale": "Adoption and usage is moderate at 0.54 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
@@ -56,16 +56,16 @@
       "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
     },
     {
-      "factorId": "capital-formation",
-      "contributionMonths": -0.876576,
-      "rationale": "AI capital formation is running high at 0.79 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
-    },
-    {
       "factorId": "hardware-supply",
       "contributionMonths": -0.8736,
       "rationale": "Hardware supply is running high at 0.70 — a tailwind pulling the date sooner.",
       "citation": "https://investor.tsmc.com/english"
+    },
+    {
+      "factorId": "capital-formation",
+      "contributionMonths": -0.873264,
+      "rationale": "AI capital formation is running high at 0.79 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "energy-headroom",
@@ -111,8 +111,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.400465,
-      "rationale": "Research velocity is running low at 0.30 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.403091,
+      "rationale": "Research velocity is running low at 0.31 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
