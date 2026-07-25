@@ -1,5 +1,5 @@
 {
-  "ts": "2026-07-25T20:54:07.964Z",
+  "ts": "2026-07-25T21:57:13.376Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -215,7 +215,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.244,
+        "normalized": 0.246,
         "level": 0.518,
         "confidence": 0.673,
         "citation": "https://arxiv.org/list/cs.AI/recent",
@@ -223,15 +223,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -1.13,
-          "percentile": 0.193,
+          "zScore": -1.119,
+          "percentile": 0.199,
           "volatility": 0.008
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.32,
-        "transformative-ai": -0.222,
-        "strong-agi": -0.296
+        "weak-agi": -0.323,
+        "transformative-ai": -0.224,
+        "strong-agi": -0.298
       },
       "sources": [
         {
@@ -261,7 +261,7 @@
       "weight": 5,
       "normalization": "momentum-01",
       "reading": {
-        "normalized": 0.829,
+        "normalized": 0.823,
         "level": 0.778,
         "confidence": 0.68,
         "citation": "https://openrouter.ai/rankings",
@@ -270,14 +270,14 @@
           "method": "momentum-01",
           "sampleSize": 181,
           "zScore": 0.312,
-          "percentile": 0.829,
+          "percentile": 0.823,
           "volatility": 0.035
         }
       },
       "contributionMonths": {
-        "weak-agi": -1.691,
-        "transformative-ai": -2.114,
-        "strong-agi": -0.987
+        "weak-agi": -1.679,
+        "transformative-ai": -2.099,
+        "strong-agi": -0.979
       },
       "sources": [
         {
@@ -697,7 +697,7 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.706,
+        "normalized": 0.704,
         "level": 0.84,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -705,15 +705,15 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": 0.877,
+          "zScore": 0.867,
           "percentile": 0.492,
-          "volatility": 0.174
+          "volatility": 0.173
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.779,
-        "transformative-ai": -1.364,
-        "strong-agi": -0.974
+        "weak-agi": -0.777,
+        "transformative-ai": -1.36,
+        "strong-agi": -0.972
       },
       "sources": [
         {
