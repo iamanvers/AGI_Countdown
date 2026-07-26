@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260726T180506001Z-strong-agi",
-  "ts": "2026-07-26T18:05:06.001Z",
+  "runId": "refresh-hourly-20260726T192429466Z-strong-agi",
+  "ts": "2026-07-26T19:24:29.466Z",
   "definition": "strong-agi",
-  "tAgi": "2039-03-24T04:14:31.450Z",
+  "tAgi": "2039-03-24T04:29:15.044Z",
   "progress": 34.8,
   "band": {
-    "earlyP10": "2031-08-19T02:19:11.887Z",
-    "lateP90": "2046-10-27T06:09:51.013Z",
-    "likelyEarly": "2035-06-06T03:16:51.669Z",
-    "likelyLate": "2043-01-09T05:12:11.231Z"
+    "earlyP10": "2031-08-19T03:12:53.519Z",
+    "lateP90": "2046-10-27T05:45:36.569Z",
+    "likelyEarly": "2035-06-06T03:51:04.281Z",
+    "likelyLate": "2043-01-09T05:07:25.807Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -9.292125,
+  "deltaMonths": -9.291789,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -74,16 +74,16 @@
       "citation": "https://www.bis.gov/"
     },
     {
-      "factorId": "capital-formation",
-      "contributionMonths": -0.94116,
-      "rationale": "AI capital formation is running high at 0.68 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
-    },
-    {
       "factorId": "adoption-usage",
       "contributionMonths": -0.9401,
       "rationale": "Adoption and usage is running high at 0.79 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
+    },
+    {
+      "factorId": "capital-formation",
+      "contributionMonths": -0.9384,
+      "rationale": "AI capital formation is running high at 0.68 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "policy-friction",
@@ -123,7 +123,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.213312,
+      "contributionMonths": -0.215736,
       "rationale": "Research velocity is running low at 0.18 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     }
