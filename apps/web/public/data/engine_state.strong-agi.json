@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20260727T100753639Z-strong-agi",
-  "ts": "2026-07-27T10:07:53.639Z",
+  "runId": "refresh-weekly-20260727T102657958Z-strong-agi",
+  "ts": "2026-07-27T10:26:57.958Z",
   "definition": "strong-agi",
-  "tAgi": "2039-02-26T08:09:24.222Z",
+  "tAgi": "2039-02-24T09:21:53.212Z",
   "progress": 34.8,
   "band": {
-    "earlyP10": "2031-08-09T03:55:02.280Z",
-    "lateP90": "2046-09-15T12:23:46.164Z",
-    "likelyEarly": "2035-05-19T06:02:13.251Z",
-    "likelyLate": "2042-12-06T10:16:35.193Z"
+    "earlyP10": "2031-08-08T09:23:20.265Z",
+    "lateP90": "2046-09-12T09:20:26.159Z",
+    "likelyEarly": "2035-05-17T21:22:36.739Z",
+    "likelyLate": "2042-12-03T21:21:09.685Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -10.140993,
+  "deltaMonths": -10.205049,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -50,16 +50,16 @@
       "citation": "https://investor.tsmc.com/english"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -1.149696,
+      "rationale": "Research velocity is running high at 1.00 — a tailwind pulling the date sooner.",
+      "citation": "https://www.semanticscholar.org/"
+    },
+    {
       "factorId": "datacenter-capex",
       "contributionMonths": -1.125153,
       "rationale": "Datacenter capex is running high at 0.74 — a tailwind pulling the date sooner.",
       "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -1.08288,
-      "rationale": "Research velocity is running high at 0.94 — a tailwind pulling the date sooner.",
-      "citation": "https://www.semanticscholar.org/"
     },
     {
       "factorId": "frontier-release-cadence",
@@ -87,7 +87,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.92046,
+      "contributionMonths": -0.9177,
       "rationale": "AI capital formation is running high at 0.67 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
