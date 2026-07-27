@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260727T182443930Z-weak-agi",
-  "ts": "2026-07-27T18:24:43.930Z",
+  "runId": "refresh-hourly-20260727T202327836Z-weak-agi",
+  "ts": "2026-07-27T20:23:27.836Z",
   "definition": "weak-agi",
-  "tAgi": "2027-07-14T13:16:32.598Z",
+  "tAgi": "2027-07-14T17:37:24.847Z",
   "progress": 86.6875,
   "band": {
-    "earlyP10": "2026-07-27T18:24:43.930Z",
-    "lateP90": "2028-07-13T19:05:44.598Z",
-    "likelyEarly": "2027-01-12T22:21:56.598Z",
-    "likelyLate": "2028-01-13T04:11:08.598Z"
+    "earlyP10": "2026-07-27T20:23:27.836Z",
+    "lateP90": "2028-07-13T23:26:36.847Z",
+    "likelyEarly": "2027-01-13T02:42:48.847Z",
+    "likelyLate": "2028-01-13T08:32:00.847Z"
   },
   "anchor": "2028-06-17T05:43:11.283Z",
-  "deltaMonths": -11.127462,
+  "deltaMonths": -11.12151,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -39,7 +39,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -1.234272,
+      "contributionMonths": -1.230528,
       "rationale": "Research velocity is running high at 0.99 — a tailwind pulling the date sooner.",
       "citation": "https://www.semanticscholar.org/"
     },
@@ -74,16 +74,16 @@
       "citation": "https://www.iea.org/reports/electricity-2025"
     },
     {
-      "factorId": "capital-formation",
-      "contributionMonths": -0.725328,
-      "rationale": "AI capital formation is moderate at 0.66 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
-    },
-    {
       "factorId": "data-availability",
       "contributionMonths": 0.72337,
       "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
       "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
+    },
+    {
+      "factorId": "capital-formation",
+      "contributionMonths": -0.72312,
+      "rationale": "AI capital formation is moderate at 0.66 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "policy-friction",
