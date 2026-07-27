@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260727T202327836Z-transformative-ai",
-  "ts": "2026-07-27T20:23:27.836Z",
+  "runId": "refresh-hourly-20260727T220848999Z-transformative-ai",
+  "ts": "2026-07-27T22:08:48.999Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-03-23T22:33:45.175Z",
+  "tAgi": "2031-03-24T03:16:42.815Z",
   "progress": 54.66,
   "band": {
-    "earlyP10": "2028-06-06T17:39:48.468Z",
-    "lateP90": "2034-01-07T03:27:41.882Z",
-    "likelyEarly": "2029-10-29T20:06:46.821Z",
-    "likelyLate": "2032-08-15T01:00:43.529Z"
+    "earlyP10": "2028-06-06T20:39:04.367Z",
+    "lateP90": "2034-01-07T09:54:21.263Z",
+    "likelyEarly": "2029-10-29T23:57:53.591Z",
+    "likelyLate": "2032-08-15T06:35:32.039Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -9.2999,
+  "deltaMonths": -9.293444,
   "movers": [
     {
       "factorId": "adoption-usage",
@@ -44,16 +44,16 @@
       "citation": "https://www.iea.org/reports/electricity-2025"
     },
     {
-      "factorId": "capital-formation",
-      "contributionMonths": -1.26546,
-      "rationale": "AI capital formation is moderate at 0.66 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
-    },
-    {
       "factorId": "autonomy-horizon",
       "contributionMonths": -1.2636,
       "rationale": "Autonomy horizon is moderate at 0.60 — a tailwind pulling the date sooner.",
       "citation": "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/"
+    },
+    {
+      "factorId": "capital-formation",
+      "contributionMonths": -1.261596,
+      "rationale": "AI capital formation is moderate at 0.65 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "hardware-supply",
@@ -87,8 +87,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.851904,
-      "rationale": "Research velocity is running high at 0.99 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.849312,
+      "rationale": "Research velocity is running high at 0.98 — a tailwind pulling the date sooner.",
       "citation": "https://www.semanticscholar.org/"
     },
     {
