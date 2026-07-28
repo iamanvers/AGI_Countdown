@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260728T062736307Z-strong-agi",
-  "ts": "2026-07-28T06:27:36.307Z",
+  "runId": "refresh-daily-20260728T085003247Z-strong-agi",
+  "ts": "2026-07-28T08:50:03.247Z",
   "definition": "strong-agi",
-  "tAgi": "2039-02-26T00:32:52.788Z",
+  "tAgi": "2039-02-28T21:54:11.392Z",
   "progress": 34.8,
   "band": {
-    "earlyP10": "2031-08-09T13:05:53.793Z",
-    "lateP90": "2046-09-14T11:59:51.783Z",
-    "likelyEarly": "2035-05-19T06:49:23.291Z",
-    "likelyLate": "2042-12-05T18:16:22.285Z"
+    "earlyP10": "2031-08-10T18:17:05.963Z",
+    "lateP90": "2046-09-19T01:31:16.821Z",
+    "likelyEarly": "2035-05-21T08:05:38.677Z",
+    "likelyLate": "2042-12-09T11:42:44.107Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -10.151409,
+  "deltaMonths": -10.056465,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -56,16 +56,16 @@
       "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -1.120896,
-      "rationale": "Research velocity is running high at 0.97 — a tailwind pulling the date sooner.",
-      "citation": "https://www.semanticscholar.org/"
-    },
-    {
       "factorId": "frontier-release-cadence",
       "contributionMonths": -1.05,
       "rationale": "Frontier release cadence is running high at 0.75 — a tailwind pulling the date sooner.",
       "citation": "https://epoch.ai/data/notable-ai-models"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -1.035048,
+      "rationale": "Research velocity is running high at 0.85 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "data-availability",
@@ -87,8 +87,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.89286,
-      "rationale": "AI capital formation is moderate at 0.65 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.88596,
+      "rationale": "AI capital formation is moderate at 0.64 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
@@ -99,8 +99,8 @@
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.64821,
-      "rationale": "Public backlash pressure is moderate at 0.44 — a headwind pushing the date later.",
+      "contributionMonths": 0.650406,
+      "rationale": "Public backlash pressure is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
