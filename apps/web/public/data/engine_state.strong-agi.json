@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260728T181442226Z-strong-agi",
-  "ts": "2026-07-28T18:14:42.226Z",
+  "runId": "refresh-hourly-20260728T201559255Z-strong-agi",
+  "ts": "2026-07-28T20:15:59.255Z",
   "definition": "strong-agi",
-  "tAgi": "2039-03-15T12:21:30.444Z",
-  "progress": 34.66,
+  "tAgi": "2039-03-15T17:50:08.279Z",
+  "progress": 34.635,
   "band": {
-    "earlyP10": "2031-08-16T20:12:23.934Z",
-    "lateP90": "2046-10-12T04:30:36.954Z",
-    "likelyEarly": "2035-05-31T16:16:57.189Z",
-    "likelyLate": "2042-12-28T08:26:03.699Z"
+    "earlyP10": "2031-08-16T23:37:06.516Z",
+    "lateP90": "2046-10-12T12:03:10.042Z",
+    "likelyEarly": "2035-05-31T20:43:37.397Z",
+    "likelyLate": "2042-12-28T14:56:39.161Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -9.576708,
+  "deltaMonths": -9.56921,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -75,21 +75,21 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.90678,
+      "contributionMonths": -0.90083,
       "rationale": "Adoption and usage is running high at 0.76 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
-    },
-    {
-      "factorId": "capital-formation",
-      "contributionMonths": -0.86664,
-      "rationale": "AI capital formation is moderate at 0.63 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "policy-friction",
       "contributionMonths": 0.864153,
       "rationale": "Policy friction is running low at 0.38 — a headwind pushing the date later.",
       "citation": "https://artificialintelligenceact.eu/"
+    },
+    {
+      "factorId": "capital-formation",
+      "contributionMonths": -0.86388,
+      "rationale": "AI capital formation is moderate at 0.63 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "public-backlash-pressure",
@@ -105,8 +105,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.610848,
-      "rationale": "Research velocity is moderate at 0.50 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.61206,
+      "rationale": "Research velocity is moderate at 0.51 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
