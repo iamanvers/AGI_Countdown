@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20260728T085003247Z-weak-agi",
-  "ts": "2026-07-28T08:50:03.247Z",
+  "runId": "refresh-hourly-20260728T093647655Z-weak-agi",
+  "ts": "2026-07-28T09:36:47.655Z",
   "definition": "weak-agi",
-  "tAgi": "2027-07-18T13:10:16.566Z",
-  "progress": 86.6875,
+  "tAgi": "2027-08-02T07:39:18.667Z",
+  "progress": 86.625,
   "band": {
-    "earlyP10": "2026-07-28T08:50:03.247Z",
-    "lateP90": "2028-07-17T18:59:28.566Z",
-    "likelyEarly": "2027-01-16T22:15:40.566Z",
-    "likelyLate": "2028-01-17T04:04:52.566Z"
+    "earlyP10": "2026-08-02T01:50:06.667Z",
+    "lateP90": "2028-08-01T13:28:30.667Z",
+    "likelyEarly": "2027-01-31T16:44:42.667Z",
+    "likelyLate": "2028-01-31T22:33:54.667Z"
   },
   "anchor": "2028-06-17T05:42:43.788Z",
-  "deltaMonths": -10.996175,
+  "deltaMonths": -10.510903,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -27,7 +27,7 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -1.6116,
+      "contributionMonths": -1.6014,
       "rationale": "Adoption and usage is running high at 0.79 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
@@ -42,12 +42,6 @@
       "contributionMonths": -1.1396,
       "rationale": "Algorithmic efficiency is running high at 0.70 — a tailwind pulling the date sooner.",
       "citation": "https://aiindex.stanford.edu/report/"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -1.121302,
-      "rationale": "Research velocity is running high at 0.85 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "frontier-release-cadence",
@@ -81,9 +75,15 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.708768,
+      "contributionMonths": -0.702144,
       "rationale": "AI capital formation is moderate at 0.64 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.655187,
+      "rationale": "Research velocity is moderate at 0.50 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "policy-friction",
@@ -105,7 +105,7 @@
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.520325,
+      "contributionMonths": 0.522658,
       "rationale": "Public backlash pressure is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
