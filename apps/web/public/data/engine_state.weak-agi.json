@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260729T084153148Z-weak-agi",
-  "ts": "2026-07-29T08:41:53.148Z",
+  "runId": "refresh-daily-20260729T090707872Z-weak-agi",
+  "ts": "2026-07-29T09:07:07.872Z",
   "definition": "weak-agi",
-  "tAgi": "2027-08-05T23:34:17.205Z",
-  "progress": 85.925,
+  "tAgi": "2027-07-25T09:59:32.133Z",
+  "progress": 85.8625,
   "band": {
-    "earlyP10": "2026-08-05T17:45:05.205Z",
-    "lateP90": "2028-08-05T05:23:29.205Z",
-    "likelyEarly": "2027-02-04T08:39:41.205Z",
-    "likelyLate": "2028-02-04T14:28:53.205Z"
+    "earlyP10": "2026-07-29T09:07:07.872Z",
+    "lateP90": "2028-07-24T15:48:44.133Z",
+    "likelyEarly": "2027-01-23T19:04:56.133Z",
+    "likelyLate": "2028-01-24T00:54:08.133Z"
   },
   "anchor": "2028-06-17T05:33:29.629Z",
-  "deltaMonths": -10.390339,
+  "deltaMonths": -10.770332,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -33,8 +33,8 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -1.48716,
-      "rationale": "Adoption and usage is running high at 0.73 — a tailwind pulling the date sooner.",
+      "contributionMonths": -1.47696,
+      "rationale": "Adoption and usage is running high at 0.72 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
     {
@@ -42,6 +42,12 @@
       "contributionMonths": -1.1396,
       "rationale": "Algorithmic efficiency is running high at 0.70 — a tailwind pulling the date sooner.",
       "citation": "https://aiindex.stanford.edu/report/"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -1.07328,
+      "rationale": "Research velocity is running high at 0.86 — a tailwind pulling the date sooner.",
+      "citation": "https://www.semanticscholar.org/"
     },
     {
       "factorId": "frontier-release-cadence",
@@ -75,15 +81,9 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.680064,
-      "rationale": "AI capital formation is moderate at 0.62 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.66792,
+      "rationale": "AI capital formation is moderate at 0.60 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.670943,
-      "rationale": "Research velocity is moderate at 0.51 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "policy-friction",
