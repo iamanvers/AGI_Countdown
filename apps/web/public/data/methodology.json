@@ -1,5 +1,5 @@
 {
-  "ts": "2026-07-29T20:12:59.235Z",
+  "ts": "2026-07-29T22:01:48.302Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -215,7 +215,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.954,
+        "normalized": 0.95,
         "level": 0.579,
         "confidence": 0.64,
         "citation": "https://www.semanticscholar.org/",
@@ -223,15 +223,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": 3.033,
+          "zScore": 2.947,
           "percentile": 0.945,
           "volatility": 0.017
         }
       },
       "contributionMonths": {
-        "weak-agi": -1.191,
-        "transformative-ai": -0.824,
-        "strong-agi": -1.099
+        "weak-agi": -1.186,
+        "transformative-ai": -0.821,
+        "strong-agi": -1.094
       },
       "sources": [
         {
@@ -261,7 +261,7 @@
       "weight": 5,
       "normalization": "momentum-01",
       "reading": {
-        "normalized": 0.696,
+        "normalized": 0.691,
         "level": 0.778,
         "confidence": 0.68,
         "citation": "https://openrouter.ai/rankings",
@@ -270,14 +270,14 @@
           "method": "momentum-01",
           "sampleSize": 181,
           "zScore": 0.302,
-          "percentile": 0.696,
+          "percentile": 0.691,
           "volatility": 0.035
         }
       },
       "contributionMonths": {
-        "weak-agi": -1.42,
-        "transformative-ai": -1.775,
-        "strong-agi": -0.828
+        "weak-agi": -1.41,
+        "transformative-ai": -1.762,
+        "strong-agi": -0.822
       },
       "sources": [
         {
@@ -697,7 +697,7 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.584,
+        "normalized": 0.582,
         "level": 0.825,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -705,15 +705,15 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": 0.339,
-          "percentile": 0.188,
-          "volatility": 0.13
+          "zScore": 0.33,
+          "percentile": 0.182,
+          "volatility": 0.128
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.645,
-        "transformative-ai": -1.128,
-        "strong-agi": -0.806
+        "weak-agi": -0.643,
+        "transformative-ai": -1.124,
+        "strong-agi": -0.803
       },
       "sources": [
         {
