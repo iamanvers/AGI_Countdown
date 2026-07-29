@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20260729T090707872Z-weak-agi",
-  "ts": "2026-07-29T09:07:07.872Z",
+  "runId": "refresh-hourly-20260729T112639881Z-weak-agi",
+  "ts": "2026-07-29T11:26:39.881Z",
   "definition": "weak-agi",
-  "tAgi": "2027-07-25T09:59:32.133Z",
-  "progress": 85.8625,
+  "tAgi": "2027-07-30T16:28:19.504Z",
+  "progress": 85.7875,
   "band": {
-    "earlyP10": "2026-07-29T09:07:07.872Z",
-    "lateP90": "2028-07-24T15:48:44.133Z",
-    "likelyEarly": "2027-01-23T19:04:56.133Z",
-    "likelyLate": "2028-01-24T00:54:08.133Z"
+    "earlyP10": "2026-07-30T10:39:07.504Z",
+    "lateP90": "2028-07-29T22:17:31.504Z",
+    "likelyEarly": "2027-01-29T01:33:43.504Z",
+    "likelyLate": "2028-01-29T07:22:55.504Z"
   },
   "anchor": "2028-06-17T05:33:29.629Z",
-  "deltaMonths": -10.770332,
+  "deltaMonths": -10.597187,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -33,21 +33,21 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -1.47696,
+      "contributionMonths": -1.46472,
       "rationale": "Adoption and usage is running high at 0.72 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -1.209312,
+      "rationale": "Research velocity is running high at 0.97 — a tailwind pulling the date sooner.",
+      "citation": "https://www.semanticscholar.org/"
     },
     {
       "factorId": "algorithmic-efficiency",
       "contributionMonths": -1.1396,
       "rationale": "Algorithmic efficiency is running high at 0.70 — a tailwind pulling the date sooner.",
       "citation": "https://aiindex.stanford.edu/report/"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -1.07328,
-      "rationale": "Research velocity is running high at 0.86 — a tailwind pulling the date sooner.",
-      "citation": "https://www.semanticscholar.org/"
     },
     {
       "factorId": "frontier-release-cadence",
@@ -74,6 +74,12 @@
       "citation": "https://www.iea.org/reports/electricity-2025"
     },
     {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": 0.806347,
+      "rationale": "Public backlash pressure is running high at 0.99 — a headwind pushing the date later.",
+      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
+    },
+    {
       "factorId": "data-availability",
       "contributionMonths": 0.72337,
       "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
@@ -81,8 +87,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.66792,
-      "rationale": "AI capital formation is moderate at 0.60 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.654672,
+      "rationale": "AI capital formation is moderate at 0.59 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
@@ -102,12 +108,6 @@
       "contributionMonths": 0.59397,
       "rationale": "Export-control friction is moderate at 0.50 — a headwind pushing the date later.",
       "citation": "https://www.bis.gov/"
-    },
-    {
-      "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.522658,
-      "rationale": "Public backlash pressure is moderate at 0.45 — a headwind pushing the date later.",
-      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
       "factorId": "robotics-embodiment",
