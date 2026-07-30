@@ -1,22 +1,22 @@
 {
-  "runId": "refresh-daily-20260730T084823257Z-transformative-ai",
-  "ts": "2026-07-30T08:48:23.257Z",
+  "runId": "refresh-hourly-20260730T093141751Z-transformative-ai",
+  "ts": "2026-07-30T09:31:41.751Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-04-12T18:29:38.326Z",
-  "progress": 52.628,
+  "tAgi": "2031-04-21T19:26:13.442Z",
+  "progress": 52.532,
   "band": {
-    "earlyP10": "2028-06-16T06:04:08.128Z",
-    "lateP90": "2034-02-06T06:55:08.524Z",
-    "likelyEarly": "2029-11-13T12:16:53.227Z",
-    "likelyLate": "2032-09-09T00:42:23.425Z"
+    "earlyP10": "2028-06-19T21:31:38.116Z",
+    "lateP90": "2034-02-20T17:20:48.768Z",
+    "likelyEarly": "2029-11-19T20:28:55.779Z",
+    "likelyLate": "2032-09-20T18:23:31.105Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -8.648372,
+  "deltaMonths": -8.351387,
   "movers": [
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -1.69065,
-      "rationale": "Adoption and usage is running high at 0.66 — a tailwind pulling the date sooner.",
+      "contributionMonths": -1.67535,
+      "rationale": "Adoption and usage is moderate at 0.66 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
     {
@@ -56,12 +56,6 @@
       "citation": "https://investor.tsmc.com/english"
     },
     {
-      "factorId": "capital-formation",
-      "contributionMonths": -1.060668,
-      "rationale": "AI capital formation is moderate at 0.55 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
-    },
-    {
       "factorId": "frontier-release-cadence",
       "contributionMonths": -1.05,
       "rationale": "Frontier release cadence is running high at 0.75 — a tailwind pulling the date sooner.",
@@ -72,6 +66,12 @@
       "contributionMonths": -1.04958,
       "rationale": "Labor automation exposure is moderate at 0.51 — a tailwind pulling the date sooner.",
       "citation": "https://www.anthropic.com/economic-index"
+    },
+    {
+      "factorId": "capital-formation",
+      "contributionMonths": -1.016232,
+      "rationale": "AI capital formation is moderate at 0.53 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "algorithmic-efficiency",
@@ -92,12 +92,6 @@
       "citation": "https://www.bis.gov/"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.729018,
-      "rationale": "Research velocity is running high at 0.80 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
       "factorId": "public-backlash-pressure",
       "contributionMonths": 0.713031,
       "rationale": "Public backlash pressure is moderate at 0.44 — a headwind pushing the date later.",
@@ -114,6 +108,12 @@
       "contributionMonths": 0.552783,
       "rationale": "Macro & bubble risk is running low at 0.16 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.491769,
+      "rationale": "Research velocity is moderate at 0.54 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "safety-eval-pressure",
