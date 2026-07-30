@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260730T062918850Z-strong-agi",
-  "ts": "2026-07-30T06:29:18.850Z",
+  "runId": "refresh-daily-20260730T084823257Z-strong-agi",
+  "ts": "2026-07-30T08:48:23.257Z",
   "definition": "strong-agi",
-  "tAgi": "2039-03-06T21:18:48.386Z",
-  "progress": 34.195,
+  "tAgi": "2039-03-11T06:29:08.696Z",
+  "progress": 34.165,
   "band": {
-    "earlyP10": "2031-08-14T07:15:39.249Z",
-    "lateP90": "2046-09-27T11:21:57.523Z",
-    "likelyEarly": "2035-05-26T02:17:13.818Z",
-    "likelyLate": "2042-12-16T16:20:22.954Z"
+    "earlyP10": "2031-08-16T02:45:23.098Z",
+    "lateP90": "2046-10-04T10:12:54.294Z",
+    "likelyEarly": "2035-05-29T04:37:15.897Z",
+    "likelyLate": "2042-12-22T08:21:01.495Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -9.860143,
+  "deltaMonths": -9.716167,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -56,12 +56,6 @@
       "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -1.07712,
-      "rationale": "Research velocity is running high at 0.94 — a tailwind pulling the date sooner.",
-      "citation": "https://www.semanticscholar.org/"
-    },
-    {
       "factorId": "frontier-release-cadence",
       "contributionMonths": -1.05,
       "rationale": "Frontier release cadence is running high at 0.75 — a tailwind pulling the date sooner.",
@@ -72,6 +66,12 @@
       "contributionMonths": 0.986414,
       "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
       "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.972024,
+      "rationale": "Research velocity is running high at 0.80 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "export-control-friction",
@@ -87,14 +87,14 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.79611,
-      "rationale": "Adoption and usage is running high at 0.67 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.78897,
+      "rationale": "Adoption and usage is running high at 0.66 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.78936,
-      "rationale": "AI capital formation is moderate at 0.57 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.75762,
+      "rationale": "AI capital formation is moderate at 0.55 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {

@@ -1,22 +1,22 @@
 {
-  "runId": "refresh-hourly-20260730T062918850Z-transformative-ai",
-  "ts": "2026-07-30T06:29:18.850Z",
+  "runId": "refresh-daily-20260730T084823257Z-transformative-ai",
+  "ts": "2026-07-30T08:48:23.257Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-04-08T13:16:45.980Z",
-  "progress": 52.724,
+  "tAgi": "2031-04-12T18:29:38.326Z",
+  "progress": 52.628,
   "band": {
-    "earlyP10": "2028-06-14T12:00:54.359Z",
-    "lateP90": "2034-01-30T14:32:37.601Z",
-    "likelyEarly": "2029-11-10T12:38:50.170Z",
-    "likelyLate": "2032-09-03T13:54:41.790Z"
+    "earlyP10": "2028-06-16T06:04:08.128Z",
+    "lateP90": "2034-02-06T06:55:08.524Z",
+    "likelyEarly": "2029-11-13T12:16:53.227Z",
+    "likelyLate": "2032-09-09T00:42:23.425Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -8.78693,
+  "deltaMonths": -8.648372,
   "movers": [
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -1.70595,
-      "rationale": "Adoption and usage is running high at 0.67 — a tailwind pulling the date sooner.",
+      "contributionMonths": -1.69065,
+      "rationale": "Adoption and usage is running high at 0.66 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
     {
@@ -50,16 +50,16 @@
       "citation": "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/"
     },
     {
-      "factorId": "capital-formation",
-      "contributionMonths": -1.105104,
-      "rationale": "AI capital formation is moderate at 0.57 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
-    },
-    {
       "factorId": "hardware-supply",
       "contributionMonths": -1.092,
       "rationale": "Hardware supply is running high at 0.70 — a tailwind pulling the date sooner.",
       "citation": "https://investor.tsmc.com/english"
+    },
+    {
+      "factorId": "capital-formation",
+      "contributionMonths": -1.060668,
+      "rationale": "AI capital formation is moderate at 0.55 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "frontier-release-cadence",
@@ -86,16 +86,16 @@
       "citation": "https://artificialintelligenceact.eu/"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.80784,
-      "rationale": "Research velocity is running high at 0.94 — a tailwind pulling the date sooner.",
-      "citation": "https://www.semanticscholar.org/"
-    },
-    {
       "factorId": "export-control-friction",
       "contributionMonths": 0.742462,
       "rationale": "Export-control friction is moderate at 0.50 — a headwind pushing the date later.",
       "citation": "https://www.bis.gov/"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.729018,
+      "rationale": "Research velocity is running high at 0.80 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "public-backlash-pressure",
