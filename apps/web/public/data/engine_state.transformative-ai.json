@@ -1,29 +1,29 @@
 {
-  "runId": "refresh-hourly-20260730T115230413Z-transformative-ai",
-  "ts": "2026-07-30T11:52:30.413Z",
+  "runId": "refresh-hourly-20260730T140401282Z-transformative-ai",
+  "ts": "2026-07-30T14:04:01.282Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-04-22T08:59:04.712Z",
-  "progress": 52.452,
+  "tAgi": "2031-04-23T01:48:22.503Z",
+  "progress": 52.356,
   "band": {
-    "earlyP10": "2028-06-20T04:25:56.642Z",
-    "lateP90": "2034-02-21T13:32:12.782Z",
-    "likelyEarly": "2029-11-20T06:42:30.677Z",
-    "likelyLate": "2032-09-21T11:15:38.747Z"
+    "earlyP10": "2028-06-20T12:33:22.328Z",
+    "lateP90": "2034-02-22T15:03:22.678Z",
+    "likelyEarly": "2029-11-20T19:10:52.416Z",
+    "likelyLate": "2032-09-22T08:25:52.590Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -8.332841,
+  "deltaMonths": -8.309813,
   "movers": [
-    {
-      "factorId": "adoption-usage",
-      "contributionMonths": -1.6626,
-      "rationale": "Adoption and usage is moderate at 0.65 — a tailwind pulling the date sooner.",
-      "citation": "https://openrouter.ai/rankings"
-    },
     {
       "factorId": "training-compute-growth",
       "contributionMonths": -1.6524,
       "rationale": "Training compute growth is running high at 0.72 — a tailwind pulling the date sooner.",
       "citation": "https://epoch.ai/data/notable-ai-models"
+    },
+    {
+      "factorId": "adoption-usage",
+      "contributionMonths": -1.6473,
+      "rationale": "Adoption and usage is moderate at 0.65 — a tailwind pulling the date sooner.",
+      "citation": "https://openrouter.ai/rankings"
     },
     {
       "factorId": "datacenter-capex",
@@ -69,7 +69,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.010436,
+      "contributionMonths": -1.002708,
       "rationale": "AI capital formation is moderate at 0.52 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
