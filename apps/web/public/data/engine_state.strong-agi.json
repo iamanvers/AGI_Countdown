@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260731T094513848Z-strong-agi",
-  "ts": "2026-07-31T09:45:13.848Z",
+  "runId": "refresh-hourly-20260731T120020092Z-strong-agi",
+  "ts": "2026-07-31T12:00:20.092Z",
   "definition": "strong-agi",
-  "tAgi": "2039-03-23T08:32:16.681Z",
-  "progress": 33.835,
+  "tAgi": "2039-03-23T20:41:14.617Z",
+  "progress": 33.805,
   "band": {
-    "earlyP10": "2031-08-21T13:56:56.070Z",
-    "lateP90": "2046-10-23T03:07:37.292Z",
-    "likelyEarly": "2035-06-06T23:14:36.375Z",
-    "likelyLate": "2043-01-06T17:49:56.987Z"
+    "earlyP10": "2031-08-21T20:10:41.644Z",
+    "lateP90": "2046-10-23T21:11:47.590Z",
+    "likelyEarly": "2035-06-07T08:25:58.131Z",
+    "likelyLate": "2043-01-07T08:56:31.103Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -9.319099,
+  "deltaMonths": -9.302467,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -81,21 +81,15 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.761136,
+      "contributionMonths": -0.759924,
       "rationale": "Research velocity is moderate at 0.63 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.71043,
-      "rationale": "Adoption and usage is moderate at 0.60 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.70329,
+      "rationale": "Adoption and usage is moderate at 0.59 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
-    },
-    {
-      "factorId": "capital-formation",
-      "contributionMonths": -0.64998,
-      "rationale": "AI capital formation is moderate at 0.47 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "public-backlash-pressure",
@@ -108,6 +102,12 @@
       "contributionMonths": -0.648,
       "rationale": "Robotics & embodiment is moderate at 0.48 — a tailwind pulling the date sooner.",
       "citation": "https://ifr.org/worldrobotics/"
+    },
+    {
+      "factorId": "capital-formation",
+      "contributionMonths": -0.6417,
+      "rationale": "AI capital formation is moderate at 0.47 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "safety-eval-pressure",
