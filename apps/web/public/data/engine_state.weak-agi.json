@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260801T033535730Z-weak-agi",
-  "ts": "2026-08-01T03:35:35.730Z",
+  "runId": "refresh-hourly-20260801T062957487Z-weak-agi",
+  "ts": "2026-08-01T06:29:57.487Z",
   "definition": "weak-agi",
-  "tAgi": "2027-08-19T09:37:21.324Z",
-  "progress": 83.7125,
+  "tAgi": "2027-08-20T04:21:50.087Z",
+  "progress": 83.65,
   "band": {
-    "earlyP10": "2026-08-19T03:48:09.324Z",
-    "lateP90": "2028-08-18T15:26:33.324Z",
-    "likelyEarly": "2027-02-17T18:42:45.324Z",
-    "likelyLate": "2028-02-18T00:31:57.324Z"
+    "earlyP10": "2026-08-19T22:32:38.087Z",
+    "lateP90": "2028-08-19T10:11:02.087Z",
+    "likelyEarly": "2027-02-18T13:27:14.087Z",
+    "likelyLate": "2028-02-18T19:16:26.087Z"
   },
   "anchor": "2028-06-17T03:08:04.242Z",
-  "deltaMonths": -9.946148,
+  "deltaMonths": -9.920492,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -39,7 +39,7 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -1.12608,
+      "contributionMonths": -1.11588,
       "rationale": "Adoption and usage is moderate at 0.55 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
@@ -111,8 +111,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.44712,
-      "rationale": "AI capital formation is moderate at 0.41 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.431664,
+      "rationale": "AI capital formation is running low at 0.39 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
