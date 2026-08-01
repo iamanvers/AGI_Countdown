@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-01T22:55:57.450Z",
+  "ts": "2026-08-01T23:57:54.100Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -215,7 +215,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.531,
+        "normalized": 0.53,
         "level": 0.533,
         "confidence": 0.673,
         "citation": "https://arxiv.org/list/cs.AI/recent",
@@ -223,15 +223,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": 0.123,
-          "percentile": 0.751,
+          "zScore": 0.12,
+          "percentile": 0.746,
           "volatility": 0.019
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.697,
-        "transformative-ai": -0.483,
-        "strong-agi": -0.644
+        "weak-agi": -0.696,
+        "transformative-ai": -0.482,
+        "strong-agi": -0.642
       },
       "sources": [
         {
@@ -435,23 +435,23 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.442,
-        "level": 0.363,
-        "confidence": 0.65,
+        "normalized": 0.986,
+        "level": 0.403,
+        "confidence": 0.675,
         "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/",
         "rolling": {
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -0.233,
-          "percentile": 0.945,
-          "volatility": 0.008
+          "zScore": 4.245,
+          "percentile": 1,
+          "volatility": 0.009
         }
       },
       "contributionMonths": {
-        "weak-agi": 0.519,
-        "transformative-ai": 0.713,
-        "strong-agi": 0.648
+        "weak-agi": 0.804,
+        "transformative-ai": 1.106,
+        "strong-agi": 1.005
       },
       "sources": [
         {
@@ -697,7 +697,7 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.021,
+        "normalized": 0.025,
         "level": 0.669,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -705,15 +705,15 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": -3.836,
-          "percentile": 0.055,
-          "volatility": 0.041
+          "zScore": -3.668,
+          "percentile": 0.061,
+          "volatility": 0.042
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.023,
-        "transformative-ai": -0.041,
-        "strong-agi": -0.029
+        "weak-agi": -0.028,
+        "transformative-ai": -0.048,
+        "strong-agi": -0.034
       },
       "sources": [
         {

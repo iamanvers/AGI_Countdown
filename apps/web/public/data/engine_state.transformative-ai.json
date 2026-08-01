@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260801T225557450Z-transformative-ai",
-  "ts": "2026-08-01T22:55:57.450Z",
+  "runId": "refresh-hourly-20260801T235754100Z-transformative-ai",
+  "ts": "2026-08-01T23:57:54.100Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-05-30T18:51:34.683Z",
+  "tAgi": "2031-06-11T12:52:56.499Z",
   "progress": 50.676,
   "band": {
-    "earlyP10": "2028-07-07T02:05:23.751Z",
-    "lateP90": "2034-04-22T11:37:45.615Z",
-    "likelyEarly": "2029-12-17T22:28:29.217Z",
-    "likelyLate": "2032-11-09T15:14:40.149Z"
+    "earlyP10": "2028-07-11T19:30:38.842Z",
+    "lateP90": "2034-05-11T06:15:14.156Z",
+    "likelyEarly": "2029-12-26T04:11:47.670Z",
+    "likelyLate": "2032-11-24T21:34:05.328Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -7.070837,
+  "deltaMonths": -6.684761,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -50,6 +50,12 @@
       "citation": "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/"
     },
     {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": 1.105926,
+      "rationale": "Public backlash pressure is running high at 0.99 — a headwind pushing the date later.",
+      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
+    },
+    {
       "factorId": "hardware-supply",
       "contributionMonths": -1.092,
       "rationale": "Hardware supply is running high at 0.70 — a tailwind pulling the date sooner.",
@@ -86,12 +92,6 @@
       "citation": "https://www.bis.gov/"
     },
     {
-      "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.713031,
-      "rationale": "Public backlash pressure is moderate at 0.44 — a headwind pushing the date later.",
-      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
-    },
-    {
       "factorId": "data-availability",
       "contributionMonths": 0.591848,
       "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
@@ -105,7 +105,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.482679,
+      "contributionMonths": -0.48177,
       "rationale": "Research velocity is moderate at 0.53 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
@@ -123,8 +123,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.040572,
-      "rationale": "AI capital formation is running low at 0.02 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.0483,
+      "rationale": "AI capital formation is running low at 0.03 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
   ]
