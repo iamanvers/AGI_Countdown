@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-02T10:41:55.353Z",
+  "ts": "2026-08-02T12:03:14.776Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -223,8 +223,8 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -0.036,
-          "percentile": 0.663,
+          "zScore": -0.038,
+          "percentile": 0.657,
           "volatility": 0.019
         }
       },
@@ -261,7 +261,7 @@
       "weight": 5,
       "normalization": "momentum-01",
       "reading": {
-        "normalized": 0.541,
+        "normalized": 0.536,
         "level": 0.778,
         "confidence": 0.68,
         "citation": "https://openrouter.ai/rankings",
@@ -269,15 +269,15 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": 0.401,
-          "percentile": 0.541,
+          "zScore": 0.394,
+          "percentile": 0.536,
           "volatility": 0.001
         }
       },
       "contributionMonths": {
-        "weak-agi": -1.104,
-        "transformative-ai": -1.38,
-        "strong-agi": -0.644
+        "weak-agi": -1.093,
+        "transformative-ai": -1.367,
+        "strong-agi": -0.638
       },
       "sources": [
         {
@@ -697,7 +697,7 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.045,
+        "normalized": 0.049,
         "level": 0.669,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -705,15 +705,15 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": -3.053,
-          "percentile": 0.088,
-          "volatility": 0.049
+          "zScore": -2.96,
+          "percentile": 0.094,
+          "volatility": 0.051
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.05,
-        "transformative-ai": -0.087,
-        "strong-agi": -0.062
+        "weak-agi": -0.054,
+        "transformative-ai": -0.095,
+        "strong-agi": -0.068
       },
       "sources": [
         {
