@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260802T025113527Z-strong-agi",
-  "ts": "2026-08-02T02:51:13.527Z",
+  "runId": "refresh-hourly-20260802T060345190Z-strong-agi",
+  "ts": "2026-08-02T06:03:45.190Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-26T06:42:34.272Z",
+  "tAgi": "2039-04-16T07:10:34.261Z",
   "progress": 33.555,
   "band": {
-    "earlyP10": "2031-09-05T04:23:14.724Z",
-    "lateP90": "2046-12-15T09:01:53.820Z",
-    "likelyEarly": "2035-07-01T05:32:54.498Z",
-    "likelyLate": "2043-02-19T07:52:14.046Z"
+    "earlyP10": "2031-09-01T06:30:04.254Z",
+    "lateP90": "2046-11-29T07:51:04.268Z",
+    "likelyEarly": "2035-06-24T06:50:19.257Z",
+    "likelyLate": "2043-02-06T07:30:49.265Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.204536,
+  "deltaMonths": -8.532446,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -68,12 +68,6 @@
       "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
     },
     {
-      "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.966185,
-      "rationale": "Public backlash pressure is running high at 0.98 — a headwind pushing the date later.",
-      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
-    },
-    {
       "factorId": "export-control-friction",
       "contributionMonths": 0.965201,
       "rationale": "Export-control friction is moderate at 0.50 — a headwind pushing the date later.",
@@ -90,6 +84,12 @@
       "contributionMonths": -0.648,
       "rationale": "Robotics & embodiment is moderate at 0.48 — a tailwind pulling the date sooner.",
       "citation": "https://ifr.org/worldrobotics/"
+    },
+    {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": 0.643795,
+      "rationale": "Public backlash pressure is moderate at 0.44 — a headwind pushing the date later.",
+      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
       "factorId": "adoption-usage",
@@ -123,7 +123,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.04002,
+      "contributionMonths": -0.04554,
       "rationale": "AI capital formation is running low at 0.03 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
