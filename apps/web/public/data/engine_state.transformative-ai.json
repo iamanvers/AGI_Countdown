@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20260802T083550990Z-transformative-ai",
-  "ts": "2026-08-02T08:35:50.990Z",
+  "runId": "refresh-hourly-20260802T104155353Z-transformative-ai",
+  "ts": "2026-08-02T10:41:55.353Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-05-30T01:41:40.911Z",
+  "tAgi": "2031-05-30T08:00:06.138Z",
   "progress": 50.676,
   "band": {
-    "earlyP10": "2028-07-07T01:01:08.264Z",
-    "lateP90": "2034-04-21T02:22:13.558Z",
-    "likelyEarly": "2029-12-17T13:21:24.588Z",
-    "likelyLate": "2032-11-08T14:01:57.234Z"
+    "earlyP10": "2028-07-07T04:48:08.070Z",
+    "lateP90": "2034-04-21T11:12:04.206Z",
+    "likelyEarly": "2029-12-17T18:24:07.104Z",
+    "likelyLate": "2032-11-08T21:36:05.172Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -7.094335,
+  "deltaMonths": -7.085701,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -104,16 +104,16 @@
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.462681,
-      "rationale": "Research velocity is moderate at 0.51 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
       "factorId": "safety-eval-pressure",
       "contributionMonths": 0.456158,
       "rationale": "Safety-eval pressure is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.aisi.gov.uk/"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.446319,
+      "rationale": "Research velocity is moderate at 0.49 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "robotics-embodiment",
@@ -123,7 +123,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.079212,
+      "contributionMonths": -0.08694,
       "rationale": "AI capital formation is running low at 0.04 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
