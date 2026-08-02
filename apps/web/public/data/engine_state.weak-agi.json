@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260802T160750313Z-weak-agi",
-  "ts": "2026-08-02T16:07:50.313Z",
+  "runId": "refresh-hourly-20260802T180108204Z-weak-agi",
+  "ts": "2026-08-02T18:01:08.204Z",
   "definition": "weak-agi",
-  "tAgi": "2027-09-06T15:58:25.765Z",
-  "progress": 83.3,
+  "tAgi": "2027-09-06T20:11:56.216Z",
+  "progress": 83.2375,
   "band": {
-    "earlyP10": "2026-09-06T10:09:13.765Z",
-    "lateP90": "2028-09-05T21:47:37.765Z",
-    "likelyEarly": "2027-03-08T01:03:49.765Z",
-    "likelyLate": "2028-03-07T06:53:01.765Z"
+    "earlyP10": "2026-09-06T14:22:44.216Z",
+    "lateP90": "2028-09-06T02:01:08.216Z",
+    "likelyEarly": "2027-03-08T05:17:20.216Z",
+    "likelyLate": "2028-03-07T11:06:32.216Z"
   },
   "anchor": "2028-06-16T14:42:41.354Z",
-  "deltaMonths": -9.329059,
+  "deltaMonths": -9.323275,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -38,16 +38,16 @@
       "citation": "https://aiindex.stanford.edu/report/"
     },
     {
-      "factorId": "adoption-usage",
-      "contributionMonths": -1.05876,
-      "rationale": "Adoption and usage is moderate at 0.52 — a tailwind pulling the date sooner.",
-      "citation": "https://openrouter.ai/rankings"
-    },
-    {
       "factorId": "frontier-release-cadence",
       "contributionMonths": -1.05,
       "rationale": "Frontier release cadence is running high at 0.75 — a tailwind pulling the date sooner.",
       "citation": "https://epoch.ai/data/notable-ai-models"
+    },
+    {
+      "factorId": "adoption-usage",
+      "contributionMonths": -1.04856,
+      "rationale": "Adoption and usage is moderate at 0.51 — a tailwind pulling the date sooner.",
+      "citation": "https://openrouter.ai/rankings"
     },
     {
       "factorId": "datacenter-capex",
@@ -123,8 +123,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.068448,
-      "rationale": "AI capital formation is running low at 0.06 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.072864,
+      "rationale": "AI capital formation is running low at 0.07 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
   ]
