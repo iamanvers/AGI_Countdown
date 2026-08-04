@@ -1,23 +1,29 @@
 {
-  "runId": "refresh-daily-20260804T090535122Z-weak-agi",
-  "ts": "2026-08-04T09:05:35.122Z",
+  "runId": "refresh-hourly-20260804T104000339Z-weak-agi",
+  "ts": "2026-08-04T10:40:00.339Z",
   "definition": "weak-agi",
-  "tAgi": "2027-09-03T15:59:46.947Z",
-  "progress": 81.925,
+  "tAgi": "2027-07-25T01:28:06.345Z",
+  "progress": 89.3125,
   "band": {
-    "earlyP10": "2026-09-03T10:10:34.947Z",
-    "lateP90": "2028-09-02T21:48:58.947Z",
-    "likelyEarly": "2027-03-05T01:05:10.947Z",
-    "likelyLate": "2028-03-04T06:54:22.947Z"
+    "earlyP10": "2026-08-04T10:40:00.339Z",
+    "lateP90": "2028-07-24T07:17:18.345Z",
+    "likelyEarly": "2027-01-23T10:33:30.345Z",
+    "likelyLate": "2028-01-23T16:22:42.345Z"
   },
-  "anchor": "2028-06-12T22:45:56.288Z",
-  "deltaMonths": -9.307199,
+  "anchor": "2028-06-12T17:34:14.996Z",
+  "deltaMonths": -10.634171,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
       "contributionMonths": -2.875215,
       "rationale": "Frontier benchmark saturation is running high at 0.69 — a tailwind pulling the date sooner.",
       "citation": "https://aiindex.stanford.edu/report/"
+    },
+    {
+      "factorId": "adoption-usage",
+      "contributionMonths": -2.04,
+      "rationale": "Adoption and usage is running high at 1.00 — a tailwind pulling the date sooner.",
+      "citation": "https://openrouter.ai/rankings"
     },
     {
       "factorId": "training-compute-growth",
@@ -56,22 +62,16 @@
       "citation": "https://investor.tsmc.com/english"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.867893,
+      "rationale": "Research velocity is running high at 0.66 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
       "factorId": "energy-headroom",
       "contributionMonths": 0.845234,
       "rationale": "Energy & grid constraints is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.iea.org/reports/electricity-2025"
-    },
-    {
-      "factorId": "adoption-usage",
-      "contributionMonths": -0.83436,
-      "rationale": "Adoption and usage is moderate at 0.41 — a tailwind pulling the date sooner.",
-      "citation": "https://openrouter.ai/rankings"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.757601,
-      "rationale": "Research velocity is moderate at 0.58 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "data-availability",
@@ -123,8 +123,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.158976,
-      "rationale": "AI capital formation is running low at 0.14 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.170016,
+      "rationale": "AI capital formation is running low at 0.15 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
   ]
