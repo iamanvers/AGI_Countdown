@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260804T074007507Z-transformative-ai",
-  "ts": "2026-08-04T07:40:07.507Z",
+  "runId": "refresh-daily-20260804T090535122Z-transformative-ai",
+  "ts": "2026-08-04T09:05:35.122Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-06-04T03:05:30.510Z",
-  "progress": 48.644,
+  "tAgi": "2031-06-01T12:36:24.666Z",
+  "progress": 48.564,
   "band": {
-    "earlyP10": "2028-07-10T05:47:27.510Z",
-    "lateP90": "2034-04-28T00:23:33.510Z",
-    "likelyEarly": "2029-12-21T16:26:29.010Z",
-    "likelyLate": "2032-11-14T13:44:32.010Z"
+    "earlyP10": "2028-07-09T05:38:34.598Z",
+    "lateP90": "2034-04-23T19:34:14.734Z",
+    "likelyEarly": "2029-12-19T21:07:29.632Z",
+    "likelyLate": "2032-11-11T04:05:19.700Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -6.928148,
+  "deltaMonths": -7.013687,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -50,12 +50,6 @@
       "citation": "https://investor.tsmc.com/english"
     },
     {
-      "factorId": "adoption-usage",
-      "contributionMonths": -1.0557,
-      "rationale": "Adoption and usage is moderate at 0.41 — a tailwind pulling the date sooner.",
-      "citation": "https://openrouter.ai/rankings"
-    },
-    {
       "factorId": "frontier-release-cadence",
       "contributionMonths": -1.05,
       "rationale": "Frontier release cadence is running high at 0.75 — a tailwind pulling the date sooner.",
@@ -66,6 +60,12 @@
       "contributionMonths": -1.04958,
       "rationale": "Labor automation exposure is moderate at 0.51 — a tailwind pulling the date sooner.",
       "citation": "https://www.anthropic.com/economic-index"
+    },
+    {
+      "factorId": "adoption-usage",
+      "contributionMonths": -1.04295,
+      "rationale": "Adoption and usage is moderate at 0.41 — a tailwind pulling the date sooner.",
+      "citation": "https://openrouter.ai/rankings"
     },
     {
       "factorId": "algorithmic-efficiency",
@@ -104,16 +104,16 @@
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.524493,
+      "rationale": "Research velocity is moderate at 0.58 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
       "factorId": "safety-eval-pressure",
       "contributionMonths": 0.456158,
       "rationale": "Safety-eval pressure is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.aisi.gov.uk/"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.443592,
-      "rationale": "Research velocity is moderate at 0.49 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "robotics-embodiment",
@@ -123,7 +123,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.26082,
+      "contributionMonths": -0.278208,
       "rationale": "AI capital formation is running low at 0.14 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
