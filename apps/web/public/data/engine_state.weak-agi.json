@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20260805T085112842Z-weak-agi",
-  "ts": "2026-08-05T08:51:12.842Z",
+  "runId": "refresh-hourly-20260805T103544267Z-weak-agi",
+  "ts": "2026-08-05T10:35:44.267Z",
   "definition": "weak-agi",
-  "tAgi": "2027-09-22T21:24:53.180Z",
+  "tAgi": "2027-09-21T05:30:52.139Z",
   "progress": 76.8875,
   "band": {
-    "earlyP10": "2026-09-22T15:35:41.180Z",
-    "lateP90": "2028-09-22T03:14:05.180Z",
-    "likelyEarly": "2027-03-24T06:30:17.180Z",
-    "likelyLate": "2028-03-23T12:19:29.180Z"
+    "earlyP10": "2026-09-20T23:41:40.139Z",
+    "lateP90": "2028-09-20T11:20:04.139Z",
+    "likelyEarly": "2027-03-22T14:36:16.139Z",
+    "likelyLate": "2028-03-21T20:25:28.139Z"
   },
-  "anchor": "2028-06-12T20:26:42.460Z",
-  "deltaMonths": -8.672362,
+  "anchor": "2028-06-12T20:24:47.696Z",
+  "deltaMonths": -8.72694,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -44,16 +44,16 @@
       "citation": "https://epoch.ai/data/notable-ai-models"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.937482,
+      "rationale": "Research velocity is running high at 0.71 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
       "factorId": "datacenter-capex",
       "contributionMonths": -0.900123,
       "rationale": "Datacenter capex is running high at 0.74 — a tailwind pulling the date sooner.",
       "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.89284,
-      "rationale": "Research velocity is running high at 0.68 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "hardware-supply",
@@ -117,8 +117,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.20976,
-      "rationale": "AI capital formation is running low at 0.19 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.219696,
+      "rationale": "AI capital formation is running low at 0.20 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
