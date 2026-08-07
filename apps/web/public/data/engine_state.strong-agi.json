@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260807T141645321Z-strong-agi",
-  "ts": "2026-08-07T14:16:45.321Z",
+  "runId": "refresh-hourly-20260807T155637650Z-strong-agi",
+  "ts": "2026-08-07T15:56:37.650Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-06T19:27:38.281Z",
-  "progress": 32.675,
+  "tAgi": "2039-04-06T14:52:07.698Z",
+  "progress": 32.7,
   "band": {
-    "earlyP10": "2031-08-31T16:16:48.030Z",
-    "lateP90": "2046-11-10T22:38:28.532Z",
-    "likelyEarly": "2035-06-19T05:52:13.155Z",
-    "likelyLate": "2043-01-23T09:03:03.407Z"
+    "earlyP10": "2031-08-31T15:26:28.351Z",
+    "lateP90": "2046-11-10T14:17:47.045Z",
+    "likelyEarly": "2035-06-19T03:09:18.025Z",
+    "likelyLate": "2043-01-23T02:34:57.371Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.844178,
+  "deltaMonths": -8.850464,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -81,8 +81,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.79386,
-      "rationale": "Research velocity is moderate at 0.66 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.791436,
+      "rationale": "Research velocity is moderate at 0.65 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -111,13 +111,13 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.43435,
-      "rationale": "Adoption and usage is running low at 0.36 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.4403,
+      "rationale": "Adoption and usage is running low at 0.37 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.414,
+      "contributionMonths": -0.41676,
       "rationale": "AI capital formation is running low at 0.30 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
