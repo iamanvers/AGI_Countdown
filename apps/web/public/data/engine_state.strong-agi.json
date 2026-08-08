@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260808T222943610Z-strong-agi",
-  "ts": "2026-08-08T22:29:43.610Z",
+  "runId": "refresh-hourly-20260808T232911666Z-strong-agi",
+  "ts": "2026-08-08T23:29:11.666Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-28T08:59:01.281Z",
+  "tAgi": "2039-04-27T04:17:06.450Z",
   "progress": 31.235,
   "band": {
-    "earlyP10": "2031-09-10T02:37:23.108Z",
-    "lateP90": "2046-12-14T15:20:39.454Z",
-    "likelyEarly": "2035-07-04T17:48:12.194Z",
-    "likelyLate": "2043-02-20T00:09:50.368Z"
+    "earlyP10": "2031-09-09T15:44:24.236Z",
+    "lateP90": "2046-12-12T16:49:48.664Z",
+    "likelyEarly": "2035-07-03T22:00:45.343Z",
+    "likelyLate": "2043-02-18T10:33:27.557Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.135713,
+  "deltaMonths": -8.175,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -62,12 +62,6 @@
       "citation": "https://epoch.ai/data/notable-ai-models"
     },
     {
-      "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.998224,
-      "rationale": "Public backlash pressure is running high at 0.97 — a headwind pushing the date later.",
-      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
-    },
-    {
       "factorId": "data-availability",
       "contributionMonths": 0.986414,
       "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
@@ -78,6 +72,12 @@
       "contributionMonths": 0.965201,
       "rationale": "Export-control friction is moderate at 0.50 — a headwind pushing the date later.",
       "citation": "https://www.bis.gov/"
+    },
+    {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": 0.959273,
+      "rationale": "Public backlash pressure is running high at 0.97 — a headwind pushing the date later.",
+      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
       "factorId": "policy-friction",
@@ -93,7 +93,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.626604,
+      "contributionMonths": -0.62418,
       "rationale": "Research velocity is moderate at 0.52 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
@@ -105,7 +105,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.56994,
+      "contributionMonths": -0.5727,
       "rationale": "AI capital formation is moderate at 0.41 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
