@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260808T213103065Z-weak-agi",
-  "ts": "2026-08-08T21:31:03.065Z",
+  "runId": "refresh-hourly-20260808T222943610Z-weak-agi",
+  "ts": "2026-08-08T22:29:43.610Z",
   "definition": "weak-agi",
-  "tAgi": "2027-09-17T17:40:23.874Z",
+  "tAgi": "2027-09-26T01:59:57.125Z",
   "progress": 77.775,
   "band": {
-    "earlyP10": "2026-09-17T11:51:11.874Z",
-    "lateP90": "2028-09-16T23:29:35.874Z",
-    "likelyEarly": "2027-03-19T02:45:47.874Z",
-    "likelyLate": "2028-03-18T08:34:59.874Z"
+    "earlyP10": "2026-09-25T20:10:45.125Z",
+    "lateP90": "2028-09-25T07:49:09.125Z",
+    "likelyEarly": "2027-03-27T11:05:21.125Z",
+    "likelyLate": "2028-03-26T16:54:33.125Z"
   },
-  "anchor": "2028-06-12T23:15:26.130Z",
-  "deltaMonths": -8.845608,
+  "anchor": "2028-06-12T20:52:14.347Z",
+  "deltaMonths": -8.568104,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -62,6 +62,12 @@
       "citation": "https://www.iea.org/reports/electricity-2025"
     },
     {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": 0.798579,
+      "rationale": "Public backlash pressure is running high at 0.97 — a headwind pushing the date later.",
+      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
+    },
+    {
       "factorId": "data-availability",
       "contributionMonths": 0.72337,
       "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
@@ -69,7 +75,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.681447,
+      "contributionMonths": -0.678821,
       "rationale": "Research velocity is moderate at 0.52 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
@@ -92,12 +98,6 @@
       "citation": "https://www.bis.gov/"
     },
     {
-      "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.521493,
-      "rationale": "Public backlash pressure is moderate at 0.45 — a headwind pushing the date later.",
-      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
-    },
-    {
       "factorId": "robotics-embodiment",
       "contributionMonths": -0.4752,
       "rationale": "Robotics & embodiment is moderate at 0.48 — a tailwind pulling the date sooner.",
@@ -105,7 +105,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.453744,
+      "contributionMonths": -0.455952,
       "rationale": "AI capital formation is moderate at 0.41 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
