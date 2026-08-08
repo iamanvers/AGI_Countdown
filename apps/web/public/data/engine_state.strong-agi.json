@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260808T054221714Z-strong-agi",
-  "ts": "2026-08-08T05:42:21.714Z",
+  "runId": "refresh-hourly-20260808T065404689Z-strong-agi",
+  "ts": "2026-08-08T06:54:04.689Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-04T03:50:20.553Z",
-  "progress": 33.03,
+  "tAgi": "2039-04-04T01:31:00.591Z",
+  "progress": 33.06,
   "band": {
-    "earlyP10": "2031-08-31T00:04:47.758Z",
-    "lateP90": "2046-11-06T07:35:53.348Z",
-    "likelyEarly": "2035-06-17T13:57:34.155Z",
-    "likelyLate": "2043-01-19T17:43:06.951Z"
+    "earlyP10": "2031-08-30T23:52:02.943Z",
+    "lateP90": "2046-11-06T03:09:58.239Z",
+    "likelyEarly": "2035-06-17T12:41:31.767Z",
+    "likelyLate": "2043-01-19T14:20:29.415Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.931273,
+  "deltaMonths": -8.934452,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -81,13 +81,13 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.767196,
+      "contributionMonths": -0.764772,
       "rationale": "Research velocity is moderate at 0.63 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.650406,
+      "contributionMonths": 0.653323,
       "rationale": "Public backlash pressure is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
@@ -104,20 +104,20 @@
       "citation": "https://www.aisi.gov.uk/"
     },
     {
+      "factorId": "adoption-usage",
+      "contributionMonths": -0.52598,
+      "rationale": "Adoption and usage is moderate at 0.44 — a tailwind pulling the date sooner.",
+      "citation": "https://openrouter.ai/rankings"
+    },
+    {
       "factorId": "labor-automation-exposure",
       "contributionMonths": -0.52479,
       "rationale": "Labor automation exposure is moderate at 0.51 — a tailwind pulling the date sooner.",
       "citation": "https://www.anthropic.com/economic-index"
     },
     {
-      "factorId": "adoption-usage",
-      "contributionMonths": -0.51884,
-      "rationale": "Adoption and usage is moderate at 0.44 — a tailwind pulling the date sooner.",
-      "citation": "https://openrouter.ai/rankings"
-    },
-    {
       "factorId": "capital-formation",
-      "contributionMonths": -0.44988,
+      "contributionMonths": -0.45126,
       "rationale": "AI capital formation is running low at 0.33 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
