@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20260809T071439564Z-strong-agi",
-  "ts": "2026-08-09T07:14:39.564Z",
+  "runId": "refresh-hourly-20260809T075407098Z-strong-agi",
+  "ts": "2026-08-09T07:54:07.098Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-18T10:53:42.908Z",
+  "tAgi": "2039-04-19T06:07:38.861Z",
   "progress": 31.235,
   "band": {
-    "earlyP10": "2031-09-06T08:38:54.353Z",
-    "lateP90": "2046-11-28T13:08:31.463Z",
-    "likelyEarly": "2035-06-27T21:46:18.630Z",
-    "likelyLate": "2043-02-07T00:01:07.186Z"
+    "earlyP10": "2031-09-06T16:44:11.180Z",
+    "lateP90": "2046-11-29T19:31:06.542Z",
+    "likelyEarly": "2035-06-28T11:25:55.021Z",
+    "likelyLate": "2043-02-08T00:49:22.701Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.461645,
+  "deltaMonths": -8.435317,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -98,16 +98,16 @@
       "citation": "https://www.aisi.gov.uk/"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.586608,
-      "rationale": "Research velocity is moderate at 0.48 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
+      "factorId": "capital-formation",
+      "contributionMonths": -0.58788,
+      "rationale": "AI capital formation is moderate at 0.43 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
-      "factorId": "capital-formation",
-      "contributionMonths": -0.58512,
-      "rationale": "AI capital formation is moderate at 0.42 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
+      "factorId": "research-velocity",
+      "contributionMonths": -0.55752,
+      "rationale": "Research velocity is moderate at 0.46 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "labor-automation-exposure",

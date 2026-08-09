@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-09T07:14:39.564Z",
+  "ts": "2026-08-09T07:54:07.098Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -215,23 +215,23 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.484,
-        "level": 0.542,
+        "normalized": 0.46,
+        "level": 0.54,
         "confidence": 0.673,
         "citation": "https://arxiv.org/list/cs.AI/recent",
         "rolling": {
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -0.066,
-          "percentile": 0.47,
+          "zScore": -0.159,
+          "percentile": 0.464,
           "volatility": 0.016
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.635,
-        "transformative-ai": -0.44,
-        "strong-agi": -0.587
+        "weak-agi": -0.604,
+        "transformative-ai": -0.418,
+        "strong-agi": -0.558
       },
       "sources": [
         {
@@ -269,7 +269,7 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": 0.25,
+          "zScore": 0.246,
           "percentile": 0.077,
           "volatility": 0.033
         }
@@ -697,7 +697,7 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.424,
+        "normalized": 0.426,
         "level": 0.718,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -705,15 +705,15 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": -0.305,
+          "zScore": -0.297,
           "percentile": 0.508,
           "volatility": 0.068
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.468,
-        "transformative-ai": -0.819,
-        "strong-agi": -0.585
+        "weak-agi": -0.47,
+        "transformative-ai": -0.823,
+        "strong-agi": -0.588
       },
       "sources": [
         {
