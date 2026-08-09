@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260809T065731656Z-strong-agi",
-  "ts": "2026-08-09T06:57:31.656Z",
+  "runId": "refresh-daily-20260809T071439564Z-strong-agi",
+  "ts": "2026-08-09T07:14:39.564Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-17T16:32:54.207Z",
+  "tAgi": "2039-04-18T10:53:42.908Z",
   "progress": 31.235,
   "band": {
-    "earlyP10": "2031-09-06T01:08:12.312Z",
-    "lateP90": "2046-11-27T07:57:36.102Z",
-    "likelyEarly": "2035-06-27T08:50:33.260Z",
-    "likelyLate": "2043-02-06T00:15:15.154Z"
+    "earlyP10": "2031-09-06T08:38:54.353Z",
+    "lateP90": "2046-11-28T13:08:31.463Z",
+    "likelyEarly": "2035-06-27T21:46:18.630Z",
+    "likelyLate": "2043-02-07T00:01:07.186Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.486761,
+  "deltaMonths": -8.461645,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -92,20 +92,20 @@
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.614484,
-      "rationale": "Research velocity is moderate at 0.51 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
       "factorId": "safety-eval-pressure",
       "contributionMonths": 0.593005,
       "rationale": "Safety-eval pressure is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.aisi.gov.uk/"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.586608,
+      "rationale": "Research velocity is moderate at 0.48 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
       "factorId": "capital-formation",
-      "contributionMonths": -0.58236,
+      "contributionMonths": -0.58512,
       "rationale": "AI capital formation is moderate at 0.42 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
