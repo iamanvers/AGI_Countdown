@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260809T184112977Z-strong-agi",
-  "ts": "2026-08-09T18:41:12.977Z",
+  "runId": "refresh-hourly-20260809T193328852Z-strong-agi",
+  "ts": "2026-08-09T19:33:28.852Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-19T07:43:53.783Z",
+  "tAgi": "2039-04-19T02:03:04.878Z",
   "progress": 31.235,
   "band": {
-    "earlyP10": "2031-09-06T23:51:10.064Z",
-    "lateP90": "2046-11-29T15:36:37.502Z",
-    "likelyEarly": "2035-06-28T15:47:31.924Z",
-    "likelyLate": "2043-02-07T23:40:15.642Z"
+    "earlyP10": "2031-09-06T22:06:17.463Z",
+    "lateP90": "2046-11-29T05:59:52.293Z",
+    "likelyEarly": "2035-06-28T12:04:41.170Z",
+    "likelyLate": "2043-02-07T16:01:28.586Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.433121,
+  "deltaMonths": -8.440897,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -93,7 +93,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.61962,
+      "contributionMonths": -0.62376,
       "rationale": "AI capital formation is moderate at 0.45 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -104,16 +104,16 @@
       "citation": "https://www.aisi.gov.uk/"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.52722,
+      "rationale": "Research velocity is moderate at 0.43 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
       "factorId": "labor-automation-exposure",
       "contributionMonths": -0.52479,
       "rationale": "Labor automation exposure is moderate at 0.51 — a tailwind pulling the date sooner.",
       "citation": "https://www.anthropic.com/economic-index"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.523584,
-      "rationale": "Research velocity is moderate at 0.43 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "macro-headwinds",
