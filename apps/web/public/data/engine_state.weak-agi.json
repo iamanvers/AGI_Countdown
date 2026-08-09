@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260809T084310515Z-weak-agi",
-  "ts": "2026-08-09T08:43:10.515Z",
+  "runId": "refresh-hourly-20260809T094010864Z-weak-agi",
+  "ts": "2026-08-09T09:40:10.864Z",
   "definition": "weak-agi",
-  "tAgi": "2027-09-19T12:23:14.501Z",
+  "tAgi": "2027-09-19T01:25:06.260Z",
   "progress": 77.775,
   "band": {
-    "earlyP10": "2026-09-19T06:34:02.501Z",
-    "lateP90": "2028-09-18T18:12:26.501Z",
-    "likelyEarly": "2027-03-20T21:28:38.501Z",
-    "likelyLate": "2028-03-20T03:17:50.501Z"
+    "earlyP10": "2026-09-18T19:35:54.260Z",
+    "lateP90": "2028-09-18T07:14:18.260Z",
+    "likelyEarly": "2027-03-20T10:30:30.260Z",
+    "likelyLate": "2028-03-19T16:19:42.260Z"
   },
-  "anchor": "2028-06-12T23:44:23.251Z",
-  "deltaMonths": -8.787795,
+  "anchor": "2028-06-12T11:30:22.920Z",
+  "deltaMonths": -8.786064,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -74,16 +74,16 @@
       "citation": "https://artificialintelligenceact.eu/"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.601354,
-      "rationale": "Research velocity is moderate at 0.46 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
       "factorId": "labor-automation-exposure",
       "contributionMonths": -0.59976,
       "rationale": "Labor automation exposure is moderate at 0.51 — a tailwind pulling the date sooner.",
       "citation": "https://www.anthropic.com/economic-index"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.597415,
+      "rationale": "Research velocity is moderate at 0.46 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "export-control-friction",
@@ -105,7 +105,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.472512,
+      "contributionMonths": -0.47472,
       "rationale": "AI capital formation is moderate at 0.43 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
