@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260809T094010864Z-weak-agi",
-  "ts": "2026-08-09T09:40:10.864Z",
+  "runId": "refresh-hourly-20260809T103509856Z-weak-agi",
+  "ts": "2026-08-09T10:35:09.856Z",
   "definition": "weak-agi",
-  "tAgi": "2027-09-19T01:25:06.260Z",
+  "tAgi": "2027-09-17T20:31:19.302Z",
   "progress": 77.775,
   "band": {
-    "earlyP10": "2026-09-18T19:35:54.260Z",
-    "lateP90": "2028-09-18T07:14:18.260Z",
-    "likelyEarly": "2027-03-20T10:30:30.260Z",
-    "likelyLate": "2028-03-19T16:19:42.260Z"
+    "earlyP10": "2026-09-17T14:42:07.302Z",
+    "lateP90": "2028-09-17T02:20:31.302Z",
+    "likelyEarly": "2027-03-19T05:36:43.302Z",
+    "likelyLate": "2028-03-18T11:25:55.302Z"
   },
-  "anchor": "2028-06-12T11:30:22.920Z",
-  "deltaMonths": -8.786064,
+  "anchor": "2028-06-11T05:20:43.871Z",
+  "deltaMonths": -8.784333,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -80,16 +80,16 @@
       "citation": "https://www.anthropic.com/economic-index"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.597415,
-      "rationale": "Research velocity is moderate at 0.46 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
       "factorId": "export-control-friction",
       "contributionMonths": 0.59397,
       "rationale": "Export-control friction is moderate at 0.50 — a headwind pushing the date later.",
       "citation": "https://www.bis.gov/"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.593476,
+      "rationale": "Research velocity is moderate at 0.45 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "public-backlash-pressure",
@@ -98,16 +98,16 @@
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
+      "factorId": "capital-formation",
+      "contributionMonths": -0.476928,
+      "rationale": "AI capital formation is moderate at 0.43 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
+    },
+    {
       "factorId": "robotics-embodiment",
       "contributionMonths": -0.4752,
       "rationale": "Robotics & embodiment is moderate at 0.48 — a tailwind pulling the date sooner.",
       "citation": "https://ifr.org/worldrobotics/"
-    },
-    {
-      "factorId": "capital-formation",
-      "contributionMonths": -0.47472,
-      "rationale": "AI capital formation is moderate at 0.43 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "safety-eval-pressure",
