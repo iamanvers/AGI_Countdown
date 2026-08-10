@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260810T015122562Z-weak-agi",
-  "ts": "2026-08-10T01:51:22.562Z",
+  "runId": "refresh-hourly-20260810T035631028Z-weak-agi",
+  "ts": "2026-08-10T03:56:31.028Z",
   "definition": "weak-agi",
-  "tAgi": "2027-09-18T01:25:52.342Z",
+  "tAgi": "2027-09-17T19:10:31.197Z",
   "progress": 77.775,
   "band": {
-    "earlyP10": "2026-09-17T19:36:40.342Z",
-    "lateP90": "2028-09-17T07:15:04.342Z",
-    "likelyEarly": "2027-03-19T10:31:16.342Z",
-    "likelyLate": "2028-03-18T16:20:28.342Z"
+    "earlyP10": "2026-09-17T13:21:19.197Z",
+    "lateP90": "2028-09-17T00:59:43.197Z",
+    "likelyEarly": "2027-03-19T04:15:55.197Z",
+    "likelyLate": "2028-03-18T10:05:07.197Z"
   },
   "anchor": "2028-06-12T08:22:38.769Z",
-  "deltaMonths": -8.814618,
+  "deltaMonths": -8.823182,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -80,16 +80,16 @@
       "citation": "https://www.anthropic.com/economic-index"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.594789,
+      "rationale": "Research velocity is moderate at 0.45 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
       "factorId": "export-control-friction",
       "contributionMonths": 0.59397,
       "rationale": "Export-control friction is moderate at 0.50 — a headwind pushing the date later.",
       "citation": "https://www.bis.gov/"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.589537,
-      "rationale": "Research velocity is moderate at 0.45 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "public-backlash-pressure",
@@ -99,8 +99,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.511152,
-      "rationale": "AI capital formation is moderate at 0.46 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.514464,
+      "rationale": "AI capital formation is moderate at 0.47 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
