@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260810T155953451Z-strong-agi",
-  "ts": "2026-08-10T15:59:53.451Z",
+  "runId": "refresh-hourly-20260810T165417310Z-strong-agi",
+  "ts": "2026-08-10T16:54:17.310Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-19T17:47:41.164Z",
-  "progress": 31.4,
+  "tAgi": "2039-04-19T09:55:28.280Z",
+  "progress": 31.43,
   "band": {
-    "earlyP10": "2031-09-07T16:39:39.295Z",
-    "lateP90": "2046-11-29T18:55:43.033Z",
-    "likelyEarly": "2035-06-29T05:13:40.229Z",
-    "likelyLate": "2043-02-08T06:21:42.099Z"
+    "earlyP10": "2031-09-07T14:03:21.615Z",
+    "lateP90": "2046-11-29T05:47:34.945Z",
+    "likelyEarly": "2035-06-28T23:59:24.948Z",
+    "likelyLate": "2043-02-07T19:51:31.612Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.419345,
+  "deltaMonths": -8.430119,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -62,28 +62,28 @@
       "citation": "https://epoch.ai/data/notable-ai-models"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.987264,
-      "rationale": "Research velocity is running high at 0.86 — a tailwind pulling the date sooner.",
-      "citation": "https://www.semanticscholar.org/"
-    },
-    {
       "factorId": "data-availability",
       "contributionMonths": 0.986414,
       "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
       "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
     },
     {
-      "factorId": "macro-headwinds",
-      "contributionMonths": 0.968151,
-      "rationale": "Macro & bubble risk is running high at 0.99 — a headwind pushing the date later.",
-      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
+      "factorId": "research-velocity",
+      "contributionMonths": -0.983808,
+      "rationale": "Research velocity is running high at 0.85 — a tailwind pulling the date sooner.",
+      "citation": "https://www.semanticscholar.org/"
     },
     {
       "factorId": "export-control-friction",
       "contributionMonths": 0.965201,
       "rationale": "Export-control friction is moderate at 0.50 — a headwind pushing the date later.",
       "citation": "https://www.bis.gov/"
+    },
+    {
+      "factorId": "macro-headwinds",
+      "contributionMonths": 0.965201,
+      "rationale": "Macro & bubble risk is running high at 0.98 — a headwind pushing the date later.",
+      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "policy-friction",
@@ -93,7 +93,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.6762,
+      "contributionMonths": -0.68034,
       "rationale": "AI capital formation is moderate at 0.49 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -123,8 +123,8 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.1309,
-      "rationale": "Adoption and usage is running low at 0.11 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.13804,
+      "rationale": "Adoption and usage is running low at 0.12 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     }
   ]
