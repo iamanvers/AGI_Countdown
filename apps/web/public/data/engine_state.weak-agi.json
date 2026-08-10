@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260810T074248059Z-weak-agi",
-  "ts": "2026-08-10T07:42:48.059Z",
+  "runId": "refresh-daily-20260810T080248739Z-weak-agi",
+  "ts": "2026-08-10T08:02:48.739Z",
   "definition": "weak-agi",
-  "tAgi": "2027-09-17T09:07:16.340Z",
+  "tAgi": "2027-09-08T16:19:02.821Z",
   "progress": 77.775,
   "band": {
-    "earlyP10": "2026-09-17T03:18:04.340Z",
-    "lateP90": "2028-09-16T14:56:28.340Z",
-    "likelyEarly": "2027-03-18T18:12:40.340Z",
-    "likelyLate": "2028-03-18T00:01:52.340Z"
+    "earlyP10": "2026-09-08T10:29:50.821Z",
+    "lateP90": "2028-09-07T22:08:14.821Z",
+    "likelyEarly": "2027-03-10T01:24:26.821Z",
+    "likelyLate": "2028-03-09T07:13:38.821Z"
   },
-  "anchor": "2028-06-12T08:06:37.249Z",
-  "deltaMonths": -8.83658,
+  "anchor": "2028-06-12T07:50:35.729Z",
+  "deltaMonths": -9.122057,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -50,6 +50,12 @@
       "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.884832,
+      "rationale": "Research velocity is running high at 0.71 — a tailwind pulling the date sooner.",
+      "citation": "https://www.semanticscholar.org/"
+    },
+    {
       "factorId": "hardware-supply",
       "contributionMonths": -0.8736,
       "rationale": "Hardware supply is running high at 0.70 — a tailwind pulling the date sooner.",
@@ -74,12 +80,6 @@
       "citation": "https://artificialintelligenceact.eu/"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.602667,
-      "rationale": "Research velocity is moderate at 0.46 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
       "factorId": "labor-automation-exposure",
       "contributionMonths": -0.59976,
       "rationale": "Labor automation exposure is moderate at 0.51 — a tailwind pulling the date sooner.",
@@ -93,7 +93,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.519984,
+      "contributionMonths": -0.523296,
       "rationale": "AI capital formation is moderate at 0.47 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },

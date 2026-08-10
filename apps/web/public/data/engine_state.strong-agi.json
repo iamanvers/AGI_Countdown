@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260810T074248059Z-strong-agi",
-  "ts": "2026-08-10T07:42:48.059Z",
+  "runId": "refresh-daily-20260810T080248739Z-strong-agi",
+  "ts": "2026-08-10T08:02:48.739Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-17T09:38:58.886Z",
+  "tAgi": "2039-04-09T08:21:48.094Z",
   "progress": 31.235,
   "band": {
-    "earlyP10": "2031-09-06T13:14:25.214Z",
-    "lateP90": "2046-11-26T06:03:32.558Z",
-    "likelyEarly": "2035-06-27T11:26:42.050Z",
-    "likelyLate": "2043-02-05T07:51:15.722Z"
+    "earlyP10": "2031-09-03T08:07:15.526Z",
+    "lateP90": "2046-11-13T08:36:20.662Z",
+    "likelyEarly": "2035-06-21T20:14:31.810Z",
+    "likelyLate": "2043-01-25T20:29:04.378Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.496205,
+  "deltaMonths": -8.760805,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -80,8 +80,14 @@
       "citation": "https://artificialintelligenceact.eu/"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.816768,
+      "rationale": "Research velocity is running high at 0.71 — a tailwind pulling the date sooner.",
+      "citation": "https://www.semanticscholar.org/"
+    },
+    {
       "factorId": "capital-formation",
-      "contributionMonths": -0.64998,
+      "contributionMonths": -0.65412,
       "rationale": "AI capital formation is moderate at 0.47 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -102,12 +108,6 @@
       "contributionMonths": 0.593005,
       "rationale": "Safety-eval pressure is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.aisi.gov.uk/"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.556308,
-      "rationale": "Research velocity is moderate at 0.46 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "labor-automation-exposure",
