@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260811T205228646Z-weak-agi",
-  "ts": "2026-08-11T20:52:28.646Z",
+  "runId": "refresh-hourly-20260811T214919022Z-weak-agi",
+  "ts": "2026-08-11T21:49:19.022Z",
   "definition": "weak-agi",
-  "tAgi": "2027-08-30T12:14:50.805Z",
-  "progress": 79.925,
+  "tAgi": "2027-08-30T01:11:05.621Z",
+  "progress": 79.9875,
   "band": {
-    "earlyP10": "2026-08-30T06:25:38.805Z",
-    "lateP90": "2028-08-29T18:04:02.805Z",
-    "likelyEarly": "2027-02-28T21:20:14.805Z",
-    "likelyLate": "2028-02-29T03:09:26.805Z"
+    "earlyP10": "2026-08-29T19:21:53.621Z",
+    "lateP90": "2028-08-29T07:00:17.621Z",
+    "likelyEarly": "2027-02-28T10:16:29.621Z",
+    "likelyLate": "2028-02-28T16:05:41.621Z"
   },
-  "anchor": "2028-06-12T08:19:50.812Z",
-  "deltaMonths": -9.42399,
+  "anchor": "2028-06-12T08:23:49.808Z",
+  "deltaMonths": -9.439225,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -45,7 +45,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.974246,
+      "contributionMonths": -0.97162,
       "rationale": "Research velocity is running high at 0.74 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
@@ -69,7 +69,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.780528,
+      "contributionMonths": -0.786048,
       "rationale": "AI capital formation is running high at 0.71 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -81,7 +81,7 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.711469,
+      "contributionMonths": 0.709328,
       "rationale": "Macro & bubble risk is running high at 0.83 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
@@ -104,16 +104,16 @@
       "citation": "https://www.bis.gov/"
     },
     {
+      "factorId": "adoption-usage",
+      "contributionMonths": -0.51816,
+      "rationale": "Adoption and usage is running low at 0.25 — a tailwind pulling the date sooner.",
+      "citation": "https://openrouter.ai/rankings"
+    },
+    {
       "factorId": "public-backlash-pressure",
       "contributionMonths": 0.517981,
       "rationale": "Public backlash pressure is moderate at 0.44 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
-    },
-    {
-      "factorId": "adoption-usage",
-      "contributionMonths": -0.50796,
-      "rationale": "Adoption and usage is running low at 0.25 — a tailwind pulling the date sooner.",
-      "citation": "https://openrouter.ai/rankings"
     },
     {
       "factorId": "robotics-embodiment",
