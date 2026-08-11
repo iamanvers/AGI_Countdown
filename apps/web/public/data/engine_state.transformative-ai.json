@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260811T105225298Z-transformative-ai",
-  "ts": "2026-08-11T10:52:25.298Z",
+  "runId": "refresh-hourly-20260811T114349471Z-transformative-ai",
+  "ts": "2026-08-11T11:43:49.471Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-06-04T19:26:50.523Z",
-  "progress": 45.204,
+  "tAgi": "2031-06-03T17:09:41.742Z",
+  "progress": 45.284,
   "band": {
-    "earlyP10": "2028-07-14T18:48:09.797Z",
-    "lateP90": "2034-04-24T20:05:31.249Z",
-    "likelyEarly": "2029-12-24T07:07:30.160Z",
-    "likelyLate": "2032-11-13T07:46:10.886Z"
+    "earlyP10": "2028-07-14T08:48:33.597Z",
+    "lateP90": "2034-04-23T01:30:49.887Z",
+    "likelyEarly": "2029-12-23T12:59:07.669Z",
+    "likelyLate": "2032-11-11T21:20:15.815Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -6.905758,
+  "deltaMonths": -6.941742,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -38,16 +38,16 @@
       "citation": "https://www.iea.org/reports/electricity-2025"
     },
     {
-      "factorId": "macro-headwinds",
-      "contributionMonths": 1.281211,
-      "rationale": "Macro & bubble risk is running high at 0.88 — a headwind pushing the date later.",
-      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
+      "factorId": "capital-formation",
+      "contributionMonths": -1.288644,
+      "rationale": "AI capital formation is running high at 0.67 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
-      "factorId": "capital-formation",
-      "contributionMonths": -1.277052,
-      "rationale": "AI capital formation is running high at 0.66 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
+      "factorId": "macro-headwinds",
+      "contributionMonths": 1.276841,
+      "rationale": "Macro & bubble risk is running high at 0.88 — a headwind pushing the date later.",
+      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "autonomy-horizon",
@@ -99,8 +99,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.680841,
-      "rationale": "Research velocity is running high at 0.75 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.688113,
+      "rationale": "Research velocity is running high at 0.76 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -111,7 +111,7 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.50745,
+      "contributionMonths": -0.5202,
       "rationale": "Adoption and usage is running low at 0.20 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
