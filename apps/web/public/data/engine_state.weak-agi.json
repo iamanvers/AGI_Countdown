@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260813T195803412Z-weak-agi",
-  "ts": "2026-08-13T19:58:03.412Z",
+  "runId": "refresh-hourly-20260813T204305414Z-weak-agi",
+  "ts": "2026-08-13T20:43:05.414Z",
   "definition": "weak-agi",
-  "tAgi": "2027-08-14T09:00:59.239Z",
-  "progress": 82.3375,
+  "tAgi": "2027-08-14T03:23:24.935Z",
+  "progress": 82.4125,
   "band": {
-    "earlyP10": "2026-08-14T03:11:47.239Z",
-    "lateP90": "2028-08-13T14:50:11.239Z",
-    "likelyEarly": "2027-02-12T18:06:23.239Z",
-    "likelyLate": "2028-02-12T23:55:35.239Z"
+    "earlyP10": "2026-08-13T21:34:12.935Z",
+    "lateP90": "2028-08-13T09:12:36.935Z",
+    "likelyEarly": "2027-02-12T12:28:48.935Z",
+    "likelyLate": "2028-02-12T18:18:00.935Z"
   },
   "anchor": "2028-06-11T23:50:01.024Z",
-  "deltaMonths": -9.942459,
+  "deltaMonths": -9.950161,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -45,14 +45,14 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.003536,
+      "contributionMonths": -1.000224,
       "rationale": "AI capital formation is running high at 0.91 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.90168,
-      "rationale": "Adoption and usage is moderate at 0.44 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.91392,
+      "rationale": "Adoption and usage is moderate at 0.45 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
     {
@@ -75,8 +75,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.820625,
-      "rationale": "Research velocity is moderate at 0.63 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.817999,
+      "rationale": "Research velocity is moderate at 0.62 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -87,7 +87,7 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.652595,
+      "contributionMonths": 0.651195,
       "rationale": "Macro & bubble risk is running high at 0.70 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
