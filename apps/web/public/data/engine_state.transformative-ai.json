@@ -1,27 +1,27 @@
 {
-  "runId": "refresh-hourly-20260814T130729856Z-transformative-ai",
-  "ts": "2026-08-14T13:07:29.856Z",
+  "runId": "refresh-hourly-20260814T145217218Z-transformative-ai",
+  "ts": "2026-08-14T14:52:17.218Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-03-31T10:43:01.022Z",
-  "progress": 56.516,
+  "tAgi": "2031-03-31T06:00:08.642Z",
+  "progress": 56.612,
   "band": {
-    "earlyP10": "2028-06-20T11:10:32.178Z",
-    "lateP90": "2034-01-08T10:15:29.866Z",
-    "likelyEarly": "2029-11-09T10:56:46.600Z",
-    "likelyLate": "2032-08-19T10:29:15.444Z"
+    "earlyP10": "2028-06-20T10:20:05.714Z",
+    "lateP90": "2034-01-08T01:40:11.570Z",
+    "likelyEarly": "2029-11-09T08:10:07.178Z",
+    "likelyLate": "2032-08-19T03:50:10.106Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -9.053277,
+  "deltaMonths": -9.059731,
   "movers": [
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -2.3103,
+      "contributionMonths": -2.3256,
       "rationale": "Adoption and usage is running high at 0.91 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.765848,
+      "contributionMonths": -1.75812,
       "rationale": "AI capital formation is running high at 0.91 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -57,7 +57,7 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 1.111449,
+      "contributionMonths": 1.108931,
       "rationale": "Macro & bubble risk is running high at 0.66 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
@@ -123,7 +123,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.371781,
+      "contributionMonths": -0.368145,
       "rationale": "Research velocity is moderate at 0.41 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     }
