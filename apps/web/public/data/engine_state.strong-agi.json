@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260814T212516629Z-strong-agi",
-  "ts": "2026-08-14T21:25:16.629Z",
+  "runId": "refresh-hourly-20260814T222305881Z-strong-agi",
+  "ts": "2026-08-14T22:23:05.881Z",
   "definition": "strong-agi",
-  "tAgi": "2039-03-14T03:07:14.371Z",
-  "progress": 35.6,
+  "tAgi": "2039-03-14T00:55:26.725Z",
+  "progress": 35.63,
   "band": {
-    "earlyP10": "2031-08-26T13:57:34.958Z",
-    "lateP90": "2046-09-29T16:16:53.784Z",
-    "likelyEarly": "2035-06-04T20:32:24.665Z",
-    "likelyLate": "2042-12-21T09:42:04.077Z"
+    "earlyP10": "2031-08-26T13:39:32.677Z",
+    "lateP90": "2046-09-29T12:11:20.773Z",
+    "likelyEarly": "2035-06-04T19:17:29.701Z",
+    "likelyLate": "2042-12-21T06:33:23.749Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -9.622209,
+  "deltaMonths": -9.625216,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -51,14 +51,14 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.22544,
+      "contributionMonths": -1.2213,
       "rationale": "AI capital formation is running high at 0.89 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -1.1305,
-      "rationale": "Adoption and usage is running high at 0.95 — a tailwind pulling the date sooner.",
+      "contributionMonths": -1.13764,
+      "rationale": "Adoption and usage is running high at 0.96 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
     {
@@ -93,7 +93,7 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.780609,
+      "contributionMonths": 0.77939,
       "rationale": "Macro & bubble risk is moderate at 0.64 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
@@ -123,7 +123,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.458136,
+      "contributionMonths": -0.456924,
       "rationale": "Research velocity is running low at 0.38 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     }

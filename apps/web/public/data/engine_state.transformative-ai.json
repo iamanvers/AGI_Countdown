@@ -1,27 +1,27 @@
 {
-  "runId": "refresh-hourly-20260814T212516629Z-transformative-ai",
-  "ts": "2026-08-14T21:25:16.629Z",
+  "runId": "refresh-hourly-20260814T222305881Z-transformative-ai",
+  "ts": "2026-08-14T22:23:05.881Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-03-29T20:27:01.778Z",
-  "progress": 57.22,
+  "tAgi": "2031-03-29T12:55:32.765Z",
+  "progress": 57.316,
   "band": {
-    "earlyP10": "2028-06-20T00:46:55.420Z",
-    "lateP90": "2034-01-05T16:07:08.136Z",
-    "likelyEarly": "2029-11-08T10:36:58.599Z",
-    "likelyLate": "2032-08-17T06:17:04.957Z"
+    "earlyP10": "2028-06-19T22:20:46.947Z",
+    "lateP90": "2034-01-05T03:30:18.583Z",
+    "likelyEarly": "2029-11-08T05:38:09.856Z",
+    "likelyLate": "2032-08-16T20:12:55.674Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -9.105662,
+  "deltaMonths": -9.115963,
   "movers": [
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -2.4225,
-      "rationale": "Adoption and usage is running high at 0.95 — a tailwind pulling the date sooner.",
+      "contributionMonths": -2.4378,
+      "rationale": "Adoption and usage is running high at 0.96 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.715616,
+      "contributionMonths": -1.70982,
       "rationale": "AI capital formation is running high at 0.89 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -56,16 +56,16 @@
       "citation": "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/"
     },
     {
-      "factorId": "macro-headwinds",
-      "contributionMonths": 1.092853,
-      "rationale": "Macro & bubble risk is moderate at 0.64 — a headwind pushing the date later.",
-      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
-    },
-    {
       "factorId": "hardware-supply",
       "contributionMonths": -1.092,
       "rationale": "Hardware supply is running high at 0.70 — a tailwind pulling the date sooner.",
       "citation": "https://investor.tsmc.com/english"
+    },
+    {
+      "factorId": "macro-headwinds",
+      "contributionMonths": 1.091147,
+      "rationale": "Macro & bubble risk is moderate at 0.64 — a headwind pushing the date later.",
+      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "frontier-release-cadence",
@@ -123,7 +123,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.343602,
+      "contributionMonths": -0.342693,
       "rationale": "Research velocity is running low at 0.38 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     }
