@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260814T232200977Z-weak-agi",
-  "ts": "2026-08-14T23:22:00.977Z",
+  "runId": "refresh-hourly-20260815T011603628Z-weak-agi",
+  "ts": "2026-08-15T01:16:03.628Z",
   "definition": "weak-agi",
-  "tAgi": "2027-07-23T16:02:11.397Z",
-  "progress": 88.825,
+  "tAgi": "2027-07-23T09:54:45.961Z",
+  "progress": 88.9,
   "band": {
-    "earlyP10": "2026-08-14T23:22:00.977Z",
-    "lateP90": "2028-07-22T21:51:23.397Z",
-    "likelyEarly": "2027-01-22T01:07:35.397Z",
-    "likelyLate": "2028-01-22T06:56:47.397Z"
+    "earlyP10": "2026-08-15T01:16:03.628Z",
+    "lateP90": "2028-07-22T15:43:57.961Z",
+    "likelyEarly": "2027-01-21T19:00:09.961Z",
+    "likelyLate": "2028-01-22T00:49:21.961Z"
   },
-  "anchor": "2028-06-12T14:56:20.658Z",
-  "deltaMonths": -10.676335,
+  "anchor": "2028-06-12T15:05:35.259Z",
+  "deltaMonths": -10.684929,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -27,8 +27,8 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -1.96044,
-      "rationale": "Adoption and usage is running high at 0.96 — a tailwind pulling the date sooner.",
+      "contributionMonths": -1.97268,
+      "rationale": "Adoption and usage is running high at 0.97 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
     {
@@ -51,7 +51,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.973728,
+      "contributionMonths": -0.970416,
       "rationale": "AI capital formation is running high at 0.88 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -81,8 +81,8 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.622047,
-      "rationale": "Macro & bubble risk is moderate at 0.64 — a headwind pushing the date later.",
+      "contributionMonths": 0.621068,
+      "rationale": "Macro & bubble risk is moderate at 0.63 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -111,7 +111,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.495001,
+      "contributionMonths": -0.493688,
       "rationale": "Research velocity is running low at 0.38 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
