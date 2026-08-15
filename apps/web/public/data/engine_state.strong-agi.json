@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260815T142247831Z-strong-agi",
-  "ts": "2026-08-15T14:22:47.831Z",
+  "runId": "refresh-hourly-20260815T152024162Z-strong-agi",
+  "ts": "2026-08-15T15:20:24.162Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-12T12:56:37.516Z",
+  "tAgi": "2039-04-12T10:47:51.323Z",
   "progress": 35.85,
   "band": {
-    "earlyP10": "2031-09-07T18:34:14.029Z",
-    "lateP90": "2046-11-15T07:19:01.003Z",
-    "likelyEarly": "2035-06-25T15:45:25.772Z",
-    "likelyLate": "2043-01-28T10:07:49.260Z"
+    "earlyP10": "2031-09-07T18:17:36.017Z",
+    "lateP90": "2046-11-15T03:18:06.629Z",
+    "likelyEarly": "2035-06-25T14:32:43.670Z",
+    "likelyLate": "2043-01-28T07:02:58.976Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.65597,
+  "deltaMonths": -8.658908,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -87,8 +87,8 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.753972,
-      "rationale": "Macro & bubble risk is moderate at 0.60 — a headwind pushing the date later.",
+      "contributionMonths": 0.752078,
+      "rationale": "Macro & bubble risk is moderate at 0.59 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -117,14 +117,14 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.34638,
+      "contributionMonths": -0.345,
       "rationale": "AI capital formation is running low at 0.25 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.28482,
-      "rationale": "Research velocity is running low at 0.23 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.287244,
+      "rationale": "Research velocity is running low at 0.24 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     }
   ]
