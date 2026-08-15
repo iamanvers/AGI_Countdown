@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-15T12:38:14.338Z",
+  "ts": "2026-08-15T13:30:28.996Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -215,7 +215,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.23,
+        "normalized": 0.233,
         "level": 0.542,
         "confidence": 0.673,
         "citation": "https://arxiv.org/list/cs.AI/recent",
@@ -223,15 +223,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -1.205,
+          "zScore": -1.194,
           "percentile": 0.122,
           "volatility": 0.007
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.302,
-        "transformative-ai": -0.209,
-        "strong-agi": -0.279
+        "weak-agi": -0.306,
+        "transformative-ai": -0.212,
+        "strong-agi": -0.282
       },
       "sources": [
         {
@@ -269,9 +269,9 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": 0.229,
+          "zScore": 0.216,
           "percentile": 1,
-          "volatility": 0.025
+          "volatility": 0.023
         }
       },
       "contributionMonths": {
@@ -705,8 +705,8 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": -1.086,
-          "percentile": 0.083,
+          "zScore": -1.091,
+          "percentile": 0.077,
           "volatility": 0.038
         }
       },
@@ -738,7 +738,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.603,
+        "normalized": 0.6,
         "level": 0.165,
         "confidence": 0.65,
         "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N",
@@ -746,15 +746,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": 0.418,
-          "percentile": 0.442,
+          "zScore": 0.407,
+          "percentile": 0.436,
           "volatility": 0
         }
       },
       "contributionMonths": {
-        "weak-agi": 0.606,
-        "transformative-ai": 1.06,
-        "strong-agi": 0.757
+        "weak-agi": 0.604,
+        "transformative-ai": 1.057,
+        "strong-agi": 0.755
       },
       "sources": [
         {

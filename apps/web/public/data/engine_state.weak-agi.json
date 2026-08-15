@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260815T123814338Z-weak-agi",
-  "ts": "2026-08-15T12:38:14.338Z",
+  "runId": "refresh-hourly-20260815T133028996Z-weak-agi",
+  "ts": "2026-08-15T13:30:28.996Z",
   "definition": "weak-agi",
-  "tAgi": "2027-08-16T20:14:54.202Z",
+  "tAgi": "2027-08-16T16:16:07.346Z",
   "progress": 89.3125,
   "band": {
-    "earlyP10": "2026-08-16T14:25:42.202Z",
-    "lateP90": "2028-08-16T02:04:06.202Z",
-    "likelyEarly": "2027-02-15T05:20:18.202Z",
-    "likelyLate": "2028-02-15T11:09:30.202Z"
+    "earlyP10": "2026-08-16T10:26:55.346Z",
+    "lateP90": "2028-08-15T22:05:19.346Z",
+    "likelyEarly": "2027-02-15T01:21:31.346Z",
+    "likelyLate": "2028-02-15T07:10:43.346Z"
   },
   "anchor": "2028-06-12T16:09:19.448Z",
-  "deltaMonths": -9.883717,
+  "deltaMonths": -9.889165,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -74,16 +74,16 @@
       "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
     },
     {
-      "factorId": "macro-headwinds",
-      "contributionMonths": 0.605694,
-      "rationale": "Macro & bubble risk is moderate at 0.60 — a headwind pushing the date later.",
-      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
-    },
-    {
       "factorId": "policy-friction",
       "contributionMonths": 0.604907,
       "rationale": "Policy friction is running low at 0.38 — a headwind pushing the date later.",
       "citation": "https://artificialintelligenceact.eu/"
+    },
+    {
+      "factorId": "macro-headwinds",
+      "contributionMonths": 0.604185,
+      "rationale": "Macro & bubble risk is moderate at 0.60 — a headwind pushing the date later.",
+      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "labor-automation-exposure",
@@ -117,7 +117,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.30199,
+      "contributionMonths": -0.305929,
       "rationale": "Research velocity is running low at 0.23 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
