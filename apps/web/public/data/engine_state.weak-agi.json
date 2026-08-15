@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260815T212130025Z-weak-agi",
-  "ts": "2026-08-15T21:21:30.025Z",
+  "runId": "refresh-hourly-20260815T222149003Z-weak-agi",
+  "ts": "2026-08-15T22:21:49.003Z",
   "definition": "weak-agi",
-  "tAgi": "2027-08-16T02:17:11.727Z",
+  "tAgi": "2027-08-15T23:37:10.525Z",
   "progress": 89.3125,
   "band": {
-    "earlyP10": "2026-08-15T21:21:30.025Z",
-    "lateP90": "2028-08-15T08:06:23.727Z",
-    "likelyEarly": "2027-02-14T11:22:35.727Z",
-    "likelyLate": "2028-02-14T17:11:47.727Z"
+    "earlyP10": "2026-08-15T22:21:49.003Z",
+    "lateP90": "2028-08-15T05:26:22.525Z",
+    "likelyEarly": "2027-02-14T08:42:34.525Z",
+    "likelyLate": "2028-02-14T14:31:46.525Z"
   },
   "anchor": "2028-06-12T15:53:54.127Z",
-  "deltaMonths": -9.907954,
+  "deltaMonths": -9.911605,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -86,16 +86,16 @@
       "citation": "https://www.anthropic.com/economic-index"
     },
     {
-      "factorId": "macro-headwinds",
-      "contributionMonths": 0.59403,
-      "rationale": "Macro & bubble risk is moderate at 0.58 — a headwind pushing the date later.",
-      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
-    },
-    {
       "factorId": "export-control-friction",
       "contributionMonths": 0.59397,
       "rationale": "Export-control friction is moderate at 0.50 — a headwind pushing the date later.",
       "citation": "https://www.bis.gov/"
+    },
+    {
+      "factorId": "macro-headwinds",
+      "contributionMonths": 0.593005,
+      "rationale": "Macro & bubble risk is moderate at 0.58 — a headwind pushing the date later.",
+      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "public-backlash-pressure",
@@ -111,7 +111,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.326937,
+      "contributionMonths": -0.329563,
       "rationale": "Research velocity is running low at 0.25 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
