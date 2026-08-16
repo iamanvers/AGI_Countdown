@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-16T20:22:45.889Z",
+  "ts": "2026-08-16T21:20:23.962Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -215,7 +215,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.143,
+        "normalized": 0.146,
         "level": 0.533,
         "confidence": 0.673,
         "citation": "https://arxiv.org/list/cs.AI/recent",
@@ -223,15 +223,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -1.794,
+          "zScore": -1.768,
           "percentile": 0.006,
           "volatility": 0.009
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.188,
-        "transformative-ai": -0.13,
-        "strong-agi": -0.173
+        "weak-agi": -0.192,
+        "transformative-ai": -0.133,
+        "strong-agi": -0.177
       },
       "sources": [
         {
@@ -697,7 +697,7 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.247,
+        "normalized": 0.248,
         "level": 0.696,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -705,15 +705,15 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": -1.112,
+          "zScore": -1.111,
           "percentile": 0.006,
           "volatility": 0.038
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.273,
-        "transformative-ai": -0.477,
-        "strong-agi": -0.341
+        "weak-agi": -0.274,
+        "transformative-ai": -0.479,
+        "strong-agi": -0.342
       },
       "sources": [
         {
@@ -738,7 +738,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.514,
+        "normalized": 0.511,
         "level": 0.165,
         "confidence": 0.65,
         "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N",
@@ -746,15 +746,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": 0.057,
-          "percentile": 0.26,
+          "zScore": 0.044,
+          "percentile": 0.254,
           "volatility": 0
         }
       },
       "contributionMonths": {
-        "weak-agi": 0.559,
-        "transformative-ai": 0.979,
-        "strong-agi": 0.699
+        "weak-agi": 0.558,
+        "transformative-ai": 0.976,
+        "strong-agi": 0.697
       },
       "sources": [
         {
