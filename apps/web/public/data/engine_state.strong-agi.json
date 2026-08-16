@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-all-20260816T173449826Z-strong-agi",
-  "ts": "2026-08-16T17:34:49.826Z",
+  "runId": "refresh-hourly-20260816T182931362Z-strong-agi",
+  "ts": "2026-08-16T18:29:31.362Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-16T23:02:08.677Z",
+  "tAgi": "2039-04-17T09:03:55.089Z",
   "progress": 35.52,
   "band": {
-    "earlyP10": "2031-09-10T05:21:19.722Z",
-    "lateP90": "2046-11-21T16:42:57.632Z",
-    "likelyEarly": "2035-06-29T02:11:44.199Z",
-    "likelyLate": "2043-02-02T19:52:33.155Z"
+    "earlyP10": "2031-09-10T09:54:51.516Z",
+    "lateP90": "2046-11-22T08:12:58.662Z",
+    "likelyEarly": "2035-06-29T09:29:23.302Z",
+    "likelyLate": "2043-02-03T08:38:26.876Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.510735,
+  "deltaMonths": -8.497005,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -87,7 +87,7 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.705108,
+      "contributionMonths": 0.703082,
       "rationale": "Macro & bubble risk is moderate at 0.52 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
@@ -123,8 +123,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.180588,
-      "rationale": "Research velocity is running low at 0.15 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.164832,
+      "rationale": "Research velocity is running low at 0.14 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     }
   ]
