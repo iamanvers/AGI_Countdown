@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260816T112035681Z-strong-agi",
-  "ts": "2026-08-16T11:20:35.681Z",
+  "runId": "refresh-hourly-20260816T123928308Z-strong-agi",
+  "ts": "2026-08-16T12:39:28.308Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-16T05:18:58.928Z",
-  "progress": 35.71,
+  "tAgi": "2039-04-16T05:33:18.855Z",
+  "progress": 35.685,
   "band": {
-    "earlyP10": "2031-09-09T18:31:31.565Z",
-    "lateP90": "2046-11-20T16:06:26.291Z",
-    "likelyEarly": "2035-06-28T11:55:15.246Z",
-    "likelyLate": "2043-02-01T22:42:42.610Z"
+    "earlyP10": "2031-09-09T19:24:35.055Z",
+    "lateP90": "2046-11-20T15:42:02.655Z",
+    "likelyEarly": "2035-06-28T12:28:56.955Z",
+    "likelyLate": "2043-02-01T22:37:40.755Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.534992,
+  "deltaMonths": -8.534665,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -51,7 +51,7 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -1.15668,
+      "contributionMonths": -1.15073,
       "rationale": "Adoption and usage is running high at 0.97 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
@@ -87,7 +87,7 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.718463,
+      "contributionMonths": 0.716476,
       "rationale": "Macro & bubble risk is moderate at 0.54 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
@@ -123,8 +123,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.17574,
-      "rationale": "Research velocity is running low at 0.14 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.179376,
+      "rationale": "Research velocity is running low at 0.15 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     }
   ]
