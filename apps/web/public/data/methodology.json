@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-16T06:39:59.707Z",
+  "ts": "2026-08-16T06:57:14.375Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -215,23 +215,23 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.263,
-        "level": 0.542,
+        "normalized": 0.188,
+        "level": 0.538,
         "confidence": 0.673,
         "citation": "https://arxiv.org/list/cs.AI/recent",
         "rolling": {
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -1.028,
-          "percentile": 0.122,
-          "volatility": 0.007
+          "zScore": -1.465,
+          "percentile": 0.006,
+          "volatility": 0.008
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.345,
-        "transformative-ai": -0.239,
-        "strong-agi": -0.319
+        "weak-agi": -0.247,
+        "transformative-ai": -0.171,
+        "strong-agi": -0.228
       },
       "sources": [
         {
@@ -262,14 +262,14 @@
       "normalization": "momentum-01",
       "reading": {
         "normalized": 1,
-        "level": 0.777,
+        "level": 0.778,
         "confidence": 0.68,
         "citation": "https://openrouter.ai/rankings",
         "rolling": {
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": 1.589,
+          "zScore": 1.832,
           "percentile": 1,
           "volatility": 0
         }
@@ -705,7 +705,7 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": -1.133,
+          "zScore": -1.131,
           "percentile": 0.006,
           "volatility": 0.037
         }
@@ -738,7 +738,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.559,
+        "normalized": 0.557,
         "level": 0.165,
         "confidence": 0.65,
         "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N",
@@ -746,15 +746,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": 0.239,
-          "percentile": 0.348,
+          "zScore": 0.228,
+          "percentile": 0.343,
           "volatility": 0
         }
       },
       "contributionMonths": {
-        "weak-agi": 0.583,
-        "transformative-ai": 1.021,
-        "strong-agi": 0.729
+        "weak-agi": 0.582,
+        "transformative-ai": 1.019,
+        "strong-agi": 0.728
       },
       "sources": [
         {
