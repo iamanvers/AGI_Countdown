@@ -1,22 +1,22 @@
 {
-  "runId": "refresh-hourly-20260816T171952925Z-transformative-ai",
-  "ts": "2026-08-16T17:19:52.925Z",
+  "runId": "refresh-all-20260816T173449826Z-transformative-ai",
+  "ts": "2026-08-16T17:34:49.826Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-05-10T09:51:43.264Z",
-  "progress": 57.044,
+  "tAgi": "2031-05-11T02:24:24.381Z",
+  "progress": 56.964,
   "band": {
-    "earlyP10": "2028-07-07T19:06:38.164Z",
-    "lateP90": "2034-03-12T00:36:48.364Z",
-    "likelyEarly": "2029-12-08T02:29:10.714Z",
-    "likelyLate": "2032-10-09T17:14:15.814Z"
+    "earlyP10": "2028-07-08T01:52:41.778Z",
+    "lateP90": "2034-03-13T02:56:06.984Z",
+    "likelyEarly": "2029-12-08T14:08:33.079Z",
+    "likelyLate": "2032-10-10T14:40:15.683Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -7.740252,
+  "deltaMonths": -7.717603,
   "movers": [
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -2.39445,
-      "rationale": "Adoption and usage is running high at 0.94 — a tailwind pulling the date sooner.",
+      "contributionMonths": -2.3817,
+      "rationale": "Adoption and usage is running high at 0.93 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
     {
@@ -69,8 +69,8 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.989978,
-      "rationale": "Macro & bubble risk is moderate at 0.53 — a headwind pushing the date later.",
+      "contributionMonths": 0.987151,
+      "rationale": "Macro & bubble risk is moderate at 0.52 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -123,8 +123,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.148167,
-      "rationale": "Research velocity is running low at 0.16 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.135441,
+      "rationale": "Research velocity is running low at 0.15 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     }
   ]
