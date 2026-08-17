@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260817T112627287Z-strong-agi",
-  "ts": "2026-08-17T11:26:27.287Z",
+  "runId": "refresh-hourly-20260817T124434855Z-strong-agi",
+  "ts": "2026-08-17T12:44:34.855Z",
   "definition": "strong-agi",
-  "tAgi": "2039-03-14T19:52:46.004Z",
+  "tAgi": "2039-03-14T20:22:15.823Z",
   "progress": 35.52,
   "band": {
-    "earlyP10": "2031-08-28T09:59:47.556Z",
-    "lateP90": "2046-09-29T05:45:44.452Z",
-    "likelyEarly": "2035-06-06T02:56:16.780Z",
-    "likelyLate": "2042-12-21T12:49:15.228Z"
+    "earlyP10": "2031-08-28T10:58:28.067Z",
+    "lateP90": "2046-09-29T05:46:03.579Z",
+    "likelyEarly": "2035-06-06T03:40:21.945Z",
+    "likelyLate": "2042-12-21T13:04:09.701Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -9.599267,
+  "deltaMonths": -9.598594,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -51,8 +51,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -1.207572,
-      "rationale": "Research velocity is running high at 0.98 — a tailwind pulling the date sooner.",
+      "contributionMonths": -1.202628,
+      "rationale": "Research velocity is running high at 0.97 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -99,8 +99,8 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.659117,
-      "rationale": "Macro & bubble risk is moderate at 0.46 — a headwind pushing the date later.",
+      "contributionMonths": 0.656226,
+      "rationale": "Macro & bubble risk is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -123,8 +123,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.36432,
-      "rationale": "AI capital formation is running low at 0.26 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.3657,
+      "rationale": "AI capital formation is running low at 0.27 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
   ]
