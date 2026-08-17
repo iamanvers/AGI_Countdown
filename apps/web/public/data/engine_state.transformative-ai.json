@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260817T084343130Z-transformative-ai",
-  "ts": "2026-08-17T08:43:43.130Z",
+  "runId": "refresh-hourly-20260817T094148351Z-transformative-ai",
+  "ts": "2026-08-17T09:41:48.351Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-04-15T04:39:39.741Z",
+  "tAgi": "2031-04-15T03:46:14.081Z",
   "progress": 56.964,
   "band": {
-    "earlyP10": "2028-06-28T02:14:36.740Z",
-    "lateP90": "2034-01-30T07:04:42.742Z",
-    "likelyEarly": "2029-11-20T15:27:08.241Z",
-    "likelyLate": "2032-09-06T17:52:11.241Z"
+    "earlyP10": "2028-06-28T02:27:54.619Z",
+    "lateP90": "2034-01-30T05:04:33.543Z",
+    "likelyEarly": "2029-11-20T15:07:04.350Z",
+    "likelyLate": "2032-09-06T16:25:23.812Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -8.568744,
+  "deltaMonths": -8.569963,
   "movers": [
     {
       "factorId": "adoption-usage",
@@ -68,21 +68,21 @@
       "citation": "https://www.anthropic.com/economic-index"
     },
     {
-      "factorId": "macro-headwinds",
-      "contributionMonths": 0.934801,
-      "rationale": "Macro & bubble risk is moderate at 0.47 — a headwind pushing the date later.",
-      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
-    },
-    {
       "factorId": "algorithmic-efficiency",
       "contributionMonths": -0.9324,
       "rationale": "Algorithmic efficiency is running high at 0.70 — a tailwind pulling the date sooner.",
       "citation": "https://aiindex.stanford.edu/report/"
     },
     {
+      "factorId": "macro-headwinds",
+      "contributionMonths": 0.931806,
+      "rationale": "Macro & bubble risk is moderate at 0.47 — a headwind pushing the date later.",
+      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
+    },
+    {
       "factorId": "research-velocity",
-      "contributionMonths": -0.915876,
-      "rationale": "Research velocity is running high at 0.99 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.912168,
+      "rationale": "Research velocity is running high at 0.98 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -111,7 +111,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.504252,
+      "contributionMonths": -0.506184,
       "rationale": "AI capital formation is running low at 0.26 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
