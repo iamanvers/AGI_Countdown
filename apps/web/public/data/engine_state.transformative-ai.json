@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260817T133942941Z-transformative-ai",
-  "ts": "2026-08-17T13:39:42.941Z",
+  "runId": "refresh-hourly-20260817T142807170Z-transformative-ai",
+  "ts": "2026-08-17T14:28:07.170Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-04-14T21:52:10.992Z",
+  "tAgi": "2031-04-15T00:09:40.506Z",
   "progress": 56.964,
   "band": {
-    "earlyP10": "2028-06-28T02:28:47.534Z",
-    "lateP90": "2034-01-29T17:15:34.450Z",
-    "likelyEarly": "2029-11-20T12:10:29.263Z",
-    "likelyLate": "2032-09-06T07:33:52.721Z"
+    "earlyP10": "2028-06-28T03:52:58.192Z",
+    "lateP90": "2034-01-29T20:26:22.820Z",
+    "likelyEarly": "2029-11-20T14:01:19.349Z",
+    "likelyLate": "2032-09-06T10:18:01.663Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -8.578041,
+  "deltaMonths": -8.574904,
   "movers": [
     {
       "factorId": "adoption-usage",
@@ -75,14 +75,14 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.913633,
-      "rationale": "Macro & bubble risk is moderate at 0.45 — a headwind pushing the date later.",
+      "contributionMonths": 0.909545,
+      "rationale": "Macro & bubble risk is moderate at 0.44 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.898263,
-      "rationale": "Research velocity is running high at 0.97 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.894555,
+      "rationale": "Research velocity is running high at 0.96 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -99,8 +99,8 @@
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.736051,
-      "rationale": "Public backlash pressure is moderate at 0.47 — a headwind pushing the date later.",
+      "contributionMonths": 0.7415,
+      "rationale": "Public backlash pressure is moderate at 0.48 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
@@ -111,7 +111,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.513912,
+      "contributionMonths": -0.515844,
       "rationale": "AI capital formation is running low at 0.27 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
