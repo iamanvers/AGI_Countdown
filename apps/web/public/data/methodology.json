@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-18T08:37:25.408Z",
+  "ts": "2026-08-18T09:34:11.494Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -215,7 +215,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.244,
+        "normalized": 0.245,
         "level": 0.534,
         "confidence": 0.673,
         "citation": "https://arxiv.org/list/cs.AI/recent",
@@ -223,15 +223,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -1.131,
+          "zScore": -1.127,
           "percentile": 0.072,
           "volatility": 0.019
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.32,
-        "transformative-ai": -0.222,
-        "strong-agi": -0.296
+        "weak-agi": -0.322,
+        "transformative-ai": -0.223,
+        "strong-agi": -0.297
       },
       "sources": [
         {
@@ -705,8 +705,8 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": -0.736,
-          "percentile": 0.42,
+          "zScore": -0.733,
+          "percentile": 0.425,
           "volatility": 0.041
         }
       },
@@ -738,7 +738,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.305,
+        "normalized": 0.289,
         "level": 0.165,
         "confidence": 0.65,
         "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N",
@@ -746,15 +746,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -0.826,
-          "percentile": 0.055,
+          "zScore": -0.9,
+          "percentile": 0.05,
           "volatility": 0
         }
       },
       "contributionMonths": {
-        "weak-agi": 0.431,
-        "transformative-ai": 0.754,
-        "strong-agi": 0.538
+        "weak-agi": 0.419,
+        "transformative-ai": 0.734,
+        "strong-agi": 0.524
       },
       "sources": [
         {

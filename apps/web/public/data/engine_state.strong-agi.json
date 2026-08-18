@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260818T083725408Z-strong-agi",
-  "ts": "2026-08-18T08:37:25.408Z",
+  "runId": "refresh-hourly-20260818T093411494Z-strong-agi",
+  "ts": "2026-08-18T09:34:11.494Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-05T15:33:58.800Z",
+  "tAgi": "2039-04-05T04:13:31.994Z",
   "progress": 35.52,
   "band": {
-    "earlyP10": "2031-09-06T16:11:18.202Z",
-    "lateP90": "2046-11-02T14:56:39.398Z",
-    "likelyEarly": "2035-06-21T15:52:38.501Z",
-    "likelyLate": "2043-01-18T15:15:19.099Z"
+    "earlyP10": "2031-09-06T12:13:11.052Z",
+    "lateP90": "2046-11-01T20:13:52.936Z",
+    "likelyEarly": "2035-06-21T08:13:21.523Z",
+    "likelyLate": "2043-01-18T00:13:42.465Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.882364,
+  "deltaMonths": -8.897889,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -104,16 +104,16 @@
       "citation": "https://www.aisi.gov.uk/"
     },
     {
-      "factorId": "macro-headwinds",
-      "contributionMonths": 0.538461,
-      "rationale": "Macro & bubble risk is running low at 0.30 — a headwind pushing the date later.",
-      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
-    },
-    {
       "factorId": "labor-automation-exposure",
       "contributionMonths": -0.52479,
       "rationale": "Labor automation exposure is moderate at 0.51 — a tailwind pulling the date sooner.",
       "citation": "https://www.anthropic.com/economic-index"
+    },
+    {
+      "factorId": "macro-headwinds",
+      "contributionMonths": 0.524148,
+      "rationale": "Macro & bubble risk is running low at 0.29 — a headwind pushing the date later.",
+      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "capital-formation",
@@ -123,7 +123,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.295728,
+      "contributionMonths": -0.29694,
       "rationale": "Research velocity is running low at 0.24 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     }
