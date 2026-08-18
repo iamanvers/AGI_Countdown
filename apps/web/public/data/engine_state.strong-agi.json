@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260818T102831281Z-strong-agi",
-  "ts": "2026-08-18T10:28:31.281Z",
+  "runId": "refresh-hourly-20260818T112541049Z-strong-agi",
+  "ts": "2026-08-18T11:25:41.049Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-04T15:06:05.977Z",
+  "tAgi": "2039-04-03T23:15:53.084Z",
   "progress": 35.52,
   "band": {
-    "earlyP10": "2031-09-06T07:30:48.330Z",
-    "lateP90": "2046-10-31T22:41:23.624Z",
-    "likelyEarly": "2035-06-20T23:18:27.153Z",
-    "likelyLate": "2043-01-17T06:53:44.801Z"
+    "earlyP10": "2031-09-06T01:45:00.770Z",
+    "lateP90": "2046-10-30T20:46:45.398Z",
+    "likelyEarly": "2035-06-20T12:30:26.927Z",
+    "likelyLate": "2043-01-16T10:01:19.241Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.915855,
+  "deltaMonths": -8.937535,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -111,20 +111,20 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.507562,
-      "rationale": "Macro & bubble risk is running low at 0.27 — a headwind pushing the date later.",
+      "contributionMonths": 0.488474,
+      "rationale": "Macro & bubble risk is running low at 0.25 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.4485,
+      "contributionMonths": -0.44988,
       "rationale": "AI capital formation is running low at 0.33 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.29694,
-      "rationale": "Research velocity is running low at 0.24 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.298152,
+      "rationale": "Research velocity is running low at 0.25 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     }
   ]
