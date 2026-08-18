@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260818T124707534Z-transformative-ai",
-  "ts": "2026-08-18T12:47:07.534Z",
+  "runId": "refresh-hourly-20260818T134205528Z-transformative-ai",
+  "ts": "2026-08-18T13:42:05.528Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-04-24T01:00:12.716Z",
+  "tAgi": "2031-04-22T15:05:16.239Z",
   "progress": 56.964,
   "band": {
-    "earlyP10": "2028-07-02T08:01:05.619Z",
-    "lateP90": "2034-02-12T17:59:19.813Z",
-    "likelyEarly": "2029-11-27T04:30:39.168Z",
-    "likelyLate": "2032-09-17T21:29:46.264Z"
+    "earlyP10": "2028-07-01T19:00:04.780Z",
+    "lateP90": "2034-02-10T11:10:27.698Z",
+    "likelyEarly": "2029-11-26T05:02:40.510Z",
+    "likelyLate": "2032-09-16T01:07:51.968Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -8.278057,
+  "deltaMonths": -8.324486,
   "movers": [
     {
       "factorId": "adoption-usage",
@@ -92,16 +92,16 @@
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
-      "factorId": "macro-headwinds",
-      "contributionMonths": 0.650348,
-      "rationale": "Macro & bubble risk is running low at 0.23 — a headwind pushing the date later.",
-      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
-    },
-    {
       "factorId": "capital-formation",
-      "contributionMonths": -0.629832,
+      "contributionMonths": -0.631764,
       "rationale": "AI capital formation is running low at 0.33 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
+    },
+    {
+      "factorId": "macro-headwinds",
+      "contributionMonths": 0.605851,
+      "rationale": "Macro & bubble risk is running low at 0.20 — a headwind pushing the date later.",
+      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "data-availability",
