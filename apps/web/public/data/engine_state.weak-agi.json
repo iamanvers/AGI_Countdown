@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260818T064300160Z-weak-agi",
-  "ts": "2026-08-18T06:43:00.160Z",
+  "runId": "refresh-daily-20260818T070232576Z-weak-agi",
+  "ts": "2026-08-18T07:02:32.576Z",
   "definition": "weak-agi",
-  "tAgi": "2027-07-19T13:29:15.197Z",
+  "tAgi": "2027-07-30T04:05:21.609Z",
   "progress": 88.4875,
   "band": {
-    "earlyP10": "2026-08-18T06:43:00.160Z",
-    "lateP90": "2028-07-18T19:18:27.197Z",
-    "likelyEarly": "2027-01-17T22:34:39.197Z",
-    "likelyLate": "2028-01-18T04:23:51.197Z"
+    "earlyP10": "2026-08-18T07:02:32.576Z",
+    "lateP90": "2028-07-29T09:54:33.609Z",
+    "likelyEarly": "2027-01-28T13:10:45.609Z",
+    "likelyLate": "2028-01-28T18:59:57.609Z"
   },
   "anchor": "2028-06-12T23:06:29.311Z",
-  "deltaMonths": -10.822427,
+  "deltaMonths": -10.473889,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -36,12 +36,6 @@
       "contributionMonths": -1.5444,
       "rationale": "Autonomy horizon is moderate at 0.60 — a tailwind pulling the date sooner.",
       "citation": "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -1.210456,
-      "rationale": "Research velocity is running high at 0.90 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "algorithmic-efficiency",
@@ -72,6 +66,12 @@
       "contributionMonths": 0.845234,
       "rationale": "Energy & grid constraints is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.iea.org/reports/electricity-2025"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.832442,
+      "rationale": "Research velocity is moderate at 0.63 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "data-availability",
@@ -111,21 +111,21 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.45615,
-      "rationale": "Macro & bubble risk is running low at 0.34 — a headwind pushing the date later.",
+      "contributionMonths": 0.448754,
+      "rationale": "Macro & bubble risk is running low at 0.33 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
+    },
+    {
+      "factorId": "capital-formation",
+      "contributionMonths": -0.333408,
+      "rationale": "AI capital formation is running low at 0.30 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "safety-eval-pressure",
       "contributionMonths": 0.319311,
       "rationale": "Safety-eval pressure is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.aisi.gov.uk/"
-    },
-    {
-      "factorId": "capital-formation",
-      "contributionMonths": -0.311328,
-      "rationale": "AI capital formation is running low at 0.28 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
   ]
 }

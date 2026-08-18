@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260818T064300160Z-transformative-ai",
-  "ts": "2026-08-18T06:43:00.160Z",
+  "runId": "refresh-daily-20260818T070232576Z-transformative-ai",
+  "ts": "2026-08-18T07:02:32.576Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-04-12T11:00:28.689Z",
+  "tAgi": "2031-04-18T20:29:50.919Z",
   "progress": 56.964,
   "band": {
-    "earlyP10": "2028-06-27T13:09:08.223Z",
-    "lateP90": "2034-01-25T08:51:49.155Z",
-    "likelyEarly": "2029-11-19T00:04:48.456Z",
-    "likelyLate": "2032-09-02T21:56:08.922Z"
+    "earlyP10": "2028-06-30T02:45:22.012Z",
+    "lateP90": "2034-02-04T14:14:19.826Z",
+    "likelyEarly": "2029-11-23T11:37:36.465Z",
+    "likelyLate": "2032-09-11T05:22:05.373Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -8.65862,
+  "deltaMonths": -8.4485,
   "movers": [
     {
       "factorId": "adoption-usage",
@@ -80,15 +80,9 @@
       "citation": "https://artificialintelligenceact.eu/"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.838008,
-      "rationale": "Research velocity is running high at 0.90 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.798262,
-      "rationale": "Macro & bubble risk is running low at 0.34 — a headwind pushing the date later.",
+      "contributionMonths": 0.78532,
+      "rationale": "Macro & bubble risk is running low at 0.33 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -111,9 +105,15 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.544824,
-      "rationale": "AI capital formation is running low at 0.28 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.583464,
+      "rationale": "AI capital formation is running low at 0.30 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.576306,
+      "rationale": "Research velocity is moderate at 0.63 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "safety-eval-pressure",
