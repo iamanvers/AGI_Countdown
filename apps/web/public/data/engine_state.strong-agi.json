@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260818T052947630Z-strong-agi",
-  "ts": "2026-08-18T05:29:47.630Z",
+  "runId": "refresh-hourly-20260818T064300160Z-strong-agi",
+  "ts": "2026-08-18T06:43:00.160Z",
   "definition": "strong-agi",
-  "tAgi": "2039-03-14T12:20:40.174Z",
+  "tAgi": "2039-03-14T08:54:08.811Z",
   "progress": 35.52,
   "band": {
-    "earlyP10": "2031-08-28T17:48:32.659Z",
-    "lateP90": "2046-09-28T06:52:47.689Z",
-    "likelyEarly": "2035-06-06T03:04:36.417Z",
-    "likelyLate": "2042-12-20T21:36:43.931Z"
+    "earlyP10": "2031-08-28T17:09:51.811Z",
+    "lateP90": "2046-09-28T00:38:25.811Z",
+    "likelyEarly": "2035-06-06T01:02:00.311Z",
+    "likelyLate": "2042-12-20T16:46:17.311Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -9.609582,
+  "deltaMonths": -9.614294,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -57,8 +57,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -1.122288,
-      "rationale": "Research velocity is running high at 0.91 — a tailwind pulling the date sooner.",
+      "contributionMonths": -1.117344,
+      "rationale": "Research velocity is running high at 0.90 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -111,8 +111,8 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.578463,
-      "rationale": "Macro & bubble risk is running low at 0.35 — a headwind pushing the date later.",
+      "contributionMonths": 0.570187,
+      "rationale": "Macro & bubble risk is running low at 0.34 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -123,7 +123,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.38778,
+      "contributionMonths": -0.38916,
       "rationale": "AI capital formation is running low at 0.28 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
