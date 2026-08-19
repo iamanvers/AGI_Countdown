@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20260819T070356906Z-transformative-ai",
-  "ts": "2026-08-19T07:03:56.906Z",
+  "runId": "refresh-hourly-20260819T073827703Z-transformative-ai",
+  "ts": "2026-08-19T07:38:27.703Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-04-10T12:09:14.151Z",
+  "tAgi": "2031-04-04T06:40:45.006Z",
   "progress": 56.964,
   "band": {
-    "earlyP10": "2028-06-27T09:01:20.937Z",
-    "lateP90": "2034-01-21T15:17:07.365Z",
-    "likelyEarly": "2029-11-17T22:35:17.544Z",
-    "likelyLate": "2032-08-31T01:43:10.758Z"
+    "earlyP10": "2028-06-24T21:33:41.533Z",
+    "lateP90": "2034-01-11T15:47:48.479Z",
+    "likelyEarly": "2029-11-13T14:07:13.270Z",
+    "likelyLate": "2032-08-22T23:14:16.742Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -8.722761,
+  "deltaMonths": -8.927385,
   "movers": [
     {
       "factorId": "adoption-usage",
@@ -80,6 +80,12 @@
       "citation": "https://artificialintelligenceact.eu/"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.818541,
+      "rationale": "Research velocity is running high at 0.88 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
       "factorId": "export-control-friction",
       "contributionMonths": 0.742462,
       "rationale": "Export-control friction is moderate at 0.50 — a headwind pushing the date later.",
@@ -92,22 +98,16 @@
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
-      "factorId": "capital-formation",
-      "contributionMonths": -0.61824,
-      "rationale": "AI capital formation is running low at 0.32 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
-    },
-    {
       "factorId": "data-availability",
       "contributionMonths": 0.591848,
       "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
       "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.584937,
-      "rationale": "Research velocity is moderate at 0.63 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
+      "factorId": "capital-formation",
+      "contributionMonths": -0.58926,
+      "rationale": "AI capital formation is running low at 0.30 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "macro-headwinds",

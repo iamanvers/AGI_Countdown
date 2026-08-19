@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20260819T070356906Z-weak-agi",
-  "ts": "2026-08-19T07:03:56.906Z",
+  "runId": "refresh-hourly-20260819T073827703Z-weak-agi",
+  "ts": "2026-08-19T07:38:27.703Z",
   "definition": "weak-agi",
-  "tAgi": "2027-07-25T08:53:52.583Z",
+  "tAgi": "2027-07-15T13:30:10.863Z",
   "progress": 88.4875,
   "band": {
-    "earlyP10": "2026-08-19T07:03:56.906Z",
-    "lateP90": "2028-07-24T14:43:04.583Z",
-    "likelyEarly": "2027-01-23T17:59:16.583Z",
-    "likelyLate": "2028-01-23T23:48:28.583Z"
+    "earlyP10": "2026-08-19T07:38:27.703Z",
+    "lateP90": "2028-07-14T19:19:22.863Z",
+    "likelyEarly": "2027-01-13T22:35:34.863Z",
+    "likelyLate": "2028-01-14T04:24:46.863Z"
   },
-  "anchor": "2028-06-13T03:54:11.844Z",
-  "deltaMonths": -10.638145,
+  "anchor": "2028-06-13T02:53:51.464Z",
+  "deltaMonths": -10.959013,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -36,6 +36,12 @@
       "contributionMonths": -1.5444,
       "rationale": "Autonomy horizon is moderate at 0.60 — a tailwind pulling the date sooner.",
       "citation": "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -1.182337,
+      "rationale": "Research velocity is running high at 0.88 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "algorithmic-efficiency",
@@ -66,12 +72,6 @@
       "contributionMonths": 0.845234,
       "rationale": "Energy & grid constraints is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.iea.org/reports/electricity-2025"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.844909,
-      "rationale": "Research velocity is moderate at 0.63 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "data-availability",
@@ -111,8 +111,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.35328,
-      "rationale": "AI capital formation is running low at 0.32 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.33672,
+      "rationale": "AI capital formation is running low at 0.30 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
