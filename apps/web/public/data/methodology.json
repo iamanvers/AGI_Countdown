@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-19T09:34:20.995Z",
+  "ts": "2026-08-19T10:29:30.625Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -215,7 +215,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.877,
+        "normalized": 0.874,
         "level": 0.593,
         "confidence": 0.687,
         "citation": "https://arxiv.org/list/cs.AI/recent",
@@ -223,15 +223,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": 1.966,
+          "zScore": 1.94,
           "percentile": 0.867,
-          "volatility": 0.02
+          "volatility": 0.021
         }
       },
       "contributionMonths": {
-        "weak-agi": -1.174,
-        "transformative-ai": -0.813,
-        "strong-agi": -1.084
+        "weak-agi": -1.17,
+        "transformative-ai": -0.81,
+        "strong-agi": -1.08
       },
       "sources": [
         {
@@ -269,7 +269,7 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": 0.599,
+          "zScore": 0.592,
           "percentile": 0.934,
           "volatility": 0.001
         }
@@ -705,7 +705,7 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": -0.816,
+          "zScore": -0.812,
           "percentile": 0.409,
           "volatility": 0.042
         }
