@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260819T064348013Z-weak-agi",
-  "ts": "2026-08-19T06:43:48.013Z",
+  "runId": "refresh-daily-20260819T070356906Z-weak-agi",
+  "ts": "2026-08-19T07:03:56.906Z",
   "definition": "weak-agi",
-  "tAgi": "2027-08-08T14:33:34.600Z",
+  "tAgi": "2027-07-25T08:53:52.583Z",
   "progress": 88.4875,
   "band": {
-    "earlyP10": "2026-08-19T06:43:48.013Z",
-    "lateP90": "2028-08-07T20:22:46.600Z",
-    "likelyEarly": "2027-02-06T23:38:58.600Z",
-    "likelyLate": "2028-02-07T05:28:10.600Z"
+    "earlyP10": "2026-08-19T07:03:56.906Z",
+    "lateP90": "2028-07-24T14:43:04.583Z",
+    "likelyEarly": "2027-01-23T17:59:16.583Z",
+    "likelyLate": "2028-01-23T23:48:28.583Z"
   },
-  "anchor": "2028-06-13T04:04:32.312Z",
-  "deltaMonths": -10.170662,
+  "anchor": "2028-06-13T03:54:11.844Z",
+  "deltaMonths": -10.638145,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -68,6 +68,12 @@
       "citation": "https://www.iea.org/reports/electricity-2025"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.844909,
+      "rationale": "Research velocity is moderate at 0.63 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
       "factorId": "data-availability",
       "contributionMonths": 0.72337,
       "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
@@ -105,15 +111,9 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.370944,
-      "rationale": "AI capital formation is running low at 0.34 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.35328,
+      "rationale": "AI capital formation is running low at 0.32 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.359762,
-      "rationale": "Research velocity is running low at 0.27 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "safety-eval-pressure",

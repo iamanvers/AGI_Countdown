@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260819T064348013Z-transformative-ai",
-  "ts": "2026-08-19T06:43:48.013Z",
+  "runId": "refresh-daily-20260819T070356906Z-transformative-ai",
+  "ts": "2026-08-19T07:03:56.906Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-04-19T18:55:18.862Z",
+  "tAgi": "2031-04-10T12:09:14.151Z",
   "progress": 56.964,
   "band": {
-    "earlyP10": "2028-07-01T01:56:50.711Z",
-    "lateP90": "2034-02-05T11:53:47.013Z",
-    "likelyEarly": "2029-11-24T10:26:04.786Z",
-    "likelyLate": "2032-09-12T03:24:32.938Z"
+    "earlyP10": "2028-06-27T09:01:20.937Z",
+    "lateP90": "2034-01-21T15:17:07.365Z",
+    "likelyEarly": "2029-11-17T22:35:17.544Z",
+    "likelyLate": "2032-08-31T01:43:10.758Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -8.417802,
+  "deltaMonths": -8.722761,
   "movers": [
     {
       "factorId": "adoption-usage",
@@ -93,8 +93,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.649152,
-      "rationale": "AI capital formation is running low at 0.34 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.61824,
+      "rationale": "AI capital formation is running low at 0.32 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
@@ -102,6 +102,12 @@
       "contributionMonths": 0.591848,
       "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
       "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.584937,
+      "rationale": "Research velocity is moderate at 0.63 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "macro-headwinds",
@@ -120,12 +126,6 @@
       "contributionMonths": -0.3888,
       "rationale": "Robotics & embodiment is moderate at 0.48 — a tailwind pulling the date sooner.",
       "citation": "https://ifr.org/worldrobotics/"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.249066,
-      "rationale": "Research velocity is running low at 0.27 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     }
   ]
 }
