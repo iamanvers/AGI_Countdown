@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260819T172702025Z-weak-agi",
-  "ts": "2026-08-19T17:27:02.025Z",
+  "runId": "refresh-hourly-20260819T183612454Z-weak-agi",
+  "ts": "2026-08-19T18:36:12.454Z",
   "definition": "weak-agi",
-  "tAgi": "2027-07-14T06:18:53.300Z",
+  "tAgi": "2027-07-14T08:26:33.750Z",
   "progress": 88.4875,
   "band": {
-    "earlyP10": "2026-08-19T17:27:02.025Z",
-    "lateP90": "2028-07-13T12:08:05.300Z",
-    "likelyEarly": "2027-01-12T15:24:17.300Z",
-    "likelyLate": "2028-01-12T21:13:29.300Z"
+    "earlyP10": "2026-08-19T18:36:12.454Z",
+    "lateP90": "2028-07-13T14:15:45.750Z",
+    "likelyEarly": "2027-01-12T17:31:57.750Z",
+    "likelyLate": "2028-01-12T23:21:09.750Z"
   },
   "anchor": "2028-06-13T01:52:45.040Z",
-  "deltaMonths": -11.000314,
+  "deltaMonths": -10.997401,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -38,16 +38,16 @@
       "citation": "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -1.142167,
-      "rationale": "Research velocity is running high at 0.85 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
       "factorId": "algorithmic-efficiency",
       "contributionMonths": -1.1396,
       "rationale": "Algorithmic efficiency is running high at 0.70 — a tailwind pulling the date sooner.",
       "citation": "https://aiindex.stanford.edu/report/"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -1.13815,
+      "rationale": "Research velocity is running high at 0.85 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "frontier-release-cadence",
@@ -111,7 +111,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.348864,
+      "contributionMonths": -0.349968,
       "rationale": "AI capital formation is running low at 0.32 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
