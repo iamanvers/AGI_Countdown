@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260820T083849400Z-strong-agi",
-  "ts": "2026-08-20T08:38:49.400Z",
+  "runId": "refresh-hourly-20260820T093512310Z-strong-agi",
+  "ts": "2026-08-20T09:35:12.310Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-26T10:35:47.151Z",
-  "progress": 31.845,
+  "tAgi": "2039-04-26T13:01:59.983Z",
+  "progress": 31.815,
   "band": {
-    "earlyP10": "2031-09-16T04:36:59.276Z",
-    "lateP90": "2046-12-04T16:34:35.026Z",
-    "likelyEarly": "2035-07-06T19:36:23.213Z",
-    "likelyLate": "2043-02-14T01:35:11.089Z"
+    "earlyP10": "2031-09-16T06:09:17.810Z",
+    "lateP90": "2046-12-04T19:54:42.156Z",
+    "likelyEarly": "2035-07-06T21:35:38.896Z",
+    "likelyLate": "2043-02-14T04:28:21.070Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.199215,
+  "deltaMonths": -8.195879,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -105,8 +105,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.44712,
-      "rationale": "AI capital formation is running low at 0.32 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.4485,
+      "rationale": "AI capital formation is running low at 0.33 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
@@ -117,14 +117,14 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.258156,
+      "contributionMonths": -0.26058,
       "rationale": "Research velocity is running low at 0.21 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.23681,
-      "rationale": "Adoption and usage is running low at 0.20 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.22967,
+      "rationale": "Adoption and usage is running low at 0.19 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     }
   ]
