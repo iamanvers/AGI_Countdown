@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260820T193139345Z-strong-agi",
-  "ts": "2026-08-20T19:31:39.345Z",
+  "runId": "refresh-hourly-20260820T202855925Z-strong-agi",
+  "ts": "2026-08-20T20:28:55.925Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-27T00:59:28.925Z",
-  "progress": 31.54,
+  "tAgi": "2039-04-27T01:33:03.311Z",
+  "progress": 31.515,
   "band": {
-    "earlyP10": "2031-09-16T16:54:03.701Z",
-    "lateP90": "2046-12-05T09:04:54.149Z",
-    "likelyEarly": "2035-07-07T08:56:46.313Z",
-    "likelyLate": "2043-02-14T17:02:11.537Z"
+    "earlyP10": "2031-09-16T17:41:50.834Z",
+    "lateP90": "2046-12-05T09:24:15.788Z",
+    "likelyEarly": "2035-07-07T09:37:27.072Z",
+    "likelyLate": "2043-02-14T17:28:39.550Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.179509,
+  "deltaMonths": -8.178743,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -105,7 +105,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.47334,
+      "contributionMonths": -0.4761,
       "rationale": "AI capital formation is running low at 0.34 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -117,14 +117,14 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.28482,
-      "rationale": "Research velocity is running low at 0.23 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.287244,
+      "rationale": "Research velocity is running low at 0.24 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.16422,
-      "rationale": "Adoption and usage is running low at 0.14 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.15827,
+      "rationale": "Adoption and usage is running low at 0.13 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     }
   ]
