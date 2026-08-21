@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20260821T070626558Z-weak-agi",
-  "ts": "2026-08-21T07:06:26.558Z",
+  "runId": "refresh-hourly-20260821T074228035Z-weak-agi",
+  "ts": "2026-08-21T07:42:28.035Z",
   "definition": "weak-agi",
-  "tAgi": "2027-09-29T11:57:30.063Z",
-  "progress": 77.775,
+  "tAgi": "2027-09-30T12:33:50.427Z",
+  "progress": 77.7125,
   "band": {
-    "earlyP10": "2026-09-29T06:08:18.063Z",
-    "lateP90": "2028-09-28T17:46:42.063Z",
-    "likelyEarly": "2027-03-30T21:02:54.063Z",
-    "likelyLate": "2028-03-30T02:52:06.063Z"
+    "earlyP10": "2026-09-30T06:44:38.427Z",
+    "lateP90": "2028-09-29T18:23:02.427Z",
+    "likelyEarly": "2027-03-31T21:39:14.427Z",
+    "likelyLate": "2028-03-31T03:28:26.427Z"
   },
   "anchor": "2028-06-13T05:44:12.270Z",
-  "deltaMonths": -8.468043,
+  "deltaMonths": -8.434359,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -99,7 +99,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.39192,
+      "contributionMonths": -0.384192,
       "rationale": "AI capital formation is running low at 0.35 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -117,14 +117,14 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.31512,
-      "rationale": "Research velocity is running low at 0.24 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.299364,
+      "rationale": "Research velocity is running low at 0.23 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.15708,
-      "rationale": "Adoption and usage is running low at 0.08 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.14688,
+      "rationale": "Adoption and usage is running low at 0.07 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     }
   ]
