@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260821T153337273Z-weak-agi",
-  "ts": "2026-08-21T15:33:37.273Z",
+  "runId": "refresh-hourly-20260821T163450773Z-weak-agi",
+  "ts": "2026-08-21T16:34:50.773Z",
   "definition": "weak-agi",
-  "tAgi": "2027-10-02T03:34:47.437Z",
-  "progress": 77.1625,
+  "tAgi": "2027-10-02T10:13:27.892Z",
+  "progress": 77.0875,
   "band": {
-    "earlyP10": "2026-10-01T21:45:35.437Z",
-    "lateP90": "2028-10-01T09:23:59.437Z",
-    "likelyEarly": "2027-04-02T12:40:11.437Z",
-    "likelyLate": "2028-04-01T18:29:23.437Z"
+    "earlyP10": "2026-10-02T04:24:15.892Z",
+    "lateP90": "2028-10-01T16:02:39.892Z",
+    "likelyEarly": "2027-04-02T19:18:51.892Z",
+    "likelyLate": "2028-04-02T01:08:03.892Z"
   },
-  "anchor": "2028-06-13T07:26:00.816Z",
-  "deltaMonths": -8.383271,
+  "anchor": "2028-06-13T07:51:42.133Z",
+  "deltaMonths": -8.374761,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -99,14 +99,14 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.401856,
+      "contributionMonths": -0.40296,
       "rationale": "AI capital formation is running low at 0.36 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.320372,
-      "rationale": "Research velocity is running low at 0.24 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.322998,
+      "rationale": "Research velocity is running low at 0.25 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -123,8 +123,8 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.05712,
-      "rationale": "Adoption and usage is running low at 0.03 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.04488,
+      "rationale": "Adoption and usage is running low at 0.02 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     }
   ]
