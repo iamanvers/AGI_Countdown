@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260822T142155288Z-transformative-ai",
-  "ts": "2026-08-22T14:21:55.288Z",
+  "runId": "refresh-hourly-20260822T152112152Z-transformative-ai",
+  "ts": "2026-08-22T15:21:12.152Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-06-28T16:36:38.645Z",
-  "progress": 42.724,
+  "tAgi": "2031-06-29T09:44:36.708Z",
+  "progress": 42.82,
   "band": {
-    "earlyP10": "2028-07-31T00:51:16.364Z",
-    "lateP90": "2034-05-26T08:22:00.926Z",
-    "likelyEarly": "2030-01-13T08:43:57.504Z",
-    "likelyLate": "2032-12-11T00:29:19.786Z"
+    "earlyP10": "2028-07-31T08:18:08.482Z",
+    "lateP90": "2034-05-27T11:11:04.934Z",
+    "likelyEarly": "2030-01-13T21:01:22.595Z",
+    "likelyLate": "2032-12-11T22:27:50.821Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -6.121124,
+  "deltaMonths": -6.09767,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -92,16 +92,16 @@
       "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
     },
     {
-      "factorId": "capital-formation",
-      "contributionMonths": -0.575736,
-      "rationale": "AI capital formation is running low at 0.30 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
-    },
-    {
       "factorId": "macro-headwinds",
       "contributionMonths": 0.554466,
       "rationale": "Macro & bubble risk is running low at 0.17 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
+    },
+    {
+      "factorId": "capital-formation",
+      "contributionMonths": -0.535164,
+      "rationale": "AI capital formation is running low at 0.28 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "safety-eval-pressure",
@@ -117,14 +117,14 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.19998,
+      "contributionMonths": -0.201798,
       "rationale": "Research velocity is running low at 0.22 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.1122,
-      "rationale": "Adoption and usage is running low at 0.04 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.1275,
+      "rationale": "Adoption and usage is running low at 0.05 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     }
   ]
