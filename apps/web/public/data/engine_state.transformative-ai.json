@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20260822T065751414Z-transformative-ai",
-  "ts": "2026-08-22T06:57:51.414Z",
+  "runId": "refresh-hourly-20260822T073158274Z-transformative-ai",
+  "ts": "2026-08-22T07:31:58.274Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-06-27T11:06:41.613Z",
+  "tAgi": "2031-06-29T22:32:53.526Z",
   "progress": 42.116,
   "band": {
-    "earlyP10": "2028-07-30T08:35:50.310Z",
-    "lateP90": "2034-05-24T13:37:32.916Z",
-    "likelyEarly": "2030-01-12T09:51:15.962Z",
-    "likelyLate": "2032-12-09T12:22:07.264Z"
+    "earlyP10": "2028-07-31T08:43:06.319Z",
+    "lateP90": "2034-05-28T12:22:40.733Z",
+    "likelyEarly": "2030-01-14T03:37:59.923Z",
+    "likelyLate": "2032-12-12T17:27:47.129Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -6.161507,
+  "deltaMonths": -6.080141,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -80,16 +80,16 @@
       "citation": "https://www.bis.gov/"
     },
     {
-      "factorId": "capital-formation",
-      "contributionMonths": -0.699384,
-      "rationale": "AI capital formation is running low at 0.36 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
-    },
-    {
       "factorId": "public-backlash-pressure",
       "contributionMonths": 0.646176,
       "rationale": "Public backlash pressure is running low at 0.36 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
+    },
+    {
+      "factorId": "capital-formation",
+      "contributionMonths": -0.645288,
+      "rationale": "AI capital formation is running low at 0.33 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "data-availability",
@@ -117,8 +117,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.213615,
-      "rationale": "Research velocity is running low at 0.23 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.186345,
+      "rationale": "Research velocity is running low at 0.20 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
