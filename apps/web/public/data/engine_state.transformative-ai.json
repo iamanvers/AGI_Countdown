@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260822T212205264Z-transformative-ai",
-  "ts": "2026-08-22T21:22:05.264Z",
+  "runId": "refresh-hourly-20260822T222233921Z-transformative-ai",
+  "ts": "2026-08-22T22:22:33.921Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-07-07T22:05:48.152Z",
-  "progress": 43.348,
+  "tAgi": "2031-07-07T06:28:25.774Z",
+  "progress": 43.428,
   "band": {
-    "earlyP10": "2028-08-03T21:39:27.027Z",
-    "lateP90": "2034-06-09T22:32:09.277Z",
-    "likelyEarly": "2030-01-19T21:52:37.590Z",
-    "likelyLate": "2032-12-22T22:18:58.714Z"
+    "earlyP10": "2028-08-03T16:00:46.684Z",
+    "lateP90": "2034-06-08T20:56:04.864Z",
+    "likelyEarly": "2030-01-19T11:14:36.229Z",
+    "likelyLate": "2032-12-22T01:42:15.319Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -5.81792,
+  "deltaMonths": -5.839307,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -110,21 +110,21 @@
       "citation": "https://ifr.org/worldrobotics/"
     },
     {
+      "factorId": "adoption-usage",
+      "contributionMonths": -0.2244,
+      "rationale": "Adoption and usage is running low at 0.09 — a tailwind pulling the date sooner.",
+      "citation": "https://openrouter.ai/rankings"
+    },
+    {
       "factorId": "research-velocity",
-      "contributionMonths": -0.212706,
+      "contributionMonths": -0.213615,
       "rationale": "Research velocity is running low at 0.23 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
-      "factorId": "adoption-usage",
-      "contributionMonths": -0.21165,
-      "rationale": "Adoption and usage is running low at 0.08 — a tailwind pulling the date sooner.",
-      "citation": "https://openrouter.ai/rankings"
-    },
-    {
       "factorId": "capital-formation",
-      "contributionMonths": -0.160356,
-      "rationale": "AI capital formation is running low at 0.08 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.168084,
+      "rationale": "AI capital formation is running low at 0.09 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
   ]
