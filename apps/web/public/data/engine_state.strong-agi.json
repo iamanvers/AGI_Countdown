@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260822T064023140Z-strong-agi",
-  "ts": "2026-08-22T06:40:23.140Z",
+  "runId": "refresh-daily-20260822T065751414Z-strong-agi",
+  "ts": "2026-08-22T06:57:51.414Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-28T17:09:22.879Z",
+  "tAgi": "2039-05-01T00:34:57.487Z",
   "progress": 30.88,
   "band": {
-    "earlyP10": "2031-09-18T06:03:25.620Z",
-    "lateP90": "2046-12-07T04:15:20.138Z",
-    "likelyEarly": "2035-07-08T23:36:24.249Z",
-    "likelyLate": "2043-02-16T10:42:21.509Z"
+    "earlyP10": "2031-09-19T04:24:15.325Z",
+    "lateP90": "2046-12-10T20:45:39.649Z",
+    "likelyEarly": "2035-07-10T14:29:36.406Z",
+    "likelyLate": "2043-02-19T10:40:18.568Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.124525,
+  "deltaMonths": -8.048649,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -98,16 +98,16 @@
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
-      "factorId": "capital-formation",
-      "contributionMonths": -0.53544,
-      "rationale": "AI capital formation is running low at 0.39 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
-    },
-    {
       "factorId": "labor-automation-exposure",
       "contributionMonths": -0.52479,
       "rationale": "Labor automation exposure is moderate at 0.51 — a tailwind pulling the date sooner.",
       "citation": "https://www.anthropic.com/economic-index"
+    },
+    {
+      "factorId": "capital-formation",
+      "contributionMonths": -0.49956,
+      "rationale": "AI capital formation is running low at 0.36 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "macro-headwinds",
@@ -117,8 +117,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.324816,
-      "rationale": "Research velocity is running low at 0.27 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.28482,
+      "rationale": "Research velocity is running low at 0.23 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {

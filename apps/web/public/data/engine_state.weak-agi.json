@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260822T064023140Z-weak-agi",
-  "ts": "2026-08-22T06:40:23.140Z",
+  "runId": "refresh-daily-20260822T065751414Z-weak-agi",
+  "ts": "2026-08-22T06:57:51.414Z",
   "definition": "weak-agi",
-  "tAgi": "2027-10-01T08:34:50.157Z",
+  "tAgi": "2027-10-03T13:11:58.651Z",
   "progress": 76.8875,
   "band": {
-    "earlyP10": "2026-10-01T02:45:38.157Z",
-    "lateP90": "2028-09-30T14:24:02.157Z",
-    "likelyEarly": "2027-04-01T17:40:14.157Z",
-    "likelyLate": "2028-03-31T23:29:26.157Z"
+    "earlyP10": "2026-10-03T07:22:46.651Z",
+    "lateP90": "2028-10-02T19:01:10.651Z",
+    "likelyEarly": "2027-04-03T22:17:22.651Z",
+    "likelyLate": "2028-04-03T04:06:34.651Z"
   },
   "anchor": "2028-06-12T22:01:26.842Z",
-  "deltaMonths": -8.396399,
+  "deltaMonths": -8.324366,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -99,15 +99,9 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.428352,
-      "rationale": "AI capital formation is running low at 0.39 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.399648,
+      "rationale": "AI capital formation is running low at 0.36 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.351884,
-      "rationale": "Research velocity is running low at 0.27 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "safety-eval-pressure",
@@ -120,6 +114,12 @@
       "contributionMonths": 0.316837,
       "rationale": "Macro & bubble risk is running low at 0.17 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.308555,
+      "rationale": "Research velocity is running low at 0.23 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "adoption-usage",
