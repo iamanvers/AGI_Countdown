@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260823T083032793Z-strong-agi",
-  "ts": "2026-08-23T08:30:32.793Z",
+  "runId": "refresh-hourly-20260823T092749629Z-strong-agi",
+  "ts": "2026-08-23T09:27:49.629Z",
   "definition": "strong-agi",
-  "tAgi": "2039-05-06T21:16:26.566Z",
-  "progress": 31.57,
+  "tAgi": "2039-05-06T11:07:28.876Z",
+  "progress": 31.595,
   "band": {
-    "earlyP10": "2031-09-22T04:00:49.463Z",
-    "lateP90": "2046-12-19T14:32:03.669Z",
-    "likelyEarly": "2035-07-15T00:38:38.014Z",
-    "likelyLate": "2043-02-26T17:54:15.118Z"
+    "earlyP10": "2031-09-22T00:31:36.376Z",
+    "lateP90": "2046-12-18T21:43:21.376Z",
+    "likelyEarly": "2035-07-14T17:49:32.626Z",
+    "likelyLate": "2043-02-26T04:25:25.126Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -7.856049,
+  "deltaMonths": -7.869943,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -111,20 +111,20 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.26058,
-      "rationale": "Research velocity is running low at 0.21 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.263004,
+      "rationale": "Research velocity is running low at 0.22 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.17136,
-      "rationale": "Adoption and usage is running low at 0.14 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.17731,
+      "rationale": "Adoption and usage is running low at 0.15 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.16698,
-      "rationale": "AI capital formation is running low at 0.12 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.1725,
+      "rationale": "AI capital formation is running low at 0.13 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
   ]
