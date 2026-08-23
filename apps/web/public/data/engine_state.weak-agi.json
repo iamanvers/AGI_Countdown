@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260823T064110486Z-weak-agi",
-  "ts": "2026-08-23T06:41:10.486Z",
+  "runId": "refresh-daily-20260823T065932261Z-weak-agi",
+  "ts": "2026-08-23T06:59:32.261Z",
   "definition": "weak-agi",
-  "tAgi": "2027-10-03T22:21:07.538Z",
-  "progress": 78.4,
+  "tAgi": "2027-10-04T04:25:06.198Z",
+  "progress": 78.475,
   "band": {
-    "earlyP10": "2026-10-03T16:31:55.538Z",
-    "lateP90": "2028-10-03T04:10:19.538Z",
-    "likelyEarly": "2027-04-04T07:26:31.538Z",
-    "likelyLate": "2028-04-03T13:15:43.538Z"
+    "earlyP10": "2026-10-03T22:35:54.198Z",
+    "lateP90": "2028-10-03T10:14:18.198Z",
+    "likelyEarly": "2027-04-04T13:30:30.198Z",
+    "likelyLate": "2028-04-03T19:19:42.198Z"
   },
-  "anchor": "2028-06-12T21:32:16.231Z",
-  "deltaMonths": -8.311171,
+  "anchor": "2028-06-12T21:32:51.666Z",
+  "deltaMonths": -8.30288,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -98,12 +98,6 @@
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.325624,
-      "rationale": "Research velocity is running low at 0.25 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
       "factorId": "safety-eval-pressure",
       "contributionMonths": 0.319311,
       "rationale": "Safety-eval pressure is moderate at 0.45 — a headwind pushing the date later.",
@@ -116,15 +110,21 @@
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.300677,
+      "rationale": "Research velocity is running low at 0.23 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.25908,
+      "contributionMonths": -0.27132,
       "rationale": "Adoption and usage is running low at 0.13 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.122544,
-      "rationale": "AI capital formation is running low at 0.11 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.12696,
+      "rationale": "AI capital formation is running low at 0.12 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
   ]

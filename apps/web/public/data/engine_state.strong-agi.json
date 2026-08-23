@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260823T064110486Z-strong-agi",
-  "ts": "2026-08-23T06:41:10.486Z",
+  "runId": "refresh-daily-20260823T065932261Z-strong-agi",
+  "ts": "2026-08-23T06:59:32.261Z",
   "definition": "strong-agi",
-  "tAgi": "2039-05-06T16:54:57.502Z",
-  "progress": 31.485,
+  "tAgi": "2039-05-07T00:29:22.708Z",
+  "progress": 31.515,
   "band": {
-    "earlyP10": "2031-09-22T01:10:35.445Z",
-    "lateP90": "2046-12-19T08:39:19.559Z",
-    "likelyEarly": "2035-07-14T21:02:46.473Z",
-    "likelyLate": "2043-02-26T12:47:08.531Z"
+    "earlyP10": "2031-09-22T04:23:23.361Z",
+    "lateP90": "2046-12-19T20:35:22.055Z",
+    "likelyEarly": "2035-07-15T02:26:23.035Z",
+    "likelyLate": "2043-02-26T22:32:22.381Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -7.862015,
+  "deltaMonths": -7.851647,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -111,19 +111,19 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.300576,
-      "rationale": "Research velocity is running low at 0.25 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.277548,
+      "rationale": "Research velocity is running low at 0.23 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.15318,
-      "rationale": "AI capital formation is running low at 0.11 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.1587,
+      "rationale": "AI capital formation is running low at 0.12 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.15113,
+      "contributionMonths": -0.15827,
       "rationale": "Adoption and usage is running low at 0.13 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     }
