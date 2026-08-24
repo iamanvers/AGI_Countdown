@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260824T075747887Z-strong-agi",
-  "ts": "2026-08-24T07:57:47.887Z",
+  "runId": "refresh-hourly-20260824T084856505Z-strong-agi",
+  "ts": "2026-08-24T08:48:56.505Z",
   "definition": "strong-agi",
-  "tAgi": "2039-05-18T13:29:48.689Z",
+  "tAgi": "2039-05-09T04:02:02.846Z",
   "progress": 30.88,
   "band": {
-    "earlyP10": "2031-09-27T10:10:06.834Z",
-    "lateP90": "2047-01-06T16:49:30.544Z",
-    "likelyEarly": "2035-07-23T11:49:57.762Z",
-    "likelyLate": "2043-03-13T15:09:39.616Z"
+    "earlyP10": "2031-09-23T16:29:48.695Z",
+    "lateP90": "2046-12-22T15:34:16.997Z",
+    "likelyEarly": "2035-07-16T22:15:55.770Z",
+    "likelyLate": "2043-03-01T09:48:09.922Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -7.472437,
+  "deltaMonths": -7.781085,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -68,12 +68,6 @@
       "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
     },
     {
-      "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.96766,
-      "rationale": "Public backlash pressure is running high at 0.98 — a headwind pushing the date later.",
-      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
-    },
-    {
       "factorId": "export-control-friction",
       "contributionMonths": 0.965201,
       "rationale": "Export-control friction is moderate at 0.50 — a headwind pushing the date later.",
@@ -84,6 +78,12 @@
       "contributionMonths": 0.864153,
       "rationale": "Policy friction is running low at 0.38 — a headwind pushing the date later.",
       "citation": "https://artificialintelligenceact.eu/"
+    },
+    {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": 0.665576,
+      "rationale": "Public backlash pressure is moderate at 0.47 — a headwind pushing the date later.",
+      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
       "factorId": "robotics-embodiment",
@@ -111,13 +111,13 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.324816,
+      "contributionMonths": -0.32724,
       "rationale": "Research velocity is running low at 0.27 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.26358,
+      "contributionMonths": -0.26772,
       "rationale": "AI capital formation is running low at 0.19 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
