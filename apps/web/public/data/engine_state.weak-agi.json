@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-weekly-20260824T073858854Z-weak-agi",
-  "ts": "2026-08-24T07:38:58.854Z",
+  "runId": "refresh-hourly-20260824T075747887Z-weak-agi",
+  "ts": "2026-08-24T07:57:47.887Z",
   "definition": "weak-agi",
-  "tAgi": "2027-10-18T02:08:28.534Z",
+  "tAgi": "2027-10-16T21:21:54.950Z",
   "progress": 76.8875,
   "band": {
-    "earlyP10": "2026-10-17T20:19:16.534Z",
-    "lateP90": "2028-10-17T07:57:40.534Z",
-    "likelyEarly": "2027-04-18T11:13:52.534Z",
-    "likelyLate": "2028-04-17T17:03:04.534Z"
+    "earlyP10": "2026-10-16T15:32:42.950Z",
+    "lateP90": "2028-10-16T03:11:06.950Z",
+    "likelyEarly": "2027-04-17T06:27:18.950Z",
+    "likelyLate": "2028-04-16T12:16:30.950Z"
   },
   "anchor": "2028-06-12T13:44:12.039Z",
-  "deltaMonths": -7.835336,
+  "deltaMonths": -7.874729,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -63,8 +63,8 @@
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.81,
-      "rationale": "Public backlash pressure is running high at 1.00 — a headwind pushing the date later.",
+      "contributionMonths": 0.774128,
+      "rationale": "Public backlash pressure is running high at 0.98 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
@@ -99,7 +99,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.350571,
+      "contributionMonths": -0.351884,
       "rationale": "Research velocity is running low at 0.27 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
@@ -117,7 +117,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.208656,
+      "contributionMonths": -0.210864,
       "rationale": "AI capital formation is running low at 0.19 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
