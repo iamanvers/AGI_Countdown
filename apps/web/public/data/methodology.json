@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-24T05:38:22.802Z",
+  "ts": "2026-08-24T06:59:14.862Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -215,7 +215,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.251,
+        "normalized": 0.253,
         "level": 0.504,
         "confidence": 0.673,
         "citation": "https://arxiv.org/list/cs.AI/recent",
@@ -223,15 +223,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -1.092,
+          "zScore": -1.083,
           "percentile": 0.006,
           "volatility": 0.034
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.33,
-        "transformative-ai": -0.228,
-        "strong-agi": -0.304
+        "weak-agi": -0.332,
+        "transformative-ai": -0.23,
+        "strong-agi": -0.307
       },
       "sources": [
         {
@@ -261,7 +261,7 @@
       "weight": 5,
       "normalization": "momentum-01",
       "reading": {
-        "normalized": 0.254,
+        "normalized": 0.26,
         "level": 0.776,
         "confidence": 0.68,
         "citation": "https://openrouter.ai/rankings",
@@ -269,15 +269,15 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": -1.38,
-          "percentile": 0.254,
+          "zScore": -1.375,
+          "percentile": 0.26,
           "volatility": 0
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.518,
-        "transformative-ai": -0.648,
-        "strong-agi": -0.302
+        "weak-agi": -0.53,
+        "transformative-ai": -0.663,
+        "strong-agi": -0.309
       },
       "sources": [
         {
@@ -435,23 +435,23 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.363,
-        "level": 0.363,
-        "confidence": 0.65,
+        "normalized": 1,
+        "level": 0.404,
+        "confidence": 0.675,
         "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/",
         "rolling": {
-          "applied": false,
+          "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": 0,
-          "percentile": 0,
-          "volatility": 0
+          "zScore": 13.416,
+          "percentile": 1,
+          "volatility": 0.003
         }
       },
       "contributionMonths": {
-        "weak-agi": 0.47,
-        "transformative-ai": 0.646,
-        "strong-agi": 0.587
+        "weak-agi": 0.81,
+        "transformative-ai": 1.114,
+        "strong-agi": 1.013
       },
       "sources": [
         {
@@ -697,7 +697,7 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.181,
+        "normalized": 0.183,
         "level": 0.685,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -705,15 +705,15 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": -1.511,
+          "zScore": -1.493,
           "percentile": 0.006,
           "volatility": 0.006
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.2,
-        "transformative-ai": -0.35,
-        "strong-agi": -0.25
+        "weak-agi": -0.202,
+        "transformative-ai": -0.354,
+        "strong-agi": -0.253
       },
       "sources": [
         {
