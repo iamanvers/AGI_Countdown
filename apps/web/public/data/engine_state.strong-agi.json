@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260825T064923817Z-strong-agi",
-  "ts": "2026-08-25T06:49:23.817Z",
+  "runId": "refresh-daily-20260825T070655448Z-strong-agi",
+  "ts": "2026-08-25T07:06:55.448Z",
   "definition": "strong-agi",
-  "tAgi": "2039-05-05T21:25:20.100Z",
+  "tAgi": "2039-05-03T04:05:26.137Z",
   "progress": 30.88,
   "band": {
-    "earlyP10": "2031-09-22T22:15:21.467Z",
-    "lateP90": "2046-12-16T20:35:18.733Z",
-    "likelyEarly": "2035-07-14T21:50:20.783Z",
-    "likelyLate": "2043-02-24T21:00:19.417Z"
+    "earlyP10": "2031-09-21T20:17:37.710Z",
+    "lateP90": "2046-12-12T11:53:14.564Z",
+    "likelyEarly": "2035-07-13T00:11:31.924Z",
+    "likelyLate": "2043-02-21T07:59:20.350Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -7.888701,
+  "deltaMonths": -7.978137,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -92,6 +92,12 @@
       "citation": "https://ifr.org/worldrobotics/"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.600192,
+      "rationale": "Research velocity is moderate at 0.52 — a tailwind pulling the date sooner.",
+      "citation": "https://www.semanticscholar.org/"
+    },
+    {
       "factorId": "safety-eval-pressure",
       "contributionMonths": 0.593005,
       "rationale": "Safety-eval pressure is moderate at 0.45 — a headwind pushing the date later.",
@@ -110,15 +116,9 @@
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.367236,
-      "rationale": "Research velocity is running low at 0.30 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
       "factorId": "capital-formation",
-      "contributionMonths": -0.33534,
-      "rationale": "AI capital formation is running low at 0.24 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.19182,
+      "rationale": "AI capital formation is running low at 0.14 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
