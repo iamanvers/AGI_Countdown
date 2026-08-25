@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260825T034902351Z-transformative-ai",
-  "ts": "2026-08-25T03:49:02.351Z",
+  "runId": "refresh-hourly-20260825T043859664Z-transformative-ai",
+  "ts": "2026-08-25T04:38:59.664Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-07-05T17:53:33.354Z",
+  "tAgi": "2031-07-05T13:44:31.137Z",
   "progress": 42.116,
   "band": {
-    "earlyP10": "2028-08-04T09:25:54.972Z",
-    "lateP90": "2034-06-05T02:21:11.736Z",
-    "likelyEarly": "2030-01-19T01:39:44.163Z",
-    "likelyLate": "2032-12-19T10:07:22.545Z"
+    "earlyP10": "2028-08-04T08:16:17.548Z",
+    "lateP90": "2034-06-04T19:12:44.726Z",
+    "likelyEarly": "2030-01-18T23:00:24.343Z",
+    "likelyLate": "2032-12-19T04:28:37.931Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -5.889385,
+  "deltaMonths": -5.895067,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -98,16 +98,16 @@
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
+      "factorId": "capital-formation",
+      "contributionMonths": -0.459816,
+      "rationale": "AI capital formation is running low at 0.24 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
+    },
+    {
       "factorId": "safety-eval-pressure",
       "contributionMonths": 0.456158,
       "rationale": "Safety-eval pressure is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.aisi.gov.uk/"
-    },
-    {
-      "factorId": "capital-formation",
-      "contributionMonths": -0.455952,
-      "rationale": "AI capital formation is running low at 0.24 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "robotics-embodiment",
@@ -117,7 +117,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.270882,
+      "contributionMonths": -0.2727,
       "rationale": "Research velocity is running low at 0.30 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
