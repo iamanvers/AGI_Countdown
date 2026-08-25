@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20260825T070655448Z-weak-agi",
-  "ts": "2026-08-25T07:06:55.448Z",
+  "runId": "refresh-hourly-20260825T074346901Z-weak-agi",
+  "ts": "2026-08-25T07:43:46.901Z",
   "definition": "weak-agi",
-  "tAgi": "2027-10-02T04:38:41.738Z",
+  "tAgi": "2027-09-26T04:27:52.992Z",
   "progress": 76.8875,
   "band": {
-    "earlyP10": "2026-10-01T22:49:29.738Z",
-    "lateP90": "2028-10-01T10:27:53.738Z",
-    "likelyEarly": "2027-04-02T13:44:05.738Z",
-    "likelyLate": "2028-04-01T19:33:17.738Z"
+    "earlyP10": "2026-09-25T22:38:40.992Z",
+    "lateP90": "2028-09-25T10:17:04.992Z",
+    "likelyEarly": "2027-03-27T13:33:16.992Z",
+    "likelyLate": "2028-03-26T19:22:28.992Z"
   },
   "anchor": "2028-06-12T13:32:09.541Z",
-  "deltaMonths": -8.357312,
+  "deltaMonths": -8.554688,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -44,6 +44,12 @@
       "citation": "https://epoch.ai/data/notable-ai-models"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.916032,
+      "rationale": "Research velocity is running high at 0.73 — a tailwind pulling the date sooner.",
+      "citation": "https://www.semanticscholar.org/"
+    },
+    {
       "factorId": "datacenter-capex",
       "contributionMonths": -0.900123,
       "rationale": "Datacenter capex is running high at 0.74 — a tailwind pulling the date sooner.",
@@ -66,12 +72,6 @@
       "contributionMonths": 0.72337,
       "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
       "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.650208,
-      "rationale": "Research velocity is moderate at 0.52 — a tailwind pulling the date sooner.",
-      "citation": "https://www.semanticscholar.org/"
     },
     {
       "factorId": "policy-friction",
@@ -117,8 +117,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.153456,
-      "rationale": "AI capital formation is running low at 0.14 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.085008,
+      "rationale": "AI capital formation is running low at 0.08 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
