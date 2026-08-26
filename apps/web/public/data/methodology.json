@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-26T07:07:05.911Z",
+  "ts": "2026-08-26T07:47:00.702Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -215,23 +215,23 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.902,
-        "level": 0.6,
+        "normalized": 0.962,
+        "level": 0.634,
         "confidence": 0.653,
         "citation": "https://www.semanticscholar.org/",
         "rolling": {
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": 2.216,
+          "zScore": 3.242,
           "percentile": 1,
-          "volatility": 0.03
+          "volatility": 0.031
         }
       },
       "contributionMonths": {
-        "weak-agi": -1.149,
-        "transformative-ai": -0.796,
-        "strong-agi": -1.061
+        "weak-agi": -1.226,
+        "transformative-ai": -0.848,
+        "strong-agi": -1.131
       },
       "sources": [
         {
@@ -269,7 +269,7 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": -1.739,
+          "zScore": -1.747,
           "percentile": 0.006,
           "volatility": 0.001
         }
@@ -697,23 +697,23 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.121,
-        "level": 0.673,
+        "normalized": 0.097,
+        "level": 0.671,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
         "rolling": {
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": -1.981,
+          "zScore": -2.227,
           "percentile": 0.006,
           "volatility": 0.008
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.134,
-        "transformative-ai": -0.234,
-        "strong-agi": -0.167
+        "weak-agi": -0.107,
+        "transformative-ai": -0.187,
+        "strong-agi": -0.134
       },
       "sources": [
         {
