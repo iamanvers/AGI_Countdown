@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260829T105229609Z-strong-agi",
-  "ts": "2026-08-29T10:52:29.609Z",
+  "runId": "refresh-daily-20260829T124000416Z-strong-agi",
+  "ts": "2026-08-29T12:40:00.416Z",
   "definition": "strong-agi",
-  "tAgi": "2039-05-13T01:04:59.891Z",
+  "tAgi": "2039-05-14T01:56:35.407Z",
   "progress": 30.88,
   "band": {
-    "earlyP10": "2031-09-28T06:56:59.644Z",
-    "lateP90": "2046-12-25T19:13:00.138Z",
-    "likelyEarly": "2035-07-21T04:00:59.768Z",
-    "likelyLate": "2043-03-04T22:09:00.014Z"
+    "earlyP10": "2031-09-28T17:58:10.170Z",
+    "lateP90": "2046-12-27T09:55:00.644Z",
+    "likelyEarly": "2035-07-21T21:57:22.788Z",
+    "likelyLate": "2043-03-06T05:55:48.026Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -7.653705,
+  "deltaMonths": -7.619673,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -104,21 +104,21 @@
       "citation": "https://www.anthropic.com/economic-index"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.39996,
-      "rationale": "Research velocity is running low at 0.33 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
       "factorId": "macro-headwinds",
       "contributionMonths": 0.396047,
       "rationale": "Macro & bubble risk is running low at 0.17 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.386628,
+      "rationale": "Research velocity is running low at 0.32 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
       "factorId": "capital-formation",
-      "contributionMonths": -0.06762,
-      "rationale": "AI capital formation is running low at 0.05 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.04692,
+      "rationale": "AI capital formation is running low at 0.03 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
