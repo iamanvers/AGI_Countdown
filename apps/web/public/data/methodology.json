@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-28T21:08:38.963Z",
+  "ts": "2026-08-29T03:32:44.101Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -215,7 +215,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.326,
+        "normalized": 0.328,
         "level": 0.509,
         "confidence": 0.673,
         "citation": "https://arxiv.org/list/cs.AI/recent",
@@ -223,15 +223,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -0.726,
+          "zScore": -0.717,
           "percentile": 0.276,
           "volatility": 0.039
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.428,
-        "transformative-ai": -0.296,
-        "strong-agi": -0.395
+        "weak-agi": -0.431,
+        "transformative-ai": -0.298,
+        "strong-agi": -0.398
       },
       "sources": [
         {
@@ -269,7 +269,7 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": -4.438,
+          "zScore": -4.236,
           "percentile": 0.006,
           "volatility": 0.001
         }
@@ -697,7 +697,7 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.041,
+        "normalized": 0.045,
         "level": 0.659,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -705,15 +705,15 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": -3.141,
-          "percentile": 0.006,
-          "volatility": 0.008
+          "zScore": -3.051,
+          "percentile": 0.011,
+          "volatility": 0.009
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.045,
-        "transformative-ai": -0.079,
-        "strong-agi": -0.057
+        "weak-agi": -0.05,
+        "transformative-ai": -0.087,
+        "strong-agi": -0.062
       },
       "sources": [
         {

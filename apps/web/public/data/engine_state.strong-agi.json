@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260828T210838963Z-strong-agi",
-  "ts": "2026-08-28T21:08:38.963Z",
+  "runId": "refresh-hourly-20260829T033244101Z-strong-agi",
+  "ts": "2026-08-29T03:32:44.101Z",
   "definition": "strong-agi",
-  "tAgi": "2039-05-13T12:41:21.296Z",
+  "tAgi": "2039-05-13T06:53:10.593Z",
   "progress": 30.88,
   "band": {
-    "earlyP10": "2031-09-28T03:21:14.726Z",
-    "lateP90": "2046-12-26T22:01:27.866Z",
-    "likelyEarly": "2035-07-21T08:01:18.011Z",
-    "likelyLate": "2043-03-05T17:21:24.581Z"
+    "earlyP10": "2031-09-28T04:52:25.002Z",
+    "lateP90": "2046-12-26T08:53:56.184Z",
+    "likelyEarly": "2035-07-21T05:52:47.797Z",
+    "likelyLate": "2043-03-05T07:53:33.389Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -7.637817,
+  "deltaMonths": -7.645761,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -104,20 +104,20 @@
       "citation": "https://www.anthropic.com/economic-index"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.397536,
+      "rationale": "Research velocity is running low at 0.33 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
       "factorId": "macro-headwinds",
       "contributionMonths": 0.396047,
       "rationale": "Macro & bubble risk is running low at 0.17 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.395112,
-      "rationale": "Research velocity is running low at 0.33 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
       "factorId": "capital-formation",
-      "contributionMonths": -0.05658,
+      "contributionMonths": -0.0621,
       "rationale": "AI capital formation is running low at 0.04 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
