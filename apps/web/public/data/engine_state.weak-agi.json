@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260830T175743724Z-weak-agi",
-  "ts": "2026-08-30T17:57:43.724Z",
+  "runId": "refresh-hourly-20260830T204041530Z-weak-agi",
+  "ts": "2026-08-30T20:40:41.530Z",
   "definition": "weak-agi",
-  "tAgi": "2027-10-08T23:09:07.425Z",
-  "progress": 77.7125,
+  "tAgi": "2027-10-08T10:33:25.345Z",
+  "progress": 77.775,
   "band": {
-    "earlyP10": "2026-10-08T17:19:55.425Z",
-    "lateP90": "2028-10-08T04:58:19.425Z",
-    "likelyEarly": "2027-04-09T08:14:31.425Z",
-    "likelyLate": "2028-04-08T14:03:43.425Z"
+    "earlyP10": "2026-10-08T04:44:13.345Z",
+    "lateP90": "2028-10-07T16:22:37.345Z",
+    "likelyEarly": "2027-04-08T19:38:49.345Z",
+    "likelyLate": "2028-04-08T01:28:01.345Z"
   },
   "anchor": "2028-06-12T10:35:46.686Z",
-  "deltaMonths": -8.130823,
+  "deltaMonths": -8.148065,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -99,8 +99,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.387335,
-      "rationale": "Research velocity is running low at 0.29 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.389961,
+      "rationale": "Research velocity is running low at 0.30 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -117,13 +117,13 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.14688,
-      "rationale": "Adoption and usage is running low at 0.07 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.15708,
+      "rationale": "Adoption and usage is running low at 0.08 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.0552,
+      "contributionMonths": -0.059616,
       "rationale": "AI capital formation is running low at 0.05 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
