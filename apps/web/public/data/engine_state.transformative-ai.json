@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260901T213750572Z-transformative-ai",
-  "ts": "2026-09-01T21:37:50.572Z",
+  "runId": "refresh-hourly-20260901T235033579Z-transformative-ai",
+  "ts": "2026-09-01T23:50:33.579Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-07-01T07:55:37.140Z",
-  "progress": 44.404,
+  "tAgi": "2031-06-30T15:06:19.349Z",
+  "progress": 44.5,
   "band": {
-    "earlyP10": "2028-08-07T06:31:36.337Z",
-    "lateP90": "2034-05-24T09:19:37.943Z",
-    "likelyEarly": "2030-01-18T07:13:36.739Z",
-    "likelyLate": "2032-12-11T08:37:37.541Z"
+    "earlyP10": "2028-08-07T01:07:29.250Z",
+    "lateP90": "2034-05-23T05:05:09.448Z",
+    "likelyEarly": "2030-01-17T20:06:54.299Z",
+    "likelyLate": "2032-12-10T10:05:44.399Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -6.034447,
+  "deltaMonths": -6.057475,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -104,6 +104,12 @@
       "citation": "https://www.aisi.gov.uk/"
     },
     {
+      "factorId": "adoption-usage",
+      "contributionMonths": -0.39525,
+      "rationale": "Adoption and usage is running low at 0.15 — a tailwind pulling the date sooner.",
+      "citation": "https://openrouter.ai/rankings"
+    },
+    {
       "factorId": "robotics-embodiment",
       "contributionMonths": -0.3888,
       "rationale": "Robotics & embodiment is moderate at 0.48 — a tailwind pulling the date sooner.",
@@ -116,15 +122,9 @@
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
-      "factorId": "adoption-usage",
-      "contributionMonths": -0.37995,
-      "rationale": "Adoption and usage is running low at 0.15 — a tailwind pulling the date sooner.",
-      "citation": "https://openrouter.ai/rankings"
-    },
-    {
       "factorId": "capital-formation",
-      "contributionMonths": -0.123648,
-      "rationale": "AI capital formation is running low at 0.06 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.131376,
+      "rationale": "AI capital formation is running low at 0.07 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
   ]
