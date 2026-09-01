@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260901T035847116Z-strong-agi",
-  "ts": "2026-09-01T03:58:47.116Z",
+  "runId": "refresh-hourly-20260901T091416285Z-strong-agi",
+  "ts": "2026-09-01T09:14:16.285Z",
   "definition": "strong-agi",
-  "tAgi": "2039-05-07T00:14:02.297Z",
-  "progress": 31.46,
+  "tAgi": "2039-05-06T14:58:11.858Z",
+  "progress": 31.485,
   "band": {
-    "earlyP10": "2031-09-27T12:04:22.567Z",
-    "lateP90": "2046-12-14T12:23:42.027Z",
-    "likelyEarly": "2035-07-17T18:09:12.432Z",
-    "likelyLate": "2043-02-24T06:18:52.162Z"
+    "earlyP10": "2031-09-27T11:31:19.259Z",
+    "lateP90": "2046-12-13T18:25:04.457Z",
+    "likelyEarly": "2035-07-17T13:14:45.559Z",
+    "likelyLate": "2043-02-23T16:41:38.157Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -7.851997,
+  "deltaMonths": -7.864679,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -105,7 +105,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.413292,
+      "contributionMonths": -0.414504,
       "rationale": "Research velocity is running low at 0.34 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
@@ -117,14 +117,14 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.14518,
-      "rationale": "Adoption and usage is running low at 0.12 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.15113,
+      "rationale": "Adoption and usage is running low at 0.13 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.11454,
-      "rationale": "AI capital formation is running low at 0.08 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.12006,
+      "rationale": "AI capital formation is running low at 0.09 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
   ]

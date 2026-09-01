@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260901T035847116Z-transformative-ai",
-  "ts": "2026-09-01T03:58:47.116Z",
+  "runId": "refresh-hourly-20260901T091416285Z-transformative-ai",
+  "ts": "2026-09-01T09:14:16.285Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-07-04T13:11:28.004Z",
-  "progress": 43.972,
+  "tAgi": "2031-07-03T21:34:05.626Z",
+  "progress": 44.052,
   "band": {
-    "earlyP10": "2028-08-08T02:50:46.689Z",
-    "lateP90": "2034-05-29T23:32:09.319Z",
-    "likelyEarly": "2030-01-20T08:01:07.346Z",
-    "likelyLate": "2032-12-15T18:21:48.662Z"
+    "earlyP10": "2028-08-07T23:45:05.276Z",
+    "lateP90": "2034-05-28T19:23:05.976Z",
+    "likelyEarly": "2030-01-19T22:39:35.451Z",
+    "likelyLate": "2032-12-14T20:28:35.801Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -5.928676,
+  "deltaMonths": -5.950063,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -111,20 +111,20 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.3111,
-      "rationale": "Adoption and usage is running low at 0.12 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.32385,
+      "rationale": "Adoption and usage is running low at 0.13 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.309969,
+      "contributionMonths": -0.310878,
       "rationale": "Research velocity is running low at 0.34 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.160356,
-      "rationale": "AI capital formation is running low at 0.08 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.168084,
+      "rationale": "AI capital formation is running low at 0.09 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
   ]
