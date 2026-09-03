@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260903T104827551Z-transformative-ai",
-  "ts": "2026-09-03T10:48:27.551Z",
+  "runId": "refresh-daily-20260903T111136849Z-transformative-ai",
+  "ts": "2026-09-03T11:11:36.849Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-06-23T09:11:05.753Z",
-  "progress": 45.38,
+  "tAgi": "2031-07-09T07:00:39.247Z",
+  "progress": 42.116,
   "band": {
-    "earlyP10": "2028-08-05T00:31:44.175Z",
-    "lateP90": "2034-05-10T17:50:27.331Z",
-    "likelyEarly": "2030-01-13T04:51:24.964Z",
-    "likelyLate": "2032-11-30T13:30:46.542Z"
+    "earlyP10": "2028-08-11T09:29:31.109Z",
+    "lateP90": "2034-06-05T04:31:47.385Z",
+    "likelyEarly": "2030-01-24T08:15:05.178Z",
+    "likelyLate": "2032-12-21T05:46:13.316Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -6.295564,
+  "deltaMonths": -5.772862,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -98,12 +98,6 @@
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
-      "factorId": "adoption-usage",
-      "contributionMonths": -0.5355,
-      "rationale": "Adoption and usage is running low at 0.21 — a tailwind pulling the date sooner.",
-      "citation": "https://openrouter.ai/rankings"
-    },
-    {
       "factorId": "safety-eval-pressure",
       "contributionMonths": 0.456158,
       "rationale": "Safety-eval pressure is moderate at 0.45 — a headwind pushing the date later.",
@@ -111,8 +105,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.440865,
-      "rationale": "Research velocity is moderate at 0.48 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.449955,
+      "rationale": "Research velocity is moderate at 0.49 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -123,9 +117,15 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.171948,
-      "rationale": "AI capital formation is running low at 0.09 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.160356,
+      "rationale": "AI capital formation is running low at 0.08 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
+    },
+    {
+      "factorId": "adoption-usage",
+      "contributionMonths": -0.0153,
+      "rationale": "Adoption and usage is running low at 0.01 — a tailwind pulling the date sooner.",
+      "citation": "https://openrouter.ai/rankings"
     }
   ]
 }
