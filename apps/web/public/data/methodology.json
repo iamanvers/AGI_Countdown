@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-03T18:22:33.640Z",
+  "ts": "2026-09-03T21:34:48.482Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -224,7 +224,7 @@
           "method": "zscore",
           "sampleSize": 181,
           "zScore": 0.02,
-          "percentile": 0.779,
+          "percentile": 0.773,
           "volatility": 0.036
         }
       },
@@ -261,7 +261,7 @@
       "weight": 5,
       "normalization": "momentum-01",
       "reading": {
-        "normalized": 0.011,
+        "normalized": 0.017,
         "level": 0.773,
         "confidence": 0.68,
         "citation": "https://openrouter.ai/rankings",
@@ -269,15 +269,15 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": -2.223,
-          "percentile": 0.011,
+          "zScore": -2.169,
+          "percentile": 0.017,
           "volatility": 0.001
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.022,
-        "transformative-ai": -0.028,
-        "strong-agi": -0.013
+        "weak-agi": -0.035,
+        "transformative-ai": -0.043,
+        "strong-agi": -0.02
       },
       "sources": [
         {
@@ -697,7 +697,7 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.082,
+        "normalized": 0.086,
         "level": 0.635,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -705,15 +705,15 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": -2.414,
-          "percentile": 0.011,
-          "volatility": 0.016
+          "zScore": -2.365,
+          "percentile": 0.017,
+          "volatility": 0.017
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.091,
-        "transformative-ai": -0.158,
-        "strong-agi": -0.113
+        "weak-agi": -0.095,
+        "transformative-ai": -0.166,
+        "strong-agi": -0.119
       },
       "sources": [
         {
