@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260904T031909411Z-strong-agi",
-  "ts": "2026-09-04T03:19:09.411Z",
+  "runId": "refresh-hourly-20260904T083217759Z-strong-agi",
+  "ts": "2026-09-04T08:32:17.759Z",
   "definition": "strong-agi",
-  "tAgi": "2039-05-03T22:40:05.837Z",
-  "progress": 30.99,
+  "tAgi": "2039-05-03T15:10:29.903Z",
+  "progress": 31.015,
   "band": {
-    "earlyP10": "2031-09-28T01:26:36.881Z",
-    "lateP90": "2046-12-07T19:53:34.793Z",
-    "likelyEarly": "2035-07-16T12:03:21.359Z",
-    "likelyLate": "2043-02-19T09:16:50.315Z"
+    "earlyP10": "2031-09-28T01:34:39.309Z",
+    "lateP90": "2046-12-07T04:46:20.497Z",
+    "likelyEarly": "2035-07-16T08:22:34.606Z",
+    "likelyLate": "2043-02-18T21:58:25.200Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -7.952705,
+  "deltaMonths": -7.962963,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -93,8 +93,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.61206,
-      "rationale": "Research velocity is moderate at 0.51 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.610848,
+      "rationale": "Research velocity is moderate at 0.50 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -117,13 +117,13 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.12834,
-      "rationale": "AI capital formation is running low at 0.09 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.13386,
+      "rationale": "AI capital formation is running low at 0.10 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.03332,
+      "contributionMonths": -0.03927,
       "rationale": "Adoption and usage is running low at 0.03 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     }
