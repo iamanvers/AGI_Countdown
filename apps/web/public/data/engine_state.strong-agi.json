@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260905T100451466Z-strong-agi",
-  "ts": "2026-09-05T10:04:51.466Z",
+  "runId": "refresh-daily-20260905T103239463Z-strong-agi",
+  "ts": "2026-09-05T10:32:39.463Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-22T14:04:02.484Z",
-  "progress": 32.315,
+  "tAgi": "2039-04-23T01:15:45.971Z",
+  "progress": 32.34,
   "band": {
-    "earlyP10": "2031-09-24T06:51:30.448Z",
-    "lateP90": "2046-11-18T21:16:34.520Z",
-    "likelyEarly": "2035-07-08T22:27:46.466Z",
-    "likelyLate": "2043-02-04T05:40:18.502Z"
+    "earlyP10": "2031-09-24T11:36:55.112Z",
+    "lateP90": "2046-11-19T14:54:36.830Z",
+    "likelyEarly": "2035-07-09T06:26:20.541Z",
+    "likelyLate": "2043-02-04T20:05:11.401Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.325883,
+  "deltaMonths": -8.310557,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -93,8 +93,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.622968,
-      "rationale": "Research velocity is moderate at 0.51 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.607212,
+      "rationale": "Research velocity is moderate at 0.50 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -117,14 +117,14 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.34867,
-      "rationale": "Adoption and usage is running low at 0.29 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.35462,
+      "rationale": "Adoption and usage is running low at 0.30 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.17526,
-      "rationale": "AI capital formation is running low at 0.13 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.16974,
+      "rationale": "AI capital formation is running low at 0.12 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
   ]
