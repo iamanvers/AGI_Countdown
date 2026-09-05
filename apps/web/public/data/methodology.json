@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-04T22:48:55.477Z",
+  "ts": "2026-09-05T00:39:05.527Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -223,7 +223,7 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": 0.06,
+          "zScore": 0.059,
           "percentile": 0.785,
           "volatility": 0.036
         }
@@ -261,7 +261,7 @@
       "weight": 5,
       "normalization": "momentum-01",
       "reading": {
-        "normalized": 0.276,
+        "normalized": 0.282,
         "level": 0.774,
         "confidence": 0.68,
         "citation": "https://openrouter.ai/rankings",
@@ -269,15 +269,15 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": -1.32,
-          "percentile": 0.276,
+          "zScore": -1.304,
+          "percentile": 0.282,
           "volatility": 0.001
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.563,
-        "transformative-ai": -0.704,
-        "strong-agi": -0.328
+        "weak-agi": -0.575,
+        "transformative-ai": -0.719,
+        "strong-agi": -0.336
       },
       "sources": [
         {
@@ -697,7 +697,7 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.117,
+        "normalized": 0.12,
         "level": 0.636,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -705,15 +705,15 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": -2.021,
+          "zScore": -1.988,
           "percentile": 0.039,
           "volatility": 0.018
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.129,
-        "transformative-ai": -0.226,
-        "strong-agi": -0.161
+        "weak-agi": -0.132,
+        "transformative-ai": -0.232,
+        "strong-agi": -0.166
       },
       "sources": [
         {
