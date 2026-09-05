@@ -198,9 +198,9 @@
   {
     "factorId": "forecast-consensus-anchor",
     "sourceId": "manifold-ai-markets",
-    "ts": "2026-09-05T10:04:51.466Z",
-    "raw": 0.30909041518589464,
-    "normalized": 0.30909041518589464,
+    "ts": "2026-09-05T13:23:40.695Z",
+    "raw": 0.3090904151858946,
+    "normalized": 0.3090904151858946,
     "confidence": 0.7,
     "citation": "https://manifold.markets/search?term=AGI",
     "quarantined": false,
@@ -14714,6 +14714,20 @@
     "notes": "6 major frontier model releases in the last ~9 months (release velocity)."
   },
   {
+    "factorId": "frontier-release-cadence",
+    "sourceId": "epoch-ai-notable-models",
+    "ts": "2026-09-05T10:32:39.463Z",
+    "raw": 6,
+    "normalized": 0.75,
+    "confidence": 0.7,
+    "citation": "https://epoch.ai/data/notable-ai-models",
+    "quarantined": false,
+    "factorName": "Frontier release cadence",
+    "domain": "labs",
+    "unit": "frontier-releases-270d",
+    "notes": "6 major frontier model releases in the last ~9 months (release velocity)."
+  },
+  {
     "factorId": "hardware-supply",
     "sourceId": "tsmc-capacity",
     "ts": "2026-08-31T14:18:53.851Z",
@@ -14828,16 +14842,16 @@
   {
     "factorId": "public-backlash-pressure",
     "sourceId": "gdelt-ai-tone",
-    "ts": "2026-09-05T10:04:51.466Z",
-    "raw": 0.32,
-    "normalized": 0.32,
-    "confidence": 0.6,
+    "ts": "2026-09-05T13:23:40.695Z",
+    "raw": 0.044,
+    "normalized": 0.4963309523809524,
+    "confidence": 0.65,
     "citation": "https://www.gdeltproject.org/",
     "quarantined": false,
     "factorName": "Public backlash pressure",
     "domain": "sentiment",
-    "unit": "backlash-0-1",
-    "notes": "Fallback estimate; replaced by live GDELT tone when available."
+    "unit": "avg-tone",
+    "notes": "Mean GDELT tone for AI coverage over ~14d: 0.04."
   },
   {
     "factorId": "public-backlash-pressure",
@@ -14940,7 +14954,7 @@
   {
     "factorId": "frontier-release-cadence",
     "sourceId": "epoch-ai-notable-models",
-    "ts": "2026-09-05T10:32:39.463Z",
+    "ts": "2026-09-05T13:23:40.695Z",
     "raw": 6,
     "normalized": 0.75,
     "confidence": 0.7,
