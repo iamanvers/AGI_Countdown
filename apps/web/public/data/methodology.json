@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-06T13:58:42.990Z",
+  "ts": "2026-09-06T16:44:20.325Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -215,7 +215,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.739,
+        "normalized": 0.737,
         "level": 0.566,
         "confidence": 0.64,
         "citation": "https://www.semanticscholar.org/",
@@ -223,15 +223,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": 1.04,
+          "zScore": 1.03,
           "percentile": 0.917,
           "volatility": 0.036
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.922,
-        "transformative-ai": -0.638,
-        "strong-agi": -0.851
+        "weak-agi": -0.92,
+        "transformative-ai": -0.637,
+        "strong-agi": -0.849
       },
       "sources": [
         {
@@ -269,7 +269,7 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": -1.312,
+          "zScore": -1.301,
           "percentile": 0.039,
           "volatility": 0.001
         }
@@ -697,7 +697,7 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.149,
+        "normalized": 0.152,
         "level": 0.633,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -705,15 +705,15 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": -1.745,
-          "percentile": 0.055,
+          "zScore": -1.721,
+          "percentile": 0.061,
           "volatility": 0.02
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.164,
-        "transformative-ai": -0.288,
-        "strong-agi": -0.206
+        "weak-agi": -0.168,
+        "transformative-ai": -0.294,
+        "strong-agi": -0.21
       },
       "sources": [
         {
