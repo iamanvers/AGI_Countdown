@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260906T053500399Z-transformative-ai",
-  "ts": "2026-09-06T05:35:00.399Z",
+  "runId": "refresh-hourly-20260906T102553450Z-transformative-ai",
+  "ts": "2026-09-06T10:25:53.450Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-06-10T08:46:42.281Z",
-  "progress": 47.412,
+  "tAgi": "2031-06-09T17:22:05.160Z",
+  "progress": 47.508,
   "band": {
-    "earlyP10": "2028-08-01T11:37:30.953Z",
-    "lateP90": "2034-04-18T05:55:53.609Z",
-    "likelyEarly": "2030-01-04T22:12:06.617Z",
-    "likelyLate": "2032-11-12T19:21:17.945Z"
+    "earlyP10": "2028-08-01T08:22:10.748Z",
+    "lateP90": "2034-04-17T02:21:59.572Z",
+    "likelyEarly": "2030-01-04T12:52:07.954Z",
+    "likelyLate": "2032-11-11T21:52:02.366Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -6.723234,
+  "deltaMonths": -6.74433,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -68,16 +68,16 @@
       "citation": "https://aiindex.stanford.edu/report/"
     },
     {
+      "factorId": "adoption-usage",
+      "contributionMonths": -0.87465,
+      "rationale": "Adoption and usage is running low at 0.34 — a tailwind pulling the date sooner.",
+      "citation": "https://openrouter.ai/rankings"
+    },
+    {
       "factorId": "policy-friction",
       "contributionMonths": 0.864153,
       "rationale": "Policy friction is running low at 0.38 — a headwind pushing the date later.",
       "citation": "https://artificialintelligenceact.eu/"
-    },
-    {
-      "factorId": "adoption-usage",
-      "contributionMonths": -0.85935,
-      "rationale": "Adoption and usage is running low at 0.34 — a tailwind pulling the date sooner.",
-      "citation": "https://openrouter.ai/rankings"
     },
     {
       "factorId": "export-control-friction",
@@ -123,7 +123,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.268548,
+      "contributionMonths": -0.274344,
       "rationale": "AI capital formation is running low at 0.14 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     }
