@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-weekly-20260907T125647620Z-transformative-ai",
-  "ts": "2026-09-07T12:56:47.620Z",
+  "runId": "refresh-hourly-20260907T145350124Z-transformative-ai",
+  "ts": "2026-09-07T14:53:50.124Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-07-01T09:53:52.194Z",
+  "tAgi": "2031-07-01T07:54:41.915Z",
   "progress": 42.644,
   "band": {
-    "earlyP10": "2028-08-10T16:29:20.446Z",
-    "lateP90": "2034-05-21T03:18:23.942Z",
-    "likelyEarly": "2030-01-20T01:11:36.320Z",
-    "likelyLate": "2032-12-09T18:36:08.068Z"
+    "earlyP10": "2028-08-10T16:51:52.764Z",
+    "lateP90": "2034-05-20T22:57:31.066Z",
+    "likelyEarly": "2030-01-20T00:23:17.340Z",
+    "likelyLate": "2032-12-09T15:26:06.490Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -6.031749,
+  "deltaMonths": -6.034468,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -50,16 +50,16 @@
       "citation": "https://investor.tsmc.com/english"
     },
     {
-      "factorId": "frontier-release-cadence",
-      "contributionMonths": -1.05,
-      "rationale": "Frontier release cadence is running high at 0.75 — a tailwind pulling the date sooner.",
-      "citation": "https://epoch.ai/data/notable-ai-models"
-    },
-    {
       "factorId": "labor-automation-exposure",
       "contributionMonths": -1.04958,
       "rationale": "Labor automation exposure is moderate at 0.51 — a tailwind pulling the date sooner.",
       "citation": "https://www.anthropic.com/economic-index"
+    },
+    {
+      "factorId": "frontier-release-cadence",
+      "contributionMonths": -1.0486,
+      "rationale": "Frontier release cadence is running high at 0.75 — a tailwind pulling the date sooner.",
+      "citation": "https://epoch.ai/data/notable-ai-models"
     },
     {
       "factorId": "algorithmic-efficiency",
@@ -93,7 +93,7 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.554466,
+      "contributionMonths": 0.556143,
       "rationale": "Macro & bubble risk is running low at 0.17 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
@@ -117,8 +117,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.334236,
-      "rationale": "AI capital formation is running low at 0.17 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.340032,
+      "rationale": "AI capital formation is running low at 0.18 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
