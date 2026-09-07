@@ -14,11 +14,12 @@
     "sourceId": "manifold-ai-markets",
     "name": "Manifold AI markets",
     "url": "https://api.manifold.markets/v0/markets",
-    "lastFetchedAt": "2026-09-06T23:33:09.630Z",
-    "status": "ok",
+    "lastFetchedAt": "2026-09-07T03:20:49.105Z",
+    "status": "stale",
     "errorRate": 0,
     "domain": "forecasts",
     "cadence": "hourly",
+    "notes": "Manifold live fetch failed: Manifold responded 503",
     "tier": "primary"
   },
   {
@@ -159,12 +160,12 @@
     "sourceId": "gdelt-ai-tone",
     "name": "GDELT AI news tone",
     "url": "https://api.gdeltproject.org/api/v2/doc/doc",
-    "lastFetchedAt": "2026-09-06T23:33:09.630Z",
+    "lastFetchedAt": "2026-09-07T03:20:49.105Z",
     "status": "ok",
     "errorRate": 0,
     "domain": "sentiment",
     "cadence": "hourly",
-    "notes": "GDELT live fetch failed: GDELT responded 429 Live fetch empty; used curated fallback.",
+    "notes": "GDELT live fetch failed: fetch failed Live fetch empty; used curated fallback.",
     "tier": "primary"
   },
   {
