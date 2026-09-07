@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20260907T122907346Z-weak-agi",
-  "ts": "2026-09-07T12:29:07.346Z",
+  "runId": "refresh-weekly-20260907T125647620Z-weak-agi",
+  "ts": "2026-09-07T12:56:47.620Z",
   "definition": "weak-agi",
-  "tAgi": "2027-09-14T19:25:08.635Z",
+  "tAgi": "2027-09-19T17:50:58.835Z",
   "progress": 77.3,
   "band": {
-    "earlyP10": "2026-09-14T13:35:56.635Z",
-    "lateP90": "2028-09-14T01:14:20.635Z",
-    "likelyEarly": "2027-03-16T04:30:32.635Z",
-    "likelyLate": "2028-03-15T10:19:44.635Z"
+    "earlyP10": "2026-09-19T12:01:46.835Z",
+    "lateP90": "2028-09-18T23:40:10.835Z",
+    "likelyEarly": "2027-03-21T02:56:22.835Z",
+    "likelyLate": "2028-03-20T08:45:34.835Z"
   },
   "anchor": "2028-06-03T04:44:09.389Z",
-  "deltaMonths": -8.620734,
+  "deltaMonths": -8.458608,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -62,16 +62,16 @@
       "citation": "https://www.iea.org/reports/electricity-2025"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.807495,
-      "rationale": "Research velocity is moderate at 0.61 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
       "factorId": "data-availability",
       "contributionMonths": 0.72337,
       "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
       "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.642057,
+      "rationale": "Research velocity is moderate at 0.49 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "policy-friction",
@@ -117,7 +117,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.18768,
+      "contributionMonths": -0.190992,
       "rationale": "AI capital formation is running low at 0.17 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
