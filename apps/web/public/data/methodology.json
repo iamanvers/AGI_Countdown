@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-07T09:01:05.530Z",
+  "ts": "2026-09-07T12:29:07.346Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -215,23 +215,23 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.727,
-        "level": 0.566,
-        "confidence": 0.64,
-        "citation": "https://www.semanticscholar.org/",
+        "normalized": 0.615,
+        "level": 0.548,
+        "confidence": 0.673,
+        "citation": "https://arxiv.org/list/cs.AI/recent",
         "rolling": {
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": 0.981,
-          "percentile": 0.917,
+          "zScore": 0.468,
+          "percentile": 0.751,
           "volatility": 0.036
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.907,
-        "transformative-ai": -0.628,
-        "strong-agi": -0.838
+        "weak-agi": -0.807,
+        "transformative-ai": -0.559,
+        "strong-agi": -0.745
       },
       "sources": [
         {
@@ -269,7 +269,7 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": -1.243,
+          "zScore": -1.319,
           "percentile": 0.039,
           "volatility": 0.001
         }
@@ -697,7 +697,7 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.167,
+        "normalized": 0.17,
         "level": 0.633,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -705,15 +705,15 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": -1.608,
-          "percentile": 0.088,
+          "zScore": -1.586,
+          "percentile": 0.094,
           "volatility": 0.02
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.184,
-        "transformative-ai": -0.323,
-        "strong-agi": -0.23
+        "weak-agi": -0.188,
+        "transformative-ai": -0.328,
+        "strong-agi": -0.235
       },
       "sources": [
         {
