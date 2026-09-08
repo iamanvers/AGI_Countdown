@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260908T083958768Z-weak-agi",
-  "ts": "2026-09-08T08:39:58.768Z",
+  "runId": "refresh-daily-20260908T111604794Z-weak-agi",
+  "ts": "2026-09-08T11:16:04.794Z",
   "definition": "weak-agi",
-  "tAgi": "2027-11-03T18:29:00.280Z",
+  "tAgi": "2027-11-04T14:07:18.876Z",
   "progress": 77.3,
   "band": {
-    "earlyP10": "2026-11-03T12:39:48.280Z",
-    "lateP90": "2028-11-03T00:18:12.280Z",
-    "likelyEarly": "2027-05-05T03:34:24.280Z",
-    "likelyLate": "2028-05-04T09:23:36.280Z"
+    "earlyP10": "2026-11-04T08:18:06.876Z",
+    "lateP90": "2028-11-03T19:56:30.876Z",
+    "likelyEarly": "2027-05-05T23:12:42.876Z",
+    "likelyLate": "2028-05-05T05:01:54.876Z"
   },
-  "anchor": "2028-06-03T04:04:11.947Z",
-  "deltaMonths": -6.978359,
+  "anchor": "2028-06-03T01:12:36.996Z",
+  "deltaMonths": -6.94756,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -57,8 +57,8 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.769002,
-      "rationale": "Macro & bubble risk is running high at 0.97 — a headwind pushing the date later.",
+      "contributionMonths": 0.765036,
+      "rationale": "Macro & bubble risk is running high at 0.96 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -66,12 +66,6 @@
       "contributionMonths": 0.72337,
       "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
       "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.636805,
-      "rationale": "Research velocity is moderate at 0.48 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "policy-friction",
@@ -84,6 +78,12 @@
       "contributionMonths": -0.59976,
       "rationale": "Labor automation exposure is moderate at 0.51 — a tailwind pulling the date sooner.",
       "citation": "https://www.anthropic.com/economic-index"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.598728,
+      "rationale": "Research velocity is moderate at 0.46 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "export-control-friction",
@@ -111,7 +111,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.20976,
+      "contributionMonths": -0.213072,
       "rationale": "AI capital formation is running low at 0.19 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
