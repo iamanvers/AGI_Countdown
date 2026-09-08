@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260908T034802688Z-weak-agi",
-  "ts": "2026-09-08T03:48:02.688Z",
+  "runId": "refresh-hourly-20260908T083958768Z-weak-agi",
+  "ts": "2026-09-08T08:39:58.768Z",
   "definition": "weak-agi",
-  "tAgi": "2027-11-04T01:23:52.950Z",
+  "tAgi": "2027-11-03T18:29:00.280Z",
   "progress": 77.3,
   "band": {
-    "earlyP10": "2026-11-03T19:34:40.950Z",
-    "lateP90": "2028-11-03T07:13:04.950Z",
-    "likelyEarly": "2027-05-05T10:29:16.950Z",
-    "likelyLate": "2028-05-04T16:18:28.950Z"
+    "earlyP10": "2026-11-03T12:39:48.280Z",
+    "lateP90": "2028-11-03T00:18:12.280Z",
+    "likelyEarly": "2027-05-05T03:34:24.280Z",
+    "likelyLate": "2028-05-04T09:23:36.280Z"
   },
-  "anchor": "2028-06-03T06:55:46.897Z",
-  "deltaMonths": -6.972808,
+  "anchor": "2028-06-03T04:04:11.947Z",
+  "deltaMonths": -6.978359,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -57,8 +57,8 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.772554,
-      "rationale": "Macro & bubble risk is running high at 0.98 — a headwind pushing the date later.",
+      "contributionMonths": 0.769002,
+      "rationale": "Macro & bubble risk is running high at 0.97 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -69,8 +69,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.638118,
-      "rationale": "Research velocity is moderate at 0.49 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.636805,
+      "rationale": "Research velocity is moderate at 0.48 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -111,7 +111,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.206448,
+      "contributionMonths": -0.20976,
       "rationale": "AI capital formation is running low at 0.19 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
