@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260909T203433717Z-weak-agi",
-  "ts": "2026-09-09T20:34:33.717Z",
+  "runId": "refresh-hourly-20260909T225937023Z-weak-agi",
+  "ts": "2026-09-09T22:59:37.023Z",
   "definition": "weak-agi",
-  "tAgi": "2027-10-15T22:17:45.799Z",
+  "tAgi": "2027-10-15T20:21:31.713Z",
   "progress": 77.3,
   "band": {
-    "earlyP10": "2026-10-15T16:28:33.799Z",
-    "lateP90": "2028-10-15T04:06:57.799Z",
-    "likelyEarly": "2027-04-16T07:23:09.799Z",
-    "likelyLate": "2028-04-15T13:12:21.799Z"
+    "earlyP10": "2026-10-15T14:32:19.713Z",
+    "lateP90": "2028-10-15T02:10:43.713Z",
+    "likelyEarly": "2027-04-16T05:26:55.713Z",
+    "likelyLate": "2028-04-15T11:16:07.713Z"
   },
   "anchor": "2028-06-01T19:29:37.201Z",
-  "deltaMonths": -7.552787,
+  "deltaMonths": -7.555439,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -39,7 +39,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -1.139489,
+      "contributionMonths": -1.135472,
       "rationale": "Research velocity is running high at 0.85 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
@@ -62,16 +62,16 @@
       "citation": "https://www.iea.org/reports/electricity-2025"
     },
     {
-      "factorId": "macro-headwinds",
-      "contributionMonths": 0.726699,
-      "rationale": "Macro & bubble risk is running high at 0.87 — a headwind pushing the date later.",
-      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
-    },
-    {
       "factorId": "data-availability",
       "contributionMonths": 0.72337,
       "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
       "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
+    },
+    {
+      "factorId": "macro-headwinds",
+      "contributionMonths": 0.723342,
+      "rationale": "Macro & bubble risk is running high at 0.86 — a headwind pushing the date later.",
+      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "policy-friction",
@@ -111,8 +111,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.235152,
-      "rationale": "AI capital formation is running low at 0.21 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.238464,
+      "rationale": "AI capital formation is running low at 0.22 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
