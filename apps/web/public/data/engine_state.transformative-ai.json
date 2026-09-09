@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20260909T112005732Z-transformative-ai",
-  "ts": "2026-09-09T11:20:05.732Z",
+  "runId": "refresh-hourly-20260909T132930695Z-transformative-ai",
+  "ts": "2026-09-09T13:29:30.695Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-08-16T18:50:13.269Z",
+  "tAgi": "2031-08-22T19:47:40.066Z",
   "progress": 42.644,
   "band": {
-    "earlyP10": "2028-08-30T09:28:29.442Z",
-    "lateP90": "2034-08-02T04:11:57.096Z",
-    "likelyEarly": "2030-02-22T02:09:21.355Z",
-    "likelyLate": "2033-02-07T11:31:05.183Z"
+    "earlyP10": "2028-09-01T20:42:48.919Z",
+    "lateP90": "2034-08-11T18:52:31.213Z",
+    "likelyEarly": "2030-02-26T08:15:14.492Z",
+    "likelyLate": "2033-02-15T07:20:05.640Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -4.508187,
+  "deltaMonths": -4.309747,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -39,8 +39,8 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 1.289907,
-      "rationale": "Macro & bubble risk is running high at 0.89 — a headwind pushing the date later.",
+      "contributionMonths": 1.28339,
+      "rationale": "Macro & bubble risk is running high at 0.88 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -48,6 +48,12 @@
       "contributionMonths": -1.2636,
       "rationale": "Autonomy horizon is moderate at 0.60 — a tailwind pulling the date sooner.",
       "citation": "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/"
+    },
+    {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": 1.095785,
+      "rationale": "Public backlash pressure is running high at 0.97 — a headwind pushing the date later.",
+      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
       "factorId": "hardware-supply",
@@ -74,22 +80,16 @@
       "citation": "https://artificialintelligenceact.eu/"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.795366,
+      "rationale": "Research velocity is running high at 0.86 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
       "factorId": "export-control-friction",
       "contributionMonths": 0.742462,
       "rationale": "Export-control friction is moderate at 0.50 — a headwind pushing the date later.",
       "citation": "https://www.bis.gov/"
-    },
-    {
-      "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.725822,
-      "rationale": "Public backlash pressure is moderate at 0.46 — a headwind pushing the date later.",
-      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.63036,
-      "rationale": "Research velocity is running high at 0.68 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "data-availability",

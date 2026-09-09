@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20260909T112005732Z-strong-agi",
-  "ts": "2026-09-09T11:20:05.732Z",
+  "runId": "refresh-hourly-20260909T132930695Z-strong-agi",
+  "ts": "2026-09-09T13:29:30.695Z",
   "definition": "strong-agi",
-  "tAgi": "2039-06-08T06:44:14.161Z",
+  "tAgi": "2039-06-11T16:18:30.008Z",
   "progress": 31.045,
   "band": {
-    "earlyP10": "2031-10-15T09:27:59.468Z",
-    "lateP90": "2047-01-30T04:00:28.854Z",
-    "likelyEarly": "2035-08-11T20:06:06.814Z",
-    "likelyLate": "2043-04-04T17:22:21.508Z"
+    "earlyP10": "2031-10-16T19:22:11.833Z",
+    "lateP90": "2047-02-04T13:14:48.183Z",
+    "likelyEarly": "2035-08-14T05:50:20.921Z",
+    "likelyLate": "2043-04-09T02:46:39.095Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -6.791738,
+  "deltaMonths": -6.680071,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -56,6 +56,18 @@
       "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -1.060488,
+      "rationale": "Research velocity is running high at 0.86 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": 0.996168,
+      "rationale": "Public backlash pressure is running high at 0.97 — a headwind pushing the date later.",
+      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
+    },
+    {
       "factorId": "data-availability",
       "contributionMonths": 0.986414,
       "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
@@ -69,8 +81,8 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.921362,
-      "rationale": "Macro & bubble risk is running high at 0.89 — a headwind pushing the date later.",
+      "contributionMonths": 0.916707,
+      "rationale": "Macro & bubble risk is running high at 0.88 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -78,18 +90,6 @@
       "contributionMonths": 0.864153,
       "rationale": "Policy friction is running low at 0.38 — a headwind pushing the date later.",
       "citation": "https://artificialintelligenceact.eu/"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.84048,
-      "rationale": "Research velocity is running high at 0.68 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
-      "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.659838,
-      "rationale": "Public backlash pressure is moderate at 0.46 — a headwind pushing the date later.",
-      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
       "factorId": "robotics-embodiment",
