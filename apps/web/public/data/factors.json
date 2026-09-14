@@ -2,21 +2,21 @@
   {
     "factorId": "adoption-usage",
     "sourceId": "hugging-face-hub",
-    "ts": "2026-09-13T11:48:56.427Z",
-    "raw": 179913555,
-    "normalized": 0.9172293205643864,
+    "ts": "2026-09-14T12:42:57.897Z",
+    "raw": 180007763,
+    "normalized": 0.9172545816505919,
     "confidence": 0.6,
     "citation": "https://huggingface.co/models",
     "quarantined": false,
     "factorName": "Adoption and usage",
     "domain": "adoption",
     "unit": "top20-text-gen-downloads-30d",
-    "notes": "Sum of recent downloads across the top-20 text-generation models: 179,913,555."
+    "notes": "Sum of recent downloads across the top-20 text-generation models: 180,007,763."
   },
   {
     "factorId": "adoption-usage",
     "sourceId": "openrouter-usage",
-    "ts": "2026-09-13T11:48:56.427Z",
+    "ts": "2026-09-14T12:42:57.897Z",
     "raw": 0.66,
     "normalized": 0.66,
     "confidence": 0.76,
@@ -72,7 +72,7 @@
   {
     "factorId": "capital-formation",
     "sourceId": "nasdaq-index",
-    "ts": "2026-09-13T11:48:56.427Z",
+    "ts": "2026-09-14T12:42:57.897Z",
     "raw": -0.04,
     "normalized": 0.49791110996954724,
     "confidence": 0.64,
@@ -212,7 +212,7 @@
   {
     "factorId": "forecast-consensus-anchor",
     "sourceId": "metaculus-agi-questions",
-    "ts": "2026-09-13T11:48:56.427Z",
+    "ts": "2026-09-14T12:42:57.897Z",
     "raw": 0.6,
     "normalized": 0.6,
     "confidence": 0.7,
@@ -226,7 +226,7 @@
   {
     "factorId": "forecast-consensus-anchor",
     "sourceId": "polymarket-ai",
-    "ts": "2026-09-13T11:48:56.427Z",
+    "ts": "2026-09-14T12:42:57.897Z",
     "raw": 0.58,
     "normalized": 0.58,
     "confidence": 0.66,
@@ -268,7 +268,7 @@
   {
     "factorId": "frontier-benchmark-saturation",
     "sourceId": "lmarena-leaderboard",
-    "ts": "2026-09-13T11:48:56.427Z",
+    "ts": "2026-09-14T12:42:57.897Z",
     "raw": 0.7,
     "normalized": 0.7,
     "confidence": 0.78,
@@ -282,7 +282,7 @@
   {
     "factorId": "frontier-benchmark-saturation",
     "sourceId": "papers-with-code-leaderboards",
-    "ts": "2026-09-13T11:48:56.427Z",
+    "ts": "2026-09-14T12:42:57.897Z",
     "raw": 0.74,
     "normalized": 0.74,
     "confidence": 0.8,
@@ -15694,6 +15694,20 @@
     "notes": "5 major frontier model releases in the last ~9 months (release velocity)."
   },
   {
+    "factorId": "frontier-release-cadence",
+    "sourceId": "epoch-ai-notable-models",
+    "ts": "2026-09-14T12:02:09.989Z",
+    "raw": 5,
+    "normalized": 0.625,
+    "confidence": 0.7,
+    "citation": "https://epoch.ai/data/notable-ai-models",
+    "quarantined": false,
+    "factorName": "Frontier release cadence",
+    "domain": "labs",
+    "unit": "frontier-releases-270d",
+    "notes": "5 major frontier model releases in the last ~9 months (release velocity)."
+  },
+  {
     "factorId": "hardware-supply",
     "sourceId": "tsmc-capacity",
     "ts": "2026-09-07T12:56:47.620Z",
@@ -15836,7 +15850,7 @@
   {
     "factorId": "research-velocity",
     "sourceId": "arxiv-ai-paper-volume",
-    "ts": "2026-09-13T11:48:56.427Z",
+    "ts": "2026-09-14T12:42:57.897Z",
     "raw": 0.6,
     "normalized": 0.6,
     "confidence": 0.6,
@@ -15850,16 +15864,16 @@
   {
     "factorId": "research-velocity",
     "sourceId": "github-frontier",
-    "ts": "2026-09-13T11:48:56.427Z",
-    "raw": 12947,
-    "normalized": 0.46160154021677124,
+    "ts": "2026-09-14T12:42:57.897Z",
+    "raw": 12935,
+    "normalized": 0.4605333428276427,
     "confidence": 0.62,
     "citation": "https://github.com/topics/llm",
     "quarantined": false,
     "factorName": "Research velocity",
     "domain": "research",
     "unit": "new-llm-repos-30d",
-    "notes": "New topic:llm repos: 12947 (last 30d) vs 15101 (prior 30d)."
+    "notes": "New topic:llm repos: 12935 (last 30d) vs 15152 (prior 30d)."
   },
   {
     "factorId": "research-velocity",
@@ -15920,7 +15934,7 @@
   {
     "factorId": "frontier-release-cadence",
     "sourceId": "epoch-ai-notable-models",
-    "ts": "2026-09-14T12:02:09.989Z",
+    "ts": "2026-09-14T12:42:57.897Z",
     "raw": 5,
     "normalized": 0.625,
     "confidence": 0.7,
