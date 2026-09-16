@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260915T225019918Z-strong-agi",
-  "ts": "2026-09-15T22:50:19.918Z",
+  "runId": "refresh-hourly-20260916T010845637Z-strong-agi",
+  "ts": "2026-09-16T01:08:45.637Z",
   "definition": "strong-agi",
-  "tAgi": "2039-06-07T02:36:01.605Z",
+  "tAgi": "2039-06-07T00:56:11.044Z",
   "progress": 31.43,
   "band": {
-    "earlyP10": "2031-10-18T19:31:25.702Z",
-    "lateP90": "2047-01-24T09:40:37.508Z",
-    "likelyEarly": "2035-08-12T23:03:43.654Z",
-    "likelyLate": "2043-04-01T06:08:19.556Z"
+    "earlyP10": "2031-10-18T20:14:32.996Z",
+    "lateP90": "2047-01-24T05:37:49.092Z",
+    "likelyEarly": "2035-08-12T22:35:22.020Z",
+    "likelyLate": "2043-04-01T03:17:00.068Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -6.830256,
+  "deltaMonths": -6.832534,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -75,14 +75,14 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.783648,
-      "rationale": "Macro & bubble risk is moderate at 0.65 — a headwind pushing the date later.",
+      "contributionMonths": 0.781826,
+      "rationale": "Macro & bubble risk is moderate at 0.64 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.732672,
-      "rationale": "Research velocity is moderate at 0.64 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.730368,
+      "rationale": "Research velocity is moderate at 0.63 — a tailwind pulling the date sooner.",
       "citation": "https://www.semanticscholar.org/"
     },
     {
@@ -111,7 +111,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.20976,
+      "contributionMonths": -0.21252,
       "rationale": "AI capital formation is running low at 0.15 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
