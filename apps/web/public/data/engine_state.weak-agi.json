@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260917T215611113Z-weak-agi",
-  "ts": "2026-09-17T21:56:11.113Z",
+  "runId": "refresh-hourly-20260917T235627753Z-weak-agi",
+  "ts": "2026-09-17T23:56:27.753Z",
   "definition": "weak-agi",
-  "tAgi": "2027-10-15T20:23:36.725Z",
+  "tAgi": "2027-10-15T11:16:01.953Z",
   "progress": 78.2625,
   "band": {
-    "earlyP10": "2026-10-15T14:34:24.725Z",
-    "lateP90": "2028-10-15T02:12:48.725Z",
-    "likelyEarly": "2027-04-16T05:29:00.725Z",
-    "likelyLate": "2028-04-15T11:18:12.725Z"
+    "earlyP10": "2026-10-15T05:26:49.953Z",
+    "lateP90": "2028-10-14T17:05:13.953Z",
+    "likelyEarly": "2027-04-15T20:21:25.953Z",
+    "likelyLate": "2028-04-15T02:10:37.953Z"
   },
-  "anchor": "2028-05-29T12:29:07.918Z",
-  "deltaMonths": -7.447233,
+  "anchor": "2028-05-29T12:12:24.629Z",
+  "deltaMonths": -7.459345,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -69,8 +69,8 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.6077,
-      "rationale": "Macro & bubble risk is moderate at 0.61 — a headwind pushing the date later.",
+      "contributionMonths": 0.606196,
+      "rationale": "Macro & bubble risk is moderate at 0.60 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -117,14 +117,14 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.175536,
+      "contributionMonths": -0.177744,
       "rationale": "AI capital formation is running low at 0.16 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "frontier-release-cadence",
-      "contributionMonths": -0.0308,
-      "rationale": "Frontier release cadence is running low at 0.02 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.0392,
+      "rationale": "Frontier release cadence is running low at 0.03 — a tailwind pulling the date sooner.",
       "citation": "https://epoch.ai/data/notable-ai-models"
     }
   ]
