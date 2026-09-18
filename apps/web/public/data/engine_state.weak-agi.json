@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260918T085057354Z-weak-agi",
-  "ts": "2026-09-18T08:50:57.354Z",
+  "runId": "refresh-daily-20260918T111118512Z-weak-agi",
+  "ts": "2026-09-18T11:11:18.512Z",
   "definition": "weak-agi",
-  "tAgi": "2027-10-16T04:03:24.770Z",
+  "tAgi": "2027-10-20T14:33:31.335Z",
   "progress": 78.2625,
   "band": {
-    "earlyP10": "2026-10-15T22:14:12.770Z",
-    "lateP90": "2028-10-15T09:52:36.770Z",
-    "likelyEarly": "2027-04-16T13:08:48.770Z",
-    "likelyLate": "2028-04-15T18:58:00.770Z"
+    "earlyP10": "2026-10-20T08:44:19.335Z",
+    "lateP90": "2028-10-19T20:22:43.335Z",
+    "likelyEarly": "2027-04-20T23:38:55.335Z",
+    "likelyLate": "2028-04-20T05:28:07.335Z"
   },
-  "anchor": "2028-05-29T11:49:22.118Z",
-  "deltaMonths": -7.435835,
+  "anchor": "2028-05-29T13:11:54.047Z",
+  "deltaMonths": -7.291922,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -56,16 +56,16 @@
       "citation": "https://www.iea.org/reports/electricity-2025"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.802464,
-      "rationale": "Research velocity is moderate at 0.64 — a tailwind pulling the date sooner.",
-      "citation": "https://www.semanticscholar.org/"
-    },
-    {
       "factorId": "data-availability",
       "contributionMonths": 0.72337,
       "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
       "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.645996,
+      "rationale": "Research velocity is moderate at 0.49 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "policy-friction",
@@ -75,8 +75,8 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.603178,
-      "rationale": "Macro & bubble risk is moderate at 0.60 — a headwind pushing the date later.",
+      "contributionMonths": 0.601663,
+      "rationale": "Macro & bubble risk is moderate at 0.59 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -117,8 +117,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.183264,
-      "rationale": "AI capital formation is running low at 0.17 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.194304,
+      "rationale": "AI capital formation is running low at 0.18 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
