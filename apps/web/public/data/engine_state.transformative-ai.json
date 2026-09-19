@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20260919T105604810Z-transformative-ai",
-  "ts": "2026-09-19T10:56:04.810Z",
+  "runId": "refresh-hourly-20260919T121910610Z-transformative-ai",
+  "ts": "2026-09-19T12:19:10.610Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-08-13T07:16:33.995Z",
+  "tAgi": "2031-08-14T22:03:48.248Z",
   "progress": 43.876,
   "band": {
-    "earlyP10": "2028-09-03T23:50:54.623Z",
-    "lateP90": "2034-07-21T14:42:13.367Z",
-    "likelyEarly": "2030-02-22T15:33:44.309Z",
-    "likelyLate": "2033-01-30T22:59:23.681Z"
+    "earlyP10": "2028-09-04T16:11:45.881Z",
+    "lateP90": "2034-07-24T03:55:50.615Z",
+    "likelyEarly": "2030-02-23T19:07:47.064Z",
+    "likelyLate": "2033-02-02T00:59:49.432Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -4.622578,
+  "deltaMonths": -4.56948,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -57,8 +57,8 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 1.035962,
-      "rationale": "Macro & bubble risk is moderate at 0.58 — a headwind pushing the date later.",
+      "contributionMonths": 1.033261,
+      "rationale": "Macro & bubble risk is moderate at 0.57 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -105,15 +105,9 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.370944,
+      "contributionMonths": -0.363216,
       "rationale": "AI capital formation is running low at 0.19 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.300879,
-      "rationale": "Research velocity is running low at 0.33 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "adoption-usage",
@@ -122,9 +116,15 @@
       "citation": "https://openrouter.ai/rankings"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.283608,
+      "rationale": "Research velocity is running low at 0.31 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
       "factorId": "frontier-release-cadence",
-      "contributionMonths": -0.0392,
-      "rationale": "Frontier release cadence is running low at 0.03 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.0084,
+      "rationale": "Frontier release cadence is running low at 0.01 — a tailwind pulling the date sooner.",
       "citation": "https://epoch.ai/data/notable-ai-models"
     }
   ]
