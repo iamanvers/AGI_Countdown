@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260921T121231945Z-strong-agi",
-  "ts": "2026-09-21T12:12:31.945Z",
+  "runId": "refresh-daily-20260921T124500633Z-strong-agi",
+  "ts": "2026-09-21T12:45:00.633Z",
   "definition": "strong-agi",
-  "tAgi": "2039-06-12T21:59:48.145Z",
+  "tAgi": "2039-06-12T19:31:34.344Z",
   "progress": 31.43,
   "band": {
-    "earlyP10": "2031-10-24T11:19:00.409Z",
-    "lateP90": "2047-01-30T08:40:35.881Z",
-    "likelyEarly": "2035-08-18T16:39:24.277Z",
-    "likelyLate": "2043-04-07T03:20:12.013Z"
+    "earlyP10": "2031-10-24T10:39:12.989Z",
+    "lateP90": "2047-01-30T04:23:55.699Z",
+    "likelyEarly": "2035-08-18T15:05:23.666Z",
+    "likelyLate": "2043-04-06T23:57:45.022Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -6.639429,
+  "deltaMonths": -6.642811,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -75,8 +75,8 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.713151,
-      "rationale": "Macro & bubble risk is moderate at 0.54 — a headwind pushing the date later.",
+      "contributionMonths": 0.711149,
+      "rationale": "Macro & bubble risk is moderate at 0.53 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -111,7 +111,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.28842,
+      "contributionMonths": -0.2898,
       "rationale": "AI capital formation is running low at 0.21 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
