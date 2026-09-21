@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260921T183021161Z-transformative-ai",
-  "ts": "2026-09-21T18:30:21.161Z",
+  "runId": "refresh-hourly-20260921T222817929Z-transformative-ai",
+  "ts": "2026-09-21T22:28:17.929Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-08-11T10:02:40.122Z",
+  "tAgi": "2031-08-11T03:31:53.307Z",
   "progress": 43.876,
   "band": {
-    "earlyP10": "2028-09-04T15:06:16.304Z",
-    "lateP90": "2034-07-17T04:59:03.940Z",
-    "likelyEarly": "2030-02-22T00:34:28.213Z",
-    "likelyLate": "2033-01-27T19:30:52.031Z"
+    "earlyP10": "2028-09-04T14:52:45.362Z",
+    "lateP90": "2034-07-16T16:11:01.252Z",
+    "likelyEarly": "2030-02-21T21:12:19.334Z",
+    "likelyLate": "2033-01-27T09:51:27.280Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -4.684498,
+  "deltaMonths": -4.693414,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -57,8 +57,8 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.990919,
-      "rationale": "Macro & bubble risk is moderate at 0.53 — a headwind pushing the date later.",
+      "contributionMonths": 0.988094,
+      "rationale": "Macro & bubble risk is moderate at 0.52 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -117,13 +117,13 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.294516,
+      "contributionMonths": -0.293607,
       "rationale": "Research velocity is running low at 0.32 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "frontier-release-cadence",
-      "contributionMonths": -0.0238,
+      "contributionMonths": -0.0308,
       "rationale": "Frontier release cadence is running low at 0.02 — a tailwind pulling the date sooner.",
       "citation": "https://epoch.ai/data/notable-ai-models"
     }
