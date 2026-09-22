@@ -198,9 +198,9 @@
   {
     "factorId": "forecast-consensus-anchor",
     "sourceId": "manifold-ai-markets",
-    "ts": "2026-09-22T01:28:15.754Z",
-    "raw": 0.3351907437671922,
-    "normalized": 0.3351907437671922,
+    "ts": "2026-09-22T07:24:34.407Z",
+    "raw": 0.34001511463683715,
+    "normalized": 0.34001511463683715,
     "confidence": 0.7,
     "citation": "https://manifold.markets/search?term=AGI",
     "quarantined": false,
@@ -16464,6 +16464,20 @@
     "notes": "5 major frontier model releases in the last ~9 months (release velocity)."
   },
   {
+    "factorId": "frontier-release-cadence",
+    "sourceId": "epoch-ai-notable-models",
+    "ts": "2026-09-22T01:28:15.754Z",
+    "raw": 5,
+    "normalized": 0.625,
+    "confidence": 0.7,
+    "citation": "https://epoch.ai/data/notable-ai-models",
+    "quarantined": false,
+    "factorName": "Frontier release cadence",
+    "domain": "labs",
+    "unit": "frontier-releases-270d",
+    "notes": "5 major frontier model releases in the last ~9 months (release velocity)."
+  },
+  {
     "factorId": "hardware-supply",
     "sourceId": "tsmc-capacity",
     "ts": "2026-09-21T13:12:28.716Z",
@@ -16578,16 +16592,16 @@
   {
     "factorId": "public-backlash-pressure",
     "sourceId": "gdelt-ai-tone",
-    "ts": "2026-09-22T01:28:15.754Z",
-    "raw": -0.276,
-    "normalized": 0.5229809523809524,
+    "ts": "2026-09-22T07:24:34.407Z",
+    "raw": -0.242,
+    "normalized": 0.5201654761904762,
     "confidence": 0.65,
     "citation": "https://www.gdeltproject.org/",
     "quarantined": false,
     "factorName": "Public backlash pressure",
     "domain": "sentiment",
     "unit": "avg-tone",
-    "notes": "Mean GDELT tone for AI coverage over ~14d: -0.28."
+    "notes": "Mean GDELT tone for AI coverage over ~14d: -0.24."
   },
   {
     "factorId": "public-backlash-pressure",
@@ -16690,7 +16704,7 @@
   {
     "factorId": "frontier-release-cadence",
     "sourceId": "epoch-ai-notable-models",
-    "ts": "2026-09-22T01:28:15.754Z",
+    "ts": "2026-09-22T07:24:34.407Z",
     "raw": 5,
     "normalized": 0.625,
     "confidence": 0.7,
