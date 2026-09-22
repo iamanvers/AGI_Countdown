@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260922T205802867Z-transformative-ai",
-  "ts": "2026-09-22T20:58:02.867Z",
+  "runId": "refresh-hourly-20260922T233059126Z-transformative-ai",
+  "ts": "2026-09-22T23:30:59.126Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-08-04T16:29:51.795Z",
+  "tAgi": "2031-08-04T12:14:07.227Z",
   "progress": 43.876,
   "band": {
-    "earlyP10": "2028-09-02T14:20:50.675Z",
-    "lateP90": "2034-07-05T18:38:52.915Z",
-    "likelyEarly": "2030-02-17T15:25:21.235Z",
-    "likelyLate": "2033-01-18T17:34:22.355Z"
+    "earlyP10": "2028-09-02T14:10:21.221Z",
+    "lateP90": "2034-07-05T10:17:53.233Z",
+    "likelyEarly": "2030-02-17T13:12:14.224Z",
+    "likelyLate": "2033-01-18T11:16:00.230Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -4.905648,
+  "deltaMonths": -4.911483,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -57,8 +57,8 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.971934,
-      "rationale": "Macro & bubble risk is moderate at 0.51 — a headwind pushing the date later.",
+      "contributionMonths": 0.969054,
+      "rationale": "Macro & bubble risk is moderate at 0.50 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -93,8 +93,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.55062,
-      "rationale": "AI capital formation is running low at 0.28 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.554484,
+      "rationale": "AI capital formation is running low at 0.29 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
@@ -111,7 +111,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.359964,
+      "contributionMonths": -0.359055,
       "rationale": "Research velocity is running low at 0.40 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
