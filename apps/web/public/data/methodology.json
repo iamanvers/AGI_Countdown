@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-22T11:35:15.889Z",
+  "ts": "2026-09-22T13:09:55.271Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -215,23 +215,23 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.361,
-        "level": 0.522,
+        "normalized": 0.399,
+        "level": 0.527,
         "confidence": 0.673,
         "citation": "https://arxiv.org/list/cs.AI/recent",
         "rolling": {
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -0.571,
-          "percentile": 0.326,
+          "zScore": -0.411,
+          "percentile": 0.442,
           "volatility": 0.027
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.474,
-        "transformative-ai": -0.328,
-        "strong-agi": -0.438
+        "weak-agi": -0.524,
+        "transformative-ai": -0.363,
+        "strong-agi": -0.484
       },
       "sources": [
         {
@@ -269,7 +269,7 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": -0.775,
+          "zScore": -0.609,
           "percentile": 0.116,
           "volatility": 0
         }
@@ -435,23 +435,23 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 1,
-        "level": 0.458,
-        "confidence": 0.675,
+        "normalized": 0.973,
+        "level": 0.41,
+        "confidence": 0.65,
         "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/",
         "rolling": {
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": 7.7,
-          "percentile": 0.994,
+          "zScore": 3.601,
+          "percentile": 0.983,
           "volatility": 0.012
         }
       },
       "contributionMonths": {
-        "weak-agi": 0.81,
-        "transformative-ai": 1.114,
-        "strong-agi": 1.013
+        "weak-agi": 0.769,
+        "transformative-ai": 1.058,
+        "strong-agi": 0.962
       },
       "sources": [
         {
@@ -697,23 +697,23 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.246,
-        "level": 0.605,
+        "normalized": 0.282,
+        "level": 0.608,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
         "rolling": {
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": -1.118,
-          "percentile": 0.243,
-          "volatility": 0.018
+          "zScore": -0.934,
+          "percentile": 0.276,
+          "volatility": 0.017
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.272,
-        "transformative-ai": -0.475,
-        "strong-agi": -0.339
+        "weak-agi": -0.311,
+        "transformative-ai": -0.545,
+        "strong-agi": -0.389
       },
       "sources": [
         {
@@ -738,7 +738,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.516,
+        "normalized": 0.513,
         "level": 0.166,
         "confidence": 0.65,
         "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N",
@@ -746,15 +746,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": 0.063,
-          "percentile": 0.403,
+          "zScore": 0.051,
+          "percentile": 0.398,
           "volatility": 0
         }
       },
       "contributionMonths": {
-        "weak-agi": 0.56,
-        "transformative-ai": 0.981,
-        "strong-agi": 0.7
+        "weak-agi": 0.559,
+        "transformative-ai": 0.978,
+        "strong-agi": 0.698
       },
       "sources": [
         {
@@ -823,7 +823,7 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": -1.985,
+          "zScore": -1.977,
           "percentile": 0.006,
           "volatility": 0.004
         }
