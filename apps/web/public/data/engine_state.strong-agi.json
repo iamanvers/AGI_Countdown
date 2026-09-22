@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260922T072434407Z-strong-agi",
-  "ts": "2026-09-22T07:24:34.407Z",
+  "runId": "refresh-daily-20260922T113515889Z-strong-agi",
+  "ts": "2026-09-22T11:35:15.889Z",
   "definition": "strong-agi",
-  "tAgi": "2039-06-22T20:08:31.638Z",
+  "tAgi": "2039-06-20T04:01:44.091Z",
   "progress": 31.43,
   "band": {
-    "earlyP10": "2031-10-28T22:05:30.165Z",
-    "lateP90": "2047-02-14T18:11:33.111Z",
-    "likelyEarly": "2035-08-25T21:07:00.902Z",
-    "likelyLate": "2043-04-19T19:10:02.374Z"
+    "earlyP10": "2031-10-27T22:56:59.200Z",
+    "lateP90": "2047-02-10T09:06:28.982Z",
+    "likelyEarly": "2035-08-24T01:29:21.646Z",
+    "likelyLate": "2043-04-16T06:34:06.536Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -6.313419,
+  "deltaMonths": -6.401187,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -81,7 +81,7 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.701729,
+      "contributionMonths": 0.700373,
       "rationale": "Macro & bubble risk is moderate at 0.52 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
@@ -105,14 +105,14 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.3939,
-      "rationale": "Research velocity is running low at 0.33 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.437532,
+      "rationale": "Research velocity is running low at 0.36 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.2967,
-      "rationale": "AI capital formation is running low at 0.21 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.33948,
+      "rationale": "AI capital formation is running low at 0.25 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {

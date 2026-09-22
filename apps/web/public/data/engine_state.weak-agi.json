@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260922T072434407Z-weak-agi",
-  "ts": "2026-09-22T07:24:34.407Z",
+  "runId": "refresh-daily-20260922T113515889Z-weak-agi",
+  "ts": "2026-09-22T11:35:15.889Z",
   "definition": "weak-agi",
-  "tAgi": "2027-11-01T09:45:49.170Z",
+  "tAgi": "2027-10-29T07:04:19.766Z",
   "progress": 78.2625,
   "band": {
-    "earlyP10": "2026-11-01T03:56:37.170Z",
-    "lateP90": "2028-10-31T15:35:01.170Z",
-    "likelyEarly": "2027-05-02T18:51:13.170Z",
-    "likelyLate": "2028-05-02T00:40:25.170Z"
+    "earlyP10": "2026-10-29T01:15:07.766Z",
+    "lateP90": "2028-10-28T12:53:31.766Z",
+    "likelyEarly": "2027-04-29T16:09:43.766Z",
+    "likelyLate": "2028-04-28T21:58:55.766Z"
   },
-  "anchor": "2028-05-28T18:22:00.284Z",
-  "deltaMonths": -6.878448,
+  "anchor": "2028-05-28T03:59:47.416Z",
+  "deltaMonths": -6.961025,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -87,7 +87,7 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.561383,
+      "contributionMonths": 0.560298,
       "rationale": "Macro & bubble risk is moderate at 0.52 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
@@ -99,8 +99,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.426725,
-      "rationale": "Research velocity is running low at 0.33 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.473993,
+      "rationale": "Research velocity is running low at 0.36 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -111,8 +111,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.23736,
-      "rationale": "AI capital formation is running low at 0.21 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.271584,
+      "rationale": "AI capital formation is running low at 0.25 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
