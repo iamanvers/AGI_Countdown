@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20260924T114245180Z-strong-agi",
-  "ts": "2026-09-24T11:42:45.180Z",
+  "runId": "refresh-hourly-20260924T131911700Z-strong-agi",
+  "ts": "2026-09-24T13:19:11.700Z",
   "definition": "strong-agi",
-  "tAgi": "2039-05-28T17:05:19.569Z",
+  "tAgi": "2039-05-26T00:46:07.804Z",
   "progress": 31.43,
   "band": {
-    "earlyP10": "2031-10-20T04:14:53.643Z",
-    "lateP90": "2047-01-04T05:55:45.495Z",
-    "likelyEarly": "2035-08-08T22:40:06.606Z",
-    "likelyLate": "2043-03-17T11:30:32.532Z"
+    "earlyP10": "2031-10-19T03:28:59.646Z",
+    "lateP90": "2046-12-30T22:03:15.962Z",
+    "likelyEarly": "2035-08-07T02:07:33.725Z",
+    "likelyLate": "2043-03-13T23:24:41.883Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -7.138971,
+  "deltaMonths": -7.227022,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -74,9 +74,15 @@
       "citation": "https://artificialintelligenceact.eu/"
     },
     {
+      "factorId": "capital-formation",
+      "contributionMonths": -0.72174,
+      "rationale": "AI capital formation is moderate at 0.52 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
+    },
+    {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.674091,
-      "rationale": "Macro & bubble risk is moderate at 0.48 — a headwind pushing the date later.",
+      "contributionMonths": 0.671972,
+      "rationale": "Macro & bubble risk is moderate at 0.47 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -92,12 +98,6 @@
       "citation": "https://ifr.org/worldrobotics/"
     },
     {
-      "factorId": "capital-formation",
-      "contributionMonths": -0.64308,
-      "rationale": "AI capital formation is moderate at 0.47 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
-    },
-    {
       "factorId": "safety-eval-pressure",
       "contributionMonths": 0.593005,
       "rationale": "Safety-eval pressure is moderate at 0.45 — a headwind pushing the date later.",
@@ -111,8 +111,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.488436,
-      "rationale": "Research velocity is moderate at 0.40 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.495708,
+      "rationale": "Research velocity is moderate at 0.41 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {

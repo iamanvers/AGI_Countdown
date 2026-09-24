@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20260924T114245180Z-weak-agi",
-  "ts": "2026-09-24T11:42:45.180Z",
+  "runId": "refresh-hourly-20260924T131911700Z-weak-agi",
+  "ts": "2026-09-24T13:19:11.700Z",
   "definition": "weak-agi",
-  "tAgi": "2027-10-10T09:39:52.706Z",
+  "tAgi": "2027-10-08T04:43:07.109Z",
   "progress": 78.2625,
   "band": {
-    "earlyP10": "2026-10-10T03:50:40.706Z",
-    "lateP90": "2028-10-09T15:29:04.706Z",
-    "likelyEarly": "2027-04-10T18:45:16.706Z",
-    "likelyLate": "2028-04-10T00:34:28.706Z"
+    "earlyP10": "2026-10-07T22:53:55.109Z",
+    "lateP90": "2028-10-07T10:32:19.109Z",
+    "likelyEarly": "2027-04-08T13:48:31.109Z",
+    "likelyLate": "2028-04-07T19:37:43.109Z"
   },
-  "anchor": "2028-05-27T16:16:36.275Z",
-  "deltaMonths": -7.565675,
+  "anchor": "2028-05-27T16:17:29.892Z",
+  "deltaMonths": -7.638176,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -80,15 +80,21 @@
       "citation": "https://www.bis.gov/"
     },
     {
+      "factorId": "capital-formation",
+      "contributionMonths": -0.577392,
+      "rationale": "AI capital formation is moderate at 0.52 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
+    },
+    {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.539273,
-      "rationale": "Macro & bubble risk is moderate at 0.48 — a headwind pushing the date later.",
+      "contributionMonths": 0.537578,
+      "rationale": "Macro & bubble risk is moderate at 0.47 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.529139,
-      "rationale": "Research velocity is moderate at 0.40 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.537017,
+      "rationale": "Research velocity is moderate at 0.41 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -96,12 +102,6 @@
       "contributionMonths": 0.524401,
       "rationale": "Public backlash pressure is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
-    },
-    {
-      "factorId": "capital-formation",
-      "contributionMonths": -0.514464,
-      "rationale": "AI capital formation is moderate at 0.47 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "robotics-embodiment",
