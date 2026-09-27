@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-27T00:19:10.662Z",
+  "ts": "2026-09-27T06:20:43.169Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -223,8 +223,8 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -0.747,
-          "percentile": 0.171,
+          "zScore": -0.748,
+          "percentile": 0.166,
           "volatility": 0.025
         }
       },
@@ -738,7 +738,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.421,
+        "normalized": 0.417,
         "level": 0.166,
         "confidence": 0.65,
         "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N",
@@ -746,15 +746,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -0.32,
-          "percentile": 0.238,
+          "zScore": -0.336,
+          "percentile": 0.232,
           "volatility": 0
         }
       },
       "contributionMonths": {
-        "weak-agi": 0.506,
-        "transformative-ai": 0.886,
-        "strong-agi": 0.633
+        "weak-agi": 0.504,
+        "transformative-ai": 0.881,
+        "strong-agi": 0.63
       },
       "sources": [
         {
@@ -823,7 +823,7 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": -1.753,
+          "zScore": -1.747,
           "percentile": 0.006,
           "volatility": 0.005
         }
