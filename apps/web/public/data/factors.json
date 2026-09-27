@@ -2,21 +2,21 @@
   {
     "factorId": "adoption-usage",
     "sourceId": "hugging-face-hub",
-    "ts": "2026-09-26T11:22:13.078Z",
-    "raw": 180776710,
-    "normalized": 0.9174602753662631,
+    "ts": "2026-09-27T11:59:57.096Z",
+    "raw": 179358691,
+    "normalized": 0.9170802695204243,
     "confidence": 0.6,
     "citation": "https://huggingface.co/models",
     "quarantined": false,
     "factorName": "Adoption and usage",
     "domain": "adoption",
     "unit": "top20-text-gen-downloads-30d",
-    "notes": "Sum of recent downloads across the top-20 text-generation models: 180,776,710."
+    "notes": "Sum of recent downloads across the top-20 text-generation models: 179,358,691."
   },
   {
     "factorId": "adoption-usage",
     "sourceId": "openrouter-usage",
-    "ts": "2026-09-26T11:22:13.078Z",
+    "ts": "2026-09-27T11:59:57.096Z",
     "raw": 0.66,
     "normalized": 0.66,
     "confidence": 0.76,
@@ -72,7 +72,7 @@
   {
     "factorId": "capital-formation",
     "sourceId": "nasdaq-index",
-    "ts": "2026-09-26T11:22:13.078Z",
+    "ts": "2026-09-27T11:59:57.096Z",
     "raw": 1.23,
     "normalized": 0.5615456084451016,
     "confidence": 0.64,
@@ -212,7 +212,7 @@
   {
     "factorId": "forecast-consensus-anchor",
     "sourceId": "metaculus-agi-questions",
-    "ts": "2026-09-26T11:22:13.078Z",
+    "ts": "2026-09-27T11:59:57.096Z",
     "raw": 0.6,
     "normalized": 0.6,
     "confidence": 0.7,
@@ -226,7 +226,7 @@
   {
     "factorId": "forecast-consensus-anchor",
     "sourceId": "polymarket-ai",
-    "ts": "2026-09-26T11:22:13.078Z",
+    "ts": "2026-09-27T11:59:57.096Z",
     "raw": 0.58,
     "normalized": 0.58,
     "confidence": 0.66,
@@ -268,7 +268,7 @@
   {
     "factorId": "frontier-benchmark-saturation",
     "sourceId": "lmarena-leaderboard",
-    "ts": "2026-09-26T11:22:13.078Z",
+    "ts": "2026-09-27T11:59:57.096Z",
     "raw": 0.7,
     "normalized": 0.7,
     "confidence": 0.78,
@@ -282,7 +282,7 @@
   {
     "factorId": "frontier-benchmark-saturation",
     "sourceId": "papers-with-code-leaderboards",
-    "ts": "2026-09-26T11:22:13.078Z",
+    "ts": "2026-09-27T11:59:57.096Z",
     "raw": 0.74,
     "normalized": 0.74,
     "confidence": 0.8,
@@ -16926,6 +16926,20 @@
     "notes": "5 major frontier model releases in the last ~9 months (release velocity)."
   },
   {
+    "factorId": "frontier-release-cadence",
+    "sourceId": "epoch-ai-notable-models",
+    "ts": "2026-09-27T06:20:43.169Z",
+    "raw": 5,
+    "normalized": 0.625,
+    "confidence": 0.7,
+    "citation": "https://epoch.ai/data/notable-ai-models",
+    "quarantined": false,
+    "factorName": "Frontier release cadence",
+    "domain": "labs",
+    "unit": "frontier-releases-270d",
+    "notes": "5 major frontier model releases in the last ~9 months (release velocity)."
+  },
+  {
     "factorId": "hardware-supply",
     "sourceId": "tsmc-capacity",
     "ts": "2026-09-21T13:12:28.716Z",
@@ -17068,30 +17082,30 @@
   {
     "factorId": "research-velocity",
     "sourceId": "arxiv-ai-paper-volume",
-    "ts": "2026-09-26T11:22:13.078Z",
-    "raw": 1862,
-    "normalized": 0.45019342359767894,
+    "ts": "2026-09-27T11:59:57.096Z",
+    "raw": 1787,
+    "normalized": 0.44375465607151726,
     "confidence": 0.7,
     "citation": "https://arxiv.org/list/cs.AI/recent",
     "quarantined": false,
     "factorName": "Research velocity",
     "domain": "research",
     "unit": "cs.AI-submissions-14d",
-    "notes": "cs.AI submissions: 1862 (last 14d) vs 2274 (prior 14d)."
+    "notes": "cs.AI submissions: 1787 (last 14d) vs 2240 (prior 14d)."
   },
   {
     "factorId": "research-velocity",
     "sourceId": "github-frontier",
-    "ts": "2026-09-26T11:22:13.078Z",
-    "raw": 13768,
-    "normalized": 0.4790202491127966,
+    "ts": "2026-09-27T11:59:57.096Z",
+    "raw": 13846,
+    "normalized": 0.4821870102733763,
     "confidence": 0.62,
     "citation": "https://github.com/topics/llm",
     "quarantined": false,
     "factorName": "Research velocity",
     "domain": "research",
     "unit": "new-llm-repos-30d",
-    "notes": "New topic:llm repos: 13768 (last 30d) vs 14974 (prior 30d)."
+    "notes": "New topic:llm repos: 13846 (last 30d) vs 14869 (prior 30d)."
   },
   {
     "factorId": "research-velocity",
@@ -17152,7 +17166,7 @@
   {
     "factorId": "frontier-release-cadence",
     "sourceId": "epoch-ai-notable-models",
-    "ts": "2026-09-27T06:20:43.169Z",
+    "ts": "2026-09-27T11:59:57.096Z",
     "raw": 5,
     "normalized": 0.625,
     "confidence": 0.7,
