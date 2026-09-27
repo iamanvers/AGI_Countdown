@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260927T173358881Z-transformative-ai",
-  "ts": "2026-09-27T17:33:58.881Z",
+  "runId": "refresh-hourly-20260927T210009768Z-transformative-ai",
+  "ts": "2026-09-27T21:00:09.768Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-06-30T20:59:58.769Z",
-  "progress": 44.404,
+  "tAgi": "2031-06-30T07:18:18.921Z",
+  "progress": 44.5,
   "band": {
-    "earlyP10": "2028-08-22T14:04:41.738Z",
-    "lateP90": "2034-05-08T03:55:15.800Z",
-    "likelyEarly": "2030-01-25T17:32:20.254Z",
-    "likelyLate": "2032-12-03T00:27:37.284Z"
+    "earlyP10": "2028-08-22T10:39:44.556Z",
+    "lateP90": "2034-05-07T03:56:53.286Z",
+    "likelyEarly": "2030-01-25T08:59:01.738Z",
+    "likelyLate": "2032-12-02T05:37:36.104Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -6.049406,
+  "deltaMonths": -6.068153,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -21,7 +21,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.58424,
+      "contributionMonths": -1.582308,
       "rationale": "AI capital formation is running high at 0.82 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -68,16 +68,16 @@
       "citation": "https://aiindex.stanford.edu/report/"
     },
     {
-      "factorId": "macro-headwinds",
-      "contributionMonths": 0.868681,
-      "rationale": "Macro & bubble risk is moderate at 0.41 — a headwind pushing the date later.",
-      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
-    },
-    {
       "factorId": "policy-friction",
       "contributionMonths": 0.864153,
       "rationale": "Policy friction is running low at 0.38 — a headwind pushing the date later.",
       "citation": "https://artificialintelligenceact.eu/"
+    },
+    {
+      "factorId": "macro-headwinds",
+      "contributionMonths": 0.863302,
+      "rationale": "Macro & bubble risk is moderate at 0.40 — a headwind pushing the date later.",
+      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "export-control-friction",
@@ -104,16 +104,16 @@
       "citation": "https://www.aisi.gov.uk/"
     },
     {
+      "factorId": "adoption-usage",
+      "contributionMonths": -0.39525,
+      "rationale": "Adoption and usage is running low at 0.15 — a tailwind pulling the date sooner.",
+      "citation": "https://openrouter.ai/rankings"
+    },
+    {
       "factorId": "robotics-embodiment",
       "contributionMonths": -0.3888,
       "rationale": "Robotics & embodiment is moderate at 0.48 — a tailwind pulling the date sooner.",
       "citation": "https://ifr.org/worldrobotics/"
-    },
-    {
-      "factorId": "adoption-usage",
-      "contributionMonths": -0.37995,
-      "rationale": "Adoption and usage is running low at 0.15 — a tailwind pulling the date sooner.",
-      "citation": "https://openrouter.ai/rankings"
     },
     {
       "factorId": "research-velocity",
