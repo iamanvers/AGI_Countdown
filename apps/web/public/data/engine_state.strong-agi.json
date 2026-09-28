@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-weekly-20260928T142139151Z-strong-agi",
-  "ts": "2026-09-28T14:21:39.151Z",
+  "runId": "refresh-hourly-20260928T192111788Z-strong-agi",
+  "ts": "2026-09-28T19:21:11.788Z",
   "definition": "strong-agi",
-  "tAgi": "2039-05-11T05:50:08.409Z",
+  "tAgi": "2039-05-12T02:26:12.506Z",
   "progress": 31.735,
   "band": {
-    "earlyP10": "2031-10-15T15:43:56.524Z",
-    "lateP90": "2046-12-04T19:56:20.294Z",
-    "likelyEarly": "2035-07-28T22:47:02.466Z",
-    "likelyLate": "2043-02-21T12:53:14.352Z"
+    "earlyP10": "2031-10-16T02:58:06.431Z",
+    "lateP90": "2046-12-06T01:54:18.581Z",
+    "likelyEarly": "2035-07-29T14:42:09.469Z",
+    "likelyLate": "2043-02-22T14:10:15.543Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -7.712909,
+  "deltaMonths": -7.684707,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -51,7 +51,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.12746,
+      "contributionMonths": -1.12608,
       "rationale": "AI capital formation is running high at 0.82 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -93,8 +93,8 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.599447,
-      "rationale": "Macro & bubble risk is running low at 0.38 — a headwind pushing the date later.",
+      "contributionMonths": 0.595469,
+      "rationale": "Macro & bubble risk is running low at 0.37 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -123,8 +123,8 @@
     },
     {
       "factorId": "frontier-release-cadence",
-      "contributionMonths": -0.0392,
-      "rationale": "Frontier release cadence is running low at 0.03 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.0084,
+      "rationale": "Frontier release cadence is running low at 0.01 — a tailwind pulling the date sooner.",
       "citation": "https://epoch.ai/data/notable-ai-models"
     }
   ]

@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-weekly-20260928T142139151Z-weak-agi",
-  "ts": "2026-09-28T14:21:39.151Z",
+  "runId": "refresh-hourly-20260928T192111788Z-weak-agi",
+  "ts": "2026-09-28T19:21:11.788Z",
   "definition": "weak-agi",
-  "tAgi": "2027-09-24T19:02:43.296Z",
+  "tAgi": "2027-09-25T12:44:54.288Z",
   "progress": 79.025,
   "band": {
-    "earlyP10": "2026-09-28T14:21:39.151Z",
-    "lateP90": "2028-09-24T00:51:55.296Z",
-    "likelyEarly": "2027-03-26T04:08:07.296Z",
-    "likelyLate": "2028-03-25T09:57:19.296Z"
+    "earlyP10": "2026-09-28T19:21:11.788Z",
+    "lateP90": "2028-09-24T18:34:06.288Z",
+    "likelyEarly": "2027-03-26T21:50:18.288Z",
+    "likelyLate": "2028-03-26T03:39:30.288Z"
   },
-  "anchor": "2028-05-27T11:43:45.115Z",
-  "deltaMonths": -8.072286,
+  "anchor": "2028-05-27T08:27:04.543Z",
+  "deltaMonths": -8.043564,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -39,7 +39,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.901968,
+      "contributionMonths": -0.900864,
       "rationale": "AI capital formation is running high at 0.82 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -93,8 +93,8 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.479557,
-      "rationale": "Macro & bubble risk is running low at 0.38 — a headwind pushing the date later.",
+      "contributionMonths": 0.476375,
+      "rationale": "Macro & bubble risk is running low at 0.37 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
@@ -123,8 +123,8 @@
     },
     {
       "factorId": "frontier-release-cadence",
-      "contributionMonths": -0.0392,
-      "rationale": "Frontier release cadence is running low at 0.03 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.0084,
+      "rationale": "Frontier release cadence is running low at 0.01 — a tailwind pulling the date sooner.",
       "citation": "https://epoch.ai/data/notable-ai-models"
     }
   ]
