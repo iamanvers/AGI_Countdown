@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260929T063750855Z-transformative-ai",
-  "ts": "2026-09-29T06:37:50.855Z",
+  "runId": "refresh-daily-20260929T124930347Z-transformative-ai",
+  "ts": "2026-09-29T12:49:30.347Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-06-27T02:53:26.451Z",
+  "tAgi": "2031-06-20T08:46:24.292Z",
   "progress": 44.852,
   "band": {
-    "earlyP10": "2028-08-22T00:16:20.157Z",
-    "lateP90": "2034-05-01T05:30:32.745Z",
-    "likelyEarly": "2030-01-23T13:34:53.304Z",
-    "likelyLate": "2032-11-27T16:11:59.598Z"
+    "earlyP10": "2028-08-19T11:07:32.539Z",
+    "lateP90": "2034-04-20T06:25:16.045Z",
+    "likelyEarly": "2030-01-18T21:56:58.415Z",
+    "likelyLate": "2032-11-18T19:35:50.169Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -6.172761,
+  "deltaMonths": -6.394692,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -20,16 +20,16 @@
       "citation": "https://epoch.ai/data/notable-ai-models"
     },
     {
+      "factorId": "capital-formation",
+      "contributionMonths": -1.644132,
+      "rationale": "AI capital formation is running high at 0.85 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
+    },
+    {
       "factorId": "datacenter-capex",
       "contributionMonths": -1.575215,
       "rationale": "Datacenter capex is running high at 0.74 — a tailwind pulling the date sooner.",
       "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
-    },
-    {
-      "factorId": "capital-formation",
-      "contributionMonths": -1.572648,
-      "rationale": "AI capital formation is running high at 0.81 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "frontier-benchmark-saturation",
@@ -75,7 +75,7 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.822405,
+      "contributionMonths": 0.81558,
       "rationale": "Macro & bubble risk is running low at 0.36 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
@@ -110,16 +110,16 @@
       "citation": "https://openrouter.ai/rankings"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.443592,
+      "rationale": "Research velocity is moderate at 0.49 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
       "factorId": "robotics-embodiment",
       "contributionMonths": -0.3888,
       "rationale": "Robotics & embodiment is moderate at 0.48 — a tailwind pulling the date sooner.",
       "citation": "https://ifr.org/worldrobotics/"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.29997,
-      "rationale": "Research velocity is running low at 0.33 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "frontier-release-cadence",
