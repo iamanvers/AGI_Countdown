@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20260928T192111788Z-strong-agi",
-  "ts": "2026-09-28T19:21:11.788Z",
+  "runId": "refresh-hourly-20260929T001418301Z-strong-agi",
+  "ts": "2026-09-29T00:14:18.301Z",
   "definition": "strong-agi",
-  "tAgi": "2039-05-12T02:26:12.506Z",
+  "tAgi": "2039-05-12T00:31:09.422Z",
   "progress": 31.735,
   "band": {
-    "earlyP10": "2031-10-16T02:58:06.431Z",
-    "lateP90": "2046-12-06T01:54:18.581Z",
-    "likelyEarly": "2035-07-29T14:42:09.469Z",
-    "likelyLate": "2043-02-22T14:10:15.543Z"
+    "earlyP10": "2031-10-16T05:07:57.177Z",
+    "lateP90": "2046-12-05T19:54:21.667Z",
+    "likelyEarly": "2035-07-29T14:49:33.299Z",
+    "likelyLate": "2043-02-22T10:12:45.545Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -7.684707,
+  "deltaMonths": -7.687332,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -50,16 +50,16 @@
       "citation": "https://investor.tsmc.com/english"
     },
     {
-      "factorId": "capital-formation",
-      "contributionMonths": -1.12608,
-      "rationale": "AI capital formation is running high at 0.82 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
-    },
-    {
       "factorId": "datacenter-capex",
       "contributionMonths": -1.125153,
       "rationale": "Datacenter capex is running high at 0.74 — a tailwind pulling the date sooner.",
       "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
+    },
+    {
+      "factorId": "capital-formation",
+      "contributionMonths": -1.1247,
+      "rationale": "AI capital formation is running high at 0.81 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "data-availability",
@@ -92,16 +92,16 @@
       "citation": "https://ifr.org/worldrobotics/"
     },
     {
-      "factorId": "macro-headwinds",
-      "contributionMonths": 0.595469,
-      "rationale": "Macro & bubble risk is running low at 0.37 — a headwind pushing the date later.",
-      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
-    },
-    {
       "factorId": "safety-eval-pressure",
       "contributionMonths": 0.593005,
       "rationale": "Safety-eval pressure is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.aisi.gov.uk/"
+    },
+    {
+      "factorId": "macro-headwinds",
+      "contributionMonths": 0.591464,
+      "rationale": "Macro & bubble risk is running low at 0.37 — a headwind pushing the date later.",
+      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "labor-automation-exposure",
