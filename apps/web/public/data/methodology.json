@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-29T00:14:18.301Z",
+  "ts": "2026-09-29T06:37:50.855Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -223,7 +223,7 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -0.707,
+          "zScore": -0.706,
           "percentile": 0.276,
           "volatility": 0.025
         }
@@ -697,7 +697,7 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.815,
+        "normalized": 0.814,
         "level": 0.641,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -705,15 +705,15 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": 1.48,
+          "zScore": 1.474,
           "percentile": 1,
           "volatility": 0.014
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.9,
-        "transformative-ai": -1.575,
-        "strong-agi": -1.125
+        "weak-agi": -0.899,
+        "transformative-ai": -1.573,
+        "strong-agi": -1.123
       },
       "sources": [
         {
@@ -738,7 +738,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.368,
+        "normalized": 0.363,
         "level": 0.166,
         "confidence": 0.65,
         "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N",
@@ -746,15 +746,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -0.542,
-          "percentile": 0.171,
+          "zScore": -0.564,
+          "percentile": 0.166,
           "volatility": 0
         }
       },
       "contributionMonths": {
-        "weak-agi": 0.473,
-        "transformative-ai": 0.828,
-        "strong-agi": 0.591
+        "weak-agi": 0.47,
+        "transformative-ai": 0.822,
+        "strong-agi": 0.587
       },
       "sources": [
         {
@@ -823,7 +823,7 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": -1.693,
+          "zScore": -1.689,
           "percentile": 0.006,
           "volatility": 0.005
         }
