@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20261001T160330082Z-strong-agi",
-  "ts": "2026-10-01T16:03:30.082Z",
+  "runId": "refresh-hourly-20261001T205812789Z-strong-agi",
+  "ts": "2026-10-01T20:58:12.789Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-16T10:35:51.992Z",
-  "progress": 32.04,
+  "tAgi": "2039-04-16T05:10:28.757Z",
+  "progress": 32.065,
   "band": {
-    "earlyP10": "2031-10-07T13:49:43.671Z",
-    "lateP90": "2046-10-24T07:22:00.313Z",
-    "likelyEarly": "2035-07-12T12:12:47.831Z",
-    "likelyLate": "2043-01-19T08:58:56.153Z"
+    "earlyP10": "2031-10-07T14:36:24.937Z",
+    "lateP90": "2046-10-23T19:44:32.577Z",
+    "likelyEarly": "2035-07-12T09:53:26.847Z",
+    "likelyLate": "2043-01-19T00:27:30.667Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.527762,
+  "deltaMonths": -8.535186,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -51,7 +51,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.3041,
+      "contributionMonths": -1.29858,
       "rationale": "AI capital formation is running high at 0.94 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -75,7 +75,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.911424,
+      "contributionMonths": -0.909,
       "rationale": "Research velocity is running high at 0.75 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
@@ -111,13 +111,13 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.509432,
-      "rationale": "Macro & bubble risk is running low at 0.27 — a headwind pushing the date later.",
+      "contributionMonths": 0.500014,
+      "rationale": "Macro & bubble risk is running low at 0.26 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.28322,
+      "contributionMonths": -0.28917,
       "rationale": "Adoption and usage is running low at 0.24 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
