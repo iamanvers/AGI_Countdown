@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20261003T113718625Z-strong-agi",
-  "ts": "2026-10-03T11:37:18.625Z",
+  "runId": "refresh-hourly-20261003T130637945Z-strong-agi",
+  "ts": "2026-10-03T13:06:37.945Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-20T00:16:13.862Z",
+  "tAgi": "2039-04-19T07:09:24.173Z",
   "progress": 30.88,
   "band": {
-    "earlyP10": "2031-10-10T02:13:35.890Z",
-    "lateP90": "2046-10-28T22:18:51.834Z",
-    "likelyEarly": "2035-07-15T13:14:54.876Z",
-    "likelyLate": "2043-01-23T11:17:32.848Z"
+    "earlyP10": "2031-10-09T20:16:28.905Z",
+    "lateP90": "2046-10-27T18:02:19.441Z",
+    "likelyEarly": "2035-07-15T01:42:56.539Z",
+    "likelyLate": "2043-01-22T12:35:51.807Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.41048,
+  "deltaMonths": -8.433908,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -51,7 +51,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.27788,
+      "contributionMonths": -1.28064,
       "rationale": "AI capital formation is running high at 0.93 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -75,8 +75,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.946572,
-      "rationale": "Research velocity is running high at 0.78 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.936876,
+      "rationale": "Research velocity is running high at 0.77 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -111,8 +111,8 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.359562,
-      "rationale": "Macro & bubble risk is running low at 0.14 — a headwind pushing the date later.",
+      "contributionMonths": 0.329198,
+      "rationale": "Macro & bubble risk is running low at 0.11 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
