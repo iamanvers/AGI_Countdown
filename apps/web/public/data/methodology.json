@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-04T10:56:56.217Z",
+  "ts": "2026-10-04T12:19:04.722Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -215,7 +215,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.765,
+        "normalized": 0.759,
         "level": 0.579,
         "confidence": 0.673,
         "citation": "https://arxiv.org/list/cs.AI/recent",
@@ -223,15 +223,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": 1.18,
-          "percentile": 0.856,
+          "zScore": 1.15,
+          "percentile": 0.823,
           "volatility": 0.026
         }
       },
       "contributionMonths": {
-        "weak-agi": -1.004,
-        "transformative-ai": -0.695,
-        "strong-agi": -0.927
+        "weak-agi": -0.997,
+        "transformative-ai": -0.69,
+        "strong-agi": -0.92
       },
       "sources": [
         {
@@ -269,7 +269,7 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": -1.742,
+          "zScore": -2.16,
           "percentile": 0.006,
           "volatility": 0
         }
@@ -697,7 +697,7 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.91,
+        "normalized": 0.906,
         "level": 0.676,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -705,15 +705,15 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": 2.313,
+          "zScore": 2.27,
           "percentile": 1,
           "volatility": 0.022
         }
       },
       "contributionMonths": {
-        "weak-agi": -1.005,
-        "transformative-ai": -1.758,
-        "strong-agi": -1.256
+        "weak-agi": -1,
+        "transformative-ai": -1.75,
+        "strong-agi": -1.25
       },
       "sources": [
         {
@@ -815,7 +815,7 @@
       "weight": 4,
       "normalization": "momentum-01",
       "reading": {
-        "normalized": 0.022,
+        "normalized": 0.028,
         "level": 0.731,
         "confidence": 0.7,
         "citation": "https://epoch.ai/data/notable-ai-models",
@@ -823,15 +823,15 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": -1.634,
-          "percentile": 0.022,
+          "zScore": -1.632,
+          "percentile": 0.028,
           "volatility": 0.005
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.031,
-        "transformative-ai": -0.031,
-        "strong-agi": -0.031
+        "weak-agi": -0.039,
+        "transformative-ai": -0.039,
+        "strong-agi": -0.039
       },
       "sources": [
         {
