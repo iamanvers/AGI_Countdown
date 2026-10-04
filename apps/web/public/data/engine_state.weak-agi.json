@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20261004T121904722Z-weak-agi",
-  "ts": "2026-10-04T12:19:04.722Z",
+  "runId": "refresh-hourly-20261004T154116379Z-weak-agi",
+  "ts": "2026-10-04T15:41:16.379Z",
   "definition": "weak-agi",
-  "tAgi": "2027-09-10T02:48:07.133Z",
+  "tAgi": "2027-09-09T23:38:56.210Z",
   "progress": 76.8875,
   "band": {
-    "earlyP10": "2026-10-04T12:19:04.722Z",
-    "lateP90": "2028-09-09T08:37:19.133Z",
-    "likelyEarly": "2027-03-11T11:53:31.133Z",
-    "likelyLate": "2028-03-10T17:42:43.133Z"
+    "earlyP10": "2026-10-04T15:41:16.379Z",
+    "lateP90": "2028-09-09T05:28:08.210Z",
+    "likelyEarly": "2027-03-11T08:44:20.210Z",
+    "likelyLate": "2028-03-10T14:33:32.210Z"
   },
-  "anchor": "2028-05-27T03:06:45.138Z",
-  "deltaMonths": -8.542695,
+  "anchor": "2028-05-26T21:51:28.436Z",
+  "deltaMonths": -8.539818,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -39,14 +39,14 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.000224,
-      "rationale": "AI capital formation is running high at 0.91 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.996912,
+      "rationale": "AI capital formation is running high at 0.90 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.996567,
-      "rationale": "Research velocity is running high at 0.76 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.990002,
+      "rationale": "Research velocity is running high at 0.75 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -117,7 +117,7 @@
     },
     {
       "factorId": "frontier-release-cadence",
-      "contributionMonths": -0.0392,
+      "contributionMonths": -0.0462,
       "rationale": "Frontier release cadence is running low at 0.03 — a tailwind pulling the date sooner.",
       "citation": "https://epoch.ai/data/notable-ai-models"
     },

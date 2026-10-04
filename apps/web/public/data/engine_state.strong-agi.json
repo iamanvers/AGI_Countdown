@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20261004T121904722Z-strong-agi",
-  "ts": "2026-10-04T12:19:04.722Z",
+  "runId": "refresh-hourly-20261004T154116379Z-strong-agi",
+  "ts": "2026-10-04T15:41:16.379Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-21T20:56:14.941Z",
+  "tAgi": "2039-04-21T23:16:30.128Z",
   "progress": 30.88,
   "band": {
-    "earlyP10": "2031-10-11T10:54:30.359Z",
-    "lateP90": "2046-10-31T06:57:59.523Z",
-    "likelyEarly": "2035-07-17T03:55:22.650Z",
-    "likelyLate": "2043-01-25T13:57:07.232Z"
+    "earlyP10": "2031-10-11T13:51:48.205Z",
+    "lateP90": "2046-10-31T08:41:12.051Z",
+    "likelyEarly": "2035-07-17T06:34:09.166Z",
+    "likelyLate": "2043-01-25T15:58:51.090Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.349333,
+  "deltaMonths": -8.346133,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -51,8 +51,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.25028,
-      "rationale": "AI capital formation is running high at 0.91 — a tailwind pulling the date sooner.",
+      "contributionMonths": -1.24614,
+      "rationale": "AI capital formation is running high at 0.90 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
@@ -75,8 +75,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.919908,
-      "rationale": "Research velocity is running high at 0.76 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.913848,
+      "rationale": "Research velocity is running high at 0.75 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -117,7 +117,7 @@
     },
     {
       "factorId": "frontier-release-cadence",
-      "contributionMonths": -0.0392,
+      "contributionMonths": -0.0462,
       "rationale": "Frontier release cadence is running low at 0.03 — a tailwind pulling the date sooner.",
       "citation": "https://epoch.ai/data/notable-ai-models"
     },
