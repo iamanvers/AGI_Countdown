@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-weekly-20261005T151016313Z-weak-agi",
-  "ts": "2026-10-05T15:10:16.313Z",
+  "runId": "refresh-hourly-20261005T180041911Z-weak-agi",
+  "ts": "2026-10-05T18:00:41.911Z",
   "definition": "weak-agi",
-  "tAgi": "2027-09-08T17:04:23.691Z",
-  "progress": 77.3,
+  "tAgi": "2027-08-29T22:30:54.880Z",
+  "progress": 77.3625,
   "band": {
-    "earlyP10": "2026-10-05T15:10:16.313Z",
-    "lateP90": "2028-09-07T22:53:35.691Z",
-    "likelyEarly": "2027-03-10T02:09:47.691Z",
-    "likelyLate": "2028-03-09T07:58:59.691Z"
+    "earlyP10": "2026-10-05T18:00:41.911Z",
+    "lateP90": "2028-08-29T04:20:06.880Z",
+    "likelyEarly": "2027-02-28T07:36:18.880Z",
+    "likelyLate": "2028-02-28T13:25:30.880Z"
   },
   "anchor": "2028-05-26T14:50:04.188Z",
-  "deltaMonths": -8.57206,
+  "deltaMonths": -8.893159,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -39,13 +39,13 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -1.014949,
+      "contributionMonths": -1.012323,
       "rationale": "Research velocity is running high at 0.77 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.973728,
+      "contributionMonths": -0.970416,
       "rationale": "AI capital formation is running high at 0.88 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -110,14 +110,8 @@
       "citation": "https://www.aisi.gov.uk/"
     },
     {
-      "factorId": "macro-headwinds",
-      "contributionMonths": 0.316837,
-      "rationale": "Macro & bubble risk is running low at 0.17 — a headwind pushing the date later.",
-      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
-    },
-    {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.07956,
+      "contributionMonths": -0.08976,
       "rationale": "Adoption and usage is running low at 0.04 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },

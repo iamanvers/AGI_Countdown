@@ -1,21 +1,21 @@
 {
-  "runId": "refresh-weekly-20261005T151016313Z-transformative-ai",
-  "ts": "2026-10-05T15:10:16.313Z",
+  "runId": "refresh-hourly-20261005T180041911Z-transformative-ai",
+  "ts": "2026-10-05T18:00:41.911Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-06-13T14:09:39.164Z",
-  "progress": 42.644,
+  "tAgi": "2031-05-27T13:22:48.043Z",
+  "progress": 42.724,
   "band": {
-    "earlyP10": "2028-08-20T09:45:45.281Z",
-    "lateP90": "2034-04-05T18:33:33.047Z",
-    "likelyEarly": "2030-01-15T23:57:42.223Z",
-    "likelyLate": "2032-11-08T04:21:36.105Z"
+    "earlyP10": "2028-08-13T15:56:35.425Z",
+    "lateP90": "2034-03-09T10:49:00.661Z",
+    "likelyEarly": "2030-01-04T02:39:41.734Z",
+    "likelyLate": "2032-10-17T00:05:54.352Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -6.617301,
+  "deltaMonths": -7.176903,
   "movers": [
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.704024,
+      "contributionMonths": -1.698228,
       "rationale": "AI capital formation is running high at 0.88 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -87,7 +87,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.702657,
+      "contributionMonths": -0.700839,
       "rationale": "Research velocity is running high at 0.77 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
@@ -96,12 +96,6 @@
       "contributionMonths": 0.591848,
       "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
       "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
-    },
-    {
-      "factorId": "macro-headwinds",
-      "contributionMonths": 0.554466,
-      "rationale": "Macro & bubble risk is running low at 0.17 — a headwind pushing the date later.",
-      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "safety-eval-pressure",
@@ -117,7 +111,7 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.09945,
+      "contributionMonths": -0.1122,
       "rationale": "Adoption and usage is running low at 0.04 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
