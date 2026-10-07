@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20261007T020849025Z-strong-agi",
-  "ts": "2026-10-07T02:08:49.025Z",
+  "runId": "refresh-hourly-20261007T095604100Z-strong-agi",
+  "ts": "2026-10-07T09:56:04.100Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-10T19:00:15.909Z",
-  "progress": 31.265,
+  "tAgi": "2039-04-11T01:12:04.045Z",
+  "progress": 31.29,
   "band": {
-    "earlyP10": "2031-10-08T13:37:18.314Z",
-    "lateP90": "2046-10-12T00:23:13.504Z",
-    "likelyEarly": "2035-07-10T04:18:47.111Z",
-    "likelyLate": "2043-01-10T09:41:44.707Z"
+    "earlyP10": "2031-10-08T20:46:14.441Z",
+    "lateP90": "2046-10-12T05:37:53.649Z",
+    "likelyEarly": "2035-07-10T10:59:09.243Z",
+    "likelyLate": "2043-01-10T15:24:58.847Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.713383,
+  "deltaMonths": -8.7049,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -51,7 +51,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.17576,
+      "contributionMonths": -1.17162,
       "rationale": "AI capital formation is running high at 0.85 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -111,13 +111,13 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.09877,
-      "rationale": "Adoption and usage is running low at 0.08 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.10472,
+      "rationale": "Adoption and usage is running low at 0.09 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.087207,
+      "contributionMonths": 0.0975,
       "rationale": "Macro & bubble risk is running low at 0.01 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
