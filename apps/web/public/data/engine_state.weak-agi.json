@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20261007T225004146Z-weak-agi",
-  "ts": "2026-10-07T22:50:04.146Z",
+  "runId": "refresh-hourly-20261008T023440142Z-weak-agi",
+  "ts": "2026-10-08T02:34:40.142Z",
   "definition": "weak-agi",
-  "tAgi": "2027-08-28T17:05:01.717Z",
-  "progress": 78.125,
+  "tAgi": "2027-08-28T19:04:14.400Z",
+  "progress": 78.1875,
   "band": {
-    "earlyP10": "2026-10-07T22:50:04.146Z",
-    "lateP90": "2028-08-27T22:54:13.717Z",
-    "likelyEarly": "2027-02-27T02:10:25.717Z",
-    "likelyLate": "2028-02-27T07:59:37.717Z"
+    "earlyP10": "2026-10-08T02:34:40.142Z",
+    "lateP90": "2028-08-28T00:53:26.400Z",
+    "likelyEarly": "2027-02-27T04:09:38.400Z",
+    "likelyLate": "2028-02-27T09:58:50.400Z"
   },
-  "anchor": "2028-05-26T20:17:43.472Z",
-  "deltaMonths": -8.940925,
+  "anchor": "2028-05-26T21:01:30.362Z",
+  "deltaMonths": -8.939204,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -45,8 +45,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.914112,
-      "rationale": "AI capital formation is running high at 0.83 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.9108,
+      "rationale": "AI capital formation is running high at 0.82 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
@@ -111,13 +111,13 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.2142,
-      "rationale": "Adoption and usage is running low at 0.10 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.2244,
+      "rationale": "Adoption and usage is running low at 0.11 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.1017,
+      "contributionMonths": 0.110309,
       "rationale": "Macro & bubble risk is running low at 0.02 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
