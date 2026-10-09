@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20261009T172132460Z-strong-agi",
-  "ts": "2026-10-09T17:21:32.460Z",
+  "runId": "refresh-hourly-20261009T222206722Z-strong-agi",
+  "ts": "2026-10-09T22:22:06.722Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-18T22:30:09.572Z",
+  "tAgi": "2039-04-19T10:45:15.672Z",
   "progress": 30.88,
   "band": {
-    "earlyP10": "2031-10-13T09:44:32.621Z",
-    "lateP90": "2046-10-23T11:15:46.523Z",
-    "likelyEarly": "2035-07-16T16:07:21.096Z",
-    "likelyLate": "2043-01-20T04:52:58.048Z"
+    "earlyP10": "2031-10-13T17:38:57.383Z",
+    "lateP90": "2046-10-24T03:51:33.961Z",
+    "likelyEarly": "2035-07-17T02:12:06.527Z",
+    "likelyLate": "2043-01-20T19:18:24.817Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.445755,
+  "deltaMonths": -8.428983,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -57,14 +57,14 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.1109,
-      "rationale": "AI capital formation is running high at 0.81 — a tailwind pulling the date sooner.",
+      "contributionMonths": -1.10676,
+      "rationale": "AI capital formation is running high at 0.80 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -1.001112,
-      "rationale": "Research velocity is running high at 0.83 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.997476,
+      "rationale": "Research velocity is running high at 0.82 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -111,8 +111,8 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.206829,
-      "rationale": "Macro & bubble risk is running low at 0.04 — a headwind pushing the date later.",
+      "contributionMonths": 0.215825,
+      "rationale": "Macro & bubble risk is running low at 0.05 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
