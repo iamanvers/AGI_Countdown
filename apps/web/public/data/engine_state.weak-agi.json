@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20261009T100958570Z-weak-agi",
-  "ts": "2026-10-09T10:09:58.570Z",
+  "runId": "refresh-daily-20261009T131339860Z-weak-agi",
+  "ts": "2026-10-09T13:13:39.860Z",
   "definition": "weak-agi",
-  "tAgi": "2027-08-27T08:19:48.480Z",
-  "progress": 78.6125,
+  "tAgi": "2027-09-05T03:46:19.187Z",
+  "progress": 76.8875,
   "band": {
-    "earlyP10": "2026-10-09T10:09:58.570Z",
-    "lateP90": "2028-08-26T14:09:00.480Z",
-    "likelyEarly": "2027-02-25T17:25:12.480Z",
-    "likelyLate": "2028-02-25T23:14:24.480Z"
+    "earlyP10": "2026-10-09T13:13:39.860Z",
+    "lateP90": "2028-09-04T09:35:31.187Z",
+    "likelyEarly": "2027-03-06T12:51:43.187Z",
+    "likelyLate": "2028-03-05T18:40:55.187Z"
   },
-  "anchor": "2028-05-25T20:29:06.215Z",
-  "deltaMonths": -8.953168,
+  "anchor": "2028-05-25T12:33:07.382Z",
+  "deltaMonths": -8.652854,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -39,21 +39,21 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -1.093729,
+      "contributionMonths": -1.088477,
       "rationale": "Research velocity is running high at 0.83 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
-      "factorId": "capital-formation",
-      "contributionMonths": -0.903072,
-      "rationale": "AI capital formation is running high at 0.82 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "datacenter-capex",
       "contributionMonths": -0.900123,
       "rationale": "Datacenter capex is running high at 0.74 — a tailwind pulling the date sooner.",
       "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
+    },
+    {
+      "factorId": "capital-formation",
+      "contributionMonths": -0.895344,
+      "rationale": "AI capital formation is running high at 0.81 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "hardware-supply",
@@ -110,16 +110,16 @@
       "citation": "https://www.aisi.gov.uk/"
     },
     {
-      "factorId": "adoption-usage",
-      "contributionMonths": -0.29376,
-      "rationale": "Adoption and usage is running low at 0.14 — a tailwind pulling the date sooner.",
-      "citation": "https://openrouter.ai/rankings"
-    },
-    {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.154038,
+      "contributionMonths": 0.159852,
       "rationale": "Macro & bubble risk is running low at 0.04 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
+    },
+    {
+      "factorId": "adoption-usage",
+      "contributionMonths": -0.01224,
+      "rationale": "Adoption and usage is running low at 0.01 — a tailwind pulling the date sooner.",
+      "citation": "https://openrouter.ai/rankings"
     },
     {
       "factorId": "frontier-release-cadence",
