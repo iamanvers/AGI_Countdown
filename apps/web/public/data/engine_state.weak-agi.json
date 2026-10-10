@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20261010T154543087Z-weak-agi",
-  "ts": "2026-10-10T15:45:43.087Z",
+  "runId": "refresh-hourly-20261010T195057798Z-weak-agi",
+  "ts": "2026-10-10T19:50:57.798Z",
   "definition": "weak-agi",
-  "tAgi": "2027-09-09T04:54:52.741Z",
+  "tAgi": "2027-09-09T08:02:13.168Z",
   "progress": 76.8875,
   "band": {
-    "earlyP10": "2026-10-10T15:45:43.087Z",
-    "lateP90": "2028-09-08T10:44:04.741Z",
-    "likelyEarly": "2027-03-10T14:00:16.741Z",
-    "likelyLate": "2028-03-09T19:49:28.741Z"
+    "earlyP10": "2026-10-10T19:50:57.798Z",
+    "lateP90": "2028-09-08T13:51:25.168Z",
+    "likelyEarly": "2027-03-10T17:07:37.168Z",
+    "likelyLate": "2028-03-09T22:56:49.168Z"
   },
-  "anchor": "2028-05-25T12:50:41.322Z",
-  "deltaMonths": -8.520271,
+  "anchor": "2028-05-25T14:22:23.643Z",
+  "deltaMonths": -8.518089,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -39,7 +39,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -1.003132,
+      "contributionMonths": -1.000506,
       "rationale": "Research velocity is running high at 0.76 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
@@ -50,16 +50,16 @@
       "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
     },
     {
-      "factorId": "capital-formation",
-      "contributionMonths": -0.875472,
-      "rationale": "AI capital formation is running high at 0.79 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
-    },
-    {
       "factorId": "hardware-supply",
       "contributionMonths": -0.8736,
       "rationale": "Hardware supply is running high at 0.70 — a tailwind pulling the date sooner.",
       "citation": "https://investor.tsmc.com/english"
+    },
+    {
+      "factorId": "capital-formation",
+      "contributionMonths": -0.87216,
+      "rationale": "AI capital formation is running high at 0.79 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "energy-headroom",
@@ -111,14 +111,14 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.194218,
-      "rationale": "Macro & bubble risk is running low at 0.06 — a headwind pushing the date later.",
+      "contributionMonths": 0.198862,
+      "rationale": "Macro & bubble risk is running low at 0.07 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "frontier-release-cadence",
-      "contributionMonths": -0.0154,
-      "rationale": "Frontier release cadence is running low at 0.01 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.0238,
+      "rationale": "Frontier release cadence is running low at 0.02 — a tailwind pulling the date sooner.",
       "citation": "https://epoch.ai/data/notable-ai-models"
     },
     {
