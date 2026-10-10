@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20261010T195057798Z-strong-agi",
-  "ts": "2026-10-10T19:50:57.798Z",
+  "runId": "refresh-hourly-20261010T231814323Z-strong-agi",
+  "ts": "2026-10-10T23:18:14.323Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-22T17:31:57.999Z",
+  "tAgi": "2039-04-22T21:21:27.349Z",
   "progress": 30.88,
   "band": {
-    "earlyP10": "2031-10-15T14:03:09.135Z",
-    "lateP90": "2046-10-28T21:00:46.863Z",
-    "likelyEarly": "2035-07-19T15:47:33.567Z",
-    "likelyLate": "2043-01-24T19:16:22.431Z"
+    "earlyP10": "2031-10-15T17:39:11.595Z",
+    "lateP90": "2046-10-29T01:03:43.103Z",
+    "likelyEarly": "2035-07-19T19:30:19.472Z",
+    "likelyLate": "2043-01-24T23:12:35.226Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.321139,
+  "deltaMonths": -8.315903,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -57,7 +57,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.0902,
+      "contributionMonths": -1.08606,
       "rationale": "AI capital formation is running high at 0.79 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -75,7 +75,7 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.923544,
+      "contributionMonths": -0.92112,
       "rationale": "Research velocity is running high at 0.76 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
@@ -111,13 +111,13 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.248577,
+      "contributionMonths": 0.254249,
       "rationale": "Macro & bubble risk is running low at 0.07 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "frontier-release-cadence",
-      "contributionMonths": -0.0238,
+      "contributionMonths": -0.0308,
       "rationale": "Frontier release cadence is running low at 0.02 — a tailwind pulling the date sooner.",
       "citation": "https://epoch.ai/data/notable-ai-models"
     },
