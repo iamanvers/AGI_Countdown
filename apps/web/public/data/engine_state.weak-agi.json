@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20261011T124619793Z-weak-agi",
-  "ts": "2026-10-11T12:46:19.793Z",
+  "runId": "refresh-hourly-20261011T172644013Z-weak-agi",
+  "ts": "2026-10-11T17:26:44.013Z",
   "definition": "weak-agi",
-  "tAgi": "2027-09-12T08:44:47.441Z",
+  "tAgi": "2027-09-14T03:51:49.520Z",
   "progress": 76.8875,
   "band": {
-    "earlyP10": "2026-10-11T12:46:19.793Z",
-    "lateP90": "2028-09-11T14:33:59.441Z",
-    "likelyEarly": "2027-03-13T17:50:11.441Z",
-    "likelyLate": "2028-03-12T23:39:23.441Z"
+    "earlyP10": "2026-10-11T17:26:44.013Z",
+    "lateP90": "2028-09-13T09:41:01.520Z",
+    "likelyEarly": "2027-03-15T12:57:13.520Z",
+    "likelyLate": "2028-03-14T18:46:25.520Z"
   },
-  "anchor": "2028-05-25T12:39:42.024Z",
-  "deltaMonths": -8.41621,
+  "anchor": "2028-05-25T10:02:40.965Z",
+  "deltaMonths": -8.353602,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -38,16 +38,16 @@
       "citation": "https://aiindex.stanford.edu/report/"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.944047,
-      "rationale": "Research velocity is running high at 0.72 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
       "factorId": "datacenter-capex",
       "contributionMonths": -0.900123,
       "rationale": "Datacenter capex is running high at 0.74 — a tailwind pulling the date sooner.",
       "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.888901,
+      "rationale": "Research velocity is running high at 0.68 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "hardware-supply",
@@ -57,7 +57,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.86112,
+      "contributionMonths": -0.857808,
       "rationale": "AI capital formation is running high at 0.78 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -111,7 +111,7 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.217842,
+      "contributionMonths": 0.221992,
       "rationale": "Macro & bubble risk is running low at 0.08 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
