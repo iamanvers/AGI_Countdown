@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20261014T055310062Z-weak-agi",
-  "ts": "2026-10-14T05:53:10.062Z",
+  "runId": "refresh-hourly-20261014T112120682Z-weak-agi",
+  "ts": "2026-10-14T11:21:20.682Z",
   "definition": "weak-agi",
-  "tAgi": "2027-09-22T18:09:56.257Z",
+  "tAgi": "2027-09-22T22:05:48.951Z",
   "progress": 77.575,
   "band": {
-    "earlyP10": "2026-10-14T05:53:10.062Z",
-    "lateP90": "2028-09-21T23:59:08.257Z",
-    "likelyEarly": "2027-03-24T03:15:20.257Z",
-    "likelyLate": "2028-03-23T09:04:32.257Z"
+    "earlyP10": "2026-10-14T11:21:20.682Z",
+    "lateP90": "2028-09-22T03:55:00.951Z",
+    "likelyEarly": "2027-03-24T07:11:12.951Z",
+    "likelyLate": "2028-03-23T13:00:24.951Z"
   },
-  "anchor": "2028-05-24T09:07:15.792Z",
-  "deltaMonths": -8.037065,
+  "anchor": "2028-05-24T09:08:23.567Z",
+  "deltaMonths": -8.031709,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -57,8 +57,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.835728,
-      "rationale": "AI capital formation is running high at 0.76 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.832416,
+      "rationale": "AI capital formation is running high at 0.75 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
@@ -93,8 +93,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.530452,
-      "rationale": "Research velocity is moderate at 0.40 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.531765,
+      "rationale": "Research velocity is moderate at 0.41 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -111,7 +111,7 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.2702,
+      "contributionMonths": 0.273557,
       "rationale": "Macro & bubble risk is running low at 0.12 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
