@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20261018T083750143Z-strong-agi",
-  "ts": "2026-10-18T08:37:50.143Z",
+  "runId": "refresh-daily-20261018T110056135Z-strong-agi",
+  "ts": "2026-10-18T11:00:56.135Z",
   "definition": "strong-agi",
-  "tAgi": "2039-05-23T09:51:34.078Z",
+  "tAgi": "2039-05-14T10:56:10.210Z",
   "progress": 30.88,
   "band": {
-    "earlyP10": "2031-11-01T09:04:38.401Z",
-    "lateP90": "2046-12-12T10:38:29.755Z",
-    "likelyEarly": "2035-08-12T09:28:06.240Z",
-    "likelyLate": "2043-03-03T10:15:01.916Z"
+    "earlyP10": "2031-10-28T20:32:41.832Z",
+    "lateP90": "2046-11-28T01:19:38.588Z",
+    "likelyEarly": "2035-08-06T03:44:26.021Z",
+    "likelyLate": "2043-02-19T18:07:54.399Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -7.313142,
+  "deltaMonths": -7.607362,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -68,14 +68,8 @@
       "citation": "https://www.bis.gov/"
     },
     {
-      "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.959769,
-      "rationale": "Public backlash pressure is running high at 0.97 — a headwind pushing the date later.",
-      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
-    },
-    {
       "factorId": "capital-formation",
-      "contributionMonths": -0.89424,
+      "contributionMonths": -0.89148,
       "rationale": "AI capital formation is moderate at 0.65 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -84,6 +78,12 @@
       "contributionMonths": 0.864153,
       "rationale": "Policy friction is running low at 0.38 — a headwind pushing the date later.",
       "citation": "https://artificialintelligenceact.eu/"
+    },
+    {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": 0.660558,
+      "rationale": "Public backlash pressure is moderate at 0.46 — a headwind pushing the date later.",
+      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
       "factorId": "robotics-embodiment",
@@ -111,7 +111,7 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.424993,
+      "contributionMonths": 0.427224,
       "rationale": "Macro & bubble risk is running low at 0.19 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },

@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20261018T083750143Z-transformative-ai",
-  "ts": "2026-10-18T08:37:50.143Z",
+  "runId": "refresh-daily-20261018T110056135Z-transformative-ai",
+  "ts": "2026-10-18T11:00:56.135Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-07-18T21:49:30.610Z",
+  "tAgi": "2031-07-09T02:30:13.714Z",
   "progress": 42.116,
   "band": {
-    "earlyP10": "2028-09-11T04:09:18.798Z",
-    "lateP90": "2034-05-24T15:29:42.422Z",
-    "likelyEarly": "2030-02-13T12:59:24.704Z",
-    "likelyLate": "2032-12-20T06:39:36.516Z"
+    "earlyP10": "2028-09-07T07:28:37.099Z",
+    "lateP90": "2034-05-08T21:31:50.329Z",
+    "likelyEarly": "2030-02-06T16:59:25.406Z",
+    "likelyLate": "2032-12-07T12:01:02.022Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -5.456888,
+  "deltaMonths": -5.779032,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -45,7 +45,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.251936,
+      "contributionMonths": -1.248072,
       "rationale": "AI capital formation is moderate at 0.65 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -54,12 +54,6 @@
       "contributionMonths": -1.092,
       "rationale": "Hardware supply is running high at 0.70 — a tailwind pulling the date sooner.",
       "citation": "https://investor.tsmc.com/english"
-    },
-    {
-      "factorId": "public-backlash-pressure",
-      "contributionMonths": 1.055745,
-      "rationale": "Public backlash pressure is running high at 0.97 — a headwind pushing the date later.",
-      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
       "factorId": "labor-automation-exposure",
@@ -86,8 +80,14 @@
       "citation": "https://www.bis.gov/"
     },
     {
+      "factorId": "public-backlash-pressure",
+      "contributionMonths": 0.726614,
+      "rationale": "Public backlash pressure is moderate at 0.46 — a headwind pushing the date later.",
+      "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
+    },
+    {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.59499,
+      "contributionMonths": 0.598113,
       "rationale": "Macro & bubble risk is running low at 0.19 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
