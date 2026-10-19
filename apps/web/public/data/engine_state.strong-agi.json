@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20261019T130928156Z-strong-agi",
-  "ts": "2026-10-19T13:09:28.156Z",
+  "runId": "refresh-weekly-20261019T134928287Z-strong-agi",
+  "ts": "2026-10-19T13:49:28.287Z",
   "definition": "strong-agi",
-  "tAgi": "2039-05-04T16:23:41.883Z",
+  "tAgi": "2039-04-29T20:33:27.282Z",
   "progress": 30.88,
   "band": {
-    "earlyP10": "2031-10-25T14:24:08.376Z",
-    "lateP90": "2046-11-11T18:23:15.390Z",
-    "likelyEarly": "2035-07-30T15:23:55.129Z",
-    "likelyLate": "2043-02-06T17:23:28.637Z"
+    "earlyP10": "2031-10-23T16:27:26.368Z",
+    "lateP90": "2046-11-04T00:39:28.196Z",
+    "likelyEarly": "2035-07-27T06:30:26.825Z",
+    "likelyLate": "2043-01-31T10:36:27.739Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -7.928438,
+  "deltaMonths": -8.087014,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -56,6 +56,12 @@
       "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -1.112496,
+      "rationale": "Research velocity is running high at 0.95 — a tailwind pulling the date sooner.",
+      "citation": "https://www.semanticscholar.org/"
+    },
+    {
       "factorId": "data-availability",
       "contributionMonths": 0.986414,
       "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
@@ -68,14 +74,8 @@
       "citation": "https://www.bis.gov/"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.949032,
-      "rationale": "Research velocity is running high at 0.81 — a tailwind pulling the date sooner.",
-      "citation": "https://www.semanticscholar.org/"
-    },
-    {
       "factorId": "capital-formation",
-      "contributionMonths": -0.8694,
+      "contributionMonths": -0.86664,
       "rationale": "AI capital formation is moderate at 0.63 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -111,7 +111,7 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.445736,
+      "contributionMonths": 0.447864,
       "rationale": "Macro & bubble risk is running low at 0.21 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },

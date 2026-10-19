@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20261019T130928156Z-transformative-ai",
-  "ts": "2026-10-19T13:09:28.156Z",
+  "runId": "refresh-weekly-20261019T134928287Z-transformative-ai",
+  "ts": "2026-10-19T13:49:28.287Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-07-02T11:16:34.830Z",
+  "tAgi": "2031-06-28T22:43:08.582Z",
   "progress": 42.116,
   "band": {
-    "earlyP10": "2028-09-05T07:27:08.491Z",
-    "lateP90": "2034-04-27T15:06:01.169Z",
-    "likelyEarly": "2030-02-02T09:21:51.661Z",
-    "likelyLate": "2032-11-28T13:11:17.999Z"
+    "earlyP10": "2028-09-03T22:00:29.857Z",
+    "lateP90": "2034-04-21T23:25:47.307Z",
+    "likelyEarly": "2030-01-30T22:21:49.219Z",
+    "likelyLate": "2032-11-23T23:04:27.945Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -5.997007,
+  "deltaMonths": -6.112762,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -45,7 +45,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -1.21716,
+      "contributionMonths": -1.213296,
       "rationale": "AI capital formation is moderate at 0.63 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
@@ -74,6 +74,12 @@
       "citation": "https://artificialintelligenceact.eu/"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.834372,
+      "rationale": "Research velocity is running high at 0.95 — a tailwind pulling the date sooner.",
+      "citation": "https://www.semanticscholar.org/"
+    },
+    {
       "factorId": "export-control-friction",
       "contributionMonths": 0.742462,
       "rationale": "Export-control friction is moderate at 0.50 — a headwind pushing the date later.",
@@ -86,14 +92,8 @@
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.711774,
-      "rationale": "Research velocity is running high at 0.81 — a tailwind pulling the date sooner.",
-      "citation": "https://www.semanticscholar.org/"
-    },
-    {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.62403,
+      "contributionMonths": 0.627009,
       "rationale": "Macro & bubble risk is running low at 0.21 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
