@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-18T22:15:59.925Z",
+  "ts": "2026-10-19T00:52:46.847Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -215,7 +215,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.489,
+        "normalized": 0.487,
         "level": 0.555,
         "confidence": 0.673,
         "citation": "https://arxiv.org/list/cs.AI/recent",
@@ -223,15 +223,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -0.044,
+          "zScore": -0.051,
           "percentile": 0.541,
           "volatility": 0.027
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.642,
-        "transformative-ai": -0.445,
-        "strong-agi": -0.593
+        "weak-agi": -0.639,
+        "transformative-ai": -0.443,
+        "strong-agi": -0.59
       },
       "sources": [
         {
@@ -269,7 +269,7 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": -1.65,
+          "zScore": -1.634,
           "percentile": 0.006,
           "volatility": 0.001
         }
@@ -697,7 +697,7 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.638,
+        "normalized": 0.636,
         "level": 0.667,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -705,15 +705,15 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": 0.567,
+          "zScore": 0.558,
           "percentile": 0.53,
           "volatility": 0.027
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.704,
-        "transformative-ai": -1.233,
-        "strong-agi": -0.88
+        "weak-agi": -0.702,
+        "transformative-ai": -1.229,
+        "strong-agi": -0.878
       },
       "sources": [
         {
@@ -738,7 +738,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.201,
+        "normalized": 0.203,
         "level": 0.165,
         "confidence": 0.65,
         "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N",
@@ -746,15 +746,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -1.381,
+          "zScore": -1.368,
           "percentile": 0.006,
           "volatility": 0
         }
       },
       "contributionMonths": {
-        "weak-agi": 0.35,
-        "transformative-ai": 0.612,
-        "strong-agi": 0.437
+        "weak-agi": 0.351,
+        "transformative-ai": 0.615,
+        "strong-agi": 0.439
       },
       "sources": [
         {
@@ -815,7 +815,7 @@
       "weight": 4,
       "normalization": "momentum-01",
       "reading": {
-        "normalized": 0.017,
+        "normalized": 0.022,
         "level": 0.724,
         "confidence": 0.7,
         "citation": "https://epoch.ai/data/notable-ai-models",
@@ -823,15 +823,15 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": -1.641,
-          "percentile": 0.017,
+          "zScore": -1.64,
+          "percentile": 0.022,
           "volatility": 0.005
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.024,
-        "transformative-ai": -0.024,
-        "strong-agi": -0.024
+        "weak-agi": -0.031,
+        "transformative-ai": -0.031,
+        "strong-agi": -0.031
       },
       "sources": [
         {
