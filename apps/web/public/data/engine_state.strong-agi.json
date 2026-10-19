@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-weekly-20261019T134928287Z-strong-agi",
-  "ts": "2026-10-19T13:49:28.287Z",
+  "runId": "refresh-hourly-20261019T190445533Z-strong-agi",
+  "ts": "2026-10-19T19:04:45.533Z",
   "definition": "strong-agi",
-  "tAgi": "2039-04-29T20:33:27.282Z",
+  "tAgi": "2039-04-30T02:41:50.297Z",
   "progress": 30.88,
   "band": {
-    "earlyP10": "2031-10-23T16:27:26.368Z",
-    "lateP90": "2046-11-04T00:39:28.196Z",
-    "likelyEarly": "2035-07-27T06:30:26.825Z",
-    "likelyLate": "2043-01-31T10:36:27.739Z"
+    "earlyP10": "2031-10-23T22:03:59.111Z",
+    "lateP90": "2046-11-04T07:19:41.483Z",
+    "likelyEarly": "2035-07-27T12:22:54.704Z",
+    "likelyLate": "2043-01-31T17:00:45.890Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -8.087014,
+  "deltaMonths": -8.078609,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -57,8 +57,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -1.112496,
-      "rationale": "Research velocity is running high at 0.95 — a tailwind pulling the date sooner.",
+      "contributionMonths": -1.108968,
+      "rationale": "Research velocity is running high at 0.94 — a tailwind pulling the date sooner.",
       "citation": "https://www.semanticscholar.org/"
     },
     {
@@ -74,16 +74,16 @@
       "citation": "https://www.bis.gov/"
     },
     {
-      "factorId": "capital-formation",
-      "contributionMonths": -0.86664,
-      "rationale": "AI capital formation is moderate at 0.63 — a tailwind pulling the date sooner.",
-      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
-    },
-    {
       "factorId": "policy-friction",
       "contributionMonths": 0.864153,
       "rationale": "Policy friction is running low at 0.38 — a headwind pushing the date later.",
       "citation": "https://artificialintelligenceact.eu/"
+    },
+    {
+      "factorId": "capital-formation",
+      "contributionMonths": -0.86388,
+      "rationale": "AI capital formation is moderate at 0.63 — a tailwind pulling the date sooner.",
+      "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "public-backlash-pressure",
@@ -111,7 +111,7 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.447864,
+      "contributionMonths": 0.449981,
       "rationale": "Macro & bubble risk is running low at 0.21 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
