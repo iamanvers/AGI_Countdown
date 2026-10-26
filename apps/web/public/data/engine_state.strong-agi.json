@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-daily-20261026T125829240Z-strong-agi",
-  "ts": "2026-10-26T12:58:29.240Z",
+  "runId": "refresh-weekly-20261026T132733823Z-strong-agi",
+  "ts": "2026-10-26T13:27:33.823Z",
   "definition": "strong-agi",
-  "tAgi": "2039-06-13T14:24:41.167Z",
+  "tAgi": "2039-06-06T17:11:09.439Z",
   "progress": 31.045,
   "band": {
-    "earlyP10": "2031-11-14T18:20:29.328Z",
-    "lateP90": "2047-01-10T10:28:53.006Z",
-    "likelyEarly": "2035-08-29T16:22:35.248Z",
-    "likelyLate": "2043-03-28T12:26:47.086Z"
+    "earlyP10": "2031-11-12T00:32:12.084Z",
+    "lateP90": "2046-12-30T09:50:06.794Z",
+    "likelyEarly": "2035-08-24T20:51:40.761Z",
+    "likelyLate": "2043-03-19T13:30:38.117Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -6.616958,
+  "deltaMonths": -6.843144,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -74,6 +74,12 @@
       "citation": "https://artificialintelligenceact.eu/"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.662496,
+      "rationale": "Research velocity is moderate at 0.54 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
       "factorId": "public-backlash-pressure",
       "contributionMonths": 0.658396,
       "rationale": "Public backlash pressure is moderate at 0.46 — a headwind pushing the date later.",
@@ -92,27 +98,21 @@
       "citation": "https://www.aisi.gov.uk/"
     },
     {
+      "factorId": "macro-headwinds",
+      "contributionMonths": 0.525054,
+      "rationale": "Macro & bubble risk is running low at 0.29 — a headwind pushing the date later.",
+      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
+    },
+    {
       "factorId": "labor-automation-exposure",
       "contributionMonths": -0.52479,
       "rationale": "Labor automation exposure is moderate at 0.51 — a tailwind pulling the date sooner.",
       "citation": "https://www.anthropic.com/economic-index"
     },
     {
-      "factorId": "macro-headwinds",
-      "contributionMonths": 0.52324,
-      "rationale": "Macro & bubble risk is running low at 0.29 — a headwind pushing the date later.",
-      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.440016,
-      "rationale": "Research velocity is running low at 0.36 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
       "factorId": "capital-formation",
-      "contributionMonths": -0.11316,
-      "rationale": "AI capital formation is running low at 0.08 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.11868,
+      "rationale": "AI capital formation is running low at 0.09 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
