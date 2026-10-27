@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20261027T192102334Z-strong-agi",
-  "ts": "2026-10-27T19:21:02.334Z",
+  "runId": "refresh-hourly-20261027T233415776Z-strong-agi",
+  "ts": "2026-10-27T23:34:15.776Z",
   "definition": "strong-agi",
-  "tAgi": "2039-05-31T05:09:07.804Z",
+  "tAgi": "2039-05-30T22:59:23.266Z",
   "progress": 31.045,
   "band": {
-    "earlyP10": "2031-11-10T04:03:07.243Z",
-    "lateP90": "2046-12-19T06:15:08.365Z",
-    "likelyEarly": "2035-08-20T16:36:07.523Z",
-    "likelyLate": "2043-03-10T17:42:08.085Z"
+    "earlyP10": "2031-11-10T04:07:08.463Z",
+    "lateP90": "2046-12-18T17:51:38.069Z",
+    "likelyEarly": "2035-08-20T13:33:15.865Z",
+    "likelyLate": "2043-03-10T08:25:30.667Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -7.056747,
+  "deltaMonths": -7.065183,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -75,8 +75,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.849024,
-      "rationale": "Research velocity is running high at 0.74 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.84672,
+      "rationale": "Research velocity is running high at 0.73 — a tailwind pulling the date sooner.",
       "citation": "https://www.semanticscholar.org/"
     },
     {
@@ -99,7 +99,7 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.533139,
+      "contributionMonths": 0.534919,
       "rationale": "Macro & bubble risk is running low at 0.30 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
@@ -111,13 +111,13 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.10764,
+      "contributionMonths": -0.11316,
       "rationale": "AI capital formation is running low at 0.08 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "frontier-release-cadence",
-      "contributionMonths": -0.0546,
+      "contributionMonths": -0.0616,
       "rationale": "Frontier release cadence is running low at 0.04 — a tailwind pulling the date sooner.",
       "citation": "https://epoch.ai/data/notable-ai-models"
     },
