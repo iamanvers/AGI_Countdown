@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20261101T044855931Z-weak-agi",
-  "ts": "2026-11-01T04:48:55.931Z",
+  "runId": "refresh-hourly-20261101T114228557Z-weak-agi",
+  "ts": "2026-11-01T11:42:28.557Z",
   "definition": "weak-agi",
-  "tAgi": "2027-10-12T20:40:29.480Z",
-  "progress": 81.4375,
+  "tAgi": "2027-10-11T02:02:33.587Z",
+  "progress": 81.5125,
   "band": {
-    "earlyP10": "2026-11-01T04:48:55.931Z",
-    "lateP90": "2028-10-12T02:29:41.480Z",
-    "likelyEarly": "2027-04-13T05:45:53.480Z",
-    "likelyLate": "2028-04-12T11:35:05.480Z"
+    "earlyP10": "2026-11-01T11:42:28.557Z",
+    "lateP90": "2028-10-10T07:51:45.587Z",
+    "likelyEarly": "2027-04-11T11:07:57.587Z",
+    "likelyLate": "2028-04-10T16:57:09.587Z"
   },
-  "anchor": "2028-05-23T09:24:43.965Z",
-  "deltaMonths": -7.344076,
+  "anchor": "2028-05-23T08:50:07.808Z",
+  "deltaMonths": -7.401648,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -57,14 +57,14 @@
     },
     {
       "factorId": "public-backlash-pressure",
-      "contributionMonths": 0.802268,
+      "contributionMonths": 0.770978,
       "rationale": "Public backlash pressure is running high at 0.98 — a headwind pushing the date later.",
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -0.7548,
-      "rationale": "Adoption and usage is running low at 0.37 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.76704,
+      "rationale": "Adoption and usage is running low at 0.38 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
     {
@@ -105,8 +105,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.346632,
-      "rationale": "Research velocity is running low at 0.26 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.349258,
+      "rationale": "Research velocity is running low at 0.27 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -117,13 +117,13 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.139104,
+      "contributionMonths": -0.14352,
       "rationale": "AI capital formation is running low at 0.13 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
       "factorId": "frontier-release-cadence",
-      "contributionMonths": -0.0084,
+      "contributionMonths": -0.0154,
       "rationale": "Frontier release cadence is running low at 0.01 — a tailwind pulling the date sooner.",
       "citation": "https://epoch.ai/data/notable-ai-models"
     }
