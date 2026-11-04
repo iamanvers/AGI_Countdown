@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-04T02:55:56.250Z",
+  "ts": "2026-11-04T10:33:26.947Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -215,7 +215,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.331,
+        "normalized": 0.333,
         "level": 0.538,
         "confidence": 0.673,
         "citation": "https://arxiv.org/list/cs.AI/recent",
@@ -223,15 +223,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -0.703,
+          "zScore": -0.696,
           "percentile": 0.343,
           "volatility": 0.031
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.435,
-        "transformative-ai": -0.301,
-        "strong-agi": -0.401
+        "weak-agi": -0.437,
+        "transformative-ai": -0.303,
+        "strong-agi": -0.404
       },
       "sources": [
         {
@@ -269,7 +269,7 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": -0.249,
+          "zScore": -0.244,
           "percentile": 0.442,
           "volatility": 0.001
         }
@@ -697,7 +697,7 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.144,
+        "normalized": 0.147,
         "level": 0.535,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -705,15 +705,15 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": -1.781,
+          "zScore": -1.755,
           "percentile": 0.006,
           "volatility": 0.052
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.159,
-        "transformative-ai": -0.278,
-        "strong-agi": -0.199
+        "weak-agi": -0.162,
+        "transformative-ai": -0.284,
+        "strong-agi": -0.203
       },
       "sources": [
         {
@@ -746,7 +746,7 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -4.695,
+          "zScore": -4.671,
           "percentile": 0.006,
           "volatility": 0
         }
@@ -816,14 +816,14 @@
       "normalization": "momentum-01",
       "reading": {
         "normalized": 0.006,
-        "level": 0.717,
+        "level": 0.716,
         "confidence": 0.7,
         "citation": "https://epoch.ai/data/notable-ai-models",
         "rolling": {
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": -1.844,
+          "zScore": -1.863,
           "percentile": 0.006,
           "volatility": 0.004
         }
