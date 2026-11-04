@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-03T22:58:02.354Z",
+  "ts": "2026-11-04T02:55:56.250Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -215,7 +215,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.33,
+        "normalized": 0.331,
         "level": 0.538,
         "confidence": 0.673,
         "citation": "https://arxiv.org/list/cs.AI/recent",
@@ -223,15 +223,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -0.71,
+          "zScore": -0.703,
           "percentile": 0.343,
           "volatility": 0.031
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.433,
-        "transformative-ai": -0.3,
-        "strong-agi": -0.4
+        "weak-agi": -0.435,
+        "transformative-ai": -0.301,
+        "strong-agi": -0.401
       },
       "sources": [
         {
@@ -269,7 +269,7 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": -0.254,
+          "zScore": -0.249,
           "percentile": 0.442,
           "volatility": 0.001
         }
@@ -697,7 +697,7 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.141,
+        "normalized": 0.144,
         "level": 0.535,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -705,15 +705,15 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": -1.807,
+          "zScore": -1.781,
           "percentile": 0.006,
-          "volatility": 0.051
+          "volatility": 0.052
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.156,
-        "transformative-ai": -0.272,
-        "strong-agi": -0.195
+        "weak-agi": -0.159,
+        "transformative-ai": -0.278,
+        "strong-agi": -0.199
       },
       "sources": [
         {
@@ -746,7 +746,7 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -4.727,
+          "zScore": -4.695,
           "percentile": 0.006,
           "volatility": 0
         }
@@ -823,7 +823,7 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": -1.825,
+          "zScore": -1.844,
           "percentile": 0.006,
           "volatility": 0.004
         }
