@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20261104T103326947Z-weak-agi",
-  "ts": "2026-11-04T10:33:26.947Z",
+  "runId": "refresh-daily-20261104T142836467Z-weak-agi",
+  "ts": "2026-11-04T14:28:36.467Z",
   "definition": "weak-agi",
-  "tAgi": "2027-09-13T20:15:46.156Z",
+  "tAgi": "2027-09-13T06:53:43.171Z",
   "progress": 82.3375,
   "band": {
-    "earlyP10": "2026-11-04T10:33:26.947Z",
-    "lateP90": "2028-09-13T02:04:58.156Z",
-    "likelyEarly": "2027-03-15T05:21:10.156Z",
-    "likelyLate": "2028-03-14T11:10:22.156Z"
+    "earlyP10": "2026-11-04T14:28:36.467Z",
+    "lateP90": "2028-09-12T12:42:55.171Z",
+    "likelyEarly": "2027-03-14T15:59:07.171Z",
+    "likelyLate": "2028-03-13T21:48:19.171Z"
   },
-  "anchor": "2028-05-22T06:59:47.893Z",
-  "deltaMonths": -8.26127,
+  "anchor": "2028-05-22T03:59:46.264Z",
+  "deltaMonths": -8.275462,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -99,8 +99,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.437229,
-      "rationale": "Research velocity is running low at 0.33 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.447733,
+      "rationale": "Research velocity is running low at 0.34 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -111,8 +111,8 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.162288,
-      "rationale": "AI capital formation is running low at 0.15 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.158976,
+      "rationale": "AI capital formation is running low at 0.14 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
@@ -123,7 +123,7 @@
     },
     {
       "factorId": "frontier-release-cadence",
-      "contributionMonths": -0.0084,
+      "contributionMonths": -0.0154,
       "rationale": "Frontier release cadence is running low at 0.01 — a tailwind pulling the date sooner.",
       "citation": "https://epoch.ai/data/notable-ai-models"
     }
