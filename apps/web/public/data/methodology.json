@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-06T11:52:19.858Z",
+  "ts": "2026-11-06T14:13:10.532Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -215,7 +215,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.364,
+        "normalized": 0.366,
         "level": 0.54,
         "confidence": 0.673,
         "citation": "https://arxiv.org/list/cs.AI/recent",
@@ -223,15 +223,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -0.558,
-          "percentile": 0.431,
+          "zScore": -0.549,
+          "percentile": 0.436,
           "volatility": 0.031
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.478,
-        "transformative-ai": -0.331,
-        "strong-agi": -0.441
+        "weak-agi": -0.481,
+        "transformative-ai": -0.333,
+        "strong-agi": -0.444
       },
       "sources": [
         {
@@ -261,7 +261,7 @@
       "weight": 5,
       "normalization": "momentum-01",
       "reading": {
-        "normalized": 0.481,
+        "normalized": 0.486,
         "level": 0.77,
         "confidence": 0.68,
         "citation": "https://openrouter.ai/rankings",
@@ -269,15 +269,15 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": -0.394,
-          "percentile": 0.481,
+          "zScore": -0.416,
+          "percentile": 0.486,
           "volatility": 0.001
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.981,
-        "transformative-ai": -1.227,
-        "strong-agi": -0.572
+        "weak-agi": -0.991,
+        "transformative-ai": -1.239,
+        "strong-agi": -0.578
       },
       "sources": [
         {
@@ -697,23 +697,23 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.147,
-        "level": 0.522,
+        "normalized": 0.138,
+        "level": 0.516,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
         "rolling": {
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": -1.761,
+          "zScore": -1.831,
           "percentile": 0.006,
           "volatility": 0.055
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.162,
-        "transformative-ai": -0.284,
-        "strong-agi": -0.203
+        "weak-agi": -0.152,
+        "transformative-ai": -0.267,
+        "strong-agi": -0.19
       },
       "sources": [
         {
@@ -738,7 +738,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.019,
+        "normalized": 0.021,
         "level": 0.164,
         "confidence": 0.65,
         "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N",
@@ -746,15 +746,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -3.953,
+          "zScore": -3.846,
           "percentile": 0.006,
           "volatility": 0
         }
       },
       "contributionMonths": {
-        "weak-agi": 0.108,
-        "transformative-ai": 0.188,
-        "strong-agi": 0.134
+        "weak-agi": 0.113,
+        "transformative-ai": 0.198,
+        "strong-agi": 0.141
       },
       "sources": [
         {
@@ -815,7 +815,7 @@
       "weight": 4,
       "normalization": "momentum-01",
       "reading": {
-        "normalized": 0.022,
+        "normalized": 0.006,
         "level": 0.715,
         "confidence": 0.7,
         "citation": "https://epoch.ai/data/notable-ai-models",
@@ -823,15 +823,15 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": -1.983,
-          "percentile": 0.022,
+          "zScore": -1.994,
+          "percentile": 0.006,
           "volatility": 0.004
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.031,
-        "transformative-ai": -0.031,
-        "strong-agi": -0.031
+        "weak-agi": -0.008,
+        "transformative-ai": -0.008,
+        "strong-agi": -0.008
       },
       "sources": [
         {
