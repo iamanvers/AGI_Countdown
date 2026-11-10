@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20261110T173112916Z-weak-agi",
-  "ts": "2026-11-10T17:31:12.916Z",
+  "runId": "refresh-hourly-20261110T225501864Z-weak-agi",
+  "ts": "2026-11-10T22:55:01.864Z",
   "definition": "weak-agi",
-  "tAgi": "2027-09-03T12:34:51.511Z",
-  "progress": 84.275,
+  "tAgi": "2027-09-02T17:51:54.249Z",
+  "progress": 84.3375,
   "band": {
-    "earlyP10": "2026-11-10T17:31:12.916Z",
-    "lateP90": "2028-09-02T18:24:03.511Z",
-    "likelyEarly": "2027-03-04T21:40:15.511Z",
-    "likelyLate": "2028-03-04T03:29:27.511Z"
+    "earlyP10": "2026-11-10T22:55:01.864Z",
+    "lateP90": "2028-09-01T23:41:06.249Z",
+    "likelyEarly": "2027-03-04T02:57:18.249Z",
+    "likelyLate": "2028-03-03T08:46:30.249Z"
   },
-  "anchor": "2028-05-23T01:58:28.877Z",
-  "deltaMonths": -8.626315,
+  "anchor": "2028-05-22T15:46:52.862Z",
+  "deltaMonths": -8.637982,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -33,7 +33,7 @@
     },
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -1.21788,
+      "contributionMonths": -1.22808,
       "rationale": "Adoption and usage is moderate at 0.60 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
@@ -74,16 +74,16 @@
       "citation": "https://artificialintelligenceact.eu/"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.600041,
+      "rationale": "Research velocity is moderate at 0.46 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
       "factorId": "labor-automation-exposure",
       "contributionMonths": -0.59976,
       "rationale": "Labor automation exposure is moderate at 0.51 — a tailwind pulling the date sooner.",
       "citation": "https://www.anthropic.com/economic-index"
-    },
-    {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.597415,
-      "rationale": "Research velocity is moderate at 0.46 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "export-control-friction",
@@ -111,14 +111,14 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.201898,
+      "contributionMonths": 0.206369,
       "rationale": "Macro & bubble risk is running low at 0.07 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.178848,
-      "rationale": "AI capital formation is running low at 0.16 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.18216,
+      "rationale": "AI capital formation is running low at 0.17 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
