@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20261112T092325262Z-strong-agi",
-  "ts": "2026-11-12T09:23:25.262Z",
+  "runId": "refresh-daily-20261112T150945743Z-strong-agi",
+  "ts": "2026-11-12T15:09:45.743Z",
   "definition": "strong-agi",
-  "tAgi": "2039-05-27T21:40:49.847Z",
+  "tAgi": "2039-05-28T21:34:10.431Z",
   "progress": 31.045,
   "band": {
-    "earlyP10": "2031-11-18T04:40:59.502Z",
-    "lateP90": "2046-12-04T14:40:40.192Z",
-    "likelyEarly": "2035-08-23T01:10:54.675Z",
-    "likelyLate": "2043-03-01T18:10:45.019Z"
+    "earlyP10": "2031-11-18T17:42:12.587Z",
+    "lateP90": "2046-12-06T01:26:08.275Z",
+    "likelyEarly": "2035-08-23T19:38:11.509Z",
+    "likelyLate": "2043-03-02T23:30:09.353Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -7.16554,
+  "deltaMonths": -7.132837,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -87,8 +87,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.625392,
-      "rationale": "Research velocity is moderate at 0.52 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.606,
+      "rationale": "Research velocity is moderate at 0.50 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -105,14 +105,14 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.280895,
-      "rationale": "Macro & bubble risk is running low at 0.08 — a headwind pushing the date later.",
+      "contributionMonths": 0.285926,
+      "rationale": "Macro & bubble risk is running low at 0.09 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.21942,
-      "rationale": "AI capital formation is running low at 0.16 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.21114,
+      "rationale": "AI capital formation is running low at 0.15 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
