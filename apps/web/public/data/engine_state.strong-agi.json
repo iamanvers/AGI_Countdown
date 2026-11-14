@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20261114T084145856Z-strong-agi",
-  "ts": "2026-11-14T08:41:45.856Z",
+  "runId": "refresh-daily-20261114T132806903Z-strong-agi",
+  "ts": "2026-11-14T13:28:06.903Z",
   "definition": "strong-agi",
-  "tAgi": "2039-05-28T19:17:54.550Z",
+  "tAgi": "2039-05-29T08:02:04.172Z",
   "progress": 31.045,
   "band": {
-    "earlyP10": "2031-11-19T17:42:48.458Z",
-    "lateP90": "2046-12-04T20:53:00.642Z",
-    "likelyEarly": "2035-08-24T06:30:21.504Z",
-    "likelyLate": "2043-03-02T08:05:27.596Z"
+    "earlyP10": "2031-11-20T01:40:16.855Z",
+    "lateP90": "2046-12-05T14:23:51.489Z",
+    "likelyEarly": "2035-08-24T16:51:10.513Z",
+    "likelyLate": "2043-03-02T23:12:57.831Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -7.135946,
+  "deltaMonths": -7.118511,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -87,8 +87,8 @@
     },
     {
       "factorId": "research-velocity",
-      "contributionMonths": -0.627816,
-      "rationale": "Research velocity is moderate at 0.52 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.602364,
+      "rationale": "Research velocity is moderate at 0.50 — a tailwind pulling the date sooner.",
       "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
@@ -105,14 +105,14 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.312913,
+      "contributionMonths": 0.315936,
       "rationale": "Macro & bubble risk is running low at 0.10 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.21942,
-      "rationale": "AI capital formation is running low at 0.16 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.23046,
+      "rationale": "AI capital formation is running low at 0.17 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
