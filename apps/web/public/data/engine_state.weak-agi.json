@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20261114T153708111Z-weak-agi",
-  "ts": "2026-11-14T15:37:08.111Z",
+  "runId": "refresh-hourly-20261114T202823585Z-weak-agi",
+  "ts": "2026-11-14T20:28:23.585Z",
   "definition": "weak-agi",
-  "tAgi": "2027-10-08T01:30:32.229Z",
+  "tAgi": "2027-10-07T16:34:16.391Z",
   "progress": 77.3,
   "band": {
-    "earlyP10": "2026-11-14T15:37:08.111Z",
-    "lateP90": "2028-10-07T07:19:44.229Z",
-    "likelyEarly": "2027-04-08T10:35:56.229Z",
-    "likelyLate": "2028-04-07T16:25:08.229Z"
+    "earlyP10": "2026-11-14T20:28:23.585Z",
+    "lateP90": "2028-10-06T22:23:28.391Z",
+    "likelyEarly": "2027-04-08T01:39:40.391Z",
+    "likelyLate": "2028-04-07T07:28:52.391Z"
   },
-  "anchor": "2028-05-22T20:13:11.366Z",
-  "deltaMonths": -7.483673,
+  "anchor": "2028-05-22T17:17:51.486Z",
+  "deltaMonths": -7.491908,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -105,14 +105,14 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.255145,
+      "contributionMonths": 0.257518,
       "rationale": "Macro & bubble risk is running low at 0.11 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.1932,
-      "rationale": "AI capital formation is running low at 0.17 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.195408,
+      "rationale": "AI capital formation is running low at 0.18 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
@@ -123,8 +123,8 @@
     },
     {
       "factorId": "frontier-release-cadence",
-      "contributionMonths": -0.0154,
-      "rationale": "Frontier release cadence is running low at 0.01 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.0238,
+      "rationale": "Frontier release cadence is running low at 0.02 — a tailwind pulling the date sooner.",
       "citation": "https://epoch.ai/data/notable-ai-models"
     }
   ]

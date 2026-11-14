@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20261114T153708111Z-strong-agi",
-  "ts": "2026-11-14T15:37:08.111Z",
+  "runId": "refresh-hourly-20261114T202823585Z-strong-agi",
+  "ts": "2026-11-14T20:28:23.585Z",
   "definition": "strong-agi",
-  "tAgi": "2039-05-29T15:38:11.938Z",
+  "tAgi": "2039-05-29T09:39:06.429Z",
   "progress": 31.045,
   "band": {
-    "earlyP10": "2031-11-20T06:00:07.369Z",
-    "lateP90": "2046-12-06T01:16:16.507Z",
-    "likelyEarly": "2035-08-24T22:49:09.653Z",
-    "likelyLate": "2043-03-03T08:27:14.223Z"
+    "earlyP10": "2031-11-20T06:31:13.445Z",
+    "lateP90": "2046-12-05T12:46:59.413Z",
+    "likelyEarly": "2035-08-24T20:05:09.937Z",
+    "likelyLate": "2043-03-02T23:13:02.921Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -7.108104,
+  "deltaMonths": -7.116297,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -105,14 +105,14 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.318931,
+      "contributionMonths": 0.321898,
       "rationale": "Macro & bubble risk is running low at 0.11 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.2415,
-      "rationale": "AI capital formation is running low at 0.17 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.24426,
+      "rationale": "AI capital formation is running low at 0.18 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
@@ -123,8 +123,8 @@
     },
     {
       "factorId": "frontier-release-cadence",
-      "contributionMonths": -0.0154,
-      "rationale": "Frontier release cadence is running low at 0.01 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.0238,
+      "rationale": "Frontier release cadence is running low at 0.02 — a tailwind pulling the date sooner.",
       "citation": "https://epoch.ai/data/notable-ai-models"
     }
   ]
