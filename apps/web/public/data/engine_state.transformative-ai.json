@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20261115T004902544Z-transformative-ai",
-  "ts": "2026-11-15T00:49:02.544Z",
+  "runId": "refresh-hourly-20261115T073640417Z-transformative-ai",
+  "ts": "2026-11-15T07:36:40.417Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-07-29T11:48:29.626Z",
+  "tAgi": "2031-07-29T11:57:55.021Z",
   "progress": 42.644,
   "band": {
-    "earlyP10": "2028-10-02T00:20:12.488Z",
-    "lateP90": "2034-05-24T23:16:46.764Z",
-    "likelyEarly": "2030-03-01T06:04:21.057Z",
-    "likelyLate": "2032-12-25T17:32:38.195Z"
+    "earlyP10": "2028-10-02T04:28:30.020Z",
+    "lateP90": "2034-05-24T19:27:20.022Z",
+    "likelyEarly": "2030-03-01T08:13:12.520Z",
+    "likelyLate": "2032-12-25T15:42:37.522Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -5.109197,
+  "deltaMonths": -5.108982,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -86,16 +86,16 @@
       "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
     },
     {
+      "factorId": "macro-headwinds",
+      "contributionMonths": 0.458851,
+      "rationale": "Macro & bubble risk is running low at 0.11 — a headwind pushing the date later.",
+      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
+    },
+    {
       "factorId": "safety-eval-pressure",
       "contributionMonths": 0.456158,
       "rationale": "Safety-eval pressure is moderate at 0.45 — a headwind pushing the date later.",
       "citation": "https://www.aisi.gov.uk/"
-    },
-    {
-      "factorId": "macro-headwinds",
-      "contributionMonths": 0.454772,
-      "rationale": "Macro & bubble risk is running low at 0.11 — a headwind pushing the date later.",
-      "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "research-velocity",
@@ -111,7 +111,7 @@
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.34776,
+      "contributionMonths": -0.351624,
       "rationale": "AI capital formation is running low at 0.18 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
