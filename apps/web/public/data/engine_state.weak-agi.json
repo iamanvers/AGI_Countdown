@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20261117T101742515Z-weak-agi",
-  "ts": "2026-11-17T10:17:42.515Z",
+  "runId": "refresh-daily-20261117T155701562Z-weak-agi",
+  "ts": "2026-11-17T15:57:01.562Z",
   "definition": "weak-agi",
-  "tAgi": "2027-10-10T20:46:16.381Z",
+  "tAgi": "2027-09-30T20:06:57.080Z",
   "progress": 77.3,
   "band": {
-    "earlyP10": "2026-11-17T10:17:42.515Z",
-    "lateP90": "2028-10-10T02:35:28.381Z",
-    "likelyEarly": "2027-04-11T05:51:40.381Z",
-    "likelyLate": "2028-04-10T11:40:52.381Z"
+    "earlyP10": "2026-11-17T15:57:01.562Z",
+    "lateP90": "2028-09-30T01:56:09.080Z",
+    "likelyEarly": "2027-04-01T05:12:21.080Z",
+    "likelyLate": "2028-03-31T11:01:33.080Z"
   },
   "anchor": "2028-05-22T05:32:29.020Z",
-  "deltaMonths": -7.3715,
+  "deltaMonths": -7.700946,
   "movers": [
     {
       "factorId": "frontier-benchmark-saturation",
@@ -56,6 +56,12 @@
       "citation": "https://www.iea.org/reports/electricity-2025"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.832858,
+      "rationale": "Research velocity is moderate at 0.62 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
       "factorId": "data-availability",
       "contributionMonths": 0.72337,
       "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
@@ -80,12 +86,6 @@
       "citation": "https://www.bis.gov/"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.516009,
-      "rationale": "Research velocity is running low at 0.39 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
       "factorId": "public-backlash-pressure",
       "contributionMonths": 0.515036,
       "rationale": "Public backlash pressure is moderate at 0.44 — a headwind pushing the date later.",
@@ -105,14 +105,14 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.284459,
-      "rationale": "Macro & bubble risk is running low at 0.13 — a headwind pushing the date later.",
+      "contributionMonths": 0.28659,
+      "rationale": "Macro & bubble risk is running low at 0.14 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.22632,
-      "rationale": "AI capital formation is running low at 0.20 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.234048,
+      "rationale": "AI capital formation is running low at 0.21 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
@@ -123,7 +123,7 @@
     },
     {
       "factorId": "frontier-release-cadence",
-      "contributionMonths": -0.0084,
+      "contributionMonths": -0.0154,
       "rationale": "Frontier release cadence is running low at 0.01 — a tailwind pulling the date sooner.",
       "citation": "https://epoch.ai/data/notable-ai-models"
     }
