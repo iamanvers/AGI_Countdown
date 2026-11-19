@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-19T01:50:06.988Z",
+  "ts": "2026-11-19T09:57:34.780Z",
   "smoothingAlpha": 0.5,
   "formula": "T_AGI = Anchor + Δfactors",
   "definitions": [
@@ -223,7 +223,7 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -0.11,
+          "zScore": -0.108,
           "percentile": 0.608,
           "volatility": 0.027
         }
@@ -269,7 +269,7 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": -0.549,
+          "zScore": -0.542,
           "percentile": 0.039,
           "volatility": 0
         }
@@ -697,7 +697,7 @@
       "weight": 4,
       "normalization": "log-zscore",
       "reading": {
-        "normalized": 0.229,
+        "normalized": 0.231,
         "level": 0.483,
         "confidence": 0.69,
         "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -705,15 +705,15 @@
           "applied": true,
           "method": "log-zscore",
           "sampleSize": 181,
-          "zScore": -1.213,
-          "percentile": 0.171,
+          "zScore": -1.202,
+          "percentile": 0.177,
           "volatility": 0.062
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.253,
-        "transformative-ai": -0.442,
-        "strong-agi": -0.316
+        "weak-agi": -0.255,
+        "transformative-ai": -0.446,
+        "strong-agi": -0.319
       },
       "sources": [
         {
@@ -738,7 +738,7 @@
       "weight": 3,
       "normalization": "zscore",
       "reading": {
-        "normalized": 0.145,
+        "normalized": 0.147,
         "level": 0.164,
         "confidence": 0.65,
         "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N",
@@ -746,15 +746,15 @@
           "applied": true,
           "method": "zscore",
           "sampleSize": 181,
-          "zScore": -1.772,
+          "zScore": -1.758,
           "percentile": 0.006,
           "volatility": 0
         }
       },
       "contributionMonths": {
-        "weak-agi": 0.297,
-        "transformative-ai": 0.52,
-        "strong-agi": 0.371
+        "weak-agi": 0.299,
+        "transformative-ai": 0.523,
+        "strong-agi": 0.374
       },
       "sources": [
         {
@@ -815,7 +815,7 @@
       "weight": 4,
       "normalization": "momentum-01",
       "reading": {
-        "normalized": 0.006,
+        "normalized": 0.011,
         "level": 0.706,
         "confidence": 0.7,
         "citation": "https://epoch.ai/data/notable-ai-models",
@@ -823,15 +823,15 @@
           "applied": true,
           "method": "momentum-01",
           "sampleSize": 181,
-          "zScore": -2.017,
-          "percentile": 0.006,
-          "volatility": 0.005
+          "zScore": -2.009,
+          "percentile": 0.011,
+          "volatility": 0.006
         }
       },
       "contributionMonths": {
-        "weak-agi": -0.008,
-        "transformative-ai": -0.008,
-        "strong-agi": -0.008
+        "weak-agi": -0.015,
+        "transformative-ai": -0.015,
+        "strong-agi": -0.015
       },
       "sources": [
         {
