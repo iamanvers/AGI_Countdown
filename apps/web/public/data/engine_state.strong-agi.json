@@ -1,17 +1,17 @@
 {
-  "runId": "refresh-hourly-20261120T082152592Z-strong-agi",
-  "ts": "2026-11-20T08:21:52.592Z",
+  "runId": "refresh-daily-20261120T152418622Z-strong-agi",
+  "ts": "2026-11-20T15:24:18.622Z",
   "definition": "strong-agi",
-  "tAgi": "2039-05-16T15:08:25.008Z",
+  "tAgi": "2039-05-22T08:30:44.522Z",
   "progress": 31.045,
   "band": {
-    "earlyP10": "2031-11-18T11:01:34.341Z",
-    "lateP90": "2046-11-11T19:15:15.675Z",
-    "likelyEarly": "2035-08-17T13:04:59.674Z",
-    "likelyLate": "2043-02-12T17:11:50.342Z"
+    "earlyP10": "2031-11-20T22:12:28.053Z",
+    "lateP90": "2046-11-20T18:49:00.991Z",
+    "likelyEarly": "2035-08-21T15:21:36.288Z",
+    "likelyLate": "2043-02-20T01:39:52.756Z"
   },
   "anchor": "2040-01-01T00:00:00.000Z",
-  "deltaMonths": -7.535897,
+  "deltaMonths": -7.347841,
   "movers": [
     {
       "factorId": "training-compute-growth",
@@ -56,12 +56,6 @@
       "citation": "https://investor.nvidia.com/financial-info/financial-reports/"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -1.003632,
-      "rationale": "Research velocity is running high at 0.81 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
       "factorId": "data-availability",
       "contributionMonths": 0.986414,
       "rationale": "Training-data scarcity is moderate at 0.50 — a headwind pushing the date later.",
@@ -78,6 +72,12 @@
       "contributionMonths": 0.864153,
       "rationale": "Policy friction is running low at 0.38 — a headwind pushing the date later.",
       "citation": "https://artificialintelligenceact.eu/"
+    },
+    {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.797496,
+      "rationale": "Research velocity is moderate at 0.66 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
     },
     {
       "factorId": "robotics-embodiment",
@@ -105,14 +105,14 @@
     },
     {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.382618,
+      "contributionMonths": 0.383858,
       "rationale": "Macro & bubble risk is running low at 0.15 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
     {
       "factorId": "capital-formation",
-      "contributionMonths": -0.31326,
-      "rationale": "AI capital formation is running low at 0.23 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.33258,
+      "rationale": "AI capital formation is running low at 0.24 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
