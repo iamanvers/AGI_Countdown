@@ -1,22 +1,22 @@
 {
-  "runId": "refresh-daily-20261125T170944472Z-transformative-ai",
-  "ts": "2026-11-25T17:09:44.472Z",
+  "runId": "refresh-hourly-20261125T225747276Z-transformative-ai",
+  "ts": "2026-11-25T22:57:47.276Z",
   "definition": "transformative-ai",
-  "tAgi": "2031-05-11T03:18:40.007Z",
-  "progress": 57.396,
+  "tAgi": "2031-05-18T02:14:50.601Z",
+  "progress": 57.492,
   "band": {
-    "earlyP10": "2028-09-06T16:19:54.316Z",
-    "lateP90": "2034-01-11T14:17:25.698Z",
-    "likelyEarly": "2030-01-07T21:49:17.162Z",
-    "likelyLate": "2032-09-10T08:48:02.852Z"
+    "earlyP10": "2028-09-09T14:36:45.159Z",
+    "lateP90": "2034-01-22T13:52:56.043Z",
+    "likelyEarly": "2030-01-12T20:25:47.880Z",
+    "likelyLate": "2032-09-19T08:03:53.322Z"
   },
   "anchor": "2032-01-01T00:00:00.000Z",
-  "deltaMonths": -7.716365,
+  "deltaMonths": -7.487837,
   "movers": [
     {
       "factorId": "adoption-usage",
-      "contributionMonths": -2.45055,
-      "rationale": "Adoption and usage is running high at 0.96 — a tailwind pulling the date sooner.",
+      "contributionMonths": -2.46585,
+      "rationale": "Adoption and usage is running high at 0.97 — a tailwind pulling the date sooner.",
       "citation": "https://openrouter.ai/rankings"
     },
     {
@@ -86,14 +86,8 @@
       "citation": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/"
     },
     {
-      "factorId": "research-velocity",
-      "contributionMonths": -0.68175,
-      "rationale": "Research velocity is running high at 0.75 — a tailwind pulling the date sooner.",
-      "citation": "https://arxiv.org/list/cs.AI/recent"
-    },
-    {
       "factorId": "macro-headwinds",
-      "contributionMonths": 0.59185,
+      "contributionMonths": 0.593422,
       "rationale": "Macro & bubble risk is running low at 0.19 — a headwind pushing the date later.",
       "citation": "https://fred.stlouisfed.org/series/RECPROUSM156N"
     },
@@ -104,9 +98,15 @@
       "citation": "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data"
     },
     {
+      "factorId": "research-velocity",
+      "contributionMonths": -0.478134,
+      "rationale": "Research velocity is moderate at 0.53 — a tailwind pulling the date sooner.",
+      "citation": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
       "factorId": "capital-formation",
-      "contributionMonths": -0.50232,
-      "rationale": "AI capital formation is running low at 0.26 — a tailwind pulling the date sooner.",
+      "contributionMonths": -0.46368,
+      "rationale": "AI capital formation is running low at 0.24 — a tailwind pulling the date sooner.",
       "citation": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
     },
     {
